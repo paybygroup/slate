@@ -1,0 +1,1 @@
+widdershins ~/paybygroup/hodor/docs/swagger.yml -y -o source/index.html.md -c
