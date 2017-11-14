@@ -249,9 +249,6 @@
                     <a href="#requestpurchaserefund" class="toc-h2 toc-link" data-title="RequestPurchaseRefund">RequestPurchaseRefund</a>
                   </li>
                   <li>
-                    <a href="#cancelpurchase" class="toc-h2 toc-link" data-title="CancelPurchase">CancelPurchase</a>
-                  </li>
-                  <li>
                     <a href="#createpurchaseimages" class="toc-h2 toc-link" data-title="CreatePurchaseImages">CreatePurchaseImages</a>
                   </li>
                   <li>
@@ -269,7 +266,7 @@
               </ul>
           </li>
           <li>
-            <a href="#payments" class="toc-h1 toc-link" data-title="payments">payments</a>
+            <a href="#payments-2" class="toc-h1 toc-link" data-title="payments">payments</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#acceptpayment" class="toc-h2 toc-link" data-title="AcceptPayment">AcceptPayment</a>
@@ -413,7 +410,10 @@
 
 <p>Email: <a href="mailto:dev@paybygroup.com">Pay By Group</a> </p>
 <h1 id='authentication'>Authentication</h1><h1 id='purchases'>purchases</h1>
-<p>Operations on Purchase objects.</p>
+<p>These are all operations that can be done on Purchase objects. Many other objects, 
+such as Memberships and Payments, can be accessed and updated within the Purchase object. 
+See this summary of <a href="https://developers.paybygroup.com/v1.0/docs/objects">all object relationships</a> 
+for a useful overview. </p>
 <h2 id='retrievemerchantpurchases'>RetrieveMerchantPurchases</h2>
 <p><code>GET /purchases</code></p>
 
@@ -493,10 +493,10 @@
         </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
           </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -512,10 +512,10 @@
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -525,7 +525,7 @@
       </span><span class="s2">"failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="s2">"payout_failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"cost_range"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -629,8 +629,8 @@
       </span><span class="p">],</span><span class="w">
       </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -642,13 +642,13 @@
           </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -761,8 +761,8 @@
               </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">},</span><span class="w">
-          </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -785,10 +785,10 @@
             </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
           </span><span class="p">},</span><span class="w">
-          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"collected_shares_amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -807,8 +807,8 @@
     </span><span class="s2">"needed_slots_to_min"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"product_or_group_max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"product_or_group_min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+    </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -936,19 +936,19 @@
 <td>» status</td>
 <td>string</td>
 <td>false</td>
-<td>Current status of the purchase. One of: - created Purchase has been created by the Merchant. - active Purchase has been claimed by an organizer and is in process. - completed All payments have been successfully paid out to the Merchant for this Purchase. - canceled The Purchase has been canceled by the merchant or organizer and is not recoverable.</td>
+<td>Current status of the purchase. One of: - <code>created</code> Purchase has been created by the Merchant. - <code>active</code> Purchase has been claimed by an organizer and is in process. - <code>completed</code> All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made,  only refunds.  - <code>canceled</code> The Purchase has been canceled by the merchant or organizer and is not recoverable.</td>
 </tr>
 <tr>
 <td>» refund_status</td>
 <td>string</td>
 <td>false</td>
-<td>Status that determines whether the Purchase is partially or fully refunded. One of: - none None of the Purchase&#39;s Memberships were refunded. - partial Some of the Purchase&#39;s Memberships were partially or fully refunded. - full All of the Purchase&#39;s Memberships were fully refunded.</td>
+<td>Status that describes whether the Purchase is partially or fully refunded. One of: - <code>none</code> None of the Purchase&#39;s Memberships were refunded. - <code>partial</code> Some of the Purchase&#39;s Memberships were partially or fully refunded. - <code>full</code> All of the Purchase&#39;s Memberships were fully refunded.</td>
 </tr>
 <tr>
 <td>» processing_refund</td>
 <td>boolean</td>
 <td>false</td>
-<td>Determines whether or not a refund is being processed for the purchase.</td>
+<td>Determines whether or not a refund is currently being processed for the purchase.</td>
 </tr>
 <tr>
 <td>» tipped</td>
@@ -1752,7 +1752,7 @@
 <td>» language_code</td>
 <td>string</td>
 <td>false</td>
-<td>Default language for this purchase. It is going to be used in the claim and commit steps; and as one of the fallbacks when detecting what language to show to the user</td>
+<td>Default 2-character language code for this purchase. It is going  to be used in the claim and commit steps; and as one of the  fallbacks when detecting what language to show to the user</td>
 </tr>
 <tr>
 <td>» created_at</td>
@@ -2611,7 +2611,12 @@ http
 
 <p><em>Create a purchase</em></p>
 
-<p>Creates a new purchase and returns a slug, which you can use to redirect an end user to their group&#39;s hub page, or you can proceed to use PATCH /purchases/:id/claim if you want to fully embed the experience.</p>
+<p>Creates a new purchase and returns the Purchase object, which contains 
+the slug you can use to redirect an end user to their group&#39;s hub page, 
+or you can proceed to use PATCH /purchases/:id/claim if you want to fully 
+embed the experience. See this 
+<a href="https://developers.paybygroup.com/v1.0/docs/standard-flow">breakdown of the entire flow</a> 
+for a list of all calls to use for a fully embedded experience. </p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -2620,17 +2625,17 @@ http
   </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trip to Las Vegas!"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"cost_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"total"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"We're going to Las Vegas."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Weekend package for Las Vegas."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"default_image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/image.jpg"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SKU-1234"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mycompany.com/product/sku-1234/details"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-03T14:57:54Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-03T14:57:54Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mycompany.com/order/1234"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-08T14:57:54Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87654"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"costs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span><span class="p">,</span><span class="w">
           </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -2638,10 +2643,11 @@ http
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">20000</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">25000</span><span class="p">,</span><span class="w">
           </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+        </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -2687,7 +2693,7 @@ http
 <td>body</td>
 <td>object</td>
 <td>false</td>
-<td>No description</td>
+<td>All parameters describing what is being purchased</td>
 </tr>
 <tr>
 <td>»» name</td>
@@ -2701,7 +2707,7 @@ http
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Cost type that determines whether the product_costs amount(s) are:</td>
+<td>Cost type that determines whether the product_costs amount(s) are for the whole group or per slot.</td>
 </tr>
 <tr>
 <td>»» description</td>
@@ -2715,7 +2721,7 @@ http
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>The primary or default image for this product</td>
+<td>The primary image to display to users for this product. The</td>
 </tr>
 <tr>
 <td>»» inventory_id</td>
@@ -2764,7 +2770,7 @@ http
 <td>body</td>
 <td>object</td>
 <td>false</td>
-<td>No description</td>
+<td>All parameters describing the particular setup of this group</td>
 </tr>
 <tr>
 <td>»» organizer_full_name</td>
@@ -2785,7 +2791,7 @@ http
 <td>body</td>
 <td>[string]</td>
 <td>false</td>
-<td>Array of legal document IDs that must be accepted by the members in this purchase</td>
+<td>Array of <a href="#legaldocument">legal document IDs</a></td>
 </tr>
 <tr>
 <td>» language_code</td>
@@ -2806,7 +2812,7 @@ http
 <td>body</td>
 <td>[object]</td>
 <td>false</td>
-<td>No description</td>
+<td>Breakdown of payment amounts and deadlines due over time for this purchase</td>
 </tr>
 <tr>
 <td>»» percentage</td>
@@ -2827,21 +2833,21 @@ http
 <td>body</td>
 <td>[object]</td>
 <td>false</td>
-<td>No description</td>
+<td>The set of consumer fields that should be attached to this purchase, by name,</td>
 </tr>
 <tr>
 <td>»» name</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>No description</td>
+<td>The name of the consumer_field_template you want to attach to the purchase. Values set in the template apply as default unless overriden here.</td>
 </tr>
 <tr>
 <td>»» scope</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Any of member or purchase.</td>
+<td>Determines whether all group members complete this field or only the organizer does on behalf of the whole purchase</td>
 </tr>
 <tr>
 <td>»» required</td>
@@ -2876,12 +2882,17 @@ http
 </tr>
 </tbody></table>
 <h5 id='cost_type'>»» cost_type</h5>
-<p>Cost type that determines whether the product_costs amount(s) are:
-- per_slot The amount is per slot claimed in the Purchase so the
-  total amount paid to the merchant is a function of the number of
-  slots claimed by group members.
-- total A single total amount so long as the number of slots claimed
+<p>Cost type that determines whether the product_costs amount(s) are for the whole group or per slot.
+-<code>per_slot</code> The product cost provided is for each slot a Member commits to in the Purchase, 
+  so the total amount paid to the merchant is a function of the number of
+  slots claimed by all group members.
+-<code>total</code> The product cost is single total amount so long as 
+  the number of slots claimed 
   is in the allowed range for that amount.</p>
+<h5 id='default_image_url'>»» default_image_url</h5>
+<p>The primary image to display to users for this product. The 
+merchant default image applies if none is provided. Use the 
+<a href="#createpurchaseimages">CreatePurchaseImages</a> call to add an image using the API.</p>
 <h5 id='inventory_id'>»» inventory_id</h5>
 <p>Inventory ID supplied by the merchant that identifies the product
 being bought in this Purchase (e.g. SKU or property ID)</p>
@@ -2898,7 +2909,12 @@ ending time)</p>
 (e.g. order or booking) in the merchant&#39;s system</p>
 <h5 id='costs'>»» costs</h5>
 <p>The set of product_costs and the optional allowed range(s) of slots
-for each provided by the merchant</p>
+for each cost as provided by the merchant. The currency of the product cost 
+determines the currency of the purchase. </p>
+<h5 id='legal_document_ids'>»» legal_document_ids</h5>
+<p>Array of <a href="#legaldocument">legal document IDs</a> 
+that must be accepted by the members in this purchase. If no values are passed, the default Legal 
+Documents will be attached to the Purchase. If one or more value is passed, it will override all defaults. </p>
 <h5 id='language_code'>» language_code</h5>
 <p>Default language for this purchase. It is going to be used in the
 claim and commit steps; and as one of the fallbacks when detecting
@@ -2908,12 +2924,16 @@ what language to show to the user</p>
 made under this Purchase.</p>
 <h5 id='percentage'>»» percentage</h5>
 <p>Percent of the total purchase cost due for this payment, which must
-be an integer. All payments on a purchase must sum to 100.</p>
+be an integer. All payments on a purchase must sum to 100. If you are 
+not doing installment or deposit payments, this is most likely &quot;100&quot;.</p>
 <h5 id='due_deadline'>»» due_deadline</h5>
 <p>Datetime by when this payment must be submitted to the merchant for
-the purchase to be valid.
-It is required for all payments after the first payment but may be
-passed for the first, or only, payment as well.</p>
+the purchase to be valid. It is required for all payments after 
+the first payment but may be passed for the first, or only, payment as well.</p>
+<h5 id='consumer_field_schemas'>» consumer_field_schemas</h5>
+<p>The set of consumer fields that should be attached to this purchase, by name, 
+and their accompanying options. If any consumer_field_schemas are passed, then 
+they override all default consumer_field_templates for the merchant.                   </p>
 
 <blockquote>
 <p>Example responses</p>
@@ -2988,10 +3008,10 @@ passed for the first, or only, payment as well.</p>
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -3007,10 +3027,10 @@ passed for the first, or only, payment as well.</p>
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -3020,7 +3040,7 @@ passed for the first, or only, payment as well.</p>
     </span><span class="s2">"failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"payout_failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"cost_range"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -3124,8 +3144,8 @@ passed for the first, or only, payment as well.</p>
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -3137,13 +3157,13 @@ passed for the first, or only, payment as well.</p>
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -3256,8 +3276,8 @@ passed for the first, or only, payment as well.</p>
             </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -3280,10 +3300,10 @@ passed for the first, or only, payment as well.</p>
           </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"collected_shares_amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -3302,8 +3322,8 @@ passed for the first, or only, payment as well.</p>
   </span><span class="s2">"needed_slots_to_min"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <h3 id="CreatePurchase-responses">Responses</h3>
@@ -3428,10 +3448,10 @@ http
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -3447,10 +3467,10 @@ http
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -3460,7 +3480,7 @@ http
     </span><span class="s2">"failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"payout_failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"cost_range"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -3564,8 +3584,8 @@ http
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -3577,13 +3597,13 @@ http
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -3696,8 +3716,8 @@ http
             </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -3720,10 +3740,10 @@ http
           </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"collected_shares_amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -3742,8 +3762,8 @@ http
   </span><span class="s2">"needed_slots_to_min"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -3767,7 +3787,7 @@ http
 <tr>
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>Sucecss response.</td>
+<td>Success response.</td>
 <td><a href="#schemapurchase">Purchase</a></td>
 </tr>
 <tr>
@@ -3787,28 +3807,25 @@ http
 
 <p><em>Update an existing purchase</em></p>
 
-<p>To update a purchase where the inventory is unavailable to apply to different inventory
+<p>To update a purchase where the inventory is no longer available and you can offer alternate inventory
 that is available, you should change details of the in-progress group. You should also
 update the purchase if other details change before it completes such as the the price,
 start datetime, due deadline, etc. You can update a purchsae at any time until you accept
 the last (or only) payment for that purchase. NOTE: you can never update the <code>cost_type</code>.
-You can not update <code>payments</code> after you have accepted at least 1 payment, but you may still
-update the <code>costs</code>.</p>
+You can not update <code>payments</code> or <code>product_costs</code> after you have accepted at least 1 payment.</p>
 
 <blockquote>
 <p>Body parameter</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"payment_destination_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"default_image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"costs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
@@ -3828,15 +3845,21 @@ update the <code>costs</code>.</p>
       </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"split_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"even_split"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"payments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"payment_destination_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <h3 id="UpdatePurchase-parameters">Parameters</h3>
@@ -3865,20 +3888,6 @@ update the <code>costs</code>.</p>
 <td>No description</td>
 </tr>
 <tr>
-<td>» language_code</td>
-<td>body</td>
-<td>string</td>
-<td>false</td>
-<td>Default language for this purchase. It is going to be used in the</td>
-</tr>
-<tr>
-<td>» payment_destination_id</td>
-<td>body</td>
-<td>string(uuid)</td>
-<td>false</td>
-<td>ID of the payment destination that will receive all future payments</td>
-</tr>
-<tr>
 <td>» product</td>
 <td>body</td>
 <td>object</td>
@@ -3904,7 +3913,7 @@ update the <code>costs</code>.</p>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>The primary or default image for this product</td>
+<td>The primary image to display for this product</td>
 </tr>
 <tr>
 <td>»» inventory_id</td>
@@ -3953,21 +3962,21 @@ update the <code>costs</code>.</p>
 <td>body</td>
 <td>object</td>
 <td>false</td>
-<td>No description</td>
+<td>All parameters configuring the group, including those set by the organizer at the claim step.</td>
 </tr>
 <tr>
 <td>»» organizer_full_name</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Full name of the expected organizer as provided by the merchant</td>
+<td>Full name of the expected organizer as provided by the merchant. This will only affect information</td>
 </tr>
 <tr>
 <td>»» organizer_email</td>
 <td>body</td>
 <td>string(email)</td>
 <td>false</td>
-<td>Email of the expected organizer as provided by the merchant</td>
+<td>Email of the expected organizer as provided by the merchant. This will only affect information</td>
 </tr>
 <tr>
 <td>»» split_type</td>
@@ -3977,13 +3986,6 @@ update the <code>costs</code>.</p>
 <td>Splitting type chosen by the organizer for how to divide the cost</td>
 </tr>
 <tr>
-<td>»» max_slots</td>
-<td>body</td>
-<td>integer(int32)</td>
-<td>false</td>
-<td>The organizer-specified value for the maximum number of slots they</td>
-</tr>
-<tr>
 <td>»» min_slots</td>
 <td>body</td>
 <td>integer(int32)</td>
@@ -3991,18 +3993,46 @@ update the <code>costs</code>.</p>
 <td>The organizer-specified value for the minimum number of slots they</td>
 </tr>
 <tr>
+<td>»» max_slots</td>
+<td>body</td>
+<td>integer(int32)</td>
+<td>false</td>
+<td>The organizer-specified value for the maximum number of slots they</td>
+</tr>
+<tr>
+<td>»» min_contribution</td>
+<td>body</td>
+<td><a href="#schemamoney">Money</a></td>
+<td>false</td>
+<td>Minimum required contribution from each group member.</td>
+</tr>
+<tr>
 <td>»» legal_document_ids</td>
 <td>body</td>
 <td>[string]</td>
 <td>false</td>
-<td>Array of legal document IDs that must be accepted by the members in this purchase</td>
+<td>Array of legal document IDs that must be accepted by the members in this purchase. These should NOT</td>
+</tr>
+<tr>
+<td>» language_code</td>
+<td>body</td>
+<td>string</td>
+<td>false</td>
+<td>Default 2-character language code for this purchase. It is going</td>
+</tr>
+<tr>
+<td>» payment_destination_id</td>
+<td>body</td>
+<td>string(uuid)</td>
+<td>false</td>
+<td>ID of the payment destination that will receive all future payments</td>
 </tr>
 <tr>
 <td>» payments</td>
 <td>body</td>
 <td>[object]</td>
 <td>false</td>
-<td>No description</td>
+<td>Breakdown of payment amounts and deadlines due over time for this Purchase.</td>
 </tr>
 <tr>
 <td>»» percentage</td>
@@ -4038,14 +4068,19 @@ update the <code>costs</code>.</p>
 <td>»» split_type</td>
 <td>fixed_per_person</td>
 </tr>
+<tr>
+<td>» language_code</td>
+<td>DA (Danish)</td>
+</tr>
+<tr>
+<td>» language_code</td>
+<td>EN (English)</td>
+</tr>
+<tr>
+<td>» language_code</td>
+<td>ES (Spanish)</td>
+</tr>
 </tbody></table>
-<h5 id='language_code-2'>» language_code</h5>
-<p>Default language for this purchase. It is going to be used in the
-claim and commit steps; and as one of the fallbacks when detecting
-what language to show to the user</p>
-<h5 id='payment_destination_id-2'>» payment_destination_id</h5>
-<p>ID of the payment destination that will receive all future payments
-made under this Purchase.</p>
 <h5 id='inventory_id-2'>»» inventory_id</h5>
 <p>Inventory ID supplied by the merchant that identifies the product
 being bought in this Purchase (e.g. SKU or property ID)</p>
@@ -4062,33 +4097,60 @@ ending time)</p>
 (e.g. order or booking) in the merchant&#39;s system</p>
 <h5 id='costs-2'>»» costs</h5>
 <p>The set of product_costs and the optional allowed range(s) of slots
-for each provided by the merchant</p>
+for each cost as provided by the merchant. When updating the product_costs, 
+you cannot use a different currency than the existing one after the purchase 
+has been claimed. You cannot edit the range of slots to be less than the current 
+number of committed slots. </p>
+<h5 id='organizer_full_name'>»» organizer_full_name</h5>
+<p>Full name of the expected organizer as provided by the merchant. This will only affect information 
+displayed to the merchant if updated after the Purchase is claimed. </p>
+<h5 id='organizer_email'>»» organizer_email</h5>
+<p>Email of the expected organizer as provided by the merchant. This will only affect information 
+displayed to the merchant if updated after the Purchase is claimed. </p>
 <h5 id='split_type'>»» split_type</h5>
 <p>Splitting type chosen by the organizer for how to divide the cost
 among group members.
 One of:
-- even_split Only compatible with total cost_type and means the
+-<code>even_split</code> Only compatible with total cost_type and means the
   Purchase amount is split evenly across each slot claimed.
-- specified_per_person Only compatible with total cost_type and
+-<code>specified_per_person</code> Only compatible with total cost_type and
   means each member may pay a different amount.
-- fixed_per_person Only compatible with per_slot cost_type and means
+-<code>fixed_per_person</code> Only compatible with per_slot cost_type and means
   each group member pays a fixed amount per slot they claim.</p>
-<h5 id='max_slots'>»» max_slots</h5>
-<p>The organizer-specified value for the maximum number of slots they
-will allow to be claimed.
-It must be within the bounds allowed by the merchant.</p>
 <h5 id='min_slots'>»» min_slots</h5>
 <p>The organizer-specified value for the minimum number of slots they
-require to be claimed.
-It must be within the bounds allowed by the merchant.</p>
+require to be claimed. It must be within the bounds allowed by the merchant. 
+Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types. </p>
+<h5 id='max_slots'>»» max_slots</h5>
+<p>The organizer-specified value for the maximum number of slots they
+will allow to be claimed. It must be within the bounds allowed by the merchant. 
+Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types. </p>
+<h5 id='min_contribution'>»» min_contribution</h5>
+<p>Minimum required contribution from each group member. 
+Only compatible with <code>specified_per_person</code> split type.</p>
+<h5 id='legal_document_ids-2'>»» legal_document_ids</h5>
+<p>Array of legal document IDs that must be accepted by the members in this purchase. These should NOT 
+be updated after a Purchase has been claimed because then some members will end up with different 
+accepted legal terms from others. </p>
+<h5 id='language_code-2'>» language_code</h5>
+<p>Default 2-character language code for this purchase. It is going 
+to be used in the claim and commit steps; and as one of the 
+fallbacks when detecting what language to show to the user</p>
+<h5 id='payment_destination_id-2'>» payment_destination_id</h5>
+<p>ID of the payment destination that will receive all future payments
+made under this Purchase. NOTE: updating this value will not affect 
+any previously accepted payments on this purchase. </p>
+<h5 id='payments'>» payments</h5>
+<p>Breakdown of payment amounts and deadlines due over time for this Purchase. 
+They can only be updated if no payment has yet been accepted by the merchant for this Purchase.. </p>
 <h5 id='percentage-2'>»» percentage</h5>
 <p>Percent of the total purchase cost due for this payment, which must
-be an integer. All payments on a purchase must sum to 100.</p>
+be an integer. All payments on a purchase must sum to 100. If you are 
+not doing installment or deposit payments, this is most likely &quot;100&quot;.</p>
 <h5 id='due_deadline-2'>»» due_deadline</h5>
 <p>Datetime by when this payment must be submitted to the merchant for
-the purchase to be valid.
-It is required for all payments after the first payment but may be
-passed for the first, or only, payment as well.</p>
+the purchase to be valid. It is required for all payments after 
+the first payment but may be passed for the first, or only, payment as well.</p>
 
 <blockquote>
 <p>Example responses</p>
@@ -4163,10 +4225,10 @@ passed for the first, or only, payment as well.</p>
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -4182,10 +4244,10 @@ passed for the first, or only, payment as well.</p>
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -4195,7 +4257,7 @@ passed for the first, or only, payment as well.</p>
     </span><span class="s2">"failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"payout_failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"cost_range"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -4299,8 +4361,8 @@ passed for the first, or only, payment as well.</p>
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -4312,13 +4374,13 @@ passed for the first, or only, payment as well.</p>
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -4431,8 +4493,8 @@ passed for the first, or only, payment as well.</p>
             </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -4455,10 +4517,10 @@ passed for the first, or only, payment as well.</p>
           </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"collected_shares_amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -4477,8 +4539,8 @@ passed for the first, or only, payment as well.</p>
   </span><span class="s2">"needed_slots_to_min"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -4560,7 +4622,11 @@ supplying defaults for the required parameters.</p>
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"split_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"even_split"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -4608,7 +4674,7 @@ supplying defaults for the required parameters.</p>
 <td>body</td>
 <td><a href="#schemamoney">Money</a></td>
 <td>false</td>
-<td>Allowed share of the organizer</td>
+<td>This is the recommended share for the organizer and is only relevant if split_type is <code>specified_per_person</code></td>
 </tr>
 <tr>
 <td>» min_contribution</td>
@@ -4636,14 +4702,21 @@ supplying defaults for the required parameters.</p>
 <td>body</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>The organizer-specified value for the maximum number of slots they</td>
+<td>The organizer-specified value for the minimum number of slots they</td>
 </tr>
 <tr>
 <td>»» min_slots</td>
 <td>body</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>The organizer-specified value for the minimum number of slots they</td>
+<td>The organizer-specified value for the maximum number of slots they</td>
+</tr>
+<tr>
+<td>»» min_contribution</td>
+<td>body</td>
+<td><a href="#schemamoney">Money</a></td>
+<td>false</td>
+<td>Minimum required contribution from each group member.</td>
 </tr>
 </tbody></table>
 <h4 id='enumerated-values-3'>Enumerated Values</h4>
@@ -4670,20 +4743,23 @@ supplying defaults for the required parameters.</p>
 <p>Splitting type chosen by the organizer for how to divide the cost
 among group members.
 One of:
-- even_split Only compatible with total cost_type and means the
+-<code>even_split</code> Only compatible with total cost_type and means the
   Purchase amount is split evenly across each slot claimed.
-- specified_per_person Only compatible with total cost_type and
+-<code>specified_per_person</code> Only compatible with total cost_type and
   means each member may pay a different amount.
-- fixed_per_person Only compatible with per_slot cost_type and means
+-<code>fixed_per_person</code> Only compatible with per_slot cost_type and means
   each group member pays a fixed amount per slot they claim.</p>
 <h5 id='max_slots-2'>»» max_slots</h5>
-<p>The organizer-specified value for the maximum number of slots they
-will allow to be claimed.
-It must be within the bounds allowed by the merchant.</p>
-<h5 id='min_slots-2'>»» min_slots</h5>
 <p>The organizer-specified value for the minimum number of slots they
-require to be claimed.
-It must be within the bounds allowed by the merchant.</p>
+require to be claimed. It must be within the bounds allowed by the merchant. 
+Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types. </p>
+<h5 id='min_slots-2'>»» min_slots</h5>
+<p>The organizer-specified value for the maximum number of slots they
+will allow to be claimed. It must be within the bounds allowed by the merchant. 
+Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types. </p>
+<h5 id='min_contribution-2'>»» min_contribution</h5>
+<p>Minimum required contribution from each group member. 
+Only compatible with <code>specified_per_person</code> split type. </p>
 
 <blockquote>
 <p>Example responses</p>
@@ -4758,10 +4834,10 @@ It must be within the bounds allowed by the merchant.</p>
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -4777,10 +4853,10 @@ It must be within the bounds allowed by the merchant.</p>
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -4790,7 +4866,7 @@ It must be within the bounds allowed by the merchant.</p>
     </span><span class="s2">"failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"payout_failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"cost_range"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -4894,8 +4970,8 @@ It must be within the bounds allowed by the merchant.</p>
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -4907,13 +4983,13 @@ It must be within the bounds allowed by the merchant.</p>
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -5026,8 +5102,8 @@ It must be within the bounds allowed by the merchant.</p>
             </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -5050,10 +5126,10 @@ It must be within the bounds allowed by the merchant.</p>
           </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"collected_shares_amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -5072,8 +5148,8 @@ It must be within the bounds allowed by the merchant.</p>
   </span><span class="s2">"needed_slots_to_min"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -5182,14 +5258,14 @@ They will receive reminders to join until the purchase completes, expires, or is
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Message to attach to the invite notification.</td>
+<td>Message from the organizer to include in the invite notification.</td>
 </tr>
 <tr>
 <td>» subject</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Subject of the notification.</td>
+<td>Subject line of the notification to the invitee if sent by email.</td>
 </tr>
 <tr>
 <td>» invitees</td>
@@ -5217,7 +5293,7 @@ They will receive reminders to join until the purchase completes, expires, or is
 <td>body</td>
 <td><a href="#schemamoney">Money</a></td>
 <td>false</td>
-<td>Suggested contribution for the invitee.</td>
+<td>Suggested contribution for the invitee. Only relevant for <code>specified_per_person</code> split type.</td>
 </tr>
 </tbody></table>
 
@@ -5330,7 +5406,7 @@ the sum of all payments on the purchase, you will get an error response.</p>
 <td>body</td>
 <td>string(uuid)</td>
 <td>false</td>
-<td>UUID of the merchant&#39;s payment source for funding refunds</td>
+<td>UUID of the merchant&#39;s payment source they wish to use to fund this refund.</td>
 </tr>
 <tr>
 <td>» memberships_shares</td>
@@ -5358,7 +5434,11 @@ the sum of all payments on the purchase, you will get an error response.</p>
 <p>Amount to be refunded. It may not be greater than the current
 collected amount of the purchase, which is the total purchase
 amount net of any previous refunds. If the memberships_shares
-are provided, this value must equal the sum of those shares.</p>
+array is provided, this value must equal the sum of those shares.</p>
+<h5 id='funding_source_id'>» funding_source_id</h5>
+<p>UUID of the merchant&#39;s payment source they wish to use to fund this refund. 
+This is only applicable if the merchant originally received the payment that is being 
+refunded into the merchant&#39;s bank account instead of a through a custom gateway.</p>
 
 <blockquote>
 <p>Example responses</p>
@@ -5433,10 +5513,10 @@ are provided, this value must equal the sum of those shares.</p>
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -5452,10 +5532,10 @@ are provided, this value must equal the sum of those shares.</p>
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -5465,7 +5545,7 @@ are provided, this value must equal the sum of those shares.</p>
     </span><span class="s2">"failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"payout_failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"cost_range"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -5569,8 +5649,8 @@ are provided, this value must equal the sum of those shares.</p>
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -5582,13 +5662,13 @@ are provided, this value must equal the sum of those shares.</p>
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -5701,8 +5781,8 @@ are provided, this value must equal the sum of those shares.</p>
             </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -5725,10 +5805,10 @@ are provided, this value must equal the sum of those shares.</p>
           </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"collected_shares_amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -5747,8 +5827,8 @@ are provided, this value must equal the sum of those shares.</p>
   </span><span class="s2">"needed_slots_to_min"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -5801,100 +5881,15 @@ are provided, this value must equal the sum of those shares.</p>
 To perform this operation, you must be authenticated by means of one of the following methods:
 http
 </aside>
-<h2 id='cancelpurchase'>CancelPurchase</h2>
-<p><code>POST /purchases/{id}/cancel</code></p>
-
-<p><em>Cancel purchase</em></p>
-
-<p>Cancels this purchase so that it may not complete under any circumstances.
-If any payment is in <code>authorized</code> state, all auths will be voided.</p>
-
-<blockquote>
-<p>Body parameter</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<h3 id="CancelPurchase-parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>In</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>path</td>
-<td>string(uuid)</td>
-<td>true</td>
-<td>ID of the Purchase to cancel</td>
-</tr>
-<tr>
-<td>body</td>
-<td>body</td>
-<td>object</td>
-<td>true</td>
-<td>No description</td>
-</tr>
-<tr>
-<td>» reason</td>
-<td>body</td>
-<td>string</td>
-<td>false</td>
-<td>Description to be provided to the group&#39;s organizer</td>
-</tr>
-</tbody></table>
-<h5 id='reason'>» reason</h5>
-<p>Description to be provided to the group&#39;s organizer
-explaining why the group was canceled</p>
-
-<h3 id="CancelPurchase-responses">Responses</h3>
-
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>204</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.5">No Content</a></td>
-<td>Success response</td>
-<td>None</td>
-</tr>
-<tr>
-<td>404</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td>
-<td>Not found</td>
-<td>None</td>
-</tr>
-<tr>
-<td>422</td>
-<td><a href="https://tools.ietf.org/html/rfc2518#section-10.3">Unprocessable Entity</a></td>
-<td>Unprocessable entity</td>
-<td>None</td>
-</tr>
-</tbody></table>
-
-<aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
-</aside>
 <h2 id='createpurchaseimages'>CreatePurchaseImages</h2>
-<p><code>POST /purchases/{id}/images</code></p>
+<p><code>POST /purchases/{id}/cancel</code></p>
 
 <p><em>Create purchase image</em></p>
 
-<p>Attaches an image of the product to the purchase specified in the
-request. The most recent image uploaded will be the primary image
-for the purchase.</p>
+<p>This call attaches the image you specify in the body to the purchase you 
+specify in the request. That image should be of the product and is used 
+for display to end users. The most recent image uploaded will be the primary 
+image displayed for the purchase.</p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -5919,7 +5914,7 @@ for the purchase.</p>
 <td>path</td>
 <td>string(uuid)</td>
 <td>true</td>
-<td>ID of the Image</td>
+<td>ID of the Purchase to which this image applies</td>
 </tr>
 <tr>
 <td>body</td>
@@ -5933,14 +5928,14 @@ for the purchase.</p>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>No description</td>
+<td>URL of the image. It will only be retrieved once from this URL, after which it will be cached by Pay By Group.</td>
 </tr>
 <tr>
 <td>» file</td>
 <td>body</td>
 <td>string(binary)</td>
 <td>false</td>
-<td>Image file provided by the merchant</td>
+<td>Image file</td>
 </tr>
 </tbody></table>
 
@@ -6026,7 +6021,7 @@ http
 <td>path</td>
 <td>string(uuid)</td>
 <td>true</td>
-<td>Purchase ID.</td>
+<td>Purchase ID</td>
 </tr>
 </tbody></table>
 
@@ -6132,8 +6127,8 @@ http
           </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -6156,10 +6151,10 @@ http
         </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+    </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -6888,9 +6883,9 @@ completed for payments related to a specific purchase.</p>
         </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"processing_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"conversion_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -7235,8 +7230,8 @@ attached to this purchase that must be accepted by its members</p>
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -7335,11 +7330,11 @@ http
 <h2 id='retrievepurchaselegalbindings'>RetrievePurchaseLegalBindings</h2>
 <p><code>GET /purchases/{id}/legal_documents/acceptances</code></p>
 
-<p><em>List legal term acceptance records for all members</em></p>
+<p><em>List legal document acceptance records for all members</em></p>
 
 <p>Returns a paginated list of all legal bindings, which
 represent each individual acceptance of a legal document
-for this purchase by a group member</p>
+for this purchase by a group member.</p>
 
 <h3 id="RetrievePurchaseLegalBindings-parameters">Parameters</h3>
 
@@ -7481,15 +7476,17 @@ for this purchase by a group member</p>
 To perform this operation, you must be authenticated by means of one of the following methods:
 http
 </aside>
-<h1 id='payments'>payments</h1>
-<p>Operations on Payment objects.</p>
+<h1 id='payments-2'>payments</h1>
+<p>This section covers all operations on Payment objects. A purchase must have at least 1 
+payment and may have up to n payments. Each payment defines an amount of the purchase 
+that must be paid by the group by a certain date. </p>
 <h2 id='acceptpayment'>AcceptPayment</h2>
 <p><code>POST /payments/{id}/accept</code></p>
 
 <p><em>Accept a payment</em></p>
 
 <p>Merchants must make this call to receive a payout for any payment
-that is in authorized status unless the merchant is  configured to auto-accept
+that is in authorized status unless the merchant is configured to auto-accept
 all payments automatically</p>
 
 <h3 id="AcceptPayment-parameters">Parameters</h3>
@@ -7567,13 +7564,17 @@ To perform this operation, you must be authenticated by means of one of the foll
 http
 </aside>
 <h1 id='legal_documents'>legal_documents</h1>
-<p>Operations on LegalDocument objects.</p>
+<p>This section covers all operations on Legal Document objects. Legal Documents are terms of 
+service and other contractual requirements you want all members in a purchase to accept 
+when joining a purchase. All Legal Documents apply to every member in every purchase 
+unless you specify 1 or more Legal Documents to attach to a purchase when creating a purchase, 
+in which case only the specified Legal Documents will apply to that purchases&#39;s members. </p>
 <h2 id='retrievemerchantlegaldocuments'>RetrieveMerchantLegalDocuments</h2>
 <p><code>GET /legal_documents</code></p>
 
 <p><em>Retrieve list of legal documents</em></p>
 
-<p>Returns a paginated list of all legal documents that currently exist under this merchant</p>
+<p>Returns a paginated list of all legal documents that currently exist under this merchant and are available to attach to purchases.</p>
 
 <blockquote>
 <p>Example responses</p>
@@ -7584,8 +7585,8 @@ http
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -7686,7 +7687,7 @@ http
 
 <p><em>Add new legal document</em></p>
 
-<p>Add a new legal document, which can be attached to any purchase to require its members&#39; acceptances</p>
+<p>Add a new legal document, which will then be available to attach to any purchase so that members are required to accept it.</p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -7720,21 +7721,21 @@ http
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Specified by the merchant as either cancellation policy for cancellation and refund terms</td>
+<td>Specified by the merchant as either the Cancellation Policy for cancellation and refund terms</td>
 </tr>
 <tr>
 <td>» title</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Mechant&#39;s title for this legal document</td>
+<td>Mechant&#39;s title for this legal document to be displayed to end users. If none is provided, it defaults to</td>
 </tr>
 <tr>
 <td>» content</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Full content as provided by the merchant, either in plain text or as a URL</td>
+<td>Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is</td>
 </tr>
 </tbody></table>
 <h4 id='enumerated-values-4'>Enumerated Values</h4>
@@ -7754,8 +7755,15 @@ http
 </tr>
 </tbody></table>
 <h5 id='type'>» type</h5>
-<p>Specified by the merchant as either cancellation policy for cancellation and refund terms
-or tos for all other legal documents</p>
+<p>Specified by the merchant as either the Cancellation Policy for cancellation and refund terms
+or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then 
+refer to that document as type TOS. If none is provided, the value defaults to <code>tos</code>. </p>
+<h5 id='title'>» title</h5>
+<p>Mechant&#39;s title for this legal document to be displayed to end users. If none is provided, it defaults to 
+the generic term &quot;Terms of Service.&quot;</p>
+<h5 id='content'>» content</h5>
+<p>Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is<br>
+provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. </p>
 
 <blockquote>
 <p>Example responses</p>
@@ -7765,8 +7773,8 @@ or tos for all other legal documents</p>
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -7810,7 +7818,7 @@ http
 
 <p><em>Retrieve legal document</em></p>
 
-<p>Retrieves the details of a specific legal document</p>
+<p>Retrieves all information for a specific legal document that was previously provided by the merchant.</p>
 
 <h3 id="RetrieveMerchantLegalDocument-parameters">Parameters</h3>
 
@@ -7840,8 +7848,8 @@ http
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -7887,7 +7895,8 @@ http
 
 <p>Makes changes to a legal document, which will apply to all
 future acceptances by members where that document is attached
-to a purchase. It will not apply retroactively.</p>
+to a purchase. It will not apply retroactively to any Purchase 
+created prior to the moment it is updated.</p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -7928,21 +7937,21 @@ to a purchase. It will not apply retroactively.</p>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Specified by the merchant as either cancellation policy for cancellation</td>
+<td>Specified by the merchant as either the Cancellation Policy for cancellation and refund terms</td>
 </tr>
 <tr>
 <td>» title</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Mechant&#39;s title for this legal document</td>
+<td>Mechant&#39;s title for this legal document to be displayed to end users. If none is provided, the existing value</td>
 </tr>
 <tr>
 <td>» content</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Full content as provided by the merchant, either in plain text or as a URL</td>
+<td>Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is</td>
 </tr>
 </tbody></table>
 <h4 id='enumerated-values-5'>Enumerated Values</h4>
@@ -7962,8 +7971,17 @@ to a purchase. It will not apply retroactively.</p>
 </tr>
 </tbody></table>
 <h5 id='type-2'>» type</h5>
-<p>Specified by the merchant as either cancellation policy for cancellation
-and refund terms or tos for all other legal documents</p>
+<p>Specified by the merchant as either the Cancellation Policy for cancellation and refund terms
+or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then 
+refer to that document as type TOS. If none is provided in this request, then the existing value 
+for the Legal Document being updated will continue to apply.</p>
+<h5 id='title-2'>» title</h5>
+<p>Mechant&#39;s title for this legal document to be displayed to end users. If none is provided, the existing value 
+for the Legal Document being updated will continue to apply.</p>
+<h5 id='content-2'>» content</h5>
+<p>Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is<br>
+provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. 
+If none is provided, the existing value for the Legal Document being updated will continue to apply. </p>
 
 <blockquote>
 <p>Example responses</p>
@@ -7973,8 +7991,8 @@ and refund terms or tos for all other legal documents</p>
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -8028,13 +8046,19 @@ To perform this operation, you must be authenticated by means of one of the foll
 http
 </aside>
 <h1 id='consumer_field_templates'>consumer_field_templates</h1>
-<p>Operations on ConsumerFieldTemplate objects.</p>
+<p>Consumer Field Templates define information you wish to collect from 
+the organizer pertaining to the entire purchase or from each group member. 
+The templates define the basic structure, which can be configured futher when 
+attaching each template to a purchase. All &quot;default&quot; templates apply to every 
+purchase unless you specify 1 or more templates, in which case only the specified 
+ones will apply.</p>
 <h2 id='createconsumerfieldtemplate'>CreateConsumerFieldTemplate</h2>
 <p><code>POST /consumer_field_templates</code></p>
 
 <p><em>Creates a new consumer field template</em></p>
 
-<p>Creates a new consumer field template</p>
+<p>You must first create a template before you can attach the template to a purchase 
+and collect data based on it. </p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -8042,7 +8066,7 @@ http
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -8080,7 +8104,7 @@ http
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>A unique name for the template.</td>
+<td>A unique name for the template, used as the reference for attaching the template to a purchase.</td>
 </tr>
 <tr>
 <td>» label</td>
@@ -8094,70 +8118,70 @@ http
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>A description for the template</td>
+<td>A description for the template displayed as sub-text below the field label.</td>
 </tr>
 <tr>
 <td>» type</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Type of field to display for this template.</td>
+<td>Type of field to display for this template. Single_select and multi_select require passing <code>option</code> values.</td>
 </tr>
 <tr>
 <td>» order</td>
 <td>body</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>Order in which the template should be displayed.</td>
+<td>Order in which the template should be displayed, with 1 being the first displayed.</td>
 </tr>
 <tr>
 <td>» scope</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Whether the template is at the member level, or purchase level.</td>
+<td>Whether the template applies at the member level to every group member or at the purchase</td>
 </tr>
 <tr>
 <td>» default_value</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Default value to use for the template.</td>
+<td>Default value to use for the template, which prepopulates the field for the user on landing.</td>
 </tr>
 <tr>
 <td>» default</td>
 <td>body</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether the template should be default or not.</td>
+<td>Whether the template should be default or not. Default templates apply to every purchase unless</td>
 </tr>
 <tr>
 <td>» required</td>
 <td>body</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether the template is required or not.</td>
+<td>This is the default setting for whether the user is required to fill this field when it is presented.</td>
 </tr>
 <tr>
 <td>» options</td>
 <td>body</td>
 <td>[object]</td>
 <td>false</td>
-<td>Array of options to use for a list template.</td>
+<td>Array of options to display, which is required for a template of single_select or multi_select type.</td>
 </tr>
 <tr>
 <td>»» type</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Option type</td>
+<td>Defines the format of the field, including how it will be shown to end users</td>
 </tr>
 <tr>
 <td>»» value</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Option value</td>
+<td>Value displayed to end users when presenting the options</td>
 </tr>
 </tbody></table>
 <h4 id='enumerated-values-6'>Enumerated Values</h4>
@@ -8199,7 +8223,43 @@ http
 <td>» scope</td>
 <td>purchase</td>
 </tr>
+<tr>
+<td>»» type</td>
+<td>address</td>
+</tr>
+<tr>
+<td>»» type</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>»» type</td>
+<td>multi_select</td>
+</tr>
+<tr>
+<td>»» type</td>
+<td>single_select</td>
+</tr>
+<tr>
+<td>»» type</td>
+<td>text</td>
+</tr>
+<tr>
+<td>»» type</td>
+<td>textarea</td>
+</tr>
 </tbody></table>
+<h5 id='order'>» order</h5>
+<p>Order in which the template should be displayed, with 1 being the first displayed. 
+This value must be unique to each template, but the values do not have to be sequential.</p>
+<h5 id='scope'>» scope</h5>
+<p>Whether the template applies at the member level to every group member or at the purchase 
+level, only to the organizer.</p>
+<h5 id='default'>» default</h5>
+<p>Whether the template should be default or not. Default templates apply to every purchase unless 
+you specify at least 1 template at purchase creation. </p>
+<h5 id='type-3'>»» type</h5>
+<p>Defines the format of the field, including how it will be shown to end users 
+and the types of values it will accept.  </p>
 
 <blockquote>
 <p>Example responses</p>
@@ -8332,10 +8392,10 @@ http
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -8351,10 +8411,10 @@ http
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -8364,7 +8424,7 @@ http
     </span><span class="s2">"failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"payout_failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"cost_range"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -8468,8 +8528,8 @@ http
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -8481,13 +8541,13 @@ http
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -8600,8 +8660,8 @@ http
             </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -8624,10 +8684,10 @@ http
           </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"collected_shares_amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -8646,8 +8706,8 @@ http
   </span><span class="s2">"needed_slots_to_min"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product_or_group_min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
 </span></code></pre><h3 id='properties'>Properties</h3>
 <table><thead>
@@ -8746,19 +8806,19 @@ http
 <td>status</td>
 <td>string</td>
 <td>false</td>
-<td>Current status of the purchase. One of: - created Purchase has been created by the Merchant. - active Purchase has been claimed by an organizer and is in process. - completed All payments have been successfully paid out to the Merchant for this Purchase. - canceled The Purchase has been canceled by the merchant or organizer and is not recoverable.</td>
+<td>Current status of the purchase. One of: - <code>created</code> Purchase has been created by the Merchant. - <code>active</code> Purchase has been claimed by an organizer and is in process. - <code>completed</code> All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made,  only refunds.  - <code>canceled</code> The Purchase has been canceled by the merchant or organizer and is not recoverable.</td>
 </tr>
 <tr>
 <td>refund_status</td>
 <td>string</td>
 <td>false</td>
-<td>Status that determines whether the Purchase is partially or fully refunded. One of: - none None of the Purchase&#39;s Memberships were refunded. - partial Some of the Purchase&#39;s Memberships were partially or fully refunded. - full All of the Purchase&#39;s Memberships were fully refunded.</td>
+<td>Status that describes whether the Purchase is partially or fully refunded. One of: - <code>none</code> None of the Purchase&#39;s Memberships were refunded. - <code>partial</code> Some of the Purchase&#39;s Memberships were partially or fully refunded. - <code>full</code> All of the Purchase&#39;s Memberships were fully refunded.</td>
 </tr>
 <tr>
 <td>processing_refund</td>
 <td>boolean</td>
 <td>false</td>
-<td>Determines whether or not a refund is being processed for the purchase.</td>
+<td>Determines whether or not a refund is currently being processed for the purchase.</td>
 </tr>
 <tr>
 <td>tipped</td>
@@ -9562,7 +9622,7 @@ http
 <td>language_code</td>
 <td>string</td>
 <td>false</td>
-<td>Default language for this purchase. It is going to be used in the claim and commit steps; and as one of the fallbacks when detecting what language to show to the user</td>
+<td>Default 2-character language code for this purchase. It is going  to be used in the claim and commit steps; and as one of the  fallbacks when detecting what language to show to the user</td>
 </tr>
 <tr>
 <td>created_at</td>
@@ -10519,6 +10579,18 @@ http
 <td>fixed_per_person</td>
 </tr>
 <tr>
+<td>language_code</td>
+<td>DA (Danish)</td>
+</tr>
+<tr>
+<td>language_code</td>
+<td>EN (English)</td>
+</tr>
+<tr>
+<td>language_code</td>
+<td>ES (Spanish)</td>
+</tr>
+<tr>
 <td>» type</td>
 <td>text</td>
 </tr>
@@ -11066,10 +11138,10 @@ http
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -11738,8 +11810,8 @@ http
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -11751,8 +11823,8 @@ http
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
@@ -12099,8 +12171,8 @@ http
         </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -12123,10 +12195,10 @@ http
       </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
 </span></code></pre><h3 id='properties-16'>Properties</h3>
 <table><thead>
@@ -12884,8 +12956,8 @@ http
       </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
 </span></code></pre><h3 id='properties-18'>Properties</h3>
@@ -13133,7 +13205,7 @@ http
     </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
 </span></code></pre><h3 id='properties-20'>Properties</h3>
 <table><thead>
@@ -13234,7 +13306,7 @@ http
 <h2 id='group'>Group</h2>
 <p><a name="schemagroup"></a></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -13389,9 +13461,9 @@ http
       </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"processing_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"conversion_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
@@ -13835,8 +13907,8 @@ http
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-03T23:44:19Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:45:15Z"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
 </span></code></pre><h3 id='properties-26'>Properties</h3>
 <table><thead>
