@@ -28,6 +28,8 @@ Email: <a href="mailto:dev@paybygroup.com">Pay By Group</a>
 
 
 
+- Basic Authentication. Use your own Access Key and Secret Key.
+
 
 
 # purchases
@@ -47,706 +49,17 @@ for a useful overview.
 
 ```json
 [
-  {
-    "id": "string",
-    "slug": "string",
-    "merchant": {
-      "id": "string",
-      "unique_name": "string",
-      "display_name": "string",
-      "support_email": "user@example.com",
-      "support_phone": "string",
-      "logo_url": "string",
-      "defaults": {
-        "currency_code": "string",
-        "language_code": "string",
-        "timezone_code": "string",
-        "product_image_url": "string"
-      }
-    },
-    "status": "created",
-    "refund_status": "none",
-    "processing_refund": true,
-    "tipped": true,
-    "auto_pilot_enabled": true,
-    "auto_pilot_trigger_slots": 0,
-    "consumer_fields": [
-      {
-        "name": "string",
-        "label": "string",
-        "description": "string",
-        "type": "text",
-        "settings": {},
-        "scope": "member",
-        "default_value": "string"
-      }
-    ],
-    "consumer_field_values": [
-      {
-        "name": "string",
-        "scope": "member",
-        "required": true
-      }
-    ],
-    "consumer_field_schemas": [
-      {
-        "id": "string",
-        "name": "string",
-        "label": "string",
-        "scope": "member",
-        "required": true,
-        "type": "text"
-      }
-    ],
-    "has_consumer_field_schemas": true,
-    "currency_code": "string",
-    "payment_destination_id": "string",
-    "currency_config": {
-      "supported_payment_sources": [
-        {
-          "type": "credit_card",
-          "unsupported_cards": [
-            "string"
-          ]
-        }
-      ]
-    },
-    "payments": [
-      {
-        "id": "string",
-        "status": "pending",
-        "number": 0,
-        "percentage": 1,
-        "due_deadline": "2017-11-14T16:45:15Z",
-        "paid_at": "2017-11-14T16:45:15Z",
-        "accepted_at": "2017-11-14T16:45:15Z",
-        "submitted_at": "2017-11-14T16:45:15Z",
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "conversion_rate": 0,
-        "processing_currency": "string",
-        "failed": true,
-        "payout_failed": true
-      }
-    ],
-    "current_payment": {
-      "id": "string",
-      "status": "pending",
-      "number": 0,
-      "percentage": 1,
-      "due_deadline": "2017-11-14T16:45:15Z",
-      "paid_at": "2017-11-14T16:45:15Z",
-      "accepted_at": "2017-11-14T16:45:15Z",
-      "submitted_at": "2017-11-14T16:45:15Z",
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "conversion_rate": 0,
-      "processing_currency": "string",
-      "failed": true,
-      "payout_failed": true
-    },
-    "next_payment_due_deadline": "2017-11-14T16:45:15Z",
-    "cost_range": [
-      {
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "min_slots": 0,
-        "max_slots": 0
-      }
-    ],
-    "current_product_cost_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "current_total_cost_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "max_product_cost_by_slots": {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    },
-    "min_product_cost_by_slots": {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    },
-    "max_product_cost_by_amount": {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    },
-    "fees_structure": {
-      "currency_code": "string",
-      "payment_destination_type": "bank_account",
-      "consumer_fees": {
-        "per_share": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "per_share_max": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "per_share_min": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "percentage": 1
-      },
-      "merchant_service_fees": {
-        "per_share": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "per_purchase_max": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "percentage": 1
-      },
-      "merchant_processing_fees": {
-        "per_transaction": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "percentage": 1
-      }
-    },
-    "apply_consumer_fee_to_organizer": true,
-    "product": {
-      "images": [
-        {
-          "name": "string",
-          "version": "string",
-          "url": "string"
-        }
-      ],
-      "default_image_url": "string",
-      "allowed_split_types": "even_split",
-      "cost_type": "total",
-      "costs": [
-        {
-          "amount": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "min_slots": 0,
-          "max_slots": 0
-        }
-      ],
-      "description": "string",
-      "name": "string",
-      "end_datetime": "2017-11-14T16:45:15Z",
-      "start_datetime": "2017-11-14T16:45:15Z",
-      "external_purchase_id": "string",
-      "inventory_id": "string",
-      "link": "string",
-      "max_slots": 0,
-      "min_slots": 0,
-      "legal_documents": [
-        {
-          "id": "string",
-          "type": "tos",
-          "title": "string",
-          "content": "string",
-          "created_at": "2017-11-14T16:45:15Z",
-          "updated_at": "2017-11-14T16:45:15Z"
-        }
-      ]
-    },
-    "group": {
-      "commit_deadline": "2017-11-14T16:45:15Z",
-      "max_slots": 0,
-      "min_slots": 0,
-      "min_contribution": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "organizer_email": "user@example.com",
-      "organizer_full_name": "string",
-      "legal_document_ids": [
-        "string"
-      ],
-      "split_type": "even_split"
-    },
-    "memberships": [
-      {
-        "id": "string",
-        "status": "holdout",
-        "refund_status": "none",
-        "failed": true,
-        "short": true,
-        "role": "organizer",
-        "claimed_slots": 0,
-        "opt_in_marketing": true,
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "fees": {
-          "consumer_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "merchant_service_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          }
-        },
-        "consumer_field_values": {
-          "name": "string",
-          "scope": "member",
-          "required": true
-        },
-        "allowed_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "allowed_share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "allowed_fees": {
-          "consumer_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "merchant_service_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          }
-        },
-        "max_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "max_share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "max_fees": {
-          "consumer_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "merchant_service_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          }
-        },
-        "collected_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "collected_share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "current_contribution": {
-          "id": "string",
-          "status": "created",
-          "refund_status": "none",
-          "amount": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "share_amount": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "fees": {
-            "consumer_fee": {
-              "amount_cents": 0,
-              "currency_code": "string"
-            },
-            "merchant_service_fee": {
-              "amount_cents": 0,
-              "currency_code": "string"
-            }
-          },
-          "charged_at": "2017-11-14T16:45:15Z",
-          "failed_at": "2017-11-14T16:45:15Z",
-          "created_at": "string"
-        },
-        "user": {
-          "id": "string",
-          "email": "user@example.com",
-          "full_name": "string",
-          "first_name": "string",
-          "last_name": "string",
-          "avatar_url": "string",
-          "language_code": "string",
-          "created_at": "string"
-        },
-        "purchase_id": "string",
-        "payment_source": {
-          "id": "string",
-          "name": "string",
-          "type": "string",
-          "info": {
-            "account_name": "string",
-            "account_number": "string",
-            "account_holder_type": "string"
-          },
-          "created_at": "2017-11-14T16:45:15Z"
-        },
-        "committed_at": "2017-11-14T16:45:15Z",
-        "created_at": "2017-11-14T16:45:15Z"
-      }
-    ],
-    "collected_shares_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "committed_shares_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "committed_slots": 0,
-    "needed_amount_to_current_payment": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "needed_slots_to_min": 0,
-    "product_or_group_max_slots": 0,
-    "product_or_group_min_slots": 0,
-    "language_code": "DA (Danish)",
-    "created_at": "2017-11-14T16:45:15Z"
-  }
+  null
 ]
 ```
 <h3 id="RetrieveMerchantPurchases-responses">Responses</h3>
 
 Status|Meaning|Description|Schema
 ---|---|---|---|
-200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response.|Inline
-
-<h3 id="RetrieveMerchantPurchases-responseschema">Response Schema</h3>
-
-Status Code **200**
-
-Name|Type|Required|Description
----|---|---|---|---|
-anonymous|[[Purchase](#schemapurchase)]|false|No description
-» id|string(uuid)|false|Pay By Group UUID for this Purchase used for API calls
-» slug|string|false|Short, unique identifier of this Purchase for easy reference in the Business Portal and with end users 
-» merchant|[Merchant](#schemamerchant)|false|No description
-»» id|string(uuid)|false|Unique ID for the merchant.
-»» unique_name|string|false|Unique Pay By Group-assigned slug to identify this merchant
-»» display_name|string|false|Display name chosen by merchant for end users to see
-»» support_email|string(email)|false|Email provided for end users to contant the merchant
-»» support_phone|string|false|Phone provided for end users to contant the merchant
-»» logo_url|string|false|Logo provided by the merchant for display to end users
-»» defaults|[MerchantDefaults](#schemamerchantdefaults)|false|No description
-»»» currency_code|string|false|Default currency code for this merchant, which applies to new purchases where a currency is not specified 
-»»» language_code|string|false|Default language for this merchant, which applies to new purchases where a default language is not specified 
-»»» timezone_code|string|false|Default timezone code for this merchant, which applies to new datetimes created under the merchant's purchases where a time is not specified. 
-»»» product_image_url|string|false|URL of the default image for this merchant, which applies to new purchases where a purchase image is not specified. 
-» status|string|false|Current status of the purchase. One of: - `created` Purchase has been created by the Merchant. - `active` Purchase has been claimed by an organizer and is in process. - `completed` All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made,  only refunds.  - `canceled` The Purchase has been canceled by the merchant or organizer and is not recoverable. 
-» refund_status|string|false|Status that describes whether the Purchase is partially or fully refunded. One of: - `none` None of the Purchase's Memberships were refunded. - `partial` Some of the Purchase's Memberships were partially or fully refunded. - `full` All of the Purchase's Memberships were fully refunded. 
-» processing_refund|boolean|false|Determines whether or not a refund is currently being processed for the purchase.
-» tipped|boolean|false|The minimum required slots have been claimed for the organizer to submit payment
-» auto_pilot_enabled|boolean|false|The organizer has chosen to have payments triggered automatically as soon as the trigger_slots level they set is reached 
-» auto_pilot_trigger_slots|integer(int32)|false|The number of slots set by the organizer, which when reached, will automatically trigger payment submission 
-» has_consumer_field_schemas|boolean|false|Whether or not this purchase has any consumer field schema declared.
-» currency_code|string|false|3-letter currency code for all money values related to the Purchase
-» payment_destination_id|string(uuid)|false|ID of the payment destination that will receive all future payments made under this Purchase.
-» currency_config|object|false|All unsupported payment source types by this Purchase's payment destination, which members cannot use for their contributions 
-»» supported_payment_sources|[object]|false|List of supported payment sources based on the currency of this Purchase
-»»» type|string|false|Type of the supported payment source
-»»» unsupported_cards|[string]|false|List of unsupported credit cards for this particular payment source.
-» current_payment|[Payment](#schemapayment)|false|No description
-»» id|string(uuid)|false|Pay By Group UUID for this payment
-»» status|string|false|One of: - pending A planned future payment on the purchase. - active The currently active, next payment to be paid on the purchase - authorizing The constituent contributions that comprise this   payment are in the process of having their funds verified. - authorized All funds have been verified for this payment and it   awaits acceptance by the merchant. - captured All funds have been taken from group members for the   purchase and are awaiting payout to the merchant. - processing_payout The payout to the merchant is in process. - canceled This payment has been canceled. - paid All funds are paid out to the Payout Account. 
-»» number|integer(int32)|false|Number of this payment in the overall sequence of the purchase. It is 0 if the purchase has only 1 payment. 
-»» percentage|integer(int32)|false|Percent of the total purchase cost due for this payment, which must be an integer. All payments on a purchase must sum to 100. 
-»» due_deadline|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for the purchase to be valid. It is required for all payments after the first payment but may be passed for the first, or only, payment as well. 
-»» paid_at|string(date-time)|false|Timestamp when the payment is paid out to the merchant
-»» accepted_at|string(date-time)|false|Timestamp when the payment is accepted by the merchant
-»» submitted_at|string(date-time)|false|Timestamp when the payment is originally submitted by the organizer
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» conversion_rate|number(float)|false|If the currency of the purchase differs from the required currency of the payment destination then this is the conversion rate used to determine the transacted amount. 
-»» processing_currency|string|false|The required currency of the payment destination, which is the currency in which all transactions related to this payment occur 
-»» failed|boolean|false|true if any of the contributions under this payment are currently in a failed state
-»» payout_failed|boolean|false|true if the last attempt to perform a payout failed
-» next_payment_due_deadline|string(date-time)|false|This is the next due deadline set by the merchant for an upcoming payment
-» current_product_cost_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» current_total_cost_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» max_product_cost_by_slots|[ProductCost](#schemaproductcost)|false|No description
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-»» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-» min_product_cost_by_slots|[ProductCost](#schemaproductcost)|false|No description
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-»» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-» max_product_cost_by_amount|[ProductCost](#schemaproductcost)|false|No description
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-»» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-» fees_structure|[PurchaseFeesStructure](#schemapurchasefeesstructure)|false|No description
-»» currency_code|string|false|3-letter currency code for which this fee structure applies
-»» payment_destination_type|string|false|Payment destination identifier for which this fee structure applies
-»» consumer_fees|[ConsumerFeesStructure](#schemaconsumerfeesstructure)|false|No description
-»»» per_share|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» per_share_max|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» per_share_min|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» percentage|integer(int32)|false|Percentage applied to member's total share to determine fee
-»» merchant_service_fees|[MerchantServiceFeesStructure](#schemamerchantservicefeesstructure)|false|No description
-»»» per_share|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» per_purchase_max|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» percentage|integer(int32)|false|Percentage fee applied to each member's share
-»» merchant_processing_fees|[MerchantProcessingFeesStructure](#schemamerchantprocessingfeesstructure)|false|No description
-»»» per_transaction|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» percentage|integer(int32)|false|Percentage fee for each successful transaction sent through Pay By Group
-» apply_consumer_fee_to_organizer|boolean|false|Tells if consumer fee applies to the purchase's organizer
-» product|[Product](#schemaproduct)|false|No description
-»» default_image_url|string|false|The primary or default image for this product
-»» cost_type|string|false|Cost type that determines whether the product_costs amount(s) are: - per_slot The amount is per slot claimed in the Purchase so the   total amount paid to the merchant is a function of the number of   slots claimed by group members. - total A single total amount so long as the number of slots claimed   is in the allowed range for that amount. 
-»» description|string|false|Description of the product for this Purchase
-»» name|string|false|Name of the product being purchased as it should be shown to end users
-»» end_datetime|string(date-time)|false|End date time for the product being purchased (e.g. check-out date time, flight arrival date time, or activity ending time) 
-»» start_datetime|string(date-time)|false|Start date time for the product being purchased (e.g. check-in date time, flight departure date time, or event starting time) 
-»» external_purchase_id|string|false|ID supplied by the merchant that identifies this Purchase (e.g. order or booking) in the merchant's system 
-»» inventory_id|string|false|Inventory ID supplied by the merchant that identifies the product being bought in this Purchase (e.g. SKU or property ID) 
-»» link|string|false|Link to the product being purchased on the merchant's (or other third party's) website
-»» max_slots|integer(int32)|false|The maximum possible slots allowed by the merchant based on product_costs
-»» min_slots|integer(int32)|false|The minimum possible slots allowed by the merchant based on product_costs
-»» images|[[Image](#schemaimage)]|false|The set of images for this product
-»»» name|string|false|Filename of the image as provided by the merchant
-»»» version|string|false|Version of the image generated by PBG
-»»» url|string|false|No description
-»» allowed_split_types|[string]|false|Array of allowed split types
-»» costs|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots for each provided by the merchant 
-»»» amount|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-»»» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-»» legal_documents|[[LegalDocument](#schemalegaldocument)]|false|All legal documents attached to this purchase that must be agreed to by the group members
-»»» id|string(uuid)|false|Pay By Group UUID of this legal document
-»»» type|string|false|Specified by the merchant as either cancellation policy for cancellation and refund terms or tos for all other legal documents. 
-»»» title|string|false|Mechant's title for this legal document
-»»» content|string|false|Full content as provided by the merchant, either in plain text or as a URL
-»»» created_at|string(date-time)|false|When this legal document was added by the merchant
-»»» updated_at|string(date-time)|false|When this legal document was last updated by the merchant
-» group|[Group](#schemagroup)|false|No description
-»» commit_deadline|string(date-time)|false|Pay By Group-generated deadline that encourages invitees to commit to the group quickly. It auto-extends unless overriden by the merchant or organizer 
-»» max_slots|integer(int32)|false|The organizer-specified value for the maximum number of slots they will allow to be claimed. It must be within the bounds allowed by the merchant. 
-»» min_slots|integer(int32)|false|The organizer-specified value for the minimum number of slots they require to be claimed. It must be within the bounds allowed by the merchant. 
-»» min_contribution|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» organizer_email|string(email)|false|Email of the expected organizer as provided by the merchant
-»» organizer_full_name|string|false|Full name of the expected organizer as provided by the merchant
-»» split_type|string|false|Splitting type chosen by the organizer for how to divide the cost among group members. One of: - even_split Only compatible with total cost_type and means the   Purchase amount is split evenly across each slot claimed. - specified_per_person Only compatible with total cost_type and   means each member may pay a different amount. - fixed_per_person Only compatible with per_slot cost_type and means   each group member pays a fixed amount per slot they claim. 
-»» legal_document_ids|[string]|false|Array of legal document IDs that must be accepted by the members in this purchase
-» collected_shares_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» committed_shares_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» committed_slots|integer(int32)|false|Sum of all slots group members have claimed in the Purchase at this point
-» needed_amount_to_current_payment|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» needed_slots_to_min|integer(int32)|false|Number of slots group members must claim in order to meet the minimum required to submit the current payment 
-» product_or_group_max_slots|integer(int32)|false|The active minimum number of slots that must be claimed based on the parameters set by the merchant and organizer 
-» product_or_group_min_slots|integer(int32)|false|The active maximum number of slots that are allowed to be claimed based on the parameters set by the merchant and organizer 
-» language_code|string|false|Default 2-character language code for this purchase. It is going  to be used in the claim and commit steps; and as one of the  fallbacks when detecting what language to show to the user 
-» created_at|string(date-time)|false|Timestamp of when the Purchase was first created by the merchant
-» consumer_fields|[[ConsumerField](#schemaconsumerfield)]|false|Array of consumer fields for this Purchase
-»» name|string|false|No description
-»» label|string|false|No description
-»» description|string|false|No description
-»» type|string|false|No description
-»» settings|object|false|No description
-»» scope|string|false|No description
-»» default_value|string|false|No description
-» consumer_field_values|[[ConsumerFieldValue](#schemaconsumerfieldvalue)]|false|Array of values for each of the consumer fields defined.
-»» name|string|false|Name of the schema
-»» scope|string|false|One of member or purchase.
-»» required|boolean|false|Whether the schema field should be required or not.
-» consumer_field_schemas|[[ConsumerFieldSchema](#schemaconsumerfieldschema)]|false|List of consumer field schemas to use for the purchase
-»» id|string(uuid)|false|No description
-»» name|string|false|No description
-»» label|string|false|No description
-»» scope|string|false|Any of member or purchase.
-»» required|boolean|false|Whether the field for this schema should be required or not.
-»» type|string|false|No description
-» payments|[[Payment](#schemapayment)]|false|Full payment schedule as set by the merchant for this Purchase
-»» id|string(uuid)|false|Pay By Group UUID for this payment
-»» status|string|false|One of: - pending A planned future payment on the purchase. - active The currently active, next payment to be paid on the purchase - authorizing The constituent contributions that comprise this   payment are in the process of having their funds verified. - authorized All funds have been verified for this payment and it   awaits acceptance by the merchant. - captured All funds have been taken from group members for the   purchase and are awaiting payout to the merchant. - processing_payout The payout to the merchant is in process. - canceled This payment has been canceled. - paid All funds are paid out to the Payout Account. 
-»» number|integer(int32)|false|Number of this payment in the overall sequence of the purchase. It is 0 if the purchase has only 1 payment. 
-»» percentage|integer(int32)|false|Percent of the total purchase cost due for this payment, which must be an integer. All payments on a purchase must sum to 100. 
-»» due_deadline|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for the purchase to be valid. It is required for all payments after the first payment but may be passed for the first, or only, payment as well. 
-»» paid_at|string(date-time)|false|Timestamp when the payment is paid out to the merchant
-»» accepted_at|string(date-time)|false|Timestamp when the payment is accepted by the merchant
-»» submitted_at|string(date-time)|false|Timestamp when the payment is originally submitted by the organizer
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» conversion_rate|number(float)|false|If the currency of the purchase differs from the required currency of the payment destination then this is the conversion rate used to determine the transacted amount. 
-»» processing_currency|string|false|The required currency of the payment destination, which is the currency in which all transactions related to this payment occur 
-»» failed|boolean|false|true if any of the contributions under this payment are currently in a failed state
-»» payout_failed|boolean|false|true if the last attempt to perform a payout failed
-» cost_range|[[ProductCost](#schemaproductcost)]|false|The range of possible costs for this product based on the product_costs merchant provides
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-»» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-» memberships|[[Membership](#schemamembership)]|false|Array that includes all members in this Purchase without their contributions.
-»» id|string|false|Pay By Group UUID for this membership
-»» status|string|false|One of: - holdout (user has been invited but not joined the group); - committed (user has joined the group and whether they have been charged is in the contribution object); 
-»» refund_status|string|false|Status that determines whether the Membership is partially or fully refunded. One of: - none (none of the Membership's Contributions were refunded). - partial (some of the Membership's Contributions were partially   or fully refunded). - full (all of the Membership's Contributions were fully refunded). 
-»» failed|boolean|false|User is currently in the group with a failed payment method, which is preventing the purchase from completing 
-»» short|boolean|false|The user is currently in the group but has not agreed to pay their new required share amount due to updates to the purchase. 
-»» role|string|false|Either organizer or invitee
-»» claimed_slots|integer(int32)|false|Number of slots the member has claimed in the group. Defaults to 1 if none is selected by the user.
-»» opt_in_marketing|boolean|false|true if the user has opted in to receive marketing communication from the merchant. Otherwise false.
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» share_amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» fees|[Fees](#schemafees)|false|No description
-»»» consumer_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»» consumer_field_values|[ConsumerFieldValue](#schemaconsumerfieldvalue)|false|No description
-»»» name|string|false|Name of the schema
-»»» scope|string|false|One of member or purchase.
-»»» required|boolean|false|Whether the schema field should be required or not.
-»» allowed_amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» allowed_share_amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» allowed_fees|[Fees](#schemafees)|false|No description
-»»» consumer_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»» max_amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» max_share_amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» max_fees|[Fees](#schemafees)|false|No description
-»»» consumer_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»» collected_amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» collected_share_amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» current_contribution|[Contribution](#schemacontribution)|false|No description
-»»» id|string|false|UUID of this contribution
-»»» status|string|false|Current status of the contribution, any of created, authorized, captured, holdout or failed
-»»» refund_status|string|false|Status that determines whether the Contribution is partially or fully refunded. One of: - none (none of the Contribution's Transactions were refunded). - partial (some of the Contribution's Transactions were partially   or fully refunded). - full (all of the Contribution's Transactions were fully refunded). 
-»»» amount|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» share_amount|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» fees|[Fees](#schemafees)|false|No description
-»»»» consumer_fee|[Money](#schemamoney)|false|No description
-»»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» charged_at|string(date-time)|false|Timestamp of when this contibution was charged
-»»» failed_at|string(date-time)|false|Timestamp of when this contribution most recently failed
-»»» created_at|string|false|Timestamp when the record of this contribution was first created, which is not necessarily when it was charged 
-»» user|[User](#schemauser)|false|No description
-»»» id|string(uuid)|false|Pay By Group UUID for this user
-»»» email|string(email)|false|User's email address
-»»» full_name|string|false|User's full name
-»»» first_name|string|false|User's first name
-»»» last_name|string|false|User's last name
-»»» avatar_url|string|false|URL of the User's avatar
-»»» language_code|string|false|The preferred language selected by this user
-»»» created_at|string(uuid)|false|No description
-»» purchase_id|string(uuid)|false|Pay By Group slug of the purchase to which this membership is tied
-»» payment_source|[PaymentSource](#schemapaymentsource)|false|No description
-»»» id|string(uuid)|false|Pay By Group UUID of this payment source
-»»» name|string|false|Full name of this payment source's owner
-»»» type|string|false|Describes the type of payment source, any of credit_card or bank_account
-»»» info|object|false|Bank account information of this payment source
-»»»» account_name|string|false|Listed name of the account holder
-»»»» account_number|string|false|Account number
-»»»» account_holder_type|string|false|Either a business or individual
-»»» created_at|string(date-time)|false|Timestamp when the payment source was first added to the system
-»» committed_at|string(date-time)|false|Timestamp of when the member agreed to pay into the purchase
-»» created_at|string(date-time)|false|When the membership was first created
-
-
+200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response.|[[Purchase](#schemapurchase)]
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## CreatePurchase
@@ -818,28 +131,28 @@ for a list of all calls to use for a fully embedded experience.
 
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
-body|body|object|true|No description
+body|body|object|true|Request body object.
 » product|body|object|false|All parameters describing what is being purchased
 »» name|body|string|false|Name of the product being purchased as it should be shown to end users
-»» cost_type|body|string|false|Cost type that determines whether the product_costs amount(s) are for the whole group or per slot.
+»» cost_type|body|string|false|Cost type that determines whether the product_costs amount(s) are for the whole group or per slot.<br/>-`per_slot` The product cost provided is for each slot a Member commits to in the Purchase, <br/>  so the total amount paid to the merchant is a function of the number of<br/>  slots claimed by all group members.<br/>-`total` The product cost is single total amount so long as <br/>  the number of slots claimed <br/>  is in the allowed range for that amount.<br/>
 »» description|body|string|false|Description of the product for this Purchase
-»» default_image_url|body|string|false|The primary image to display to users for this product. The 
-»» inventory_id|body|string|false|Inventory ID supplied by the merchant that identifies the product
+»» default_image_url|body|string|false|The primary image to display to users for this product. The <br/>merchant default image applies if none is provided. Use the <br/>[CreatePurchaseImages](#createpurchaseimages) call to add an image using the API.<br/>
+»» inventory_id|body|string|false|Inventory ID supplied by the merchant that identifies the product<br/>being bought in this Purchase (e.g. SKU or property ID)<br/>
 »» link|body|string|false|Link to the product being purchased on the merchant's (or other third party's) website
-»» start_datetime|body|string(date-time)|false|Start date time for the product being purchased
-»» end_datetime|body|string(date-time)|false|End date time for the product being purchased
-»» external_purchase_id|body|string|false|ID supplied by the merchant that identifies this Purchase
-»» costs|body|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots
+»» start_datetime|body|string(date-time)|false|Start date time for the product being purchased<br/>(e.g. check-in date time, flight departure date time, or event<br/>starting time)<br/>
+»» end_datetime|body|string(date-time)|false|End date time for the product being purchased<br/>(e.g. check-out date time, flight arrival date time, or activity<br/>ending time)<br/>
+»» external_purchase_id|body|string|false|ID supplied by the merchant that identifies this Purchase<br/>(e.g. order or booking) in the merchant's system<br/>
+»» costs|body|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. The currency of the product cost <br/>determines the currency of the purchase. <br/>
 » group|body|object|false|All parameters describing the particular setup of this group
 »» organizer_full_name|body|string|false|Full name of the expected organizer as provided by the merchant
 »» organizer_email|body|string(email)|false|Email of the expected organizer as provided by the merchant
-»» legal_document_ids|body|[string]|false|Array of [legal document IDs](#legaldocument) 
-» language_code|body|string|false|Default language for this purchase. It is going to be used in the
-» payment_destination_id|body|string(uuid)|false|ID of the payment destination that will receive all future payments
+»» legal_document_ids|body|[string]|false|Array of [legal document IDs](#legaldocument) <br/>that must be accepted by the members in this purchase. If no values are passed, the default Legal <br/>Documents will be attached to the Purchase. If one or more value is passed, it will override all defaults. <br/>
+» language_code|body|string|false|Default language for this purchase. It is going to be used in the<br/>claim and commit steps; and as one of the fallbacks when detecting<br/>what language to show to the user<br/>
+» payment_destination_id|body|string(uuid)|false|ID of the payment destination that will receive all future payments<br/>made under this Purchase.<br/>
 » payments|body|[object]|false|Breakdown of payment amounts and deadlines due over time for this purchase
-»» percentage|body|integer(int32)|true|Percent of the total purchase cost due for this payment, which must
-»» due_deadline|body|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for
-» consumer_field_schemas|body|[object]|false|The set of consumer fields that should be attached to this purchase, by name, 
+»» percentage|body|integer(int32)|true|Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are <br/>not doing installment or deposit payments, this is most likely "100". <br/>If no payments are passed, then by default a single payment for "100" <br/>percent with no `due_deadline` will be created.<br/>
+»» due_deadline|body|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for<br/>the purchase to be valid. It is required for all payments after <br/>the first payment but may be passed for the first, or only, payment as well.<br/>
+» consumer_field_schemas|body|[object]|false|The set of consumer fields that should be attached to this purchase, by name, <br/>and their accompanying options. If any consumer_field_schemas are passed, then <br/>they override all default consumer_field_templates for the merchant.                   <br/>
 »» name|body|string|false|The name of the consumer_field_template you want to attach to the purchase. Values set in the template apply as default unless overriden here.
 »» scope|body|string|false|Determines whether all group members complete this field or only the organizer does on behalf of the whole purchase
 »» required|body|boolean|false|Whether the field for this schema should be required or not.
@@ -854,128 +167,47 @@ body|body|object|true|No description
 »» scope|member|
 »» scope|purchase|
 
-##### »» cost_type
-Cost type that determines whether the product_costs amount(s) are for the whole group or per slot.
--`per_slot` The product cost provided is for each slot a Member commits to in the Purchase, 
-  so the total amount paid to the merchant is a function of the number of
-  slots claimed by all group members.
--`total` The product cost is single total amount so long as 
-  the number of slots claimed 
-  is in the allowed range for that amount.
-
-##### »» default_image_url
-The primary image to display to users for this product. The 
-merchant default image applies if none is provided. Use the 
-[CreatePurchaseImages](#createpurchaseimages) call to add an image using the API.
-
-##### »» inventory_id
-Inventory ID supplied by the merchant that identifies the product
-being bought in this Purchase (e.g. SKU or property ID)
-
-##### »» start_datetime
-Start date time for the product being purchased
-(e.g. check-in date time, flight departure date time, or event
-starting time)
-
-##### »» end_datetime
-End date time for the product being purchased
-(e.g. check-out date time, flight arrival date time, or activity
-ending time)
-
-##### »» external_purchase_id
-ID supplied by the merchant that identifies this Purchase
-(e.g. order or booking) in the merchant's system
-
-##### »» costs
-The set of product_costs and the optional allowed range(s) of slots
-for each cost as provided by the merchant. The currency of the product cost 
-determines the currency of the purchase. 
-
-##### »» legal_document_ids
-Array of [legal document IDs](#legaldocument) 
-that must be accepted by the members in this purchase. If no values are passed, the default Legal 
-Documents will be attached to the Purchase. If one or more value is passed, it will override all defaults. 
-
-##### » language_code
-Default language for this purchase. It is going to be used in the
-claim and commit steps; and as one of the fallbacks when detecting
-what language to show to the user
-
-##### » payment_destination_id
-ID of the payment destination that will receive all future payments
-made under this Purchase.
-
-##### »» percentage
-Percent of the total purchase cost due for this payment, which must
-be an integer. All payments on a purchase must sum to 100. If you are 
-not doing installment or deposit payments, this is most likely "100".
-
-##### »» due_deadline
-Datetime by when this payment must be submitted to the merchant for
-the purchase to be valid. It is required for all payments after 
-the first payment but may be passed for the first, or only, payment as well.
-
-##### » consumer_field_schemas
-The set of consumer fields that should be attached to this purchase, by name, 
-and their accompanying options. If any consumer_field_schemas are passed, then 
-they override all default consumer_field_templates for the merchant.                   
-
 > Example responses
 
 ```json
 {
   "id": "string",
   "slug": "string",
-  "merchant": {
-    "id": "string",
-    "unique_name": "string",
-    "display_name": "string",
-    "support_email": "user@example.com",
-    "support_phone": "string",
-    "logo_url": "string",
-    "defaults": {
-      "currency_code": "string",
-      "language_code": "string",
-      "timezone_code": "string",
-      "product_image_url": "string"
-    }
-  },
+  "merchant": null,
   "status": "created",
-  "refund_status": "none",
-  "processing_refund": true,
+  "currency_code": "string",
+  "payments": [
+    null
+  ],
+  "current_payment": null,
+  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
+  "product": null,
+  "group": null,
+  "memberships": [
+    null
+  ],
+  "collected_shares_amount": null,
+  "committed_shares_amount": null,
+  "needed_amount_to_current_payment": null,
+  "committed_slots": 0,
+  "needed_slots_to_min": 0,
+  "product_or_group_min_slots": 0,
+  "product_or_group_max_slots": 0,
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "consumer_fields": [
-    {
-      "name": "string",
-      "label": "string",
-      "description": "string",
-      "type": "text",
-      "settings": {},
-      "scope": "member",
-      "default_value": "string"
-    }
-  ],
-  "consumer_field_values": [
-    {
-      "name": "string",
-      "scope": "member",
-      "required": true
-    }
+  "current_product_cost_amount": null,
+  "current_total_cost_amount": null,
+  "cost_range": [
+    null
   ],
   "consumer_field_schemas": [
-    {
-      "id": "string",
-      "name": "string",
-      "label": "string",
-      "scope": "member",
-      "required": true,
-      "type": "text"
-    }
+    null
   ],
   "has_consumer_field_schemas": true,
-  "currency_code": "string",
+  "consumer_field_values": [
+    null
+  ],
   "payment_destination_id": "string",
   "currency_config": {
     "supported_payment_sources": [
@@ -987,328 +219,12 @@ they override all default consumer_field_templates for the merchant.
       }
     ]
   },
-  "payments": [
-    {
-      "id": "string",
-      "status": "pending",
-      "number": 0,
-      "percentage": 1,
-      "due_deadline": "2017-11-14T16:45:15Z",
-      "paid_at": "2017-11-14T16:45:15Z",
-      "accepted_at": "2017-11-14T16:45:15Z",
-      "submitted_at": "2017-11-14T16:45:15Z",
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "conversion_rate": 0,
-      "processing_currency": "string",
-      "failed": true,
-      "payout_failed": true
-    }
-  ],
-  "current_payment": {
-    "id": "string",
-    "status": "pending",
-    "number": 0,
-    "percentage": 1,
-    "due_deadline": "2017-11-14T16:45:15Z",
-    "paid_at": "2017-11-14T16:45:15Z",
-    "accepted_at": "2017-11-14T16:45:15Z",
-    "submitted_at": "2017-11-14T16:45:15Z",
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "conversion_rate": 0,
-    "processing_currency": "string",
-    "failed": true,
-    "payout_failed": true
-  },
-  "next_payment_due_deadline": "2017-11-14T16:45:15Z",
-  "cost_range": [
-    {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    }
-  ],
-  "current_product_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "current_total_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "max_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "min_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "max_product_cost_by_amount": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "fees_structure": {
-    "currency_code": "string",
-    "payment_destination_type": "bank_account",
-    "consumer_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_min": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_service_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_purchase_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_processing_fees": {
-      "per_transaction": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    }
-  },
+  "refund_status": "none",
+  "processing_refund": true,
+  "fees_structure": null,
   "apply_consumer_fee_to_organizer": true,
-  "product": {
-    "images": [
-      {
-        "name": "string",
-        "version": "string",
-        "url": "string"
-      }
-    ],
-    "default_image_url": "string",
-    "allowed_split_types": "even_split",
-    "cost_type": "total",
-    "costs": [
-      {
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "min_slots": 0,
-        "max_slots": 0
-      }
-    ],
-    "description": "string",
-    "name": "string",
-    "end_datetime": "2017-11-14T16:45:15Z",
-    "start_datetime": "2017-11-14T16:45:15Z",
-    "external_purchase_id": "string",
-    "inventory_id": "string",
-    "link": "string",
-    "max_slots": 0,
-    "min_slots": 0,
-    "legal_documents": [
-      {
-        "id": "string",
-        "type": "tos",
-        "title": "string",
-        "content": "string",
-        "created_at": "2017-11-14T16:45:15Z",
-        "updated_at": "2017-11-14T16:45:15Z"
-      }
-    ]
-  },
-  "group": {
-    "commit_deadline": "2017-11-14T16:45:15Z",
-    "max_slots": 0,
-    "min_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "organizer_email": "user@example.com",
-    "organizer_full_name": "string",
-    "legal_document_ids": [
-      "string"
-    ],
-    "split_type": "even_split"
-  },
-  "memberships": [
-    {
-      "id": "string",
-      "status": "holdout",
-      "refund_status": "none",
-      "failed": true,
-      "short": true,
-      "role": "organizer",
-      "claimed_slots": 0,
-      "opt_in_marketing": true,
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "consumer_field_values": {
-        "name": "string",
-        "scope": "member",
-        "required": true
-      },
-      "allowed_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "max_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "collected_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "collected_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "current_contribution": {
-        "id": "string",
-        "status": "created",
-        "refund_status": "none",
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "fees": {
-          "consumer_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "merchant_service_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          }
-        },
-        "charged_at": "2017-11-14T16:45:15Z",
-        "failed_at": "2017-11-14T16:45:15Z",
-        "created_at": "string"
-      },
-      "user": {
-        "id": "string",
-        "email": "user@example.com",
-        "full_name": "string",
-        "first_name": "string",
-        "last_name": "string",
-        "avatar_url": "string",
-        "language_code": "string",
-        "created_at": "string"
-      },
-      "purchase_id": "string",
-      "payment_source": {
-        "id": "string",
-        "name": "string",
-        "type": "string",
-        "info": {
-          "account_name": "string",
-          "account_number": "string",
-          "account_holder_type": "string"
-        },
-        "created_at": "2017-11-14T16:45:15Z"
-      },
-      "committed_at": "2017-11-14T16:45:15Z",
-      "created_at": "2017-11-14T16:45:15Z"
-    }
-  ],
-  "collected_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_slots": 0,
-  "needed_amount_to_current_payment": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "needed_slots_to_min": 0,
-  "product_or_group_max_slots": 0,
-  "product_or_group_min_slots": 0,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-14T16:45:15Z"
+  "created_at": "2017-11-22T06:40:01Z"
 }
 ```
 <h3 id="CreatePurchase-responses">Responses</h3>
@@ -1318,8 +234,7 @@ Status|Meaning|Description|Schema
 201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|Created response.|[Purchase](#schemapurchase)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## RetrievePurchase
@@ -1343,56 +258,41 @@ id|path|string(uuid)|true|Purchase ID to fetch
 {
   "id": "string",
   "slug": "string",
-  "merchant": {
-    "id": "string",
-    "unique_name": "string",
-    "display_name": "string",
-    "support_email": "user@example.com",
-    "support_phone": "string",
-    "logo_url": "string",
-    "defaults": {
-      "currency_code": "string",
-      "language_code": "string",
-      "timezone_code": "string",
-      "product_image_url": "string"
-    }
-  },
+  "merchant": null,
   "status": "created",
-  "refund_status": "none",
-  "processing_refund": true,
+  "currency_code": "string",
+  "payments": [
+    null
+  ],
+  "current_payment": null,
+  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
+  "product": null,
+  "group": null,
+  "memberships": [
+    null
+  ],
+  "collected_shares_amount": null,
+  "committed_shares_amount": null,
+  "needed_amount_to_current_payment": null,
+  "committed_slots": 0,
+  "needed_slots_to_min": 0,
+  "product_or_group_min_slots": 0,
+  "product_or_group_max_slots": 0,
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "consumer_fields": [
-    {
-      "name": "string",
-      "label": "string",
-      "description": "string",
-      "type": "text",
-      "settings": {},
-      "scope": "member",
-      "default_value": "string"
-    }
-  ],
-  "consumer_field_values": [
-    {
-      "name": "string",
-      "scope": "member",
-      "required": true
-    }
+  "current_product_cost_amount": null,
+  "current_total_cost_amount": null,
+  "cost_range": [
+    null
   ],
   "consumer_field_schemas": [
-    {
-      "id": "string",
-      "name": "string",
-      "label": "string",
-      "scope": "member",
-      "required": true,
-      "type": "text"
-    }
+    null
   ],
   "has_consumer_field_schemas": true,
-  "currency_code": "string",
+  "consumer_field_values": [
+    null
+  ],
   "payment_destination_id": "string",
   "currency_config": {
     "supported_payment_sources": [
@@ -1404,328 +304,12 @@ id|path|string(uuid)|true|Purchase ID to fetch
       }
     ]
   },
-  "payments": [
-    {
-      "id": "string",
-      "status": "pending",
-      "number": 0,
-      "percentage": 1,
-      "due_deadline": "2017-11-14T16:45:15Z",
-      "paid_at": "2017-11-14T16:45:15Z",
-      "accepted_at": "2017-11-14T16:45:15Z",
-      "submitted_at": "2017-11-14T16:45:15Z",
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "conversion_rate": 0,
-      "processing_currency": "string",
-      "failed": true,
-      "payout_failed": true
-    }
-  ],
-  "current_payment": {
-    "id": "string",
-    "status": "pending",
-    "number": 0,
-    "percentage": 1,
-    "due_deadline": "2017-11-14T16:45:15Z",
-    "paid_at": "2017-11-14T16:45:15Z",
-    "accepted_at": "2017-11-14T16:45:15Z",
-    "submitted_at": "2017-11-14T16:45:15Z",
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "conversion_rate": 0,
-    "processing_currency": "string",
-    "failed": true,
-    "payout_failed": true
-  },
-  "next_payment_due_deadline": "2017-11-14T16:45:15Z",
-  "cost_range": [
-    {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    }
-  ],
-  "current_product_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "current_total_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "max_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "min_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "max_product_cost_by_amount": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "fees_structure": {
-    "currency_code": "string",
-    "payment_destination_type": "bank_account",
-    "consumer_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_min": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_service_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_purchase_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_processing_fees": {
-      "per_transaction": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    }
-  },
+  "refund_status": "none",
+  "processing_refund": true,
+  "fees_structure": null,
   "apply_consumer_fee_to_organizer": true,
-  "product": {
-    "images": [
-      {
-        "name": "string",
-        "version": "string",
-        "url": "string"
-      }
-    ],
-    "default_image_url": "string",
-    "allowed_split_types": "even_split",
-    "cost_type": "total",
-    "costs": [
-      {
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "min_slots": 0,
-        "max_slots": 0
-      }
-    ],
-    "description": "string",
-    "name": "string",
-    "end_datetime": "2017-11-14T16:45:15Z",
-    "start_datetime": "2017-11-14T16:45:15Z",
-    "external_purchase_id": "string",
-    "inventory_id": "string",
-    "link": "string",
-    "max_slots": 0,
-    "min_slots": 0,
-    "legal_documents": [
-      {
-        "id": "string",
-        "type": "tos",
-        "title": "string",
-        "content": "string",
-        "created_at": "2017-11-14T16:45:15Z",
-        "updated_at": "2017-11-14T16:45:15Z"
-      }
-    ]
-  },
-  "group": {
-    "commit_deadline": "2017-11-14T16:45:15Z",
-    "max_slots": 0,
-    "min_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "organizer_email": "user@example.com",
-    "organizer_full_name": "string",
-    "legal_document_ids": [
-      "string"
-    ],
-    "split_type": "even_split"
-  },
-  "memberships": [
-    {
-      "id": "string",
-      "status": "holdout",
-      "refund_status": "none",
-      "failed": true,
-      "short": true,
-      "role": "organizer",
-      "claimed_slots": 0,
-      "opt_in_marketing": true,
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "consumer_field_values": {
-        "name": "string",
-        "scope": "member",
-        "required": true
-      },
-      "allowed_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "max_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "collected_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "collected_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "current_contribution": {
-        "id": "string",
-        "status": "created",
-        "refund_status": "none",
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "fees": {
-          "consumer_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "merchant_service_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          }
-        },
-        "charged_at": "2017-11-14T16:45:15Z",
-        "failed_at": "2017-11-14T16:45:15Z",
-        "created_at": "string"
-      },
-      "user": {
-        "id": "string",
-        "email": "user@example.com",
-        "full_name": "string",
-        "first_name": "string",
-        "last_name": "string",
-        "avatar_url": "string",
-        "language_code": "string",
-        "created_at": "string"
-      },
-      "purchase_id": "string",
-      "payment_source": {
-        "id": "string",
-        "name": "string",
-        "type": "string",
-        "info": {
-          "account_name": "string",
-          "account_number": "string",
-          "account_holder_type": "string"
-        },
-        "created_at": "2017-11-14T16:45:15Z"
-      },
-      "committed_at": "2017-11-14T16:45:15Z",
-      "created_at": "2017-11-14T16:45:15Z"
-    }
-  ],
-  "collected_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_slots": 0,
-  "needed_amount_to_current_payment": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "needed_slots_to_min": 0,
-  "product_or_group_max_slots": 0,
-  "product_or_group_min_slots": 0,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-14T16:45:15Z"
+  "created_at": "2017-11-22T06:40:01Z"
 }
 ```
 ```json
@@ -1746,8 +330,7 @@ Status|Meaning|Description|Schema
 404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not found|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## UpdatePurchase
@@ -1773,18 +356,11 @@ You can not update `payments` or `product_costs` after you have accepted at leas
     "default_image_url": "string",
     "inventory_id": "string",
     "link": "string",
-    "start_datetime": "2017-11-14T16:45:15Z",
-    "end_datetime": "2017-11-14T16:45:15Z",
+    "start_datetime": "2017-11-22T06:40:01Z",
+    "end_datetime": "2017-11-22T06:40:01Z",
     "external_purchase_id": "string",
     "costs": [
-      {
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "min_slots": 0,
-        "max_slots": 0
-      }
+      null
     ]
   },
   "group": {
@@ -1796,15 +372,12 @@ You can not update `payments` or `product_costs` after you have accepted at leas
     "split_type": "even_split",
     "min_slots": 0,
     "max_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    }
+    "min_contribution": null
   },
   "payments": [
     {
       "percentage": 1,
-      "due_deadline": "2017-11-14T16:45:15Z"
+      "due_deadline": "2017-11-22T06:40:01Z"
     }
   ],
   "language_code": "DA (Danish)",
@@ -1816,30 +389,30 @@ You can not update `payments` or `product_costs` after you have accepted at leas
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 id|path|string(uuid)|true|ID of the Purchase to update.
-body|body|object|true|No description
+body|body|object|true|Request body object.
 » product|body|object|false|No description
 »» name|body|string|false|Name of the product being purchased as it should be shown to end users
 »» description|body|string|false|Description of the product for this Purchase
 »» default_image_url|body|string|false|The primary image to display for this product
-»» inventory_id|body|string|false|Inventory ID supplied by the merchant that identifies the product
+»» inventory_id|body|string|false|Inventory ID supplied by the merchant that identifies the product<br/>being bought in this Purchase (e.g. SKU or property ID)<br/>
 »» link|body|string|false|Link to the product being purchased on the merchant's (or other third party's) website
-»» start_datetime|body|string(date-time)|false|Start date time for the product being purchased
-»» end_datetime|body|string(date-time)|false|End date time for the product being purchased
-»» external_purchase_id|body|string|false|ID supplied by the merchant that identifies this Purchase
-»» costs|body|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots
+»» start_datetime|body|string(date-time)|false|Start date time for the product being purchased<br/>(e.g. check-in date time, flight departure date time, or event<br/>starting time)<br/>
+»» end_datetime|body|string(date-time)|false|End date time for the product being purchased<br/>(e.g. check-out date time, flight arrival date time, or activity<br/>ending time)<br/>
+»» external_purchase_id|body|string|false|ID supplied by the merchant that identifies this Purchase<br/>(e.g. order or booking) in the merchant's system<br/>
+»» costs|body|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. When updating the product_costs, <br/>you cannot use a different currency than the existing one after the purchase <br/>has been claimed. You cannot edit the range of slots to be less than the current <br/>number of committed slots. <br/>
 » group|body|object|false|All parameters configuring the group, including those set by the organizer at the claim step.
-»» organizer_full_name|body|string|false|Full name of the expected organizer as provided by the merchant. This will only affect information 
-»» organizer_email|body|string(email)|false|Email of the expected organizer as provided by the merchant. This will only affect information 
-»» split_type|body|string|false|Splitting type chosen by the organizer for how to divide the cost
-»» min_slots|body|integer(int32)|false|The organizer-specified value for the minimum number of slots they
-»» max_slots|body|integer(int32)|false|The organizer-specified value for the maximum number of slots they
-»» min_contribution|body|[Money](#schemamoney)|false|Minimum required contribution from each group member. 
-»» legal_document_ids|body|[string]|false|Array of legal document IDs that must be accepted by the members in this purchase. These should NOT 
-» language_code|body|string|false|Default 2-character language code for this purchase. It is going 
-» payment_destination_id|body|string(uuid)|false|ID of the payment destination that will receive all future payments
-» payments|body|[object]|false|Breakdown of payment amounts and deadlines due over time for this Purchase. 
-»» percentage|body|integer(int32)|true|Percent of the total purchase cost due for this payment, which must
-»» due_deadline|body|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for
+»» organizer_full_name|body|string|false|Full name of the expected organizer as provided by the merchant. This will only affect information <br/>displayed to the merchant if updated after the Purchase is claimed. <br/>
+»» organizer_email|body|string(email)|false|Email of the expected organizer as provided by the merchant. This will only affect information <br/>displayed to the merchant if updated after the Purchase is claimed. <br/>
+»» split_type|body|string|false|Splitting type chosen by the organizer for how to divide the cost<br/>among group members.<br/>One of:<br/>-`even_split` Only compatible with total cost_type and means the<br/>  Purchase amount is split evenly across each slot claimed.<br/>-`specified_per_person` Only compatible with total cost_type and<br/>  means each member may pay a different amount.<br/>-`fixed_per_person` Only compatible with per_slot cost_type and means<br/>  each group member pays a fixed amount per slot they claim.<br/>
+»» min_slots|body|integer(int32)|false|The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with `even_split` and `fixed_per_person` split types. <br/>
+»» max_slots|body|integer(int32)|false|The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with `even_split` and `fixed_per_person` split types. <br/>
+»» min_contribution|body|[Money](#schemamoney)|false|Minimum required contribution from each group member. <br/>Only compatible with `specified_per_person` split type.<br/>
+»» legal_document_ids|body|[string]|false|Array of legal document IDs that must be accepted by the members in this purchase. These should NOT <br/>be updated after a Purchase has been claimed because then some members will end up with different <br/>accepted legal terms from others. <br/>
+» language_code|body|string|false|Default 2-character language code for this purchase. It is going <br/>to be used in the claim and commit steps; and as one of the <br/>fallbacks when detecting what language to show to the user<br/>
+» payment_destination_id|body|string(uuid)|false|ID of the payment destination that will receive all future payments<br/>made under this Purchase. NOTE: updating this value will not affect <br/>any previously accepted payments on this purchase. <br/>
+» payments|body|[object]|false|Breakdown of payment amounts and deadlines due over time for this Purchase. <br/>They can only be updated if no payment has yet been accepted by the merchant for this Purchase.. <br/>
+»» percentage|body|integer(int32)|true|Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are <br/>not doing installment or deposit payments, this is most likely "100".<br/>
+»» due_deadline|body|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for<br/>the purchase to be valid. It is required for all payments after <br/>the first payment but may be passed for the first, or only, payment as well.<br/>
 
 
 #### Enumerated Values
@@ -1853,149 +426,47 @@ body|body|object|true|No description
 » language_code|EN (English)|
 » language_code|ES (Spanish)|
 
-##### »» inventory_id
-Inventory ID supplied by the merchant that identifies the product
-being bought in this Purchase (e.g. SKU or property ID)
-
-##### »» start_datetime
-Start date time for the product being purchased
-(e.g. check-in date time, flight departure date time, or event
-starting time)
-
-##### »» end_datetime
-End date time for the product being purchased
-(e.g. check-out date time, flight arrival date time, or activity
-ending time)
-
-##### »» external_purchase_id
-ID supplied by the merchant that identifies this Purchase
-(e.g. order or booking) in the merchant's system
-
-##### »» costs
-The set of product_costs and the optional allowed range(s) of slots
-for each cost as provided by the merchant. When updating the product_costs, 
-you cannot use a different currency than the existing one after the purchase 
-has been claimed. You cannot edit the range of slots to be less than the current 
-number of committed slots. 
-
-##### »» organizer_full_name
-Full name of the expected organizer as provided by the merchant. This will only affect information 
-displayed to the merchant if updated after the Purchase is claimed. 
-
-##### »» organizer_email
-Email of the expected organizer as provided by the merchant. This will only affect information 
-displayed to the merchant if updated after the Purchase is claimed. 
-
-##### »» split_type
-Splitting type chosen by the organizer for how to divide the cost
-among group members.
-One of:
--`even_split` Only compatible with total cost_type and means the
-  Purchase amount is split evenly across each slot claimed.
--`specified_per_person` Only compatible with total cost_type and
-  means each member may pay a different amount.
--`fixed_per_person` Only compatible with per_slot cost_type and means
-  each group member pays a fixed amount per slot they claim.
-
-##### »» min_slots
-The organizer-specified value for the minimum number of slots they
-require to be claimed. It must be within the bounds allowed by the merchant. 
-Only compatible with `even_split` and `fixed_per_person` split types. 
-
-##### »» max_slots
-The organizer-specified value for the maximum number of slots they
-will allow to be claimed. It must be within the bounds allowed by the merchant. 
-Only compatible with `even_split` and `fixed_per_person` split types. 
-
-##### »» min_contribution
-Minimum required contribution from each group member. 
-Only compatible with `specified_per_person` split type.
-
-##### »» legal_document_ids
-Array of legal document IDs that must be accepted by the members in this purchase. These should NOT 
-be updated after a Purchase has been claimed because then some members will end up with different 
-accepted legal terms from others. 
-
-##### » language_code
-Default 2-character language code for this purchase. It is going 
-to be used in the claim and commit steps; and as one of the 
-fallbacks when detecting what language to show to the user
-
-##### » payment_destination_id
-ID of the payment destination that will receive all future payments
-made under this Purchase. NOTE: updating this value will not affect 
-any previously accepted payments on this purchase. 
-
-##### » payments
-Breakdown of payment amounts and deadlines due over time for this Purchase. 
-They can only be updated if no payment has yet been accepted by the merchant for this Purchase.. 
-
-##### »» percentage
-Percent of the total purchase cost due for this payment, which must
-be an integer. All payments on a purchase must sum to 100. If you are 
-not doing installment or deposit payments, this is most likely "100".
-
-##### »» due_deadline
-Datetime by when this payment must be submitted to the merchant for
-the purchase to be valid. It is required for all payments after 
-the first payment but may be passed for the first, or only, payment as well.
-
 > Example responses
 
 ```json
 {
   "id": "string",
   "slug": "string",
-  "merchant": {
-    "id": "string",
-    "unique_name": "string",
-    "display_name": "string",
-    "support_email": "user@example.com",
-    "support_phone": "string",
-    "logo_url": "string",
-    "defaults": {
-      "currency_code": "string",
-      "language_code": "string",
-      "timezone_code": "string",
-      "product_image_url": "string"
-    }
-  },
+  "merchant": null,
   "status": "created",
-  "refund_status": "none",
-  "processing_refund": true,
+  "currency_code": "string",
+  "payments": [
+    null
+  ],
+  "current_payment": null,
+  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
+  "product": null,
+  "group": null,
+  "memberships": [
+    null
+  ],
+  "collected_shares_amount": null,
+  "committed_shares_amount": null,
+  "needed_amount_to_current_payment": null,
+  "committed_slots": 0,
+  "needed_slots_to_min": 0,
+  "product_or_group_min_slots": 0,
+  "product_or_group_max_slots": 0,
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "consumer_fields": [
-    {
-      "name": "string",
-      "label": "string",
-      "description": "string",
-      "type": "text",
-      "settings": {},
-      "scope": "member",
-      "default_value": "string"
-    }
-  ],
-  "consumer_field_values": [
-    {
-      "name": "string",
-      "scope": "member",
-      "required": true
-    }
+  "current_product_cost_amount": null,
+  "current_total_cost_amount": null,
+  "cost_range": [
+    null
   ],
   "consumer_field_schemas": [
-    {
-      "id": "string",
-      "name": "string",
-      "label": "string",
-      "scope": "member",
-      "required": true,
-      "type": "text"
-    }
+    null
   ],
   "has_consumer_field_schemas": true,
-  "currency_code": "string",
+  "consumer_field_values": [
+    null
+  ],
   "payment_destination_id": "string",
   "currency_config": {
     "supported_payment_sources": [
@@ -2007,328 +478,12 @@ the first payment but may be passed for the first, or only, payment as well.
       }
     ]
   },
-  "payments": [
-    {
-      "id": "string",
-      "status": "pending",
-      "number": 0,
-      "percentage": 1,
-      "due_deadline": "2017-11-14T16:45:15Z",
-      "paid_at": "2017-11-14T16:45:15Z",
-      "accepted_at": "2017-11-14T16:45:15Z",
-      "submitted_at": "2017-11-14T16:45:15Z",
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "conversion_rate": 0,
-      "processing_currency": "string",
-      "failed": true,
-      "payout_failed": true
-    }
-  ],
-  "current_payment": {
-    "id": "string",
-    "status": "pending",
-    "number": 0,
-    "percentage": 1,
-    "due_deadline": "2017-11-14T16:45:15Z",
-    "paid_at": "2017-11-14T16:45:15Z",
-    "accepted_at": "2017-11-14T16:45:15Z",
-    "submitted_at": "2017-11-14T16:45:15Z",
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "conversion_rate": 0,
-    "processing_currency": "string",
-    "failed": true,
-    "payout_failed": true
-  },
-  "next_payment_due_deadline": "2017-11-14T16:45:15Z",
-  "cost_range": [
-    {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    }
-  ],
-  "current_product_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "current_total_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "max_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "min_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "max_product_cost_by_amount": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "fees_structure": {
-    "currency_code": "string",
-    "payment_destination_type": "bank_account",
-    "consumer_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_min": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_service_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_purchase_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_processing_fees": {
-      "per_transaction": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    }
-  },
+  "refund_status": "none",
+  "processing_refund": true,
+  "fees_structure": null,
   "apply_consumer_fee_to_organizer": true,
-  "product": {
-    "images": [
-      {
-        "name": "string",
-        "version": "string",
-        "url": "string"
-      }
-    ],
-    "default_image_url": "string",
-    "allowed_split_types": "even_split",
-    "cost_type": "total",
-    "costs": [
-      {
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "min_slots": 0,
-        "max_slots": 0
-      }
-    ],
-    "description": "string",
-    "name": "string",
-    "end_datetime": "2017-11-14T16:45:15Z",
-    "start_datetime": "2017-11-14T16:45:15Z",
-    "external_purchase_id": "string",
-    "inventory_id": "string",
-    "link": "string",
-    "max_slots": 0,
-    "min_slots": 0,
-    "legal_documents": [
-      {
-        "id": "string",
-        "type": "tos",
-        "title": "string",
-        "content": "string",
-        "created_at": "2017-11-14T16:45:15Z",
-        "updated_at": "2017-11-14T16:45:15Z"
-      }
-    ]
-  },
-  "group": {
-    "commit_deadline": "2017-11-14T16:45:15Z",
-    "max_slots": 0,
-    "min_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "organizer_email": "user@example.com",
-    "organizer_full_name": "string",
-    "legal_document_ids": [
-      "string"
-    ],
-    "split_type": "even_split"
-  },
-  "memberships": [
-    {
-      "id": "string",
-      "status": "holdout",
-      "refund_status": "none",
-      "failed": true,
-      "short": true,
-      "role": "organizer",
-      "claimed_slots": 0,
-      "opt_in_marketing": true,
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "consumer_field_values": {
-        "name": "string",
-        "scope": "member",
-        "required": true
-      },
-      "allowed_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "max_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "collected_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "collected_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "current_contribution": {
-        "id": "string",
-        "status": "created",
-        "refund_status": "none",
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "fees": {
-          "consumer_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "merchant_service_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          }
-        },
-        "charged_at": "2017-11-14T16:45:15Z",
-        "failed_at": "2017-11-14T16:45:15Z",
-        "created_at": "string"
-      },
-      "user": {
-        "id": "string",
-        "email": "user@example.com",
-        "full_name": "string",
-        "first_name": "string",
-        "last_name": "string",
-        "avatar_url": "string",
-        "language_code": "string",
-        "created_at": "string"
-      },
-      "purchase_id": "string",
-      "payment_source": {
-        "id": "string",
-        "name": "string",
-        "type": "string",
-        "info": {
-          "account_name": "string",
-          "account_number": "string",
-          "account_holder_type": "string"
-        },
-        "created_at": "2017-11-14T16:45:15Z"
-      },
-      "committed_at": "2017-11-14T16:45:15Z",
-      "created_at": "2017-11-14T16:45:15Z"
-    }
-  ],
-  "collected_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_slots": 0,
-  "needed_amount_to_current_payment": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "needed_slots_to_min": 0,
-  "product_or_group_max_slots": 0,
-  "product_or_group_min_slots": 0,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-14T16:45:15Z"
+  "created_at": "2017-11-22T06:40:01Z"
 }
 ```
 ```json
@@ -2360,8 +515,7 @@ Status|Meaning|Description|Schema
 422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity.|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## ClaimPurchase
@@ -2383,22 +537,13 @@ supplying defaults for the required parameters.
 {
   "organizer_name": "string",
   "organizer_email": "string",
-  "organizer_allowed_share_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "min_contribution": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
+  "organizer_allowed_share_amount": null,
+  "min_contribution": null,
   "group": {
     "split_type": "even_split",
     "max_slots": 0,
     "min_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    }
+    "min_contribution": null
   }
 }
 ```
@@ -2407,16 +552,16 @@ supplying defaults for the required parameters.
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 id|path|string(uuid)|true|ID of the Purchase to claim
-body|body|object|true|No description
+body|body|object|true|Request body object.
 » organizer_name|body|string|false|Name of the organizer
 » organizer_email|body|string|false|Email of the organizer
 » organizer_allowed_share_amount|body|[Money](#schemamoney)|false|This is the recommended share for the organizer and is only relevant if split_type is `specified_per_person`
 » min_contribution|body|[Money](#schemamoney)|false|Min contribution amount
 » group|body|object|false|No description
-»» split_type|body|string|false|Splitting type chosen by the organizer for how to divide the cost
-»» max_slots|body|integer(int32)|false|The organizer-specified value for the minimum number of slots they
-»» min_slots|body|integer(int32)|false|The organizer-specified value for the maximum number of slots they
-»» min_contribution|body|[Money](#schemamoney)|false|Minimum required contribution from each group member. 
+»» split_type|body|string|false|Splitting type chosen by the organizer for how to divide the cost<br/>among group members.<br/>One of:<br/>-`even_split` Only compatible with total cost_type and means the<br/>  Purchase amount is split evenly across each slot claimed.<br/>-`specified_per_person` Only compatible with total cost_type and<br/>  means each member may pay a different amount.<br/>-`fixed_per_person` Only compatible with per_slot cost_type and means<br/>  each group member pays a fixed amount per slot they claim.<br/>
+»» max_slots|body|integer(int32)|false|The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with `even_split` and `fixed_per_person` split types. <br/>
+»» min_slots|body|integer(int32)|false|The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with `even_split` and `fixed_per_person` split types. <br/>
+»» min_contribution|body|[Money](#schemamoney)|false|Minimum required contribution from each group member. <br/>Only compatible with `specified_per_person` split type. <br/>
 
 
 #### Enumerated Values
@@ -2427,87 +572,47 @@ body|body|object|true|No description
 »» split_type|specified_per_person|
 »» split_type|fixed_per_person|
 
-##### »» split_type
-Splitting type chosen by the organizer for how to divide the cost
-among group members.
-One of:
--`even_split` Only compatible with total cost_type and means the
-  Purchase amount is split evenly across each slot claimed.
--`specified_per_person` Only compatible with total cost_type and
-  means each member may pay a different amount.
--`fixed_per_person` Only compatible with per_slot cost_type and means
-  each group member pays a fixed amount per slot they claim.
-
-##### »» max_slots
-The organizer-specified value for the minimum number of slots they
-require to be claimed. It must be within the bounds allowed by the merchant. 
-Only compatible with `even_split` and `fixed_per_person` split types. 
-
-##### »» min_slots
-The organizer-specified value for the maximum number of slots they
-will allow to be claimed. It must be within the bounds allowed by the merchant. 
-Only compatible with `even_split` and `fixed_per_person` split types. 
-
-##### »» min_contribution
-Minimum required contribution from each group member. 
-Only compatible with `specified_per_person` split type. 
-
 > Example responses
 
 ```json
 {
   "id": "string",
   "slug": "string",
-  "merchant": {
-    "id": "string",
-    "unique_name": "string",
-    "display_name": "string",
-    "support_email": "user@example.com",
-    "support_phone": "string",
-    "logo_url": "string",
-    "defaults": {
-      "currency_code": "string",
-      "language_code": "string",
-      "timezone_code": "string",
-      "product_image_url": "string"
-    }
-  },
+  "merchant": null,
   "status": "created",
-  "refund_status": "none",
-  "processing_refund": true,
+  "currency_code": "string",
+  "payments": [
+    null
+  ],
+  "current_payment": null,
+  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
+  "product": null,
+  "group": null,
+  "memberships": [
+    null
+  ],
+  "collected_shares_amount": null,
+  "committed_shares_amount": null,
+  "needed_amount_to_current_payment": null,
+  "committed_slots": 0,
+  "needed_slots_to_min": 0,
+  "product_or_group_min_slots": 0,
+  "product_or_group_max_slots": 0,
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "consumer_fields": [
-    {
-      "name": "string",
-      "label": "string",
-      "description": "string",
-      "type": "text",
-      "settings": {},
-      "scope": "member",
-      "default_value": "string"
-    }
-  ],
-  "consumer_field_values": [
-    {
-      "name": "string",
-      "scope": "member",
-      "required": true
-    }
+  "current_product_cost_amount": null,
+  "current_total_cost_amount": null,
+  "cost_range": [
+    null
   ],
   "consumer_field_schemas": [
-    {
-      "id": "string",
-      "name": "string",
-      "label": "string",
-      "scope": "member",
-      "required": true,
-      "type": "text"
-    }
+    null
   ],
   "has_consumer_field_schemas": true,
-  "currency_code": "string",
+  "consumer_field_values": [
+    null
+  ],
   "payment_destination_id": "string",
   "currency_config": {
     "supported_payment_sources": [
@@ -2519,328 +624,12 @@ Only compatible with `specified_per_person` split type.
       }
     ]
   },
-  "payments": [
-    {
-      "id": "string",
-      "status": "pending",
-      "number": 0,
-      "percentage": 1,
-      "due_deadline": "2017-11-14T16:45:15Z",
-      "paid_at": "2017-11-14T16:45:15Z",
-      "accepted_at": "2017-11-14T16:45:15Z",
-      "submitted_at": "2017-11-14T16:45:15Z",
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "conversion_rate": 0,
-      "processing_currency": "string",
-      "failed": true,
-      "payout_failed": true
-    }
-  ],
-  "current_payment": {
-    "id": "string",
-    "status": "pending",
-    "number": 0,
-    "percentage": 1,
-    "due_deadline": "2017-11-14T16:45:15Z",
-    "paid_at": "2017-11-14T16:45:15Z",
-    "accepted_at": "2017-11-14T16:45:15Z",
-    "submitted_at": "2017-11-14T16:45:15Z",
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "conversion_rate": 0,
-    "processing_currency": "string",
-    "failed": true,
-    "payout_failed": true
-  },
-  "next_payment_due_deadline": "2017-11-14T16:45:15Z",
-  "cost_range": [
-    {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    }
-  ],
-  "current_product_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "current_total_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "max_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "min_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "max_product_cost_by_amount": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "fees_structure": {
-    "currency_code": "string",
-    "payment_destination_type": "bank_account",
-    "consumer_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_min": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_service_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_purchase_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_processing_fees": {
-      "per_transaction": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    }
-  },
+  "refund_status": "none",
+  "processing_refund": true,
+  "fees_structure": null,
   "apply_consumer_fee_to_organizer": true,
-  "product": {
-    "images": [
-      {
-        "name": "string",
-        "version": "string",
-        "url": "string"
-      }
-    ],
-    "default_image_url": "string",
-    "allowed_split_types": "even_split",
-    "cost_type": "total",
-    "costs": [
-      {
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "min_slots": 0,
-        "max_slots": 0
-      }
-    ],
-    "description": "string",
-    "name": "string",
-    "end_datetime": "2017-11-14T16:45:15Z",
-    "start_datetime": "2017-11-14T16:45:15Z",
-    "external_purchase_id": "string",
-    "inventory_id": "string",
-    "link": "string",
-    "max_slots": 0,
-    "min_slots": 0,
-    "legal_documents": [
-      {
-        "id": "string",
-        "type": "tos",
-        "title": "string",
-        "content": "string",
-        "created_at": "2017-11-14T16:45:15Z",
-        "updated_at": "2017-11-14T16:45:15Z"
-      }
-    ]
-  },
-  "group": {
-    "commit_deadline": "2017-11-14T16:45:15Z",
-    "max_slots": 0,
-    "min_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "organizer_email": "user@example.com",
-    "organizer_full_name": "string",
-    "legal_document_ids": [
-      "string"
-    ],
-    "split_type": "even_split"
-  },
-  "memberships": [
-    {
-      "id": "string",
-      "status": "holdout",
-      "refund_status": "none",
-      "failed": true,
-      "short": true,
-      "role": "organizer",
-      "claimed_slots": 0,
-      "opt_in_marketing": true,
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "consumer_field_values": {
-        "name": "string",
-        "scope": "member",
-        "required": true
-      },
-      "allowed_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "max_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "collected_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "collected_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "current_contribution": {
-        "id": "string",
-        "status": "created",
-        "refund_status": "none",
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "fees": {
-          "consumer_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "merchant_service_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          }
-        },
-        "charged_at": "2017-11-14T16:45:15Z",
-        "failed_at": "2017-11-14T16:45:15Z",
-        "created_at": "string"
-      },
-      "user": {
-        "id": "string",
-        "email": "user@example.com",
-        "full_name": "string",
-        "first_name": "string",
-        "last_name": "string",
-        "avatar_url": "string",
-        "language_code": "string",
-        "created_at": "string"
-      },
-      "purchase_id": "string",
-      "payment_source": {
-        "id": "string",
-        "name": "string",
-        "type": "string",
-        "info": {
-          "account_name": "string",
-          "account_number": "string",
-          "account_holder_type": "string"
-        },
-        "created_at": "2017-11-14T16:45:15Z"
-      },
-      "committed_at": "2017-11-14T16:45:15Z",
-      "created_at": "2017-11-14T16:45:15Z"
-    }
-  ],
-  "collected_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_slots": 0,
-  "needed_amount_to_current_payment": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "needed_slots_to_min": 0,
-  "product_or_group_max_slots": 0,
-  "product_or_group_min_slots": 0,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-14T16:45:15Z"
+  "created_at": "2017-11-22T06:40:01Z"
 }
 ```
 ```json
@@ -2872,8 +661,7 @@ Status|Meaning|Description|Schema
 422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## InviteMembersToPurchase
@@ -2893,10 +681,7 @@ They will receive reminders to join until the purchase completes, expires, or is
     {
       "email": "user@example.com",
       "full_name": "string",
-      "allowed_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      }
+      "allowed_share_amount": null
     }
   ],
   "message": "string",
@@ -2908,7 +693,7 @@ They will receive reminders to join until the purchase completes, expires, or is
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 id|path|string(uuid)|true|ID of the Purchase to invite to.
-body|body|object|true|No description
+body|body|object|true|Request body object.
 » message|body|string|false|Message from the organizer to include in the invite notification.
 » subject|body|string|false|Subject line of the notification to the invitee if sent by email.
 » invitees|body|[object]|false|No description
@@ -2926,8 +711,7 @@ Status|Meaning|Description|Schema
 422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity|None
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## RequestPurchaseRefund
@@ -2946,17 +730,11 @@ the sum of all payments on the purchase, you will get an error response.
 ```json
 {
   "reason": "string",
-  "amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
+  "amount": null,
   "memberships_shares": [
     {
       "membership_id": "string",
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      }
+      "amount": null
     }
   ],
   "funding_source_id": "string"
@@ -2967,25 +745,14 @@ the sum of all payments on the purchase, you will get an error response.
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 id|path|string(uuid)|true|ID of the purchase to refund
-body|body|object|true|No description
+body|body|object|true|Request body object.
 » reason|body|string|false|Reason why this amount is being refunded
-» amount|body|[Money](#schemamoney)|false|Amount to be refunded. It may not be greater than the current
-» funding_source_id|body|string(uuid)|false|UUID of the merchant's payment source they wish to use to fund this refund. 
+» amount|body|[Money](#schemamoney)|false|Amount to be refunded. It may not be greater than the current<br/>collected amount of the purchase, which is the total purchase<br/>amount net of any previous refunds. If the memberships_shares<br/>array is provided, this value must equal the sum of those shares.<br/>
+» funding_source_id|body|string(uuid)|false|UUID of the merchant's payment source they wish to use to fund this refund. <br/>This is only applicable if the merchant originally received the payment that is being <br/>refunded into the merchant's bank account instead of a through a custom gateway.<br/>
 » memberships_shares|body|[object]|false|No description
 »» membership_id|body|string|false|ID of the membership to refund.
 »» amount|body|[Money](#schemamoney)|false|Amount to refund to this member.
 
-
-##### » amount
-Amount to be refunded. It may not be greater than the current
-collected amount of the purchase, which is the total purchase
-amount net of any previous refunds. If the memberships_shares
-array is provided, this value must equal the sum of those shares.
-
-##### » funding_source_id
-UUID of the merchant's payment source they wish to use to fund this refund. 
-This is only applicable if the merchant originally received the payment that is being 
-refunded into the merchant's bank account instead of a through a custom gateway.
 
 > Example responses
 
@@ -2993,56 +760,41 @@ refunded into the merchant's bank account instead of a through a custom gateway.
 {
   "id": "string",
   "slug": "string",
-  "merchant": {
-    "id": "string",
-    "unique_name": "string",
-    "display_name": "string",
-    "support_email": "user@example.com",
-    "support_phone": "string",
-    "logo_url": "string",
-    "defaults": {
-      "currency_code": "string",
-      "language_code": "string",
-      "timezone_code": "string",
-      "product_image_url": "string"
-    }
-  },
+  "merchant": null,
   "status": "created",
-  "refund_status": "none",
-  "processing_refund": true,
+  "currency_code": "string",
+  "payments": [
+    null
+  ],
+  "current_payment": null,
+  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
+  "product": null,
+  "group": null,
+  "memberships": [
+    null
+  ],
+  "collected_shares_amount": null,
+  "committed_shares_amount": null,
+  "needed_amount_to_current_payment": null,
+  "committed_slots": 0,
+  "needed_slots_to_min": 0,
+  "product_or_group_min_slots": 0,
+  "product_or_group_max_slots": 0,
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "consumer_fields": [
-    {
-      "name": "string",
-      "label": "string",
-      "description": "string",
-      "type": "text",
-      "settings": {},
-      "scope": "member",
-      "default_value": "string"
-    }
-  ],
-  "consumer_field_values": [
-    {
-      "name": "string",
-      "scope": "member",
-      "required": true
-    }
+  "current_product_cost_amount": null,
+  "current_total_cost_amount": null,
+  "cost_range": [
+    null
   ],
   "consumer_field_schemas": [
-    {
-      "id": "string",
-      "name": "string",
-      "label": "string",
-      "scope": "member",
-      "required": true,
-      "type": "text"
-    }
+    null
   ],
   "has_consumer_field_schemas": true,
-  "currency_code": "string",
+  "consumer_field_values": [
+    null
+  ],
   "payment_destination_id": "string",
   "currency_config": {
     "supported_payment_sources": [
@@ -3054,328 +806,12 @@ refunded into the merchant's bank account instead of a through a custom gateway.
       }
     ]
   },
-  "payments": [
-    {
-      "id": "string",
-      "status": "pending",
-      "number": 0,
-      "percentage": 1,
-      "due_deadline": "2017-11-14T16:45:15Z",
-      "paid_at": "2017-11-14T16:45:15Z",
-      "accepted_at": "2017-11-14T16:45:15Z",
-      "submitted_at": "2017-11-14T16:45:15Z",
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "conversion_rate": 0,
-      "processing_currency": "string",
-      "failed": true,
-      "payout_failed": true
-    }
-  ],
-  "current_payment": {
-    "id": "string",
-    "status": "pending",
-    "number": 0,
-    "percentage": 1,
-    "due_deadline": "2017-11-14T16:45:15Z",
-    "paid_at": "2017-11-14T16:45:15Z",
-    "accepted_at": "2017-11-14T16:45:15Z",
-    "submitted_at": "2017-11-14T16:45:15Z",
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "conversion_rate": 0,
-    "processing_currency": "string",
-    "failed": true,
-    "payout_failed": true
-  },
-  "next_payment_due_deadline": "2017-11-14T16:45:15Z",
-  "cost_range": [
-    {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    }
-  ],
-  "current_product_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "current_total_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "max_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "min_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "max_product_cost_by_amount": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "fees_structure": {
-    "currency_code": "string",
-    "payment_destination_type": "bank_account",
-    "consumer_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_min": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_service_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_purchase_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_processing_fees": {
-      "per_transaction": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    }
-  },
+  "refund_status": "none",
+  "processing_refund": true,
+  "fees_structure": null,
   "apply_consumer_fee_to_organizer": true,
-  "product": {
-    "images": [
-      {
-        "name": "string",
-        "version": "string",
-        "url": "string"
-      }
-    ],
-    "default_image_url": "string",
-    "allowed_split_types": "even_split",
-    "cost_type": "total",
-    "costs": [
-      {
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "min_slots": 0,
-        "max_slots": 0
-      }
-    ],
-    "description": "string",
-    "name": "string",
-    "end_datetime": "2017-11-14T16:45:15Z",
-    "start_datetime": "2017-11-14T16:45:15Z",
-    "external_purchase_id": "string",
-    "inventory_id": "string",
-    "link": "string",
-    "max_slots": 0,
-    "min_slots": 0,
-    "legal_documents": [
-      {
-        "id": "string",
-        "type": "tos",
-        "title": "string",
-        "content": "string",
-        "created_at": "2017-11-14T16:45:15Z",
-        "updated_at": "2017-11-14T16:45:15Z"
-      }
-    ]
-  },
-  "group": {
-    "commit_deadline": "2017-11-14T16:45:15Z",
-    "max_slots": 0,
-    "min_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "organizer_email": "user@example.com",
-    "organizer_full_name": "string",
-    "legal_document_ids": [
-      "string"
-    ],
-    "split_type": "even_split"
-  },
-  "memberships": [
-    {
-      "id": "string",
-      "status": "holdout",
-      "refund_status": "none",
-      "failed": true,
-      "short": true,
-      "role": "organizer",
-      "claimed_slots": 0,
-      "opt_in_marketing": true,
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "consumer_field_values": {
-        "name": "string",
-        "scope": "member",
-        "required": true
-      },
-      "allowed_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "max_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "collected_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "collected_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "current_contribution": {
-        "id": "string",
-        "status": "created",
-        "refund_status": "none",
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "fees": {
-          "consumer_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "merchant_service_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          }
-        },
-        "charged_at": "2017-11-14T16:45:15Z",
-        "failed_at": "2017-11-14T16:45:15Z",
-        "created_at": "string"
-      },
-      "user": {
-        "id": "string",
-        "email": "user@example.com",
-        "full_name": "string",
-        "first_name": "string",
-        "last_name": "string",
-        "avatar_url": "string",
-        "language_code": "string",
-        "created_at": "string"
-      },
-      "purchase_id": "string",
-      "payment_source": {
-        "id": "string",
-        "name": "string",
-        "type": "string",
-        "info": {
-          "account_name": "string",
-          "account_number": "string",
-          "account_holder_type": "string"
-        },
-        "created_at": "2017-11-14T16:45:15Z"
-      },
-      "committed_at": "2017-11-14T16:45:15Z",
-      "created_at": "2017-11-14T16:45:15Z"
-    }
-  ],
-  "collected_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_slots": 0,
-  "needed_amount_to_current_payment": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "needed_slots_to_min": 0,
-  "product_or_group_max_slots": 0,
-  "product_or_group_min_slots": 0,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-14T16:45:15Z"
+  "created_at": "2017-11-22T06:40:01Z"
 }
 ```
 ```json
@@ -3407,8 +843,7 @@ Status|Meaning|Description|Schema
 422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## CreatePurchaseImages
@@ -3434,7 +869,7 @@ file: string
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 id|path|string(uuid)|true|ID of the Purchase to which this image applies
-body|body|object|false|No description
+body|body|object|false|Request body object.
 » url|body|string|false|URL of the image. It will only be retrieved once from this URL, after which it will be cached by Pay By Group.
 » file|body|string(binary)|false|Image file
 
@@ -3443,6 +878,7 @@ body|body|object|false|No description
 
 ```json
 {
+  "id": "string",
   "name": "string",
   "version": "string",
   "url": "string"
@@ -3477,8 +913,7 @@ Status|Meaning|Description|Schema
 422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## RetrievePurchaseMemberships
@@ -3500,133 +935,7 @@ id|path|string(uuid)|true|Purchase ID
 
 ```json
 [
-  {
-    "id": "string",
-    "status": "holdout",
-    "refund_status": "none",
-    "failed": true,
-    "short": true,
-    "role": "organizer",
-    "claimed_slots": 0,
-    "opt_in_marketing": true,
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "share_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "fees": {
-      "consumer_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "merchant_service_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      }
-    },
-    "consumer_field_values": {
-      "name": "string",
-      "scope": "member",
-      "required": true
-    },
-    "allowed_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "allowed_share_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "allowed_fees": {
-      "consumer_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "merchant_service_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      }
-    },
-    "max_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "max_share_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "max_fees": {
-      "consumer_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "merchant_service_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      }
-    },
-    "collected_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "collected_share_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "current_contribution": {
-      "id": "string",
-      "status": "created",
-      "refund_status": "none",
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "charged_at": "2017-11-14T16:45:15Z",
-      "failed_at": "2017-11-14T16:45:15Z",
-      "created_at": "string"
-    },
-    "user": {
-      "id": "string",
-      "email": "user@example.com",
-      "full_name": "string",
-      "first_name": "string",
-      "last_name": "string",
-      "avatar_url": "string",
-      "language_code": "string",
-      "created_at": "string"
-    },
-    "purchase_id": "string",
-    "payment_source": {
-      "id": "string",
-      "name": "string",
-      "type": "string",
-      "info": {
-        "account_name": "string",
-        "account_number": "string",
-        "account_holder_type": "string"
-      },
-      "created_at": "2017-11-14T16:45:15Z"
-    },
-    "committed_at": "2017-11-14T16:45:15Z",
-    "created_at": "2017-11-14T16:45:15Z"
-  }
+  null
 ]
 ```
 ```json
@@ -3643,120 +952,11 @@ id|path|string(uuid)|true|Purchase ID
 
 Status|Meaning|Description|Schema
 ---|---|---|---|
-200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|Inline
+200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|[[Membership](#schemamembership)]
 404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not found|[Error](#schemaerror)
 
-<h3 id="RetrievePurchaseMemberships-responseschema">Response Schema</h3>
-
-Status Code **200**
-
-Name|Type|Required|Description
----|---|---|---|---|
-anonymous|[[Membership](#schemamembership)]|false|No description
-» id|string|false|Pay By Group UUID for this membership
-» status|string|false|One of: - holdout (user has been invited but not joined the group); - committed (user has joined the group and whether they have been charged is in the contribution object); 
-» refund_status|string|false|Status that determines whether the Membership is partially or fully refunded. One of: - none (none of the Membership's Contributions were refunded). - partial (some of the Membership's Contributions were partially   or fully refunded). - full (all of the Membership's Contributions were fully refunded). 
-» failed|boolean|false|User is currently in the group with a failed payment method, which is preventing the purchase from completing 
-» short|boolean|false|The user is currently in the group but has not agreed to pay their new required share amount due to updates to the purchase. 
-» role|string|false|Either organizer or invitee
-» claimed_slots|integer(int32)|false|Number of slots the member has claimed in the group. Defaults to 1 if none is selected by the user.
-» opt_in_marketing|boolean|false|true if the user has opted in to receive marketing communication from the merchant. Otherwise false.
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» share_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» fees|[Fees](#schemafees)|false|No description
-»» consumer_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-» consumer_field_values|[ConsumerFieldValue](#schemaconsumerfieldvalue)|false|No description
-»» name|string|false|Name of the schema
-»» scope|string|false|One of member or purchase.
-»» required|boolean|false|Whether the schema field should be required or not.
-» allowed_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» allowed_share_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» allowed_fees|[Fees](#schemafees)|false|No description
-»» consumer_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-» max_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» max_share_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» max_fees|[Fees](#schemafees)|false|No description
-»» consumer_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-» collected_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» collected_share_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» current_contribution|[Contribution](#schemacontribution)|false|No description
-»» id|string|false|UUID of this contribution
-»» status|string|false|Current status of the contribution, any of created, authorized, captured, holdout or failed
-»» refund_status|string|false|Status that determines whether the Contribution is partially or fully refunded. One of: - none (none of the Contribution's Transactions were refunded). - partial (some of the Contribution's Transactions were partially   or fully refunded). - full (all of the Contribution's Transactions were fully refunded). 
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» share_amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» fees|[Fees](#schemafees)|false|No description
-»»» consumer_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»» charged_at|string(date-time)|false|Timestamp of when this contibution was charged
-»» failed_at|string(date-time)|false|Timestamp of when this contribution most recently failed
-»» created_at|string|false|Timestamp when the record of this contribution was first created, which is not necessarily when it was charged 
-» user|[User](#schemauser)|false|No description
-»» id|string(uuid)|false|Pay By Group UUID for this user
-»» email|string(email)|false|User's email address
-»» full_name|string|false|User's full name
-»» first_name|string|false|User's first name
-»» last_name|string|false|User's last name
-»» avatar_url|string|false|URL of the User's avatar
-»» language_code|string|false|The preferred language selected by this user
-»» created_at|string(uuid)|false|No description
-» purchase_id|string(uuid)|false|Pay By Group slug of the purchase to which this membership is tied
-» payment_source|[PaymentSource](#schemapaymentsource)|false|No description
-»» id|string(uuid)|false|Pay By Group UUID of this payment source
-»» name|string|false|Full name of this payment source's owner
-»» type|string|false|Describes the type of payment source, any of credit_card or bank_account
-»» info|object|false|Bank account information of this payment source
-»»» account_name|string|false|Listed name of the account holder
-»»» account_number|string|false|Account number
-»»» account_holder_type|string|false|Either a business or individual
-»» created_at|string(date-time)|false|Timestamp when the payment source was first added to the system
-» committed_at|string(date-time)|false|Timestamp of when the member agreed to pay into the purchase
-» created_at|string(date-time)|false|When the membership was first created
-
-
-
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## RetrievePurchasePaymentTransactions
@@ -3779,61 +979,7 @@ id|path|string(uuid)|true|Purchase ID
 
 ```json
 [
-  {
-    "id": "string",
-    "short_id": "string",
-    "parent_id": "string",
-    "chargable_type": "string",
-    "action": "auth",
-    "status": "pending",
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "fees": {
-      "consumer_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "merchant_service_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      }
-    },
-    "payout_account": {
-      "id": "string",
-      "name": "string",
-      "status": "verified",
-      "user_id": "string",
-      "merchant_id": "string",
-      "supported_currency_codes": [
-        "string"
-      ],
-      "currency_configs": "string"
-    },
-    "payment_gateway": {
-      "id": "string",
-      "name": "string",
-      "merchant_id": "string",
-      "supported_currency_codes": [
-        "string"
-      ]
-    },
-    "payment_source": {
-      "id": "string",
-      "name": "string",
-      "type": "string",
-      "info": {
-        "account_name": "string",
-        "account_number": "string",
-        "account_holder_type": "string"
-      },
-      "created_at": "2017-11-14T16:45:15Z"
-    },
-    "created_at": "2017-11-14T16:45:15Z",
-    "processing_currency": "string",
-    "conversion_rate": 0
-  }
+  null
 ]
 ```
 ```json
@@ -3850,63 +996,11 @@ id|path|string(uuid)|true|Purchase ID
 
 Status|Meaning|Description|Schema
 ---|---|---|---|
-200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|Inline
+200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|[[PaymentTransaction](#schemapaymenttransaction)]
 404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not found|[Error](#schemaerror)
 
-<h3 id="RetrievePurchasePaymentTransactions-responseschema">Response Schema</h3>
-
-Status Code **200**
-
-Name|Type|Required|Description
----|---|---|---|---|
-anonymous|[[PaymentTransaction](#schemapaymenttransaction)]|false|No description
-» id|string(uuid)|false|Pay By Group UUID for this transaction
-» short_id|string|false|Unique ID of this transaction for easy reference
-» parent_id|string|false|Another transaction related to and replaced by this one - e.g. the credit card authorization for which this transaction is the capture or the capture for which this is the refund. 
-» chargable_type|string|false|No description
-» action|string|false|One of: - auth (holds funds or the specified amount on the user's payment   method for later capture). - capture (captures funds that were previously authorized at an   amount = or < the authorized amount). - charge (instantly charges an amount without first making an   authorization). - void (voids a previously created authorization). - refund (refunds a previously created capture or charge). - payout (sends funds to a bank account). 
-» status|string|false|Oneo of pending, completed or failed
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» fees|[Fees](#schemafees)|false|No description
-»» consumer_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-» payout_account|[BankAccount](#schemabankaccount)|false|No description
-»» id|string(uuid)|false|Pay By Group UUID for this bank account
-»» name|string|false|Displayed name of bank account with last 4 of account number
-»» status|string|false|verified or unverified depending on whether micro-deposit amounts have confirmed account ownership
-»» user_id|string(uuid)|false|User that added the bank account
-»» merchant_id|string(uuid)|false|Merchant this bank account belongs to
-»» currency_configs|string|false|Set of payment sources supported across all currencies for this bank account. Not all currencies support all payment sources. 
-»» supported_currency_codes|[string]|false|3-letter currency codes that can be used for credits and debits with this account
-» payment_gateway|[PaymentGateway](#schemapaymentgateway)|false|No description
-»» id|string|false|Pay By Group UUID for this payment gateway
-»» name|string|false|Displayed name of the gateway
-»» merchant_id|string|false|Merchant this gateway belongs to
-»» supported_currency_codes|[string]|false|3-letter currency codes that can be used for payments to this gateway
-» payment_source|[PaymentSource](#schemapaymentsource)|false|No description
-»» id|string(uuid)|false|Pay By Group UUID of this payment source
-»» name|string|false|Full name of this payment source's owner
-»» type|string|false|Describes the type of payment source, any of credit_card or bank_account
-»» info|object|false|Bank account information of this payment source
-»»» account_name|string|false|Listed name of the account holder
-»»» account_number|string|false|Account number
-»»» account_holder_type|string|false|Either a business or individual
-»» created_at|string(date-time)|false|Timestamp when the payment source was first added to the system
-» created_at|string(date-time)|false|Timestamp when the transaction was created
-» processing_currency|string|false|The currency in which this transaction occurred
-» conversion_rate|number(float)|false|If the currency of the purchase differs from the required currency of the payout account then this is the conversion rate used to determine the transaction amount. 
-
-
-
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## RetrievePurchaseLegalDocuments
@@ -3929,14 +1023,7 @@ id|path|string(uuid)|true|Purchase ID
 
 ```json
 [
-  {
-    "id": "string",
-    "type": "tos",
-    "title": "string",
-    "content": "string",
-    "created_at": "2017-11-14T16:45:15Z",
-    "updated_at": "2017-11-14T16:45:15Z"
-  }
+  null
 ]
 ```
 ```json
@@ -3953,28 +1040,11 @@ id|path|string(uuid)|true|Purchase ID
 
 Status|Meaning|Description|Schema
 ---|---|---|---|
-200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|Inline
+200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|[[LegalDocument](#schemalegaldocument)]
 404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not found|[Error](#schemaerror)
 
-<h3 id="RetrievePurchaseLegalDocuments-responseschema">Response Schema</h3>
-
-Status Code **200**
-
-Name|Type|Required|Description
----|---|---|---|---|
-anonymous|[[LegalDocument](#schemalegaldocument)]|false|No description
-» id|string(uuid)|false|Pay By Group UUID of this legal document
-» type|string|false|Specified by the merchant as either cancellation policy for cancellation and refund terms or tos for all other legal documents. 
-» title|string|false|Mechant's title for this legal document
-» content|string|false|Full content as provided by the merchant, either in plain text or as a URL
-» created_at|string(date-time)|false|When this legal document was added by the merchant
-» updated_at|string(date-time)|false|When this legal document was last updated by the merchant
-
-
-
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## RetrievePurchaseLegalBindings
@@ -3998,16 +1068,7 @@ id|path|string(uuid)|true|Purchase ID
 
 ```json
 [
-  {
-    "id": "string",
-    "type": "string",
-    "title": "string",
-    "content": "string",
-    "created_at": "string",
-    "remote_ip": "string",
-    "user_id": "string",
-    "purchase_id": "string"
-  }
+  null
 ]
 ```
 ```json
@@ -4024,30 +1085,11 @@ id|path|string(uuid)|true|Purchase ID
 
 Status|Meaning|Description|Schema
 ---|---|---|---|
-200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|Inline
+200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|[[LegalBinding](#schemalegalbinding)]
 404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not found|[Error](#schemaerror)
 
-<h3 id="RetrievePurchaseLegalBindings-responseschema">Response Schema</h3>
-
-Status Code **200**
-
-Name|Type|Required|Description
----|---|---|---|---|
-anonymous|[[LegalBinding](#schemalegalbinding)]|false|No description
-» id|string(uuid)|false|Pay By Group UUID of this specific record of acceptance by the user
-» type|string|false|Either cancellation policy for cancellation and refund terms or tos for all other legal documents provided by merchant. 
-» title|string|false|Mechant's title for this legal document as accepted by the user
-» content|string|false|Full content as accepted by the user at the moment they agreed to this legal document
-» created_at|string|false|Verifiable timestamp when the user accepted this legal document
-» remote_ip|string|false|User's IP address at the moment they accepted this legal document
-» user_id|string|false|ID of the user that accepted the document, which includes their name and email
-» purchase_id|string|false|The purchase for which this document was accepted by the user
-
-
-
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 # payments
@@ -4104,8 +1146,7 @@ Status|Meaning|Description|Schema
 422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 # legal_documents
@@ -4128,14 +1169,7 @@ Returns a paginated list of all legal documents that currently exist under this 
 
 ```json
 [
-  {
-    "id": "string",
-    "type": "tos",
-    "title": "string",
-    "content": "string",
-    "created_at": "2017-11-14T16:45:15Z",
-    "updated_at": "2017-11-14T16:45:15Z"
-  }
+  null
 ]
 ```
 ```json
@@ -4152,28 +1186,11 @@ Returns a paginated list of all legal documents that currently exist under this 
 
 Status|Meaning|Description|Schema
 ---|---|---|---|
-200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|Inline
+200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success response|[[LegalDocument](#schemalegaldocument)]
 404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|[Error](#schemaerror)
 
-<h3 id="RetrieveMerchantLegalDocuments-responseschema">Response Schema</h3>
-
-Status Code **200**
-
-Name|Type|Required|Description
----|---|---|---|---|
-anonymous|[[LegalDocument](#schemalegaldocument)]|false|No description
-» id|string(uuid)|false|Pay By Group UUID of this legal document
-» type|string|false|Specified by the merchant as either cancellation policy for cancellation and refund terms or tos for all other legal documents. 
-» title|string|false|Mechant's title for this legal document
-» content|string|false|Full content as provided by the merchant, either in plain text or as a URL
-» created_at|string(date-time)|false|When this legal document was added by the merchant
-» updated_at|string(date-time)|false|When this legal document was last updated by the merchant
-
-
-
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## CreateMerchantLegalDocument
@@ -4197,10 +1214,10 @@ Add a new legal document, which will then be available to attach to any purchase
 
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
-body|body|object|true|No description
-» type|body|string|false|Specified by the merchant as either the Cancellation Policy for cancellation and refund terms
-» title|body|string|false|Mechant's title for this legal document to be displayed to end users. If none is provided, it defaults to 
-» content|body|string|false|Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  
+body|body|object|true|Request body object.
+» type|body|string|false|Specified by the merchant as either the Cancellation Policy for cancellation and refund terms<br/>or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then <br/>refer to that document as type TOS. If none is provided, the value defaults to `tos`. <br/>
+» title|body|string|false|Mechant's title for this legal document to be displayed to end users. If none is provided, it defaults to <br/>the generic term "Terms of Service."<br/>
+» content|body|string|false|Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  <br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. <br/>
 
 
 #### Enumerated Values
@@ -4210,19 +1227,6 @@ body|body|object|true|No description
 » type|tos|
 » type|cancelation_policy|
 
-##### » type
-Specified by the merchant as either the Cancellation Policy for cancellation and refund terms
-or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then 
-refer to that document as type TOS. If none is provided, the value defaults to `tos`. 
-
-##### » title
-Mechant's title for this legal document to be displayed to end users. If none is provided, it defaults to 
-the generic term "Terms of Service."
-
-##### » content
-Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  
-provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. 
-
 > Example responses
 
 ```json
@@ -4231,8 +1235,8 @@ provided, it will be linked to directly and not cached, so ensure the URL works 
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-14T16:45:15Z",
-  "updated_at": "2017-11-14T16:45:15Z"
+  "created_at": "2017-11-22T06:40:01Z",
+  "updated_at": "2017-11-22T06:40:01Z"
 }
 ```
 ```json
@@ -4253,8 +1257,7 @@ Status|Meaning|Description|Schema
 422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## RetrieveMerchantLegalDocument
@@ -4280,8 +1283,8 @@ id|path|string(uuid)|true|ID of the Legal Document to retrieve
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-14T16:45:15Z",
-  "updated_at": "2017-11-14T16:45:15Z"
+  "created_at": "2017-11-22T06:40:01Z",
+  "updated_at": "2017-11-22T06:40:01Z"
 }
 ```
 ```json
@@ -4302,8 +1305,7 @@ Status|Meaning|Description|Schema
 404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 ## patchLegalDocumentsId
@@ -4331,10 +1333,10 @@ created prior to the moment it is updated.
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 id|path|string(uuid)|true|ID of the Legal Document to update.
-body|body|object|true|No description
-» type|body|string|false|Specified by the merchant as either the Cancellation Policy for cancellation and refund terms
-» title|body|string|false|Mechant's title for this legal document to be displayed to end users. If none is provided, the existing value 
-» content|body|string|false|Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  
+body|body|object|true|Request body object.
+» type|body|string|false|Specified by the merchant as either the Cancellation Policy for cancellation and refund terms<br/>or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then <br/>refer to that document as type TOS. If none is provided in this request, then the existing value <br/>for the Legal Document being updated will continue to apply.<br/>
+» title|body|string|false|Mechant's title for this legal document to be displayed to end users. If none is provided, the existing value <br/>for the Legal Document being updated will continue to apply.<br/>
+» content|body|string|false|Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  <br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. <br/>If none is provided, the existing value for the Legal Document being updated will continue to apply. <br/>
 
 
 #### Enumerated Values
@@ -4344,21 +1346,6 @@ body|body|object|true|No description
 » type|tos|
 » type|cancelation_policy|
 
-##### » type
-Specified by the merchant as either the Cancellation Policy for cancellation and refund terms
-or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then 
-refer to that document as type TOS. If none is provided in this request, then the existing value 
-for the Legal Document being updated will continue to apply.
-
-##### » title
-Mechant's title for this legal document to be displayed to end users. If none is provided, the existing value 
-for the Legal Document being updated will continue to apply.
-
-##### » content
-Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  
-provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. 
-If none is provided, the existing value for the Legal Document being updated will continue to apply. 
-
 > Example responses
 
 ```json
@@ -4367,8 +1354,8 @@ If none is provided, the existing value for the Legal Document being updated wil
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-14T16:45:15Z",
-  "updated_at": "2017-11-14T16:45:15Z"
+  "created_at": "2017-11-22T06:40:01Z",
+  "updated_at": "2017-11-22T06:40:01Z"
 }
 ```
 ```json
@@ -4400,8 +1387,7 @@ Status|Meaning|Description|Schema
 422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 # consumer_field_templates
@@ -4426,19 +1412,19 @@ and collect data based on it.
 
 ```json
 {
+  "name": "string",
+  "label": "string",
+  "description": "string",
+  "type": "address",
   "options": [
     {
       "type": "address",
       "value": "string"
     }
   ],
-  "name": "string",
-  "label": "string",
-  "description": "string",
-  "type": "text",
+  "default_value": "string",
   "order": 0,
   "scope": "member",
-  "default_value": "string",
   "default": true,
   "required": true
 }
@@ -4447,18 +1433,18 @@ and collect data based on it.
 
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
-body|body|object|true|No description
+body|body|object|true|Request body object.
 » name|body|string|false|A unique name for the template, used as the reference for attaching the template to a purchase.
 » label|body|string|false|Text to display as the field label.
 » description|body|string|false|A description for the template displayed as sub-text below the field label.
-» type|body|string|false|Type of field to display for this template. Single_select and multi_select require passing `option` values.
-» order|body|integer(int32)|false|Order in which the template should be displayed, with 1 being the first displayed. 
-» scope|body|string|false|Whether the template applies at the member level to every group member or at the purchase 
+» type|body|string|false|Type of field to display for this template. Single_select and multi_select require passing `options` values.
 » default_value|body|string|false|Default value to use for the template, which prepopulates the field for the user on landing.
-» default|body|boolean|false|Whether the template should be default or not. Default templates apply to every purchase unless 
+» order|body|integer(int32)|false|Order in which the template should be displayed, with 1 being the first displayed. <br/>This value must be unique to each template, but the values do not have to be sequential.<br/>
+» scope|body|string|false|Whether the template applies at the member level to every group member or at the purchase <br/>level, only to the organizer.<br/>
+» default|body|boolean|false|Whether the template should be default or not. Default templates apply to every purchase unless <br/>you specify at least 1 template at purchase creation. <br/>
 » required|body|boolean|false|This is the default setting for whether the user is required to fill this field when it is presented.
 » options|body|[object]|false|Array of options to display, which is required for a template of single_select or multi_select type.
-»» type|body|string|false|Defines the format of the field, including how it will be shown to end users 
+»» type|body|string|false|Defines the format of the value you provide to display to end users.  <br/>
 »» value|body|string|false|Value displayed to end users when presenting the options
 
 
@@ -4466,58 +1452,39 @@ body|body|object|true|No description
 
 |Parameter|Value|
 |---|---|
+» type|address|
+» type|datetime|
+» type|multi_select|
+» type|single_select|
 » type|text|
 » type|textarea|
-» type|datetime|
-» type|address|
-» type|single_select|
-» type|multi_select|
 » scope|member|
 » scope|purchase|
 »» type|address|
 »» type|datetime|
-»» type|multi_select|
-»» type|single_select|
 »» type|text|
-»» type|textarea|
-
-##### » order
-Order in which the template should be displayed, with 1 being the first displayed. 
-This value must be unique to each template, but the values do not have to be sequential.
-
-##### » scope
-Whether the template applies at the member level to every group member or at the purchase 
-level, only to the organizer.
-
-##### » default
-Whether the template should be default or not. Default templates apply to every purchase unless 
-you specify at least 1 template at purchase creation. 
-
-##### »» type
-Defines the format of the field, including how it will be shown to end users 
-and the types of values it will accept.  
 
 > Example responses
 
 ```json
 {
   "id": "string",
+  "default": true,
+  "special": true,
+  "order": 0,
+  "scope": "member",
+  "required": true,
   "name": "string",
   "label": "string",
   "description": "string",
-  "type": "text",
   "default_value": "string",
+  "type": "address",
   "options": [
     {
       "type": "text",
       "value": "string"
     }
-  ],
-  "order": 0,
-  "scope": "member",
-  "default": true,
-  "special": true,
-  "required": true
+  ]
 }
 ```
 ```json
@@ -4538,887 +1505,197 @@ Status|Meaning|Description|Schema
 422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity|[Error](#schemaerror)
 
 <aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-http
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
 # Schemas
 
-## Purchase
+## BankAccount
 
-<a name="schemapurchase"></a>
+<a id="schemabankaccount"></a>
 
 ```json
 {
   "id": "string",
-  "slug": "string",
-  "merchant": {
-    "id": "string",
-    "unique_name": "string",
-    "display_name": "string",
-    "support_email": "user@example.com",
-    "support_phone": "string",
-    "logo_url": "string",
-    "defaults": {
-      "currency_code": "string",
-      "language_code": "string",
-      "timezone_code": "string",
-      "product_image_url": "string"
-    }
-  },
-  "status": "created",
-  "refund_status": "none",
-  "processing_refund": true,
-  "tipped": true,
-  "auto_pilot_enabled": true,
-  "auto_pilot_trigger_slots": 0,
-  "consumer_fields": [
-    {
-      "name": "string",
-      "label": "string",
-      "description": "string",
-      "type": "text",
-      "settings": {},
-      "scope": "member",
-      "default_value": "string"
-    }
+  "name": "string",
+  "status": "verified",
+  "merchant_id": "string",
+  "supported_currency_codes": [
+    "string"
   ],
-  "consumer_field_values": [
-    {
-      "name": "string",
-      "scope": "member",
-      "required": true
-    }
-  ],
-  "consumer_field_schemas": [
-    {
-      "id": "string",
-      "name": "string",
-      "label": "string",
-      "scope": "member",
-      "required": true,
-      "type": "text"
-    }
-  ],
-  "has_consumer_field_schemas": true,
-  "currency_code": "string",
-  "payment_destination_id": "string",
-  "currency_config": {
-    "supported_payment_sources": [
-      {
-        "type": "credit_card",
-        "unsupported_cards": [
-          "string"
-        ]
-      }
-    ]
-  },
-  "payments": [
-    {
-      "id": "string",
-      "status": "pending",
-      "number": 0,
-      "percentage": 1,
-      "due_deadline": "2017-11-14T16:45:15Z",
-      "paid_at": "2017-11-14T16:45:15Z",
-      "accepted_at": "2017-11-14T16:45:15Z",
-      "submitted_at": "2017-11-14T16:45:15Z",
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "conversion_rate": 0,
-      "processing_currency": "string",
-      "failed": true,
-      "payout_failed": true
-    }
-  ],
-  "current_payment": {
-    "id": "string",
-    "status": "pending",
-    "number": 0,
-    "percentage": 1,
-    "due_deadline": "2017-11-14T16:45:15Z",
-    "paid_at": "2017-11-14T16:45:15Z",
-    "accepted_at": "2017-11-14T16:45:15Z",
-    "submitted_at": "2017-11-14T16:45:15Z",
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "conversion_rate": 0,
-    "processing_currency": "string",
-    "failed": true,
-    "payout_failed": true
-  },
-  "next_payment_due_deadline": "2017-11-14T16:45:15Z",
-  "cost_range": [
-    {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    }
-  ],
-  "current_product_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "current_total_cost_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "max_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "min_product_cost_by_slots": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "max_product_cost_by_amount": {
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "min_slots": 0,
-    "max_slots": 0
-  },
-  "fees_structure": {
-    "currency_code": "string",
-    "payment_destination_type": "bank_account",
-    "consumer_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_share_min": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_service_fees": {
-      "per_share": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "per_purchase_max": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    },
-    "merchant_processing_fees": {
-      "per_transaction": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "percentage": 1
-    }
-  },
-  "apply_consumer_fee_to_organizer": true,
-  "product": {
-    "images": [
-      {
-        "name": "string",
-        "version": "string",
-        "url": "string"
-      }
-    ],
-    "default_image_url": "string",
-    "allowed_split_types": "even_split",
-    "cost_type": "total",
-    "costs": [
-      {
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "min_slots": 0,
-        "max_slots": 0
-      }
-    ],
-    "description": "string",
-    "name": "string",
-    "end_datetime": "2017-11-14T16:45:15Z",
-    "start_datetime": "2017-11-14T16:45:15Z",
-    "external_purchase_id": "string",
-    "inventory_id": "string",
-    "link": "string",
-    "max_slots": 0,
-    "min_slots": 0,
-    "legal_documents": [
-      {
-        "id": "string",
-        "type": "tos",
-        "title": "string",
-        "content": "string",
-        "created_at": "2017-11-14T16:45:15Z",
-        "updated_at": "2017-11-14T16:45:15Z"
-      }
-    ]
-  },
-  "group": {
-    "commit_deadline": "2017-11-14T16:45:15Z",
-    "max_slots": 0,
-    "min_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "organizer_email": "user@example.com",
-    "organizer_full_name": "string",
-    "legal_document_ids": [
-      "string"
-    ],
-    "split_type": "even_split"
-  },
-  "memberships": [
-    {
-      "id": "string",
-      "status": "holdout",
-      "refund_status": "none",
-      "failed": true,
-      "short": true,
-      "role": "organizer",
-      "claimed_slots": 0,
-      "opt_in_marketing": true,
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "consumer_field_values": {
-        "name": "string",
-        "scope": "member",
-        "required": true
-      },
-      "allowed_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "allowed_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "max_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "max_fees": {
-        "consumer_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "merchant_service_fee": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        }
-      },
-      "collected_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "collected_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "current_contribution": {
-        "id": "string",
-        "status": "created",
-        "refund_status": "none",
-        "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "share_amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
-        },
-        "fees": {
-          "consumer_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          },
-          "merchant_service_fee": {
-            "amount_cents": 0,
-            "currency_code": "string"
-          }
-        },
-        "charged_at": "2017-11-14T16:45:15Z",
-        "failed_at": "2017-11-14T16:45:15Z",
-        "created_at": "string"
-      },
-      "user": {
-        "id": "string",
-        "email": "user@example.com",
-        "full_name": "string",
-        "first_name": "string",
-        "last_name": "string",
-        "avatar_url": "string",
-        "language_code": "string",
-        "created_at": "string"
-      },
-      "purchase_id": "string",
-      "payment_source": {
-        "id": "string",
-        "name": "string",
-        "type": "string",
-        "info": {
-          "account_name": "string",
-          "account_number": "string",
-          "account_holder_type": "string"
-        },
-        "created_at": "2017-11-14T16:45:15Z"
-      },
-      "committed_at": "2017-11-14T16:45:15Z",
-      "created_at": "2017-11-14T16:45:15Z"
-    }
-  ],
-  "collected_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_shares_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "committed_slots": 0,
-  "needed_amount_to_current_payment": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "needed_slots_to_min": 0,
-  "product_or_group_max_slots": 0,
-  "product_or_group_min_slots": 0,
-  "language_code": "DA (Danish)",
-  "created_at": "2017-11-14T16:45:15Z"
+  "currency_configs": "string"
 } 
 ```
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Pay By Group UUID for this Purchase used for API calls
-slug|string|false|Short, unique identifier of this Purchase for easy reference in the Business Portal and with end users 
-merchant|[Merchant](#schemamerchant)|false|No description
-» id|string(uuid)|false|Unique ID for the merchant.
-» unique_name|string|false|Unique Pay By Group-assigned slug to identify this merchant
-» display_name|string|false|Display name chosen by merchant for end users to see
-» support_email|string(email)|false|Email provided for end users to contant the merchant
-» support_phone|string|false|Phone provided for end users to contant the merchant
-» logo_url|string|false|Logo provided by the merchant for display to end users
-» defaults|[MerchantDefaults](#schemamerchantdefaults)|false|No description
-»» currency_code|string|false|Default currency code for this merchant, which applies to new purchases where a currency is not specified 
-»» language_code|string|false|Default language for this merchant, which applies to new purchases where a default language is not specified 
-»» timezone_code|string|false|Default timezone code for this merchant, which applies to new datetimes created under the merchant's purchases where a time is not specified. 
-»» product_image_url|string|false|URL of the default image for this merchant, which applies to new purchases where a purchase image is not specified. 
-status|string|false|Current status of the purchase. One of: - `created` Purchase has been created by the Merchant. - `active` Purchase has been claimed by an organizer and is in process. - `completed` All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made,  only refunds.  - `canceled` The Purchase has been canceled by the merchant or organizer and is not recoverable. 
-refund_status|string|false|Status that describes whether the Purchase is partially or fully refunded. One of: - `none` None of the Purchase's Memberships were refunded. - `partial` Some of the Purchase's Memberships were partially or fully refunded. - `full` All of the Purchase's Memberships were fully refunded. 
-processing_refund|boolean|false|Determines whether or not a refund is currently being processed for the purchase.
-tipped|boolean|false|The minimum required slots have been claimed for the organizer to submit payment
-auto_pilot_enabled|boolean|false|The organizer has chosen to have payments triggered automatically as soon as the trigger_slots level they set is reached 
-auto_pilot_trigger_slots|integer(int32)|false|The number of slots set by the organizer, which when reached, will automatically trigger payment submission 
-has_consumer_field_schemas|boolean|false|Whether or not this purchase has any consumer field schema declared.
-currency_code|string|false|3-letter currency code for all money values related to the Purchase
-payment_destination_id|string(uuid)|false|ID of the payment destination that will receive all future payments made under this Purchase.
-currency_config|object|false|All unsupported payment source types by this Purchase's payment destination, which members cannot use for their contributions 
-» supported_payment_sources|[object]|false|List of supported payment sources based on the currency of this Purchase
-»» type|string|false|Type of the supported payment source
-»» unsupported_cards|[string]|false|List of unsupported credit cards for this particular payment source.
-current_payment|[Payment](#schemapayment)|false|No description
-» id|string(uuid)|false|Pay By Group UUID for this payment
-» status|string|false|One of: - pending A planned future payment on the purchase. - active The currently active, next payment to be paid on the purchase - authorizing The constituent contributions that comprise this   payment are in the process of having their funds verified. - authorized All funds have been verified for this payment and it   awaits acceptance by the merchant. - captured All funds have been taken from group members for the   purchase and are awaiting payout to the merchant. - processing_payout The payout to the merchant is in process. - canceled This payment has been canceled. - paid All funds are paid out to the Payout Account. 
-» number|integer(int32)|false|Number of this payment in the overall sequence of the purchase. It is 0 if the purchase has only 1 payment. 
-» percentage|integer(int32)|false|Percent of the total purchase cost due for this payment, which must be an integer. All payments on a purchase must sum to 100. 
-» due_deadline|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for the purchase to be valid. It is required for all payments after the first payment but may be passed for the first, or only, payment as well. 
-» paid_at|string(date-time)|false|Timestamp when the payment is paid out to the merchant
-» accepted_at|string(date-time)|false|Timestamp when the payment is accepted by the merchant
-» submitted_at|string(date-time)|false|Timestamp when the payment is originally submitted by the organizer
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» conversion_rate|number(float)|false|If the currency of the purchase differs from the required currency of the payment destination then this is the conversion rate used to determine the transacted amount. 
-» processing_currency|string|false|The required currency of the payment destination, which is the currency in which all transactions related to this payment occur 
-» failed|boolean|false|true if any of the contributions under this payment are currently in a failed state
-» payout_failed|boolean|false|true if the last attempt to perform a payout failed
-next_payment_due_deadline|string(date-time)|false|This is the next due deadline set by the merchant for an upcoming payment
-current_product_cost_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-current_total_cost_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-max_product_cost_by_slots|[ProductCost](#schemaproductcost)|false|No description
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-min_product_cost_by_slots|[ProductCost](#schemaproductcost)|false|No description
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-max_product_cost_by_amount|[ProductCost](#schemaproductcost)|false|No description
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-fees_structure|[PurchaseFeesStructure](#schemapurchasefeesstructure)|false|No description
-» currency_code|string|false|3-letter currency code for which this fee structure applies
-» payment_destination_type|string|false|Payment destination identifier for which this fee structure applies
-» consumer_fees|[ConsumerFeesStructure](#schemaconsumerfeesstructure)|false|No description
-»» per_share|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» per_share_max|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» per_share_min|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» percentage|integer(int32)|false|Percentage applied to member's total share to determine fee
-» merchant_service_fees|[MerchantServiceFeesStructure](#schemamerchantservicefeesstructure)|false|No description
-»» per_share|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» per_purchase_max|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» percentage|integer(int32)|false|Percentage fee applied to each member's share
-» merchant_processing_fees|[MerchantProcessingFeesStructure](#schemamerchantprocessingfeesstructure)|false|No description
-»» per_transaction|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» percentage|integer(int32)|false|Percentage fee for each successful transaction sent through Pay By Group
-apply_consumer_fee_to_organizer|boolean|false|Tells if consumer fee applies to the purchase's organizer
-product|[Product](#schemaproduct)|false|No description
-» default_image_url|string|false|The primary or default image for this product
-» cost_type|string|false|Cost type that determines whether the product_costs amount(s) are: - per_slot The amount is per slot claimed in the Purchase so the   total amount paid to the merchant is a function of the number of   slots claimed by group members. - total A single total amount so long as the number of slots claimed   is in the allowed range for that amount. 
-» description|string|false|Description of the product for this Purchase
-» name|string|false|Name of the product being purchased as it should be shown to end users
-» end_datetime|string(date-time)|false|End date time for the product being purchased (e.g. check-out date time, flight arrival date time, or activity ending time) 
-» start_datetime|string(date-time)|false|Start date time for the product being purchased (e.g. check-in date time, flight departure date time, or event starting time) 
-» external_purchase_id|string|false|ID supplied by the merchant that identifies this Purchase (e.g. order or booking) in the merchant's system 
-» inventory_id|string|false|Inventory ID supplied by the merchant that identifies the product being bought in this Purchase (e.g. SKU or property ID) 
-» link|string|false|Link to the product being purchased on the merchant's (or other third party's) website
-» max_slots|integer(int32)|false|The maximum possible slots allowed by the merchant based on product_costs
-» min_slots|integer(int32)|false|The minimum possible slots allowed by the merchant based on product_costs
-» images|[[Image](#schemaimage)]|false|The set of images for this product
-»» name|string|false|Filename of the image as provided by the merchant
-»» version|string|false|Version of the image generated by PBG
-»» url|string|false|No description
-» allowed_split_types|[string]|false|Array of allowed split types
-» costs|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots for each provided by the merchant 
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-»» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-» legal_documents|[[LegalDocument](#schemalegaldocument)]|false|All legal documents attached to this purchase that must be agreed to by the group members
-»» id|string(uuid)|false|Pay By Group UUID of this legal document
-»» type|string|false|Specified by the merchant as either cancellation policy for cancellation and refund terms or tos for all other legal documents. 
-»» title|string|false|Mechant's title for this legal document
-»» content|string|false|Full content as provided by the merchant, either in plain text or as a URL
-»» created_at|string(date-time)|false|When this legal document was added by the merchant
-»» updated_at|string(date-time)|false|When this legal document was last updated by the merchant
-group|[Group](#schemagroup)|false|No description
-» commit_deadline|string(date-time)|false|Pay By Group-generated deadline that encourages invitees to commit to the group quickly. It auto-extends unless overriden by the merchant or organizer 
-» max_slots|integer(int32)|false|The organizer-specified value for the maximum number of slots they will allow to be claimed. It must be within the bounds allowed by the merchant. 
-» min_slots|integer(int32)|false|The organizer-specified value for the minimum number of slots they require to be claimed. It must be within the bounds allowed by the merchant. 
-» min_contribution|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» organizer_email|string(email)|false|Email of the expected organizer as provided by the merchant
-» organizer_full_name|string|false|Full name of the expected organizer as provided by the merchant
-» split_type|string|false|Splitting type chosen by the organizer for how to divide the cost among group members. One of: - even_split Only compatible with total cost_type and means the   Purchase amount is split evenly across each slot claimed. - specified_per_person Only compatible with total cost_type and   means each member may pay a different amount. - fixed_per_person Only compatible with per_slot cost_type and means   each group member pays a fixed amount per slot they claim. 
-» legal_document_ids|[string]|false|Array of legal document IDs that must be accepted by the members in this purchase
-collected_shares_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-committed_shares_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-committed_slots|integer(int32)|false|Sum of all slots group members have claimed in the Purchase at this point
-needed_amount_to_current_payment|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-needed_slots_to_min|integer(int32)|false|Number of slots group members must claim in order to meet the minimum required to submit the current payment 
-product_or_group_max_slots|integer(int32)|false|The active minimum number of slots that must be claimed based on the parameters set by the merchant and organizer 
-product_or_group_min_slots|integer(int32)|false|The active maximum number of slots that are allowed to be claimed based on the parameters set by the merchant and organizer 
-language_code|string|false|Default 2-character language code for this purchase. It is going  to be used in the claim and commit steps; and as one of the  fallbacks when detecting what language to show to the user 
-created_at|string(date-time)|false|Timestamp of when the Purchase was first created by the merchant
-consumer_fields|[[ConsumerField](#schemaconsumerfield)]|false|Array of consumer fields for this Purchase
-» name|string|false|No description
-» label|string|false|No description
-» description|string|false|No description
-» type|string|false|No description
-» settings|object|false|No description
-» scope|string|false|No description
-» default_value|string|false|No description
-consumer_field_values|[[ConsumerFieldValue](#schemaconsumerfieldvalue)]|false|Array of values for each of the consumer fields defined.
-» name|string|false|Name of the schema
-» scope|string|false|One of member or purchase.
-» required|boolean|false|Whether the schema field should be required or not.
-consumer_field_schemas|[[ConsumerFieldSchema](#schemaconsumerfieldschema)]|false|List of consumer field schemas to use for the purchase
-» id|string(uuid)|false|No description
-» name|string|false|No description
-» label|string|false|No description
-» scope|string|false|Any of member or purchase.
-» required|boolean|false|Whether the field for this schema should be required or not.
-» type|string|false|No description
-payments|[[Payment](#schemapayment)]|false|Full payment schedule as set by the merchant for this Purchase
-» id|string(uuid)|false|Pay By Group UUID for this payment
-» status|string|false|One of: - pending A planned future payment on the purchase. - active The currently active, next payment to be paid on the purchase - authorizing The constituent contributions that comprise this   payment are in the process of having their funds verified. - authorized All funds have been verified for this payment and it   awaits acceptance by the merchant. - captured All funds have been taken from group members for the   purchase and are awaiting payout to the merchant. - processing_payout The payout to the merchant is in process. - canceled This payment has been canceled. - paid All funds are paid out to the Payout Account. 
-» number|integer(int32)|false|Number of this payment in the overall sequence of the purchase. It is 0 if the purchase has only 1 payment. 
-» percentage|integer(int32)|false|Percent of the total purchase cost due for this payment, which must be an integer. All payments on a purchase must sum to 100. 
-» due_deadline|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for the purchase to be valid. It is required for all payments after the first payment but may be passed for the first, or only, payment as well. 
-» paid_at|string(date-time)|false|Timestamp when the payment is paid out to the merchant
-» accepted_at|string(date-time)|false|Timestamp when the payment is accepted by the merchant
-» submitted_at|string(date-time)|false|Timestamp when the payment is originally submitted by the organizer
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» conversion_rate|number(float)|false|If the currency of the purchase differs from the required currency of the payment destination then this is the conversion rate used to determine the transacted amount. 
-» processing_currency|string|false|The required currency of the payment destination, which is the currency in which all transactions related to this payment occur 
-» failed|boolean|false|true if any of the contributions under this payment are currently in a failed state
-» payout_failed|boolean|false|true if the last attempt to perform a payout failed
-cost_range|[[ProductCost](#schemaproductcost)]|false|The range of possible costs for this product based on the product_costs merchant provides
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-memberships|[[Membership](#schemamembership)]|false|Array that includes all members in this Purchase without their contributions.
-» id|string|false|Pay By Group UUID for this membership
-» status|string|false|One of: - holdout (user has been invited but not joined the group); - committed (user has joined the group and whether they have been charged is in the contribution object); 
-» refund_status|string|false|Status that determines whether the Membership is partially or fully refunded. One of: - none (none of the Membership's Contributions were refunded). - partial (some of the Membership's Contributions were partially   or fully refunded). - full (all of the Membership's Contributions were fully refunded). 
-» failed|boolean|false|User is currently in the group with a failed payment method, which is preventing the purchase from completing 
-» short|boolean|false|The user is currently in the group but has not agreed to pay their new required share amount due to updates to the purchase. 
-» role|string|false|Either organizer or invitee
-» claimed_slots|integer(int32)|false|Number of slots the member has claimed in the group. Defaults to 1 if none is selected by the user.
-» opt_in_marketing|boolean|false|true if the user has opted in to receive marketing communication from the merchant. Otherwise false.
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» share_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» fees|[Fees](#schemafees)|false|No description
-»» consumer_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-» consumer_field_values|[ConsumerFieldValue](#schemaconsumerfieldvalue)|false|No description
-»» name|string|false|Name of the schema
-»» scope|string|false|One of member or purchase.
-»» required|boolean|false|Whether the schema field should be required or not.
-» allowed_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» allowed_share_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» allowed_fees|[Fees](#schemafees)|false|No description
-»» consumer_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-» max_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» max_share_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» max_fees|[Fees](#schemafees)|false|No description
-»» consumer_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-» collected_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» collected_share_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» current_contribution|[Contribution](#schemacontribution)|false|No description
-»» id|string|false|UUID of this contribution
-»» status|string|false|Current status of the contribution, any of created, authorized, captured, holdout or failed
-»» refund_status|string|false|Status that determines whether the Contribution is partially or fully refunded. One of: - none (none of the Contribution's Transactions were refunded). - partial (some of the Contribution's Transactions were partially   or fully refunded). - full (all of the Contribution's Transactions were fully refunded). 
-»» amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» share_amount|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» fees|[Fees](#schemafees)|false|No description
-»»» consumer_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»»» currency_code|string|false|3-letter currency code attached to every money value
-»» charged_at|string(date-time)|false|Timestamp of when this contibution was charged
-»» failed_at|string(date-time)|false|Timestamp of when this contribution most recently failed
-»» created_at|string|false|Timestamp when the record of this contribution was first created, which is not necessarily when it was charged 
-» user|[User](#schemauser)|false|No description
-»» id|string(uuid)|false|Pay By Group UUID for this user
-»» email|string(email)|false|User's email address
-»» full_name|string|false|User's full name
-»» first_name|string|false|User's first name
-»» last_name|string|false|User's last name
-»» avatar_url|string|false|URL of the User's avatar
-»» language_code|string|false|The preferred language selected by this user
-»» created_at|string(uuid)|false|No description
-» purchase_id|string(uuid)|false|Pay By Group slug of the purchase to which this membership is tied
-» payment_source|[PaymentSource](#schemapaymentsource)|false|No description
-»» id|string(uuid)|false|Pay By Group UUID of this payment source
-»» name|string|false|Full name of this payment source's owner
-»» type|string|false|Describes the type of payment source, any of credit_card or bank_account
-»» info|object|false|Bank account information of this payment source
-»»» account_name|string|false|Listed name of the account holder
-»»» account_number|string|false|Account number
-»»» account_holder_type|string|false|Either a business or individual
-»» created_at|string(date-time)|false|Timestamp when the payment source was first added to the system
-» committed_at|string(date-time)|false|Timestamp of when the member agreed to pay into the purchase
-» created_at|string(date-time)|false|When the membership was first created
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID for this bank account
+name|string|Displayed name of bank account with last 4 of account number
+status|string|verified or unverified depending on whether micro-deposit amounts have confirmed account ownership
+merchant_id|string(uuid)|Merchant this bank account belongs to
+currency_configs|string|Set of payment sources supported across all currencies for this bank account. Not all currencies support all payment sources. 
+supported_currency_codes|[string]|3-letter currency codes that can be used for credits and debits with this account
 
 
 #### Enumerated Values
 
 |Property|Value|
 |---|---|
-status|created|
-status|active|
-status|completed|
-status|canceled|
-refund_status|none|
-refund_status|partial|
-refund_status|full|
-»» type|credit_card|
-» status|pending|
-» status|active|
-» status|authorizing|
-» status|authorized|
-» status|captured|
-» status|processing_payout|
-» status|canceled|
-» status|paid|
-» payment_destination_type|bank_account|
-» payment_destination_type|payment_gateway|
-» cost_type|total|
-» cost_type|per_slot|
-»» type|tos|
-»» type|cancelation_policy|
-» split_type|even_split|
-» split_type|specified_per_person|
-» split_type|fixed_per_person|
-language_code|DA (Danish)|
-language_code|EN (English)|
-language_code|ES (Spanish)|
-» type|text|
-» type|textarea|
-» type|datetime|
-» type|address|
-» type|single_select multi_select|
-» scope|member|
-» scope|purchase|
-» scope|member|
-» scope|purchase|
-» scope|member|
-» scope|purchase|
-» type|text|
-» type|textarea|
-» type|datetime|
-» type|address|
-» type|single_select multi_select|
-» status|pending|
-» status|active|
-» status|authorizing|
-» status|authorized|
-» status|captured|
-» status|processing_payout|
-» status|canceled|
-» status|paid|
-» status|holdout|
-» status|committed|
-» refund_status|none|
-» refund_status|partial|
-» refund_status|full|
-» role|organizer|
-» role|invitee|
-»» scope|member|
-»» scope|purchase|
-»» status|created|
-»» status|authorized|
-»» status|captured|
-»» status|holdout|
-»» status|failed|
-»» refund_status|none|
-»» refund_status|partial|
-»» refund_status|full|
+status|verified|
+status|unverified|
 
 
-## Merchant
+## ConsumerFeesStructure
 
-<a name="schemamerchant"></a>
+<a id="schemaconsumerfeesstructure"></a>
+
+```json
+{
+  "per_share": null,
+  "per_share_max": null,
+  "per_share_min": null,
+  "percentage": 1
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+per_share|[Money](#schemamoney)|Amount due per group member across all payments on a Purchase,  which overrides the percentage value if both exist. 
+per_share_max|[Money](#schemamoney)|Maximum charge per member's total share when applying the percentage
+per_share_min|[Money](#schemamoney)|Minimum charge per member's total share when applying the percentage
+percentage|integer(int32)|Percentage applied to member's total share to determine the fee
+
+
+
+## ConsumerFieldSchema
+
+<a id="schemaconsumerfieldschema"></a>
 
 ```json
 {
   "id": "string",
-  "unique_name": "string",
-  "display_name": "string",
-  "support_email": "user@example.com",
-  "support_phone": "string",
-  "logo_url": "string",
-  "defaults": {
-    "currency_code": "string",
-    "language_code": "string",
-    "timezone_code": "string",
-    "product_image_url": "string"
-  }
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Unique ID for the merchant.
-unique_name|string|false|Unique Pay By Group-assigned slug to identify this merchant
-display_name|string|false|Display name chosen by merchant for end users to see
-support_email|string(email)|false|Email provided for end users to contant the merchant
-support_phone|string|false|Phone provided for end users to contant the merchant
-logo_url|string|false|Logo provided by the merchant for display to end users
-defaults|[MerchantDefaults](#schemamerchantdefaults)|false|No description
-» currency_code|string|false|Default currency code for this merchant, which applies to new purchases where a currency is not specified 
-» language_code|string|false|Default language for this merchant, which applies to new purchases where a default language is not specified 
-» timezone_code|string|false|Default timezone code for this merchant, which applies to new datetimes created under the merchant's purchases where a time is not specified. 
-» product_image_url|string|false|URL of the default image for this merchant, which applies to new purchases where a purchase image is not specified. 
-
-
-
-## MerchantDefaults
-
-<a name="schemamerchantdefaults"></a>
-
-```json
-{
-  "currency_code": "string",
-  "language_code": "string",
-  "timezone_code": "string",
-  "product_image_url": "string"
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-currency_code|string|false|Default currency code for this merchant, which applies to new purchases where a currency is not specified 
-language_code|string|false|Default language for this merchant, which applies to new purchases where a default language is not specified 
-timezone_code|string|false|Default timezone code for this merchant, which applies to new datetimes created under the merchant's purchases where a time is not specified. 
-product_image_url|string|false|URL of the default image for this merchant, which applies to new purchases where a purchase image is not specified. 
-
-
-
-## ConsumerField
-
-<a name="schemaconsumerfield"></a>
-
-```json
-{
+  "order": 0,
+  "scope": "member",
+  "required": true,
   "name": "string",
   "label": "string",
   "description": "string",
-  "type": "text",
-  "settings": {},
-  "scope": "member",
-  "default_value": "string"
+  "default_value": "string",
+  "type": "address",
+  "options": [
+    {
+      "type": "text",
+      "value": "string"
+    }
+  ]
 } 
 ```
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-name|string|false|No description
-label|string|false|No description
-description|string|false|No description
-type|string|false|No description
-settings|object|false|No description
-scope|string|false|No description
-default_value|string|false|No description
+Name|Type|Description
+---|---|---|
+id|string(uuid)|UUID that identfies this consumer_field_schema for this Purchase
+order|integer(int32)|Order in which the template should be displayed.
+scope|string|Either `member` (applies to every group member) or purchase  (applies only for the organizer to fill out on behalf of the whole Purchase) 
+required|boolean|Whether the field is required or not
+name|string|Name of this consumer_field as provided in the consumer_field_template that created this consumer_field_schema
+label|string|Text displayed as the field label
+description|string|Descriptive helper text explaining the field to the end user
+default_value|string|Default value shown on landing for the user
+type|string|Format for how the field is displayed to end users
+options|[object]|Array of options for the user to select from, which applies for `single_select`  and `multi-select` `type` templates 
+» type|string|Format type for the listed option
+» value|string|Value for the option displayed to end users
 
 
 #### Enumerated Values
 
 |Property|Value|
 |---|---|
-type|text|
-type|textarea|
-type|datetime|
-type|address|
-type|single_select multi_select|
 scope|member|
 scope|purchase|
+type|address|
+type|datetime|
+type|multi_select|
+type|single_select|
+type|text|
+type|textarea|
+» type|text|
+» type|datetime|
+» type|address|
+
+
+## ConsumerFieldTemplate
+
+<a id="schemaconsumerfieldtemplate"></a>
+
+```json
+{
+  "id": "string",
+  "default": true,
+  "special": true,
+  "order": 0,
+  "scope": "member",
+  "required": true,
+  "name": "string",
+  "label": "string",
+  "description": "string",
+  "default_value": "string",
+  "type": "address",
+  "options": [
+    {
+      "type": "text",
+      "value": "string"
+    }
+  ]
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID for this consumer field template
+default|boolean|Whether the template should be default or not.
+special|boolean|Whether the template is a special field or not. Special fields are  standardized fields where the values a user enters may be pre-populated  based on that user's previous activity. These fields are shipping  address, billing address, and phone number.  
+order|integer(int32)|Order in which the template should be displayed.
+scope|string|Either `member` (applies to every group member) or purchase  (applies only for the organizer to fill out on behalf of the whole Purchase) 
+required|boolean|Whether the field is required or not when the template is attached to a Purchase
+name|string|A unique name for the template, used when referencing the template to attach it to a Purchase
+label|string|Text displayed as the field label
+description|string|Descriptive helper text explaining the field to the end user
+default_value|string|Default value shown on landing for the user
+type|string|Format for how the field is displayed to end users
+options|[object]|Array of options for the user to select from, which applies for `single_select`  and `multi-select` `type` templates 
+» type|string|Format type for the listed option
+» value|string|Value for the option displayed to end users
+
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+scope|member|
+scope|purchase|
+type|address|
+type|datetime|
+type|multi_select|
+type|single_select|
+type|text|
+type|textarea|
+» type|text|
+» type|datetime|
+» type|address|
 
 
 ## ConsumerFieldValue
 
-<a name="schemaconsumerfieldvalue"></a>
+<a id="schemaconsumerfieldvalue"></a>
 
 ```json
 {
@@ -5430,11 +1707,11 @@ scope|purchase|
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-name|string|false|Name of the schema
-scope|string|false|One of member or purchase.
-required|boolean|false|Whether the schema field should be required or not.
+Name|Type|Description
+---|---|---|
+name|string|Name of the schema
+scope|string|One of member or purchase.
+required|boolean|Whether the schema field should be required or not.
 
 
 #### Enumerated Values
@@ -5445,49 +1722,403 @@ scope|member|
 scope|purchase|
 
 
-## ConsumerFieldSchema
+## Contribution
 
-<a name="schemaconsumerfieldschema"></a>
+<a id="schemacontribution"></a>
 
 ```json
 {
   "id": "string",
-  "name": "string",
-  "label": "string",
-  "scope": "member",
-  "required": true,
-  "type": "text"
+  "status": "created",
+  "refund_status": "none",
+  "amount": null,
+  "share_amount": null,
+  "fees": null,
+  "charged_at": "2017-11-22T06:40:01Z",
+  "failed_at": "2017-11-22T06:40:01Z",
+  "created_at": "string"
 } 
 ```
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|No description
-name|string|false|No description
-label|string|false|No description
-scope|string|false|Any of member or purchase.
-required|boolean|false|Whether the field for this schema should be required or not.
-type|string|false|No description
+Name|Type|Description
+---|---|---|
+id|string|UUID of this contribution
+status|string|Current status of the contribution, any of: `created` (member is committed, but has no payment activity on this contribution yet);  `authorized` (the member's payment method was successfully authorized for this charge);  `captured` (the full contribution amount has been captured from the member's payment method);  `holdout` (the member is not currently committed to the purchase); or  `failed` (the charge or this contribution failed and Pay By Group is attempting to resolve it) 
+refund_status|string|Status that determines whether the Contribution is partially or fully refunded, one of:  `none` (none of the Contribution's Transactions were refunded);  `partial` (some of the Contribution's Transactions were partially   or fully refunded); or  `full` (all of the Contribution's Transactions were fully refunded) 
+amount|[Money](#schemamoney)|Amount of this contribution, the sum of the purchase share and consumer fees
+share_amount|[Money](#schemamoney)|This contribution's share of the total purchase, not including consumer fees
+fees|[Fees](#schemafees)|The consumer fee added to this contribution's share and payable to Pay By Group
+charged_at|string(date-time)|Timestamp of when this contibution was charged
+failed_at|string(date-time)|Timestamp of when this contribution most recently failed, if at all
+created_at|string|Timestamp when the record of this contribution was first created, which is not necessarily when it was charged 
 
 
 #### Enumerated Values
 
 |Property|Value|
 |---|---|
-scope|member|
-scope|purchase|
-type|text|
-type|textarea|
-type|datetime|
-type|address|
-type|single_select multi_select|
+status|created|
+status|authorized|
+status|captured|
+status|holdout|
+status|failed|
+refund_status|none|
+refund_status|partial|
+refund_status|full|
+
+
+## Error
+
+<a id="schemaerror"></a>
+
+```json
+{
+  "errors": [
+    {
+      "code": 0,
+      "message": "string"
+    }
+  ]
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+errors|[object]|Array of errors returned by the endpoint
+» code|integer(int32)|Error code to identify the message (NOTE: not used at the moment)
+» message|string|Description of the error
+
+
+
+## Fees
+
+<a id="schemafees"></a>
+
+```json
+{
+  "consumer_fee": null
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+consumer_fee|[Money](#schemamoney)|Amount charged to the user and due to Pay By Group for the Membership
+
+
+
+## Group
+
+<a id="schemagroup"></a>
+
+```json
+{
+  "commit_deadline": "2017-11-22T06:40:01Z",
+  "max_slots": 0,
+  "min_slots": 0,
+  "min_contribution": null,
+  "organizer_email": "user@example.com",
+  "organizer_full_name": "string",
+  "legal_document_ids": [
+    "string"
+  ],
+  "split_type": "even_split"
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+commit_deadline|string(date-time)|Pay By Group-generated deadline that encourages invitees to commit to the group quickly. It auto-extends unless overriden by the merchant or organizer. 
+max_slots|integer(int32)|The organizer-specified value for the maximum number of slots they will allow to be claimed. It must be within the bounds of the highest  max_slots set by the merchant in Product Costs 
+min_slots|integer(int32)|The organizer-specified value for the minimum number of slots they require to be claimed. It must be above the minimum of the lowest  min_slots set by the merchant in Product Costs 
+min_contribution|[Money](#schemamoney)|The organizer-specified minimum required contribution by each member, which only  applies for Purchases set to `specified_per_person` `split_type` 
+organizer_email|string(email)|Email of the expected organizer as provided by the merchant
+organizer_full_name|string|Full name of the expected organizer as provided by the merchant
+split_type|string|Splitting type chosen by the organizer for how to divide the cost among group members, which is one of:  `even_split` (only compatible with total cost_type and means the  Purchase amount is split evenly across each slot claimed);  `specified_per_person` (only compatible with total cost_type and means each member may pay a different amount); or  `fixed_per_person` (only compatible with per_slot cost_type and means   each group member pays a fixed amount per slot they claim) 
+legal_document_ids|[string]|Array of legal document IDs that must be accepted by the members in this purchase
+
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+split_type|even_split|
+split_type|specified_per_person|
+split_type|fixed_per_person|
+
+
+## Image
+
+<a id="schemaimage"></a>
+
+```json
+{
+  "id": "string",
+  "name": "string",
+  "version": "string",
+  "url": "string"
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID of this image
+name|string|Filename of the image as provided by the merchant
+version|string|Version of the image as generated by Pay By Group
+url|string|URL to retrieve the image stored with Pay By Group
+
+
+
+## LegalBinding
+
+<a id="schemalegalbinding"></a>
+
+```json
+{
+  "id": "string",
+  "type": "tos",
+  "title": "string",
+  "content": "string",
+  "created_at": "string",
+  "remote_ip": "string",
+  "user_id": "string",
+  "purchase_id": "string"
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID of this specific record of acceptance by the user
+type|string|Either `cancellation_policy` for cancellation and refund terms or `tos` for all other legal documents provided by merchant. 
+title|string|Mechant's title for this legal document at the time it was accepted by the user
+content|string|Full content as accepted by the user at the moment they agreed to this legal document
+created_at|string|Verifiable timestamp when the user accepted this legal document
+remote_ip|string|User's IP address at the moment they accepted this legal document
+user_id|string|ID of the user that accepted the document, which includes their name and email
+purchase_id|string|The purchase for which this document was accepted by the user
+
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+type|tos|
+type|cancelation_policy|
+
+
+## LegalDocument
+
+<a id="schemalegaldocument"></a>
+
+```json
+{
+  "id": "string",
+  "type": "tos",
+  "title": "string",
+  "content": "string",
+  "created_at": "2017-11-22T06:40:01Z",
+  "updated_at": "2017-11-22T06:40:01Z"
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID of this legal document
+type|string|Specified by the merchant as either `cancellation_policy` for cancellation and refund terms or `tos` for all other legal documents. 
+title|string|Mechant's title for this legal document
+content|string|Full content as provided by the merchant, either in plain text or as a URL
+created_at|string(date-time)|When this legal document was added by the merchant
+updated_at|string(date-time)|When this legal document was last updated by the merchant
+
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+type|tos|
+type|cancelation_policy|
+
+
+## Membership
+
+<a id="schemamembership"></a>
+
+```json
+{
+  "id": "string",
+  "status": "holdout",
+  "refund_status": "none",
+  "failed": true,
+  "short": true,
+  "role": "organizer",
+  "claimed_slots": 0,
+  "opt_in_marketing": true,
+  "amount": null,
+  "share_amount": null,
+  "fees": null,
+  "consumer_field_values": null,
+  "allowed_amount": null,
+  "allowed_share_amount": null,
+  "allowed_fees": null,
+  "collected_amount": null,
+  "collected_share_amount": null,
+  "current_contribution": null,
+  "user": null,
+  "purchase_id": "string",
+  "payment_source": null,
+  "committed_at": "2017-11-22T06:40:01Z",
+  "created_at": "2017-11-22T06:40:01Z"
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+id|string|Pay By Group UUID for this membership
+status|string|One of:  `holdout` (user has been invited but not joined the group) or `committed` (user has joined the group and whether they have been charged is in the contribution object) 
+refund_status|string|Status that determines whether the Membership is partially or fully refunded, which is one of:  `none` (none of the Membership's Contributions were refunded);  `partial` (some of the Membership's Contributions were partially or fully refunded); or  `full` (all of the Membership's Contributions were fully refunded). 
+failed|boolean|User is currently in the group with a failed payment method, which is preventing the purchase from completing 
+short|boolean|The user is currently committed but has not agreed to pay their new required amount for their share due to changes to the purchase  since they first committed. 
+role|string|Either organizer or invitee
+claimed_slots|integer(int32)|Number of slots the member has claimed in the group, defaulted to 1 if none is selected by the user
+opt_in_marketing|boolean|True if the user has opted in to receive marketing communication from the merchant, otherwise false
+amount|[Money](#schemamoney)|Total amount this member will be charged based on the current purchase details across all payments, which is the sum of the  `share_amount` and `fees` 
+share_amount|[Money](#schemamoney)|This member's share of the total purchase across all payments based on the current purchase details and not including fees 
+fees|[Fees](#schemafees)|The total consumer fees paid to Pay By Group by this member
+consumer_field_values|[ConsumerFieldValue](#schemaconsumerfieldvalue)|Values that have been filled out by the member for each consumer_field_schema  scoped to the Purchase and each slot they have claimed, when applicable 
+allowed_amount|[Money](#schemamoney)|Maximum amount, including consumer fees, this member has agreed to be charged under any circumstance across all payments
+allowed_share_amount|[Money](#schemamoney)|Maximum amount this member has agreed to be charged for their share of the purchase across all payments
+allowed_fees|[Fees](#schemafees)|Maximum amount this member has agreed to be charged for their consumer fees due to Pay By Group
+collected_amount|[Money](#schemamoney)|Sum of all paid contributions making up this member's share that have been paid to date (including fees). 
+collected_share_amount|[Money](#schemamoney)|Sum of all paid contributions making up this member's share that have been paid to date, not including fees
+current_contribution|[Contribution](#schemacontribution)|This is the next upcoming contribution by this member towards their share of the  Purchase and corresponds to the next Payment on the Purchase 
+user|[User](#schemauser)|Details for the user that owns this membership
+purchase_id|string(uuid)|Pay By Group UUID of the purchase to which this membership is tied
+payment_source|[PaymentSource](#schemapaymentsource)|The payment source (e.g. credit card or bank account) currently tied to this membership to be used for all future contributions 
+committed_at|string(date-time)|Timestamp of when the member committed to pay into the purchase
+created_at|string(date-time)|When the membership was first created
+
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+status|holdout|
+status|committed|
+refund_status|none|
+refund_status|partial|
+refund_status|full|
+role|organizer|
+role|invitee|
+
+
+## Merchant
+
+<a id="schemamerchant"></a>
+
+```json
+{
+  "id": "string",
+  "unique_name": "string",
+  "display_name": "string",
+  "support_email": "user@example.com",
+  "support_phone": "string",
+  "logo_url": "string"
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+id|string(uuid)|UUID for the merchant used for API calls
+unique_name|string|Unique Pay By Group-assigned slug to identify easily identify the merchant
+display_name|string|Display name chosen by the Merchant for end users to see
+support_email|string(email)|Email provided by the Merchant for end users to contant
+support_phone|string|Phone provided by the Merchant for end users to contant
+logo_url|string|Logo provided by the merchant for display to end users
+
+
+
+## MerchantProcessingFeesStructure
+
+<a id="schemamerchantprocessingfeesstructure"></a>
+
+```json
+{
+  "per_transaction": null,
+  "percentage": 1
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+per_transaction|[Money](#schemamoney)|Charge for each successful transaction sent through Pay By Group
+percentage|integer(int32)|Percentage fee for each successful transaction sent through Pay By Group
+
+
+
+## MerchantServiceFeesStructure
+
+<a id="schemamerchantservicefeesstructure"></a>
+
+```json
+{
+  "per_share": null,
+  "per_purchase_max": null,
+  "percentage": 1
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+per_share|[Money](#schemamoney)|Amount due per group member, which may be in place of or combined with `percentage`
+per_purchase_max|[Money](#schemamoney)|Maximum total charge per each Purchase across all members
+percentage|integer(int32)|Percentage fee applied to each member's share, which may be in place of or combined with `per_share`
+
+
+
+## Money
+
+<a id="schemamoney"></a>
+
+```json
+{
+  "amount_cents": 0,
+  "currency_code": "string"
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+amount_cents|integer(int32)|Format of all money values is in cents where 100 is equivalent to $1.00
+currency_code|string|3-letter currency code attached to every money value
+
 
 
 ## Payment
 
-<a name="schemapayment"></a>
+<a id="schemapayment"></a>
 
 ```json
 {
@@ -5495,16 +2126,13 @@ type|single_select multi_select|
   "status": "pending",
   "number": 0,
   "percentage": 1,
-  "due_deadline": "2017-11-14T16:45:15Z",
-  "paid_at": "2017-11-14T16:45:15Z",
-  "accepted_at": "2017-11-14T16:45:15Z",
-  "submitted_at": "2017-11-14T16:45:15Z",
-  "amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "conversion_rate": 0,
+  "due_deadline": "2017-11-22T06:40:01Z",
+  "amount": null,
+  "submitted_at": "2017-11-22T06:40:01Z",
+  "accepted_at": "2017-11-22T06:40:01Z",
+  "paid_at": "2017-11-22T06:40:01Z",
   "processing_currency": "string",
+  "conversion_rate": 0,
   "failed": true,
   "payout_failed": true
 } 
@@ -5512,23 +2140,21 @@ type|single_select multi_select|
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Pay By Group UUID for this payment
-status|string|false|One of: - pending A planned future payment on the purchase. - active The currently active, next payment to be paid on the purchase - authorizing The constituent contributions that comprise this   payment are in the process of having their funds verified. - authorized All funds have been verified for this payment and it   awaits acceptance by the merchant. - captured All funds have been taken from group members for the   purchase and are awaiting payout to the merchant. - processing_payout The payout to the merchant is in process. - canceled This payment has been canceled. - paid All funds are paid out to the Payout Account. 
-number|integer(int32)|false|Number of this payment in the overall sequence of the purchase. It is 0 if the purchase has only 1 payment. 
-percentage|integer(int32)|false|Percent of the total purchase cost due for this payment, which must be an integer. All payments on a purchase must sum to 100. 
-due_deadline|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for the purchase to be valid. It is required for all payments after the first payment but may be passed for the first, or only, payment as well. 
-paid_at|string(date-time)|false|Timestamp when the payment is paid out to the merchant
-accepted_at|string(date-time)|false|Timestamp when the payment is accepted by the merchant
-submitted_at|string(date-time)|false|Timestamp when the payment is originally submitted by the organizer
-amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-conversion_rate|number(float)|false|If the currency of the purchase differs from the required currency of the payment destination then this is the conversion rate used to determine the transacted amount. 
-processing_currency|string|false|The required currency of the payment destination, which is the currency in which all transactions related to this payment occur 
-failed|boolean|false|true if any of the contributions under this payment are currently in a failed state
-payout_failed|boolean|false|true if the last attempt to perform a payout failed
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID for this payment
+status|string|Current status of the payment, one of:  `pending` (planned future payment on the purchase);  `active` (currently active, next payment to be paid on the purchase);  `authorizing` (contributions that comprise this payment are in the  process of having their funds verified);  `authorized` (all funds have been verified for this payment and it  awaits acceptance by the merchant);  `captured` (all funds have been taken from group members for the purchase  and are awaiting payout to the merchant);  `processing_payout` (payout to the merchant is in process);  `canceled` (the Purchase, therefore the payment, has been canceled);  `paid` (all funds are paid out to the Merchant's payout account). 
+number|integer(int32)|Number of this payment in the overall sequence of the purchase.  It is 0 if the purchase has only 1 payment. 
+percentage|integer(int32)|Percent of the total Purchase cost due for this payment, which must be an integer. All payments on a purchase must sum to 100. 
+due_deadline|string(date-time)|Datetime by when this payment must be submitted to the merchant for the purchase to be valid. It is required for all payments after the  first payment but may be passed for the first, or only, payment as well. 
+amount|[Money](#schemamoney)|Calculated amount, in currency, of this payment based on the percentage of the purchases total cost. 
+submitted_at|string(date-time)|Timestamp when the payment is originally submitted by the organizer
+accepted_at|string(date-time)|Timestamp when the payment is accepted by the merchant
+paid_at|string(date-time)|Timestamp when the payment is paid out to the merchant
+processing_currency|string|The required currency of the payment destination, which is the currency in which all transactions related to this payment occur 
+conversion_rate|number(float)|If the currency of the purchase differs from the required currency of the payment destination then this is the conversion rate used to determine the transacted amount. 
+failed|boolean|true if any of the contributions under this payment are currently in a failed state
+payout_failed|boolean|true if the last attempt to perform a payout failed
 
 
 #### Enumerated Values
@@ -5545,746 +2171,35 @@ status|canceled|
 status|paid|
 
 
-## Money
+## PaymentGateway
 
-<a name="schemamoney"></a>
-
-```json
-{
-  "amount_cents": 0,
-  "currency_code": "string"
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-currency_code|string|false|3-letter currency code attached to every money value
-
-
-
-## ProductCost
-
-<a name="schemaproductcost"></a>
+<a id="schemapaymentgateway"></a>
 
 ```json
 {
-  "amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "min_slots": 0,
-  "max_slots": 0
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-
-
-
-## PurchaseFeesStructure
-
-<a name="schemapurchasefeesstructure"></a>
-
-```json
-{
-  "currency_code": "string",
-  "payment_destination_type": "bank_account",
-  "consumer_fees": {
-    "per_share": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "per_share_max": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "per_share_min": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "percentage": 1
-  },
-  "merchant_service_fees": {
-    "per_share": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "per_purchase_max": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "percentage": 1
-  },
-  "merchant_processing_fees": {
-    "per_transaction": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "percentage": 1
-  }
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-currency_code|string|false|3-letter currency code for which this fee structure applies
-payment_destination_type|string|false|Payment destination identifier for which this fee structure applies
-consumer_fees|[ConsumerFeesStructure](#schemaconsumerfeesstructure)|false|No description
-» per_share|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» per_share_max|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» per_share_min|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» percentage|integer(int32)|false|Percentage applied to member's total share to determine fee
-merchant_service_fees|[MerchantServiceFeesStructure](#schemamerchantservicefeesstructure)|false|No description
-» per_share|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» per_purchase_max|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» percentage|integer(int32)|false|Percentage fee applied to each member's share
-merchant_processing_fees|[MerchantProcessingFeesStructure](#schemamerchantprocessingfeesstructure)|false|No description
-» per_transaction|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» percentage|integer(int32)|false|Percentage fee for each successful transaction sent through Pay By Group
-
-
-#### Enumerated Values
-
-|Property|Value|
-|---|---|
-payment_destination_type|bank_account|
-payment_destination_type|payment_gateway|
-
-
-## ConsumerFeesStructure
-
-<a name="schemaconsumerfeesstructure"></a>
-
-```json
-{
-  "per_share": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "per_share_max": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "per_share_min": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "percentage": 1
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-per_share|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-per_share_max|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-per_share_min|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-percentage|integer(int32)|false|Percentage applied to member's total share to determine fee
-
-
-
-## MerchantServiceFeesStructure
-
-<a name="schemamerchantservicefeesstructure"></a>
-
-```json
-{
-  "per_share": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "per_purchase_max": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "percentage": 1
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-per_share|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-per_purchase_max|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-percentage|integer(int32)|false|Percentage fee applied to each member's share
-
-
-
-## MerchantProcessingFeesStructure
-
-<a name="schemamerchantprocessingfeesstructure"></a>
-
-```json
-{
-  "per_transaction": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "percentage": 1
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-per_transaction|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-percentage|integer(int32)|false|Percentage fee for each successful transaction sent through Pay By Group
-
-
-
-## Product
-
-<a name="schemaproduct"></a>
-
-```json
-{
-  "images": [
-    {
-      "name": "string",
-      "version": "string",
-      "url": "string"
-    }
-  ],
-  "default_image_url": "string",
-  "allowed_split_types": "even_split",
-  "cost_type": "total",
-  "costs": [
-    {
-      "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "min_slots": 0,
-      "max_slots": 0
-    }
-  ],
-  "description": "string",
+  "id": "string",
   "name": "string",
-  "end_datetime": "2017-11-14T16:45:15Z",
-  "start_datetime": "2017-11-14T16:45:15Z",
-  "external_purchase_id": "string",
-  "inventory_id": "string",
-  "link": "string",
-  "max_slots": 0,
-  "min_slots": 0,
-  "legal_documents": [
-    {
-      "id": "string",
-      "type": "tos",
-      "title": "string",
-      "content": "string",
-      "created_at": "2017-11-14T16:45:15Z",
-      "updated_at": "2017-11-14T16:45:15Z"
-    }
+  "merchant_id": "string",
+  "supported_currency_codes": [
+    "string"
   ]
 } 
 ```
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-default_image_url|string|false|The primary or default image for this product
-cost_type|string|false|Cost type that determines whether the product_costs amount(s) are: - per_slot The amount is per slot claimed in the Purchase so the   total amount paid to the merchant is a function of the number of   slots claimed by group members. - total A single total amount so long as the number of slots claimed   is in the allowed range for that amount. 
-description|string|false|Description of the product for this Purchase
-name|string|false|Name of the product being purchased as it should be shown to end users
-end_datetime|string(date-time)|false|End date time for the product being purchased (e.g. check-out date time, flight arrival date time, or activity ending time) 
-start_datetime|string(date-time)|false|Start date time for the product being purchased (e.g. check-in date time, flight departure date time, or event starting time) 
-external_purchase_id|string|false|ID supplied by the merchant that identifies this Purchase (e.g. order or booking) in the merchant's system 
-inventory_id|string|false|Inventory ID supplied by the merchant that identifies the product being bought in this Purchase (e.g. SKU or property ID) 
-link|string|false|Link to the product being purchased on the merchant's (or other third party's) website
-max_slots|integer(int32)|false|The maximum possible slots allowed by the merchant based on product_costs
-min_slots|integer(int32)|false|The minimum possible slots allowed by the merchant based on product_costs
-images|[[Image](#schemaimage)]|false|The set of images for this product
-» name|string|false|Filename of the image as provided by the merchant
-» version|string|false|Version of the image generated by PBG
-» url|string|false|No description
-allowed_split_types|[string]|false|Array of allowed split types
-costs|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots for each provided by the merchant 
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» min_slots|integer(int32)|false|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
-» max_slots|integer(int32)|false|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
-legal_documents|[[LegalDocument](#schemalegaldocument)]|false|All legal documents attached to this purchase that must be agreed to by the group members
-» id|string(uuid)|false|Pay By Group UUID of this legal document
-» type|string|false|Specified by the merchant as either cancellation policy for cancellation and refund terms or tos for all other legal documents. 
-» title|string|false|Mechant's title for this legal document
-» content|string|false|Full content as provided by the merchant, either in plain text or as a URL
-» created_at|string(date-time)|false|When this legal document was added by the merchant
-» updated_at|string(date-time)|false|When this legal document was last updated by the merchant
-
-
-#### Enumerated Values
-
-|Property|Value|
-|---|---|
-cost_type|total|
-cost_type|per_slot|
-» type|tos|
-» type|cancelation_policy|
-
-
-## Image
-
-<a name="schemaimage"></a>
-
-```json
-{
-  "name": "string",
-  "version": "string",
-  "url": "string"
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-name|string|false|Filename of the image as provided by the merchant
-version|string|false|Version of the image generated by PBG
-url|string|false|No description
-
-
-
-## Membership
-
-<a name="schemamembership"></a>
-
-```json
-{
-  "id": "string",
-  "status": "holdout",
-  "refund_status": "none",
-  "failed": true,
-  "short": true,
-  "role": "organizer",
-  "claimed_slots": 0,
-  "opt_in_marketing": true,
-  "amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "share_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "fees": {
-    "consumer_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "merchant_service_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    }
-  },
-  "consumer_field_values": {
-    "name": "string",
-    "scope": "member",
-    "required": true
-  },
-  "allowed_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "allowed_share_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "allowed_fees": {
-    "consumer_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "merchant_service_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    }
-  },
-  "max_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "max_share_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "max_fees": {
-    "consumer_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "merchant_service_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    }
-  },
-  "collected_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "collected_share_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "current_contribution": {
-    "id": "string",
-    "status": "created",
-    "refund_status": "none",
-    "amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "share_amount": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "fees": {
-      "consumer_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      },
-      "merchant_service_fee": {
-        "amount_cents": 0,
-        "currency_code": "string"
-      }
-    },
-    "charged_at": "2017-11-14T16:45:15Z",
-    "failed_at": "2017-11-14T16:45:15Z",
-    "created_at": "string"
-  },
-  "user": {
-    "id": "string",
-    "email": "user@example.com",
-    "full_name": "string",
-    "first_name": "string",
-    "last_name": "string",
-    "avatar_url": "string",
-    "language_code": "string",
-    "created_at": "string"
-  },
-  "purchase_id": "string",
-  "payment_source": {
-    "id": "string",
-    "name": "string",
-    "type": "string",
-    "info": {
-      "account_name": "string",
-      "account_number": "string",
-      "account_holder_type": "string"
-    },
-    "created_at": "2017-11-14T16:45:15Z"
-  },
-  "committed_at": "2017-11-14T16:45:15Z",
-  "created_at": "2017-11-14T16:45:15Z"
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-id|string|false|Pay By Group UUID for this membership
-status|string|false|One of: - holdout (user has been invited but not joined the group); - committed (user has joined the group and whether they have been charged is in the contribution object); 
-refund_status|string|false|Status that determines whether the Membership is partially or fully refunded. One of: - none (none of the Membership's Contributions were refunded). - partial (some of the Membership's Contributions were partially   or fully refunded). - full (all of the Membership's Contributions were fully refunded). 
-failed|boolean|false|User is currently in the group with a failed payment method, which is preventing the purchase from completing 
-short|boolean|false|The user is currently in the group but has not agreed to pay their new required share amount due to updates to the purchase. 
-role|string|false|Either organizer or invitee
-claimed_slots|integer(int32)|false|Number of slots the member has claimed in the group. Defaults to 1 if none is selected by the user.
-opt_in_marketing|boolean|false|true if the user has opted in to receive marketing communication from the merchant. Otherwise false.
-amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-share_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-fees|[Fees](#schemafees)|false|No description
-» consumer_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» merchant_service_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-consumer_field_values|[ConsumerFieldValue](#schemaconsumerfieldvalue)|false|No description
-» name|string|false|Name of the schema
-» scope|string|false|One of member or purchase.
-» required|boolean|false|Whether the schema field should be required or not.
-allowed_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-allowed_share_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-allowed_fees|[Fees](#schemafees)|false|No description
-» consumer_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» merchant_service_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-max_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-max_share_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-max_fees|[Fees](#schemafees)|false|No description
-» consumer_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» merchant_service_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-collected_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-collected_share_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-current_contribution|[Contribution](#schemacontribution)|false|No description
-» id|string|false|UUID of this contribution
-» status|string|false|Current status of the contribution, any of created, authorized, captured, holdout or failed
-» refund_status|string|false|Status that determines whether the Contribution is partially or fully refunded. One of: - none (none of the Contribution's Transactions were refunded). - partial (some of the Contribution's Transactions were partially   or fully refunded). - full (all of the Contribution's Transactions were fully refunded). 
-» amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» share_amount|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» fees|[Fees](#schemafees)|false|No description
-»» consumer_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-»» merchant_service_fee|[Money](#schemamoney)|false|No description
-»»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»»» currency_code|string|false|3-letter currency code attached to every money value
-» charged_at|string(date-time)|false|Timestamp of when this contibution was charged
-» failed_at|string(date-time)|false|Timestamp of when this contribution most recently failed
-» created_at|string|false|Timestamp when the record of this contribution was first created, which is not necessarily when it was charged 
-user|[User](#schemauser)|false|No description
-» id|string(uuid)|false|Pay By Group UUID for this user
-» email|string(email)|false|User's email address
-» full_name|string|false|User's full name
-» first_name|string|false|User's first name
-» last_name|string|false|User's last name
-» avatar_url|string|false|URL of the User's avatar
-» language_code|string|false|The preferred language selected by this user
-» created_at|string(uuid)|false|No description
-purchase_id|string(uuid)|false|Pay By Group slug of the purchase to which this membership is tied
-payment_source|[PaymentSource](#schemapaymentsource)|false|No description
-» id|string(uuid)|false|Pay By Group UUID of this payment source
-» name|string|false|Full name of this payment source's owner
-» type|string|false|Describes the type of payment source, any of credit_card or bank_account
-» info|object|false|Bank account information of this payment source
-»» account_name|string|false|Listed name of the account holder
-»» account_number|string|false|Account number
-»» account_holder_type|string|false|Either a business or individual
-» created_at|string(date-time)|false|Timestamp when the payment source was first added to the system
-committed_at|string(date-time)|false|Timestamp of when the member agreed to pay into the purchase
-created_at|string(date-time)|false|When the membership was first created
-
-
-#### Enumerated Values
-
-|Property|Value|
-|---|---|
-status|holdout|
-status|committed|
-refund_status|none|
-refund_status|partial|
-refund_status|full|
-role|organizer|
-role|invitee|
-» scope|member|
-» scope|purchase|
-» status|created|
-» status|authorized|
-» status|captured|
-» status|holdout|
-» status|failed|
-» refund_status|none|
-» refund_status|partial|
-» refund_status|full|
-
-
-## Fees
-
-<a name="schemafees"></a>
-
-```json
-{
-  "consumer_fee": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "merchant_service_fee": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  }
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-consumer_fee|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-merchant_service_fee|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-
-
-
-## Contribution
-
-<a name="schemacontribution"></a>
-
-```json
-{
-  "id": "string",
-  "status": "created",
-  "refund_status": "none",
-  "amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "share_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "fees": {
-    "consumer_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "merchant_service_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    }
-  },
-  "charged_at": "2017-11-14T16:45:15Z",
-  "failed_at": "2017-11-14T16:45:15Z",
-  "created_at": "string"
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-id|string|false|UUID of this contribution
-status|string|false|Current status of the contribution, any of created, authorized, captured, holdout or failed
-refund_status|string|false|Status that determines whether the Contribution is partially or fully refunded. One of: - none (none of the Contribution's Transactions were refunded). - partial (some of the Contribution's Transactions were partially   or fully refunded). - full (all of the Contribution's Transactions were fully refunded). 
-amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-share_amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-fees|[Fees](#schemafees)|false|No description
-» consumer_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» merchant_service_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-charged_at|string(date-time)|false|Timestamp of when this contibution was charged
-failed_at|string(date-time)|false|Timestamp of when this contribution most recently failed
-created_at|string|false|Timestamp when the record of this contribution was first created, which is not necessarily when it was charged 
-
-
-#### Enumerated Values
-
-|Property|Value|
-|---|---|
-status|created|
-status|authorized|
-status|captured|
-status|holdout|
-status|failed|
-refund_status|none|
-refund_status|partial|
-refund_status|full|
-
-
-## User
-
-<a name="schemauser"></a>
-
-```json
-{
-  "id": "string",
-  "email": "user@example.com",
-  "full_name": "string",
-  "first_name": "string",
-  "last_name": "string",
-  "avatar_url": "string",
-  "language_code": "string",
-  "created_at": "string"
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Pay By Group UUID for this user
-email|string(email)|false|User's email address
-full_name|string|false|User's full name
-first_name|string|false|User's first name
-last_name|string|false|User's last name
-avatar_url|string|false|URL of the User's avatar
-language_code|string|false|The preferred language selected by this user
-created_at|string(uuid)|false|No description
+Name|Type|Description
+---|---|---|
+id|string|Pay By Group UUID for this payment gateway
+name|string|Displayed name of the gateway
+merchant_id|string|Merchant this gateway belongs to
+supported_currency_codes|[string]|3-letter currency codes that can be used for payments to this gateway
 
 
 
 ## PaymentSource
 
-<a name="schemapaymentsource"></a>
+<a id="schemapaymentsource"></a>
 
 ```json
 {
@@ -6296,100 +2211,28 @@ created_at|string(uuid)|false|No description
     "account_number": "string",
     "account_holder_type": "string"
   },
-  "created_at": "2017-11-14T16:45:15Z"
+  "created_at": "2017-11-22T06:40:01Z"
 } 
 ```
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Pay By Group UUID of this payment source
-name|string|false|Full name of this payment source's owner
-type|string|false|Describes the type of payment source, any of credit_card or bank_account
-info|object|false|Bank account information of this payment source
-» account_name|string|false|Listed name of the account holder
-» account_number|string|false|Account number
-» account_holder_type|string|false|Either a business or individual
-created_at|string(date-time)|false|Timestamp when the payment source was first added to the system
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID of this payment source
+name|string|Full name of this payment source's owner
+type|string|Describes the type of payment source, any of credit_card or bank_account
+info|object|Bank account information of this payment source
+» account_name|string|Listed name of the account holder
+» account_number|string|Account number
+» account_holder_type|string|Either a business or individual
+created_at|string(date-time)|Timestamp when the payment source was first added to the system
 
-
-
-## Error
-
-<a name="schemaerror"></a>
-
-```json
-{
-  "errors": [
-    {
-      "code": 0,
-      "message": "string"
-    }
-  ]
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-errors|[object]|false|Array of errors returned by the endpoint
-» code|integer(int32)|false|Error code to identify the message. Not used at the moment.
-» message|string|false|Description of the error.
-
-
-
-## Group
-
-<a name="schemagroup"></a>
-
-```json
-{
-  "commit_deadline": "2017-11-14T16:45:15Z",
-  "max_slots": 0,
-  "min_slots": 0,
-  "min_contribution": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "organizer_email": "user@example.com",
-  "organizer_full_name": "string",
-  "legal_document_ids": [
-    "string"
-  ],
-  "split_type": "even_split"
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-commit_deadline|string(date-time)|false|Pay By Group-generated deadline that encourages invitees to commit to the group quickly. It auto-extends unless overriden by the merchant or organizer 
-max_slots|integer(int32)|false|The organizer-specified value for the maximum number of slots they will allow to be claimed. It must be within the bounds allowed by the merchant. 
-min_slots|integer(int32)|false|The organizer-specified value for the minimum number of slots they require to be claimed. It must be within the bounds allowed by the merchant. 
-min_contribution|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-organizer_email|string(email)|false|Email of the expected organizer as provided by the merchant
-organizer_full_name|string|false|Full name of the expected organizer as provided by the merchant
-split_type|string|false|Splitting type chosen by the organizer for how to divide the cost among group members. One of: - even_split Only compatible with total cost_type and means the   Purchase amount is split evenly across each slot claimed. - specified_per_person Only compatible with total cost_type and   means each member may pay a different amount. - fixed_per_person Only compatible with per_slot cost_type and means   each group member pays a fixed amount per slot they claim. 
-legal_document_ids|[string]|false|Array of legal document IDs that must be accepted by the members in this purchase
-
-
-#### Enumerated Values
-
-|Property|Value|
-|---|---|
-split_type|even_split|
-split_type|specified_per_person|
-split_type|fixed_per_person|
 
 
 ## PaymentTransaction
 
-<a name="schemapaymenttransaction"></a>
+<a id="schemapaymenttransaction"></a>
 
 ```json
 {
@@ -6399,51 +2242,12 @@ split_type|fixed_per_person|
   "chargable_type": "string",
   "action": "auth",
   "status": "pending",
-  "amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "fees": {
-    "consumer_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    },
-    "merchant_service_fee": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    }
-  },
-  "payout_account": {
-    "id": "string",
-    "name": "string",
-    "status": "verified",
-    "user_id": "string",
-    "merchant_id": "string",
-    "supported_currency_codes": [
-      "string"
-    ],
-    "currency_configs": "string"
-  },
-  "payment_gateway": {
-    "id": "string",
-    "name": "string",
-    "merchant_id": "string",
-    "supported_currency_codes": [
-      "string"
-    ]
-  },
-  "payment_source": {
-    "id": "string",
-    "name": "string",
-    "type": "string",
-    "info": {
-      "account_name": "string",
-      "account_number": "string",
-      "account_holder_type": "string"
-    },
-    "created_at": "2017-11-14T16:45:15Z"
-  },
-  "created_at": "2017-11-14T16:45:15Z",
+  "amount": null,
+  "fees": null,
+  "payout_account": null,
+  "payment_gateway": null,
+  "payment_source": null,
+  "created_at": "2017-11-22T06:40:01Z",
   "processing_currency": "string",
   "conversion_rate": 0
 } 
@@ -6451,49 +2255,22 @@ split_type|fixed_per_person|
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Pay By Group UUID for this transaction
-short_id|string|false|Unique ID of this transaction for easy reference
-parent_id|string|false|Another transaction related to and replaced by this one - e.g. the credit card authorization for which this transaction is the capture or the capture for which this is the refund. 
-chargable_type|string|false|No description
-action|string|false|One of: - auth (holds funds or the specified amount on the user's payment   method for later capture). - capture (captures funds that were previously authorized at an   amount = or < the authorized amount). - charge (instantly charges an amount without first making an   authorization). - void (voids a previously created authorization). - refund (refunds a previously created capture or charge). - payout (sends funds to a bank account). 
-status|string|false|Oneo of pending, completed or failed
-amount|[Money](#schemamoney)|false|No description
-» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-» currency_code|string|false|3-letter currency code attached to every money value
-fees|[Fees](#schemafees)|false|No description
-» consumer_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-» merchant_service_fee|[Money](#schemamoney)|false|No description
-»» amount_cents|integer(int32)|false|Format of all money values is in cents where 100 is equivalent to $1.00
-»» currency_code|string|false|3-letter currency code attached to every money value
-payout_account|[BankAccount](#schemabankaccount)|false|No description
-» id|string(uuid)|false|Pay By Group UUID for this bank account
-» name|string|false|Displayed name of bank account with last 4 of account number
-» status|string|false|verified or unverified depending on whether micro-deposit amounts have confirmed account ownership
-» user_id|string(uuid)|false|User that added the bank account
-» merchant_id|string(uuid)|false|Merchant this bank account belongs to
-» currency_configs|string|false|Set of payment sources supported across all currencies for this bank account. Not all currencies support all payment sources. 
-» supported_currency_codes|[string]|false|3-letter currency codes that can be used for credits and debits with this account
-payment_gateway|[PaymentGateway](#schemapaymentgateway)|false|No description
-» id|string|false|Pay By Group UUID for this payment gateway
-» name|string|false|Displayed name of the gateway
-» merchant_id|string|false|Merchant this gateway belongs to
-» supported_currency_codes|[string]|false|3-letter currency codes that can be used for payments to this gateway
-payment_source|[PaymentSource](#schemapaymentsource)|false|No description
-» id|string(uuid)|false|Pay By Group UUID of this payment source
-» name|string|false|Full name of this payment source's owner
-» type|string|false|Describes the type of payment source, any of credit_card or bank_account
-» info|object|false|Bank account information of this payment source
-»» account_name|string|false|Listed name of the account holder
-»» account_number|string|false|Account number
-»» account_holder_type|string|false|Either a business or individual
-» created_at|string(date-time)|false|Timestamp when the payment source was first added to the system
-created_at|string(date-time)|false|Timestamp when the transaction was created
-processing_currency|string|false|The currency in which this transaction occurred
-conversion_rate|number(float)|false|If the currency of the purchase differs from the required currency of the payout account then this is the conversion rate used to determine the transaction amount. 
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID for this transaction
+short_id|string|Unique ID of this transaction for easy reference
+parent_id|string|Another transaction related to and replaced by this one - e.g. the credit card authorization for which this transaction is the capture or the capture for which this is the refund. 
+chargable_type|string|No description
+action|string|One of:  `auth` (holds funds or the specified amount on the user's payment   method for later capture);  `capture` (captures funds that were previously authorized at an   amount = or < the authorized amount);  `charge` (instantly charges an amount without first making an   authorization);  `void` (voids a previously created authorization);  `refund` (refunds a previously created capture or charge);  `payout` (sends funds to a payout bank account). 
+status|string|One of:  `pending` (transaction has been submitted for processing and our system awaits reponse);  `completed` (transaction succeeded); or  `failed` (transaction failed) 
+amount|[Money](#schemamoney)|Amount, in cents, of the transaction
+fees|[Fees](#schemafees)|Portion of the transaction that is consumer fees separate from the purchase's share of the transaction 
+payout_account|[BankAccount](#schemabankaccount)|Payout account where the transaction is paid out to
+payment_gateway|[PaymentGateway](#schemapaymentgateway)|Payment gateway where the transaction is run directly into
+payment_source|[PaymentSource](#schemapaymentsource)|Payment source of funds for this transaction
+created_at|string(date-time)|Timestamp when the transaction was created
+processing_currency|string|The currency in which this transaction occurred
+conversion_rate|number(float)|If the currency of the purchase differs from the required currency of the payout account then this is the conversion rate used to determine the transaction amount in the processing_currency. 
 
 
 #### Enumerated Values
@@ -6509,206 +2286,274 @@ action|payout|
 status|pending|
 status|completed|
 status|failed|
-» status|verified|
-» status|unverified|
 
 
-## BankAccount
+## Product
 
-<a name="schemabankaccount"></a>
+<a id="schemaproduct"></a>
 
 ```json
 {
-  "id": "string",
-  "name": "string",
-  "status": "verified",
-  "user_id": "string",
-  "merchant_id": "string",
-  "supported_currency_codes": [
-    "string"
+  "images": [
+    null
   ],
-  "currency_configs": "string"
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Pay By Group UUID for this bank account
-name|string|false|Displayed name of bank account with last 4 of account number
-status|string|false|verified or unverified depending on whether micro-deposit amounts have confirmed account ownership
-user_id|string(uuid)|false|User that added the bank account
-merchant_id|string(uuid)|false|Merchant this bank account belongs to
-currency_configs|string|false|Set of payment sources supported across all currencies for this bank account. Not all currencies support all payment sources. 
-supported_currency_codes|[string]|false|3-letter currency codes that can be used for credits and debits with this account
-
-
-#### Enumerated Values
-
-|Property|Value|
-|---|---|
-status|verified|
-status|unverified|
-
-
-## PaymentGateway
-
-<a name="schemapaymentgateway"></a>
-
-```json
-{
-  "id": "string",
+  "default_image_url": "string",
+  "cost_type": "total",
+  "costs": [
+    null
+  ],
+  "description": "string",
   "name": "string",
-  "merchant_id": "string",
-  "supported_currency_codes": [
-    "string"
+  "start_datetime": "2017-11-22T06:40:01Z",
+  "end_datetime": "2017-11-22T06:40:01Z",
+  "external_purchase_id": "string",
+  "inventory_id": "string",
+  "link": "string",
+  "max_slots": 0,
+  "min_slots": 0,
+  "legal_documents": [
+    null
   ]
 } 
 ```
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-id|string|false|Pay By Group UUID for this payment gateway
-name|string|false|Displayed name of the gateway
-merchant_id|string|false|Merchant this gateway belongs to
-supported_currency_codes|[string]|false|3-letter currency codes that can be used for payments to this gateway
-
-
-
-## LegalDocument
-
-<a name="schemalegaldocument"></a>
-
-```json
-{
-  "id": "string",
-  "type": "tos",
-  "title": "string",
-  "content": "string",
-  "created_at": "2017-11-14T16:45:15Z",
-  "updated_at": "2017-11-14T16:45:15Z"
-} 
-```
-
-### Properties
-
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Pay By Group UUID of this legal document
-type|string|false|Specified by the merchant as either cancellation policy for cancellation and refund terms or tos for all other legal documents. 
-title|string|false|Mechant's title for this legal document
-content|string|false|Full content as provided by the merchant, either in plain text or as a URL
-created_at|string(date-time)|false|When this legal document was added by the merchant
-updated_at|string(date-time)|false|When this legal document was last updated by the merchant
+Name|Type|Description
+---|---|---|
+default_image_url|string|The primary or default image for this product first displayed to end users
+cost_type|string|Cost type that determines whether the product_costs amount(s) are:  `total` (single total amount so long as the number of slots claimed   is in the allowed range for that amount) or `per_slot` (amount is per slot claimed in the Purchase so the   total amount paid to the merchant is a function of the number of   slots claimed by group members) 
+description|string|Description of the product for this Purchase for end users
+name|string|Name of the product being purchased as it should be shown to end users
+start_datetime|string(date-time)|Start date time for the product being purchased  (e.g. check-in date time, flight departure date time, or event starting time) 
+end_datetime|string(date-time)|End date time for the product being purchased  (e.g. check-out date time, flight arrival date time, or activity ending time) 
+external_purchase_id|string|ID supplied by the merchant that identifies this Purchase (e.g. order or booking) in the merchant's system 
+inventory_id|string|Inventory ID supplied by the merchant that identifies the product being bought in this Purchase (e.g. SKU or property ID) 
+link|string|Link to the product being purchased on the merchant's (or other third party's) website
+max_slots|integer(int32)|The maximum possible slots allowed by the merchant based on product_costs
+min_slots|integer(int32)|The minimum possible slots allowed by the merchant based on product_costs
+images|[[Image](#schemaimage)]|The set of images showcasing this product to end users
+costs|[[ProductCost](#schemaproductcost)]|The set of product_costs and the optional allowed range(s) of slots for each provided by the merchant 
+legal_documents|[[LegalDocument](#schemalegaldocument)]|All legal documents attached to this purchase that must be agreed to by the group members
 
 
 #### Enumerated Values
 
 |Property|Value|
 |---|---|
-type|tos|
-type|cancelation_policy|
+cost_type|total|
+cost_type|per_slot|
 
 
-## LegalBinding
+## ProductCost
 
-<a name="schemalegalbinding"></a>
+<a id="schemaproductcost"></a>
 
 ```json
 {
-  "id": "string",
-  "type": "string",
-  "title": "string",
-  "content": "string",
-  "created_at": "string",
-  "remote_ip": "string",
-  "user_id": "string",
-  "purchase_id": "string"
+  "amount": null,
+  "min_slots": 0,
+  "max_slots": 0
 } 
 ```
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Pay By Group UUID of this specific record of acceptance by the user
-type|string|false|Either cancellation policy for cancellation and refund terms or tos for all other legal documents provided by merchant. 
-title|string|false|Mechant's title for this legal document as accepted by the user
-content|string|false|Full content as accepted by the user at the moment they agreed to this legal document
-created_at|string|false|Verifiable timestamp when the user accepted this legal document
-remote_ip|string|false|User's IP address at the moment they accepted this legal document
-user_id|string|false|ID of the user that accepted the document, which includes their name and email
-purchase_id|string|false|The purchase for which this document was accepted by the user
+Name|Type|Description
+---|---|---|
+amount|[Money](#schemamoney)|Total cost as provided by the merchant for this range of slots. If no slots are provided, it is for the entire Purchase. 
+min_slots|integer(int32)|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
+max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
 
 
 
-## ConsumerFieldTemplate
+## Purchase
 
-<a name="schemaconsumerfieldtemplate"></a>
+<a id="schemapurchase"></a>
 
 ```json
 {
   "id": "string",
-  "name": "string",
-  "label": "string",
-  "description": "string",
-  "type": "text",
-  "default_value": "string",
-  "options": [
-    {
-      "type": "text",
-      "value": "string"
-    }
+  "slug": "string",
+  "merchant": null,
+  "status": "created",
+  "currency_code": "string",
+  "payments": [
+    null
   ],
-  "order": 0,
-  "scope": "member",
-  "default": true,
-  "special": true,
-  "required": true
+  "current_payment": null,
+  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
+  "product": null,
+  "group": null,
+  "memberships": [
+    null
+  ],
+  "collected_shares_amount": null,
+  "committed_shares_amount": null,
+  "needed_amount_to_current_payment": null,
+  "committed_slots": 0,
+  "needed_slots_to_min": 0,
+  "product_or_group_min_slots": 0,
+  "product_or_group_max_slots": 0,
+  "tipped": true,
+  "auto_pilot_enabled": true,
+  "auto_pilot_trigger_slots": 0,
+  "current_product_cost_amount": null,
+  "current_total_cost_amount": null,
+  "cost_range": [
+    null
+  ],
+  "consumer_field_schemas": [
+    null
+  ],
+  "has_consumer_field_schemas": true,
+  "consumer_field_values": [
+    null
+  ],
+  "payment_destination_id": "string",
+  "currency_config": {
+    "supported_payment_sources": [
+      {
+        "type": "credit_card",
+        "unsupported_cards": [
+          "string"
+        ]
+      }
+    ]
+  },
+  "refund_status": "none",
+  "processing_refund": true,
+  "fees_structure": null,
+  "apply_consumer_fee_to_organizer": true,
+  "language_code": "DA (Danish)",
+  "created_at": "2017-11-22T06:40:01Z"
 } 
 ```
 
 ### Properties
 
-Name|Type|Required|Description
----|---|---|---|
-id|string(uuid)|false|Pay By Group UUID for this consumer field template
-name|string|false|A unique name for the template.
-label|string|false|Text to display as the field label.
-description|string|false|A description for the template
-type|string|false|Type of field to display for this template.
-default_value|string|false|Default value to use for the template.
-order|integer(int32)|false|Order in which the template should be displayed.
-scope|string|false|Whether the template is at the member level, or purchase level.
-default|boolean|false|Whether the template should be default or not.
-special|boolean|false|Whether the template is a special field or not.
-required|boolean|false|Whether the template is required or not.
-options|[object]|false|Array of options to use for a list template.
-» type|string|false|Value type for the option item
-» value|string|false|Value for the option item
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID for this Purchase used for API calls
+slug|string|Short, unique identifier of this Purchase for easy reference in the Business Portal, with end users, and in URLs. 
+merchant|[Merchant](#schemamerchant)|The merchant under which this Purchase exists.
+status|string|Current status of the Purchase, one of: `created` (Purchase has been created by the Merchant);  `active` (Purchase has been claimed by an organizer and is in process);  `completed` (All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made,  only refunds.); or  `canceled` (Purchase has been canceled by the merchant or organizer and is not recoverable). 
+currency_code|string|3-letter currency code that determines how all money values relatedd  to the Purchase are presented to users 
+current_payment|[Payment](#schemapayment)|This is the next upcoming group payment due for the purchase
+next_payment_due_deadline|string(date-time)|This is the next due deadline set by the merchant for an upcoming payment. If the current payment  does not have a `due_deadline` then the `due_deadline` for the next payment after that will apply here.            
+product|[Product](#schemaproduct)|Hash that includes all product attributes, which are set by the Merchant
+group|[Group](#schemagroup)|Hash that includes all group attributes, which are usually provided by the organizer or set by Pay By Group
+collected_shares_amount|[Money](#schemamoney)|Sum of all collected contributions so far where the Members were successfully charged.
+committed_shares_amount|[Money](#schemamoney)|Sum of all Contributions group Members have agreed to pay towards the Purchase's total cost at this point, even though some or all of these may  not yet be collected.  
+needed_amount_to_current_payment|[Money](#schemamoney)|Amount group Members must still commit to in order to submit the current Payment, which  applies primarily to Purchases with the `specified_per_person` `split_type` 
+committed_slots|integer(int32)|Sum of all slots group Members have committed to in the Purchase at this point
+needed_slots_to_min|integer(int32)|Number of slots group members must claim in order to meet the minimum required to submit the current payment, which applies primarily to  Purchases with the `even_split` and `fixed_per_person` `split_types` 
+product_or_group_min_slots|integer(int32)|The active minimum number of slots that must be claimed, which is the higher  of the values set by the merchant and organizer in cases where both exist  
+product_or_group_max_slots|integer(int32)|The active maximum number of slots that are allowed to be claimed, which is  the lower of the values set by the merchant and organizer in cases where both exist 
+tipped|boolean|The minimum required slots have been claimed (even_split and fixed_per_person split_types)  or amount committed (specified_per_person split_type) for the organizer to submit payment 
+auto_pilot_enabled|boolean|The organizer has chosen to have payments triggered automatically as soon as the trigger_slots level they set is reached. For multi-payment  Purchases, payments subsequent to the first payment are triggered  automatically one day before each payment's `due_deadline`.  
+auto_pilot_trigger_slots|integer(int32)|The number of slots set by the organizer, which when reached, automatically triggers the next payment's submission without  requiring any further action by the organizer. 
+current_product_cost_amount|[Money](#schemamoney)|The cost of the product (either `total` or `per_slot` depending on `cost_type`)   for this Purchase based on the current number of claimed slots 
+current_total_cost_amount|[Money](#schemamoney)|Total amount due to merchant for this Purchase based on the current number of claimed slots
+has_consumer_field_schemas|boolean|Whether or not this Purchase has any consumer field schemas declared
+payment_destination_id|string(uuid)|ID of the payment destination that will receive all future Payments made under this  Purchase, which means all Payments that are still in `active` status 
+currency_config|object|Describes the payment methods that members can and cannot use for their  contributions based on this Purchase's currency and payment destination 
+» supported_payment_sources|[object]|List of supported payment sources for this Purchase
+»» type|string|Type of the supported payment source
+»» unsupported_cards|[string]|List of unsupported credit cards for this particular payment source if  the type is `credit_card`. If none are listed, then all of Amex,  Diner's Club, Discover, JCB, MasterCard, and Visa are supported.  
+refund_status|string|Status that describes whether the Purchase is partially or fully refunded, one of: `none` (none of the Purchase's Memberships were refunded);  `partial` (some of the Purchase's Memberships were partially or fully refunded); or  `full` (all of the Purchase's Memberships were fully refunded). 
+processing_refund|boolean|Determines whether or not a refund is currently being processed for the Purchase
+fees_structure|[PurchaseFeesStructure](#schemapurchasefeesstructure)|Full breakdown of fees due to Pay By Group from the merchant and/or group member(s) for this Purchase 
+apply_consumer_fee_to_organizer|boolean|Tells if the consumer_fees apply to the purchase's organizer for this Purchase
+language_code|string|Default 2-character language code for this purchase. It is going  to be used in the claim and commit steps; and as one of the  fallbacks when detecting what language to show to the user 
+created_at|string(date-time)|Timestamp of when the Purchase was first created by the merchant
+payments|[[Payment](#schemapayment)]|Full payment schedule as set by the merchant for this Purchase
+memberships|[[Membership](#schemamembership)]|Array that includes all members in this Purchase and the details for each. The only  information not included are every `contribution` if it is a multi-payment Purchase.  Only the Contribution for the current Payment is included. 
+cost_range|[[ProductCost](#schemaproductcost)]|The minimum and maximum possible costs for this product based on the `costs` merchant supplies and the  current `product_or_group_min_slots` and `product_or_group_max_slots` 
+consumer_field_schemas|[[ConsumerFieldSchema](#schemaconsumerfieldschema)]|The set of consumer field schemas that are attached to this Purchase and their accompanying options
+consumer_field_values|[[ConsumerFieldValue](#schemaconsumerfieldvalue)]|Values that have been provided by the organizer for each consumer_field_schema scoped to the Purchase
 
 
 #### Enumerated Values
 
 |Property|Value|
 |---|---|
-type|text|
-type|textarea|
-type|datetime|
-type|address|
-type|single_select|
-type|multi_select|
-scope|member|
-scope|purchase|
-» type|text|
-» type|textarea|
-» type|datetime|
-» type|address|
-» type|single_select|
-» type|multi_select|
+status|created|
+status|active|
+status|completed|
+status|canceled|
+»» type|credit_card|
+refund_status|none|
+refund_status|partial|
+refund_status|full|
+language_code|DA (Danish)|
+language_code|EN (English)|
+language_code|ES (Spanish)|
+
+
+## PurchaseFeesStructure
+
+<a id="schemapurchasefeesstructure"></a>
+
+```json
+{
+  "currency_code": "string",
+  "payment_destination_type": "bank_account",
+  "consumer_fees": null,
+  "merchant_service_fees": null,
+  "merchant_processing_fees": null
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+currency_code|string|3-letter currency code for which this fee structure applies
+payment_destination_type|string|Payment destination type for which this fee structure applies
+consumer_fees|[ConsumerFeesStructure](#schemaconsumerfeesstructure)|Structure of fees paid by end users for using Pay By Group, which  can be in place of or in addition to merchant_service_fees 
+merchant_service_fees|[MerchantServiceFeesStructure](#schemamerchantservicefeesstructure)|Fees charged to merchant for use of the Pay By Group service, which  can be in place of or in addition to consumer_fees 
+merchant_processing_fees|[MerchantProcessingFeesStructure](#schemamerchantprocessingfeesstructure)|Fees charged to the merchant for the processing of payments, either through the Pay By Group gateway or the merchant's own gateway 
+
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+payment_destination_type|bank_account|
+payment_destination_type|payment_gateway|
+
+
+## User
+
+<a id="schemauser"></a>
+
+```json
+{
+  "id": "string",
+  "email": "user@example.com",
+  "full_name": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "avatar_url": "string",
+  "language_code": "string",
+  "created_at": "2017-11-22T06:40:01Z"
+} 
+```
+
+### Properties
+
+Name|Type|Description
+---|---|---|
+id|string(uuid)|Pay By Group UUID for this user
+email|string(email)|User's email address
+full_name|string|User's full name
+first_name|string|User's first name
+last_name|string|User's last name
+avatar_url|string|URL of the User's avatar
+language_code|string|The preferred language selected by this user
+created_at|string(date-time)|Timestamp of when this user was first created
+
 
 
 
