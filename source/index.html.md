@@ -22,7 +22,7 @@ Base URLs:
 
 
 
-Email: <a href="mailto:dev@paybygroup.com">Pay By Group</a> 
+Email: <a href="mailto:support@paybygroup.com">Pay By Group</a> 
 
 # Authentication
 
@@ -68,14 +68,14 @@ for a useful overview.
         "status": "pending",
         "number": 0,
         "percentage": 1,
-        "due_deadline": "2017-11-22T07:18:02Z",
+        "due_deadline": "2017-11-22T18:52:09Z",
         "amount": {
           "amount_cents": 0,
           "currency_code": "string"
         },
-        "submitted_at": "2017-11-22T07:18:02Z",
-        "accepted_at": "2017-11-22T07:18:02Z",
-        "paid_at": "2017-11-22T07:18:02Z",
+        "submitted_at": "2017-11-22T18:52:09Z",
+        "accepted_at": "2017-11-22T18:52:09Z",
+        "paid_at": "2017-11-22T18:52:09Z",
         "processing_currency": "string",
         "conversion_rate": 0,
         "failed": true,
@@ -87,20 +87,20 @@ for a useful overview.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-22T07:18:02Z",
+      "due_deadline": "2017-11-22T18:52:09Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-22T07:18:02Z",
-      "accepted_at": "2017-11-22T07:18:02Z",
-      "paid_at": "2017-11-22T07:18:02Z",
+      "submitted_at": "2017-11-22T18:52:09Z",
+      "accepted_at": "2017-11-22T18:52:09Z",
+      "paid_at": "2017-11-22T18:52:09Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
       "payout_failed": true
     },
-    "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+    "next_payment_due_deadline": "2017-11-22T18:52:09Z",
     "product": {
       "images": [
         {
@@ -124,8 +124,8 @@ for a useful overview.
       ],
       "description": "string",
       "name": "string",
-      "start_datetime": "2017-11-22T07:18:02Z",
-      "end_datetime": "2017-11-22T07:18:02Z",
+      "start_datetime": "2017-11-22T18:52:09Z",
+      "end_datetime": "2017-11-22T18:52:09Z",
       "external_purchase_id": "string",
       "inventory_id": "string",
       "link": "string",
@@ -137,13 +137,13 @@ for a useful overview.
           "type": "tos",
           "title": "string",
           "content": "string",
-          "created_at": "2017-11-22T07:18:02Z",
-          "updated_at": "2017-11-22T07:18:02Z"
+          "created_at": "2017-11-22T18:52:09Z",
+          "updated_at": "2017-11-22T18:52:09Z"
         }
       ]
     },
     "group": {
-      "commit_deadline": "2017-11-22T07:18:02Z",
+      "commit_deadline": "2017-11-22T18:52:09Z",
       "max_slots": 0,
       "min_slots": 0,
       "min_contribution": {
@@ -226,8 +226,8 @@ for a useful overview.
               "currency_code": "string"
             }
           },
-          "charged_at": "2017-11-22T07:18:02Z",
-          "failed_at": "2017-11-22T07:18:02Z",
+          "charged_at": "2017-11-22T18:52:09Z",
+          "failed_at": "2017-11-22T18:52:09Z",
           "created_at": "string"
         },
         "user": {
@@ -238,7 +238,7 @@ for a useful overview.
           "last_name": "string",
           "avatar_url": "string",
           "language_code": "string",
-          "created_at": "2017-11-22T07:18:02Z"
+          "created_at": "2017-11-22T18:52:09Z"
         },
         "purchase_id": "string",
         "payment_source": {
@@ -250,10 +250,10 @@ for a useful overview.
             "account_number": "string",
             "account_holder_type": "string"
           },
-          "created_at": "2017-11-22T07:18:02Z"
+          "created_at": "2017-11-22T18:52:09Z"
         },
-        "committed_at": "2017-11-22T07:18:02Z",
-        "created_at": "2017-11-22T07:18:02Z"
+        "committed_at": "2017-11-22T18:52:09Z",
+        "created_at": "2017-11-22T18:52:09Z"
       }
     ],
     "collected_shares_amount": {
@@ -372,7 +372,7 @@ for a useful overview.
     },
     "apply_consumer_fee_to_organizer": true,
     "language_code": "DA (Danish)",
-    "created_at": "2017-11-22T07:18:02Z"
+    "created_at": "2017-11-22T18:52:09Z"
   }
 ]
 ```
@@ -392,12 +392,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 
 *Create a purchase*
 
-Creates a new purchase and returns the Purchase object, which contains 
-the slug you can use to redirect an end user to their group's hub page, 
-or you can proceed to use PATCH /purchases/:id/claim if you want to fully 
-embed the experience. See this 
-[breakdown of the entire flow](https://developers.paybygroup.com/v1.0/docs/standard-flow) 
-for a list of all calls to use for a fully embedded experience. 
+Creates a new purchase and returns the Purchase object, which contains
+the slug you can use to redirect an end user to their group's hub page,
+or you can proceed to use PATCH /purchases/:id/claim if you want to fully
+embed the experience. See this
+[breakdown of the entire flow](https://developers.paybygroup.com/v1.0/docs/standard-flow)
+for a list of all calls to use for a fully embedded experience.
 
 > Body parameter
 
@@ -424,7 +424,7 @@ for a list of all calls to use for a fully embedded experience.
       },
       {
         "amount": {
-          "amount_cents": 25000,
+          "amount_cents": 250000,
           "currency_code": "USD"
         },
         "min_slots": 4,
@@ -456,29 +456,30 @@ for a list of all calls to use for a fully embedded experience.
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 body|body|object|true|Request body object.
-» product|body|object|false|All parameters describing what is being purchased
+» product|body|object|true|All parameters describing what is being purchased
 »» name|body|string|false|Name of the product being purchased as it should be shown to end users
-»» cost_type|body|string|false|Cost type that determines whether the product_costs amount(s) are for the whole group or per slot.<br/>-`per_slot` The product cost provided is for each slot a Member commits to in the Purchase, <br/>  so the total amount paid to the merchant is a function of the number of<br/>  slots claimed by all group members.<br/>-`total` The product cost is single total amount so long as <br/>  the number of slots claimed <br/>  is in the allowed range for that amount.<br/>
+»» cost_type|body|string|false|Cost type that determines whether the product_costs amount(s) are for the whole group or per slot.<br/>-`per_slot` The product cost provided is for each slot a Member commits to in the Purchase,<br/>so the total amount paid to the merchant is a function of the number of<br/>slots claimed by all group members.<br/>-`total` The product cost is single total amount so long as<br/>the number of slots claimed is in the allowed range for that amount. (default if no value is provided)<br/>
 »» description|body|string|false|Description of the product for this Purchase
-»» default_image_url|body|string|false|The primary image to display to users for this product. The <br/>merchant default image applies if none is provided. Use the <br/>[CreatePurchaseImages](#createpurchaseimages) call to add an image using the API.<br/>
+»» default_image_url|body|string|false|The primary image to display to users for this product. The<br/>merchant default image applies if none is provided. Use the<br/>[CreatePurchaseImages](#createpurchaseimages) call to add an image using the API.<br/>
 »» inventory_id|body|string|false|Inventory ID supplied by the merchant that identifies the product<br/>being bought in this Purchase (e.g. SKU or property ID)<br/>
 »» link|body|string|false|Link to the product being purchased on the merchant's (or other third party's) website
 »» start_datetime|body|string(date-time)|false|Start date time for the product being purchased<br/>(e.g. check-in date time, flight departure date time, or event<br/>starting time)<br/>
-»» end_datetime|body|string(date-time)|false|End date time for the product being purchased<br/>(e.g. check-out date time, flight arrival date time, or activity<br/>ending time)<br/>
+»» end_datetime|body|string(date-time)|false|End date time for the product being purchased<br/>(e.g. check-out date time, flight arrival date time, or activity ending time)<br/>
 »» external_purchase_id|body|string|false|ID supplied by the merchant that identifies this Purchase<br/>(e.g. order or booking) in the merchant's system<br/>
-»» costs|body|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. The currency of the product cost <br/>determines the currency of the purchase. <br/>
+»» required|body|Unknown|false|No description
+»» costs|body|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. The currency of the product cost<br/>determines the currency of the purchase.<br/>
 » group|body|object|false|All parameters describing the particular setup of this group
 »» organizer_full_name|body|string|false|Full name of the expected organizer as provided by the merchant
 »» organizer_email|body|string(email)|false|Email of the expected organizer as provided by the merchant
-»» legal_document_ids|body|[string]|false|Array of [legal document IDs](#legaldocument) <br/>that must be accepted by the members in this purchase. If no values are passed, the default Legal <br/>Documents will be attached to the Purchase. If one or more value is passed, it will override all defaults. <br/>
-» language_code|body|string|false|Default language for this purchase. It is going to be used in the<br/>claim and commit steps; and as one of the fallbacks when detecting<br/>what language to show to the user<br/>
-» payment_destination_id|body|string(uuid)|false|ID of the payment destination that will receive all future payments<br/>made under this Purchase.<br/>
+»» legal_document_ids|body|[string]|false|Array of [legal document IDs](#legaldocument)<br/>that must be accepted by the members in this purchase. If no values are passed, the default Legal<br/>Documents will be attached to the Purchase. If one or more value is passed, it will override all defaults.<br/>
+» language_code|body|string|false|Default language for this purchase. It is going to be used in the<br/>claim and commit steps; and as one of the fallbacks when detecting<br/>what language to show to the user.<br/>
+» payment_destination_id|body|string(uuid)|false|ID of the payment destination that will receive all future payments<br/>made under this Purchase. The merchant's default for the Purchase's currency<br/>will apply if none is provided.<br/>
 » payments|body|[object]|false|Breakdown of payment amounts and deadlines due over time for this purchase
-»» percentage|body|integer(int32)|true|Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are <br/>not doing installment or deposit payments, this is most likely "100". <br/>If no payments are passed, then by default a single payment for "100" <br/>percent with no `due_deadline` will be created.<br/>
-»» due_deadline|body|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for<br/>the purchase to be valid. It is required for all payments after <br/>the first payment but may be passed for the first, or only, payment as well.<br/>
-» consumer_field_schemas|body|[object]|false|The set of consumer fields that should be attached to this purchase, by name, <br/>and their accompanying options. If any consumer_field_schemas are passed, then <br/>they override all default consumer_field_templates for the merchant.                   <br/>
-»» name|body|string|false|The name of the consumer_field_template you want to attach to the purchase. Values set in the template apply as default unless overriden here.
-»» scope|body|string|false|Determines whether all group members complete this field or only the organizer does on behalf of the whole purchase
+»» percentage|body|integer(int32)|true|Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are<br/>not doing installment or deposit payments, this is most likely "100".<br/>If no payments are passed, then by default a single payment for "100"<br/>percent with no `due_deadline` will be created.<br/>
+»» due_deadline|body|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for<br/>the purchase to be valid. It is required for all payments after<br/>the first payment but may be passed for the first, or only, payment as well.<br/>
+» consumer_field_schemas|body|[object]|false|The set of consumer fields that should be attached to this purchase, by name,<br/>and their accompanying options. If any consumer_field_schemas are passed, then<br/>they override all default consumer_field_templates for the merchant.         <br/>
+»» name|body|string|true|The name of the consumer_field_template you want to attach to the purchase.<br/>Values set in the template apply as default unless overriden here.<br/>
+»» scope|body|string|false|Determines whether all group members complete this field or only the<br/>organizer does on behalf of the whole purchase<br/>
 »» required|body|boolean|false|Whether the field for this schema should be required or not.
 
 
@@ -513,14 +514,14 @@ body|body|object|true|Request body object.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-22T07:18:02Z",
+      "due_deadline": "2017-11-22T18:52:09Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-22T07:18:02Z",
-      "accepted_at": "2017-11-22T07:18:02Z",
-      "paid_at": "2017-11-22T07:18:02Z",
+      "submitted_at": "2017-11-22T18:52:09Z",
+      "accepted_at": "2017-11-22T18:52:09Z",
+      "paid_at": "2017-11-22T18:52:09Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -532,20 +533,20 @@ body|body|object|true|Request body object.
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-22T07:18:02Z",
+    "due_deadline": "2017-11-22T18:52:09Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-22T07:18:02Z",
-    "accepted_at": "2017-11-22T07:18:02Z",
-    "paid_at": "2017-11-22T07:18:02Z",
+    "submitted_at": "2017-11-22T18:52:09Z",
+    "accepted_at": "2017-11-22T18:52:09Z",
+    "paid_at": "2017-11-22T18:52:09Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "next_payment_due_deadline": "2017-11-22T18:52:09Z",
   "product": {
     "images": [
       {
@@ -569,8 +570,8 @@ body|body|object|true|Request body object.
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-22T07:18:02Z",
-    "end_datetime": "2017-11-22T07:18:02Z",
+    "start_datetime": "2017-11-22T18:52:09Z",
+    "end_datetime": "2017-11-22T18:52:09Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -582,13 +583,13 @@ body|body|object|true|Request body object.
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-22T07:18:02Z",
-        "updated_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z",
+        "updated_at": "2017-11-22T18:52:09Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-22T07:18:02Z",
+    "commit_deadline": "2017-11-22T18:52:09Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -671,8 +672,8 @@ body|body|object|true|Request body object.
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-22T07:18:02Z",
-        "failed_at": "2017-11-22T07:18:02Z",
+        "charged_at": "2017-11-22T18:52:09Z",
+        "failed_at": "2017-11-22T18:52:09Z",
         "created_at": "string"
       },
       "user": {
@@ -683,7 +684,7 @@ body|body|object|true|Request body object.
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -695,10 +696,10 @@ body|body|object|true|Request body object.
           "account_number": "string",
           "account_holder_type": "string"
         },
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
-      "committed_at": "2017-11-22T07:18:02Z",
-      "created_at": "2017-11-22T07:18:02Z"
+      "committed_at": "2017-11-22T18:52:09Z",
+      "created_at": "2017-11-22T18:52:09Z"
     }
   ],
   "collected_shares_amount": {
@@ -817,7 +818,7 @@ body|body|object|true|Request body object.
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z"
 }
 ```
 <h3 id="CreatePurchase-responses">Responses</h3>
@@ -867,14 +868,14 @@ id|path|string(uuid)|true|Purchase ID to fetch
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-22T07:18:02Z",
+      "due_deadline": "2017-11-22T18:52:09Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-22T07:18:02Z",
-      "accepted_at": "2017-11-22T07:18:02Z",
-      "paid_at": "2017-11-22T07:18:02Z",
+      "submitted_at": "2017-11-22T18:52:09Z",
+      "accepted_at": "2017-11-22T18:52:09Z",
+      "paid_at": "2017-11-22T18:52:09Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -886,20 +887,20 @@ id|path|string(uuid)|true|Purchase ID to fetch
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-22T07:18:02Z",
+    "due_deadline": "2017-11-22T18:52:09Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-22T07:18:02Z",
-    "accepted_at": "2017-11-22T07:18:02Z",
-    "paid_at": "2017-11-22T07:18:02Z",
+    "submitted_at": "2017-11-22T18:52:09Z",
+    "accepted_at": "2017-11-22T18:52:09Z",
+    "paid_at": "2017-11-22T18:52:09Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "next_payment_due_deadline": "2017-11-22T18:52:09Z",
   "product": {
     "images": [
       {
@@ -923,8 +924,8 @@ id|path|string(uuid)|true|Purchase ID to fetch
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-22T07:18:02Z",
-    "end_datetime": "2017-11-22T07:18:02Z",
+    "start_datetime": "2017-11-22T18:52:09Z",
+    "end_datetime": "2017-11-22T18:52:09Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -936,13 +937,13 @@ id|path|string(uuid)|true|Purchase ID to fetch
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-22T07:18:02Z",
-        "updated_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z",
+        "updated_at": "2017-11-22T18:52:09Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-22T07:18:02Z",
+    "commit_deadline": "2017-11-22T18:52:09Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -1025,8 +1026,8 @@ id|path|string(uuid)|true|Purchase ID to fetch
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-22T07:18:02Z",
-        "failed_at": "2017-11-22T07:18:02Z",
+        "charged_at": "2017-11-22T18:52:09Z",
+        "failed_at": "2017-11-22T18:52:09Z",
         "created_at": "string"
       },
       "user": {
@@ -1037,7 +1038,7 @@ id|path|string(uuid)|true|Purchase ID to fetch
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -1049,10 +1050,10 @@ id|path|string(uuid)|true|Purchase ID to fetch
           "account_number": "string",
           "account_holder_type": "string"
         },
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
-      "committed_at": "2017-11-22T07:18:02Z",
-      "created_at": "2017-11-22T07:18:02Z"
+      "committed_at": "2017-11-22T18:52:09Z",
+      "created_at": "2017-11-22T18:52:09Z"
     }
   ],
   "collected_shares_amount": {
@@ -1171,7 +1172,7 @@ id|path|string(uuid)|true|Purchase ID to fetch
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z"
 }
 ```
 ```json
@@ -1213,47 +1214,23 @@ You can not update `payments` or `product_costs` after you have accepted at leas
 ```json
 {
   "product": {
-    "name": "string",
-    "description": "string",
-    "default_image_url": "string",
-    "inventory_id": "string",
-    "link": "string",
-    "start_datetime": "2017-11-22T07:18:02Z",
-    "end_datetime": "2017-11-22T07:18:02Z",
-    "external_purchase_id": "string",
+    "name": "Grand Canyon Excursion",
+    "description": "2-day, 3-night hiking tour of the Grand Canyon",
+    "inventory_id": "SKU-9876",
+    "link": "https://mycompany.com/product/sku-9876/details",
+    "start_datetime": "2018-12-03T14:57:54Z",
+    "end_datetime": "2018-12-08T14:57:54Z",
     "costs": [
       {
         "amount": {
-          "amount_cents": 0,
-          "currency_code": "string"
+          "amount_cents": 100000,
+          "currency_code": "USD"
         },
-        "min_slots": 0,
-        "max_slots": 0
+        "min_slots": 1,
+        "max_slots": 4
       }
     ]
-  },
-  "group": {
-    "organizer_full_name": "string",
-    "organizer_email": "user@example.com",
-    "legal_document_ids": [
-      "string"
-    ],
-    "split_type": "even_split",
-    "min_slots": 0,
-    "max_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    }
-  },
-  "payments": [
-    {
-      "percentage": 1,
-      "due_deadline": "2017-11-22T07:18:02Z"
-    }
-  ],
-  "language_code": "DA (Danish)",
-  "payment_destination_id": "string"
+  }
 }
 ```
 <h3 id="UpdatePurchase-parameters">Parameters</h3>
@@ -1271,15 +1248,15 @@ body|body|object|true|Request body object.
 »» start_datetime|body|string(date-time)|false|Start date time for the product being purchased<br/>(e.g. check-in date time, flight departure date time, or event<br/>starting time)<br/>
 »» end_datetime|body|string(date-time)|false|End date time for the product being purchased<br/>(e.g. check-out date time, flight arrival date time, or activity<br/>ending time)<br/>
 »» external_purchase_id|body|string|false|ID supplied by the merchant that identifies this Purchase<br/>(e.g. order or booking) in the merchant's system<br/>
-»» costs|body|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. When updating the product_costs, <br/>you cannot use a different currency than the existing one after the purchase <br/>has been claimed. You cannot edit the range of slots to be less than the current <br/>number of committed slots. <br/>
+»» costs|body|[[ProductCost](#schemaproductcost)]|false|The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. When updating the product_costs,<br/>you cannot use a different currency than the existing one after the purchase<br/>has been claimed. You cannot edit the range of slots to be less than the current<br/>number of committed slots.<br/>
 » group|body|object|false|All parameters configuring the group, including those set by the organizer at the claim step.
-»» organizer_full_name|body|string|false|Full name of the expected organizer as provided by the merchant. This will only affect information <br/>displayed to the merchant if updated after the Purchase is claimed. <br/>
-»» organizer_email|body|string(email)|false|Email of the expected organizer as provided by the merchant. This will only affect information <br/>displayed to the merchant if updated after the Purchase is claimed. <br/>
-»» split_type|body|string|false|Splitting type chosen by the organizer for how to divide the cost<br/>among group members.<br/>One of:<br/>-`even_split` Only compatible with total cost_type and means the<br/>  Purchase amount is split evenly across each slot claimed.<br/>-`specified_per_person` Only compatible with total cost_type and<br/>  means each member may pay a different amount.<br/>-`fixed_per_person` Only compatible with per_slot cost_type and means<br/>  each group member pays a fixed amount per slot they claim.<br/>
-»» min_slots|body|integer(int32)|false|The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with `even_split` and `fixed_per_person` split types. <br/>
-»» max_slots|body|integer(int32)|false|The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with `even_split` and `fixed_per_person` split types. <br/>
-»» min_contribution|body|[Money](#schemamoney)|false|Minimum required contribution from each group member. <br/>Only compatible with `specified_per_person` split type.<br/>
-»» legal_document_ids|body|[string]|false|Array of legal document IDs that must be accepted by the members in this purchase. These should NOT <br/>be updated after a Purchase has been claimed because then some members will end up with different <br/>accepted legal terms from others. <br/>
+»» organizer_full_name|body|string|false|Full name of the expected organizer as provided by the merchant. This will only affect information<br/>displayed to the merchant if updated after the Purchase is claimed.<br/>
+»» organizer_email|body|string(email)|false|Email of the expected organizer as provided by the merchant. This will only affect information<br/>displayed to the merchant if updated after the Purchase is claimed.<br/>
+»» split_type|body|string|false|Splitting type chosen by the organizer for how to divide the cost<br/>among group members.<br/>One of:<br/>-`even_split` Only compatible with total cost_type and means the<br/>Purchase amount is split evenly across each slot claimed.<br/>-`specified_per_person` Only compatible with total cost_type and<br/>means each member may pay a different amount.<br/>-`fixed_per_person` Only compatible with per_slot cost_type and means<br/>each group member pays a fixed amount per slot they claim.<br/>
+»» min_slots|body|integer(int32)|false|The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant.<br/>Only compatible with `even_split` and `fixed_per_person` split types.<br/>
+»» max_slots|body|integer(int32)|false|The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant.<br/>Only compatible with `even_split` and `fixed_per_person` split types. <br/>
+»» min_contribution|body|[Money](#schemamoney)|false|Minimum required contribution from each group member.<br/>Only compatible with `specified_per_person` split type.<br/>
+»» legal_document_ids|body|[string]|false|Array of legal document IDs that must be accepted by the members in this purchase. These should NOT<br/>be updated after a Purchase has been claimed because then some members will end up with different<br/>accepted legal terms from others.<br/>
 » language_code|body|string|false|Default 2-character language code for this purchase. It is going <br/>to be used in the claim and commit steps; and as one of the <br/>fallbacks when detecting what language to show to the user<br/>
 » payment_destination_id|body|string(uuid)|false|ID of the payment destination that will receive all future payments<br/>made under this Purchase. NOTE: updating this value will not affect <br/>any previously accepted payments on this purchase. <br/>
 » payments|body|[object]|false|Breakdown of payment amounts and deadlines due over time for this Purchase. <br/>They can only be updated if no payment has yet been accepted by the merchant for this Purchase.. <br/>
@@ -1320,14 +1297,14 @@ body|body|object|true|Request body object.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-22T07:18:02Z",
+      "due_deadline": "2017-11-22T18:52:09Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-22T07:18:02Z",
-      "accepted_at": "2017-11-22T07:18:02Z",
-      "paid_at": "2017-11-22T07:18:02Z",
+      "submitted_at": "2017-11-22T18:52:09Z",
+      "accepted_at": "2017-11-22T18:52:09Z",
+      "paid_at": "2017-11-22T18:52:09Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -1339,20 +1316,20 @@ body|body|object|true|Request body object.
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-22T07:18:02Z",
+    "due_deadline": "2017-11-22T18:52:09Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-22T07:18:02Z",
-    "accepted_at": "2017-11-22T07:18:02Z",
-    "paid_at": "2017-11-22T07:18:02Z",
+    "submitted_at": "2017-11-22T18:52:09Z",
+    "accepted_at": "2017-11-22T18:52:09Z",
+    "paid_at": "2017-11-22T18:52:09Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "next_payment_due_deadline": "2017-11-22T18:52:09Z",
   "product": {
     "images": [
       {
@@ -1376,8 +1353,8 @@ body|body|object|true|Request body object.
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-22T07:18:02Z",
-    "end_datetime": "2017-11-22T07:18:02Z",
+    "start_datetime": "2017-11-22T18:52:09Z",
+    "end_datetime": "2017-11-22T18:52:09Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -1389,13 +1366,13 @@ body|body|object|true|Request body object.
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-22T07:18:02Z",
-        "updated_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z",
+        "updated_at": "2017-11-22T18:52:09Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-22T07:18:02Z",
+    "commit_deadline": "2017-11-22T18:52:09Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -1478,8 +1455,8 @@ body|body|object|true|Request body object.
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-22T07:18:02Z",
-        "failed_at": "2017-11-22T07:18:02Z",
+        "charged_at": "2017-11-22T18:52:09Z",
+        "failed_at": "2017-11-22T18:52:09Z",
         "created_at": "string"
       },
       "user": {
@@ -1490,7 +1467,7 @@ body|body|object|true|Request body object.
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -1502,10 +1479,10 @@ body|body|object|true|Request body object.
           "account_number": "string",
           "account_holder_type": "string"
         },
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
-      "committed_at": "2017-11-22T07:18:02Z",
-      "created_at": "2017-11-22T07:18:02Z"
+      "committed_at": "2017-11-22T18:52:09Z",
+      "created_at": "2017-11-22T18:52:09Z"
     }
   ],
   "collected_shares_amount": {
@@ -1624,7 +1601,7 @@ body|body|object|true|Request body object.
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z"
 }
 ```
 ```json
@@ -1676,24 +1653,12 @@ supplying defaults for the required parameters.
 
 ```json
 {
-  "organizer_name": "string",
-  "organizer_email": "string",
-  "organizer_allowed_share_amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
-  "min_contribution": {
-    "amount_cents": 0,
-    "currency_code": "string"
-  },
+  "organizer_name": "John Doe",
+  "organizer_email": "johndoe@gmail.com",
   "group": {
     "split_type": "even_split",
-    "max_slots": 0,
-    "min_slots": 0,
-    "min_contribution": {
-      "amount_cents": 0,
-      "currency_code": "string"
-    }
+    "min_slots": 2,
+    "max_slots": 4
   }
 }
 ```
@@ -1703,15 +1668,15 @@ Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 id|path|string(uuid)|true|ID of the Purchase to claim
 body|body|object|true|Request body object.
-» organizer_name|body|string|false|Name of the organizer
-» organizer_email|body|string|false|Email of the organizer
+» organizer_name|body|string|true|Full name of the organizer
+» organizer_email|body|string|true|Email of the organizer
 » organizer_allowed_share_amount|body|[Money](#schemamoney)|false|This is the recommended share for the organizer and is only relevant if split_type is `specified_per_person`
 » min_contribution|body|[Money](#schemamoney)|false|Min contribution amount
 » group|body|object|false|No description
-»» split_type|body|string|false|Splitting type chosen by the organizer for how to divide the cost<br/>among group members.<br/>One of:<br/>-`even_split` Only compatible with total cost_type and means the<br/>  Purchase amount is split evenly across each slot claimed.<br/>-`specified_per_person` Only compatible with total cost_type and<br/>  means each member may pay a different amount.<br/>-`fixed_per_person` Only compatible with per_slot cost_type and means<br/>  each group member pays a fixed amount per slot they claim.<br/>
-»» max_slots|body|integer(int32)|false|The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with `even_split` and `fixed_per_person` split types. <br/>
-»» min_slots|body|integer(int32)|false|The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with `even_split` and `fixed_per_person` split types. <br/>
-»» min_contribution|body|[Money](#schemamoney)|false|Minimum required contribution from each group member. <br/>Only compatible with `specified_per_person` split type. <br/>
+»» split_type|body|string|true|Splitting type chosen by the organizer for how to divide the cost<br/>among group members.<br/>One of:<br/>-`even_split` Only compatible with total cost_type and means the<br/>  Purchase amount is split evenly across each slot claimed.<br/>-`specified_per_person` Only compatible with total cost_type and<br/>  means each member may pay a different amount.<br/>-`fixed_per_person` Only compatible with per_slot cost_type and means<br/>  each group member pays a fixed amount per slot they claim.<br/>
+»» max_slots|body|integer(int32)|false|The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant.<br/>Only compatible with `even_split` and `fixed_per_person` split types.<br/>
+»» min_slots|body|integer(int32)|false|The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant.<br/>Only compatible with `even_split` and `fixed_per_person` split types.<br/>
+»» min_contribution|body|[Money](#schemamoney)|false|Minimum required contribution from each group member.<br/>Only compatible with `specified_per_person` split type.<br/>
 
 
 #### Enumerated Values
@@ -1744,14 +1709,14 @@ body|body|object|true|Request body object.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-22T07:18:02Z",
+      "due_deadline": "2017-11-22T18:52:09Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-22T07:18:02Z",
-      "accepted_at": "2017-11-22T07:18:02Z",
-      "paid_at": "2017-11-22T07:18:02Z",
+      "submitted_at": "2017-11-22T18:52:09Z",
+      "accepted_at": "2017-11-22T18:52:09Z",
+      "paid_at": "2017-11-22T18:52:09Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -1763,20 +1728,20 @@ body|body|object|true|Request body object.
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-22T07:18:02Z",
+    "due_deadline": "2017-11-22T18:52:09Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-22T07:18:02Z",
-    "accepted_at": "2017-11-22T07:18:02Z",
-    "paid_at": "2017-11-22T07:18:02Z",
+    "submitted_at": "2017-11-22T18:52:09Z",
+    "accepted_at": "2017-11-22T18:52:09Z",
+    "paid_at": "2017-11-22T18:52:09Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "next_payment_due_deadline": "2017-11-22T18:52:09Z",
   "product": {
     "images": [
       {
@@ -1800,8 +1765,8 @@ body|body|object|true|Request body object.
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-22T07:18:02Z",
-    "end_datetime": "2017-11-22T07:18:02Z",
+    "start_datetime": "2017-11-22T18:52:09Z",
+    "end_datetime": "2017-11-22T18:52:09Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -1813,13 +1778,13 @@ body|body|object|true|Request body object.
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-22T07:18:02Z",
-        "updated_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z",
+        "updated_at": "2017-11-22T18:52:09Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-22T07:18:02Z",
+    "commit_deadline": "2017-11-22T18:52:09Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -1902,8 +1867,8 @@ body|body|object|true|Request body object.
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-22T07:18:02Z",
-        "failed_at": "2017-11-22T07:18:02Z",
+        "charged_at": "2017-11-22T18:52:09Z",
+        "failed_at": "2017-11-22T18:52:09Z",
         "created_at": "string"
       },
       "user": {
@@ -1914,7 +1879,7 @@ body|body|object|true|Request body object.
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -1926,10 +1891,10 @@ body|body|object|true|Request body object.
           "account_number": "string",
           "account_holder_type": "string"
         },
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
-      "committed_at": "2017-11-22T07:18:02Z",
-      "created_at": "2017-11-22T07:18:02Z"
+      "committed_at": "2017-11-22T18:52:09Z",
+      "created_at": "2017-11-22T18:52:09Z"
     }
   ],
   "collected_shares_amount": {
@@ -2048,7 +2013,7 @@ body|body|object|true|Request body object.
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z"
 }
 ```
 ```json
@@ -2098,16 +2063,20 @@ They will receive reminders to join until the purchase completes, expires, or is
 {
   "invitees": [
     {
-      "email": "user@example.com",
-      "full_name": "string",
+      "email": "joanna@gmail.com",
+      "full_name": "Joanna Ross"
+    },
+    {
+      "email": "michael@hotmail.com",
+      "full_name": "Michael Wilson",
       "allowed_share_amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
+        "amount_cents": 25000,
+        "currency_code": "USD"
       }
     }
   ],
-  "message": "string",
-  "subject": "string"
+  "message": "Join in so we can finally book this Grand Canyon trip!",
+  "subject": "Grand Canyon booking"
 }
 ```
 <h3 id="InviteMembersToPurchase-parameters">Parameters</h3>
@@ -2119,7 +2088,7 @@ body|body|object|true|Request body object.
 » message|body|string|false|Message from the organizer to include in the invite notification.
 » subject|body|string|false|Subject line of the notification to the invitee if sent by email.
 » invitees|body|[object]|false|No description
-»» email|body|string(email)|false|Email to send the invite to.
+»» email|body|string(email)|true|Email to send the invite to.
 »» full_name|body|string|false|Name of the invitee.
 »» allowed_share_amount|body|[Money](#schemamoney)|false|Suggested contribution for the invitee. Only relevant for `specified_per_person` split type.
 
@@ -2151,21 +2120,27 @@ the sum of all payments on the purchase, you will get an error response.
 
 ```json
 {
-  "reason": "string",
+  "reason": "Your overpayment for the extra night that was canceled",
   "amount": {
-    "amount_cents": 0,
-    "currency_code": "string"
+    "amount_cents": 30000,
+    "currency_code": "USD"
   },
-  "memberships_shares": [
+  "membership_shares": [
     {
-      "membership_id": "string",
+      "membership_id": "03DEFD52-E46C-42CF-BD88-A61EB5A61BB5",
       "amount": {
-        "amount_cents": 0,
-        "currency_code": "string"
+        "amount_cents": 12000,
+        "currency_code": "USD"
+      }
+    },
+    {
+      "membership_id": "0288FBB9-B49C-22DF-5588-F21EC5F77B33",
+      "amount": {
+        "amount_cents": 18000,
+        "currency_code": "USD"
       }
     }
-  ],
-  "funding_source_id": "string"
+  ]
 }
 ```
 <h3 id="RequestPurchaseRefund-parameters">Parameters</h3>
@@ -2174,12 +2149,12 @@ Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 id|path|string(uuid)|true|ID of the purchase to refund
 body|body|object|true|Request body object.
-» reason|body|string|false|Reason why this amount is being refunded
-» amount|body|[Money](#schemamoney)|false|Amount to be refunded. It may not be greater than the current<br/>collected amount of the purchase, which is the total purchase<br/>amount net of any previous refunds. If the memberships_shares<br/>array is provided, this value must equal the sum of those shares.<br/>
-» funding_source_id|body|string(uuid)|false|UUID of the merchant's payment source they wish to use to fund this refund. <br/>This is only applicable if the merchant originally received the payment that is being <br/>refunded into the merchant's bank account instead of a through a custom gateway.<br/>
+» reason|body|string|true|Reason why this amount is being refunded
+» amount|body|[Money](#schemamoney)|true|Amount to be refunded. It may not be greater than the current<br/>collected amount of the purchase, which is the total purchase<br/>amount net of any previous refunds. If the memberships_shares<br/>array is provided, this value must equal the sum of those shares.<br/>
+» funding_source_id|body|string(uuid)|false|UUID of the merchant's payment source they wish to use to fund this refund.<br/>This is only applicable if the merchant originally received the payment that is being<br/>refunded into the merchant's bank account instead of a through a custom gateway. If no<br/>value is provided, then the default will be used if it has been set, otherwise the<br/>original payout bank account will be used.<br/>
 » memberships_shares|body|[object]|false|No description
-»» membership_id|body|string|false|ID of the membership to refund.
-»» amount|body|[Money](#schemamoney)|false|Amount to refund to this member.
+»» membership_id|body|string|true|ID of the membership to refund.
+»» amount|body|[Money](#schemamoney)|true|Amount to refund to this member.
 
 
 > Example responses
@@ -2204,14 +2179,14 @@ body|body|object|true|Request body object.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-22T07:18:02Z",
+      "due_deadline": "2017-11-22T18:52:09Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-22T07:18:02Z",
-      "accepted_at": "2017-11-22T07:18:02Z",
-      "paid_at": "2017-11-22T07:18:02Z",
+      "submitted_at": "2017-11-22T18:52:09Z",
+      "accepted_at": "2017-11-22T18:52:09Z",
+      "paid_at": "2017-11-22T18:52:09Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -2223,20 +2198,20 @@ body|body|object|true|Request body object.
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-22T07:18:02Z",
+    "due_deadline": "2017-11-22T18:52:09Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-22T07:18:02Z",
-    "accepted_at": "2017-11-22T07:18:02Z",
-    "paid_at": "2017-11-22T07:18:02Z",
+    "submitted_at": "2017-11-22T18:52:09Z",
+    "accepted_at": "2017-11-22T18:52:09Z",
+    "paid_at": "2017-11-22T18:52:09Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "next_payment_due_deadline": "2017-11-22T18:52:09Z",
   "product": {
     "images": [
       {
@@ -2260,8 +2235,8 @@ body|body|object|true|Request body object.
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-22T07:18:02Z",
-    "end_datetime": "2017-11-22T07:18:02Z",
+    "start_datetime": "2017-11-22T18:52:09Z",
+    "end_datetime": "2017-11-22T18:52:09Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -2273,13 +2248,13 @@ body|body|object|true|Request body object.
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-22T07:18:02Z",
-        "updated_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z",
+        "updated_at": "2017-11-22T18:52:09Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-22T07:18:02Z",
+    "commit_deadline": "2017-11-22T18:52:09Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -2362,8 +2337,8 @@ body|body|object|true|Request body object.
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-22T07:18:02Z",
-        "failed_at": "2017-11-22T07:18:02Z",
+        "charged_at": "2017-11-22T18:52:09Z",
+        "failed_at": "2017-11-22T18:52:09Z",
         "created_at": "string"
       },
       "user": {
@@ -2374,7 +2349,7 @@ body|body|object|true|Request body object.
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -2386,10 +2361,10 @@ body|body|object|true|Request body object.
           "account_number": "string",
           "account_holder_type": "string"
         },
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
-      "committed_at": "2017-11-22T07:18:02Z",
-      "created_at": "2017-11-22T07:18:02Z"
+      "committed_at": "2017-11-22T18:52:09Z",
+      "created_at": "2017-11-22T18:52:09Z"
     }
   ],
   "collected_shares_amount": {
@@ -2508,7 +2483,7 @@ body|body|object|true|Request body object.
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z"
 }
 ```
 ```json
@@ -2543,15 +2518,52 @@ Status|Meaning|Description|Schema
 To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 
-## CreatePurchaseImages
+## CancelPurchase
 
 `POST /purchases/{id}/cancel`
 
+*Cancel purchase*
+
+Cancels this purchase so that it may not complete under any circumstances.
+If any payment is in `authorized` state, all auths will be voided.
+
+> Body parameter
+
+```json
+{
+  "reason": "string"
+}
+```
+<h3 id="CancelPurchase-parameters">Parameters</h3>
+
+Parameter|In|Type|Required|Description
+---|---|---|---|---|
+id|path|string(uuid)|true|ID of the Purchase to cancel
+body|body|object|true|Request body object.
+» reason|body|string|false|Description to be provided to the group's organizer<br/>explaining why the group was canceled<br/>
+
+
+<h3 id="CancelPurchase-responses">Responses</h3>
+
+Status|Meaning|Description|Schema
+---|---|---|---|
+204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|Success response|None
+404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not found|None
+422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Unprocessable entity|None
+
+<aside class="warning">
+To perform this operation, you must be authenticated by HTTP Basic Authorization header.
+</aside>
+
+## CreatePurchaseImages
+
+`POST /purchases/{id}/images`
+
 *Create purchase image*
 
-This call attaches the image you specify in the body to the purchase you 
-specify in the request. That image should be of the product and is used 
-for display to end users. The most recent image uploaded will be the primary 
+This call attaches the image you specify in the body to the purchase you
+specify in the request. That image should be of the product and is used
+for display to end users. The most recent image uploaded will be the primary
 image displayed for the purchase.
 
 > Body parameter
@@ -2567,8 +2579,8 @@ Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 id|path|string(uuid)|true|ID of the Purchase to which this image applies
 body|body|object|false|Request body object.
-» url|body|string|false|URL of the image. It will only be retrieved once from this URL, after which it will be cached by Pay By Group.
-» file|body|string(binary)|false|Image file
+» url|body|string|true|URL of the image. It will only be retrieved once from this URL, after which it will be cached by Pay By Group.
+» file|body|string(binary)|true|Image file
 
 
 > Example responses
@@ -2700,8 +2712,8 @@ id|path|string(uuid)|true|Purchase ID
           "currency_code": "string"
         }
       },
-      "charged_at": "2017-11-22T07:18:02Z",
-      "failed_at": "2017-11-22T07:18:02Z",
+      "charged_at": "2017-11-22T18:52:09Z",
+      "failed_at": "2017-11-22T18:52:09Z",
       "created_at": "string"
     },
     "user": {
@@ -2712,7 +2724,7 @@ id|path|string(uuid)|true|Purchase ID
       "last_name": "string",
       "avatar_url": "string",
       "language_code": "string",
-      "created_at": "2017-11-22T07:18:02Z"
+      "created_at": "2017-11-22T18:52:09Z"
     },
     "purchase_id": "string",
     "payment_source": {
@@ -2724,10 +2736,10 @@ id|path|string(uuid)|true|Purchase ID
         "account_number": "string",
         "account_holder_type": "string"
       },
-      "created_at": "2017-11-22T07:18:02Z"
+      "created_at": "2017-11-22T18:52:09Z"
     },
-    "committed_at": "2017-11-22T07:18:02Z",
-    "created_at": "2017-11-22T07:18:02Z"
+    "committed_at": "2017-11-22T18:52:09Z",
+    "created_at": "2017-11-22T18:52:09Z"
   }
 ]
 ```
@@ -2816,9 +2828,9 @@ id|path|string(uuid)|true|Purchase ID
         "account_number": "string",
         "account_holder_type": "string"
       },
-      "created_at": "2017-11-22T07:18:02Z"
+      "created_at": "2017-11-22T18:52:09Z"
     },
-    "created_at": "2017-11-22T07:18:02Z",
+    "created_at": "2017-11-22T18:52:09Z",
     "processing_currency": "string",
     "conversion_rate": 0
   }
@@ -2870,8 +2882,8 @@ id|path|string(uuid)|true|Purchase ID
     "type": "tos",
     "title": "string",
     "content": "string",
-    "created_at": "2017-11-22T07:18:02Z",
-    "updated_at": "2017-11-22T07:18:02Z"
+    "created_at": "2017-11-22T18:52:09Z",
+    "updated_at": "2017-11-22T18:52:09Z"
   }
 ]
 ```
@@ -3032,8 +3044,8 @@ Returns a paginated list of all legal documents that currently exist under this 
     "type": "tos",
     "title": "string",
     "content": "string",
-    "created_at": "2017-11-22T07:18:02Z",
-    "updated_at": "2017-11-22T07:18:02Z"
+    "created_at": "2017-11-22T18:52:09Z",
+    "updated_at": "2017-11-22T18:52:09Z"
   }
 ]
 ```
@@ -3071,8 +3083,8 @@ Add a new legal document, which will then be available to attach to any purchase
 ```json
 {
   "type": "tos",
-  "title": "string",
-  "content": "string"
+  "title": "Lease Agreement",
+  "content": "https://example.com/lease-agreements/9877"
 }
 ```
 <h3 id="CreateMerchantLegalDocument-parameters">Parameters</h3>
@@ -3082,7 +3094,7 @@ Parameter|In|Type|Required|Description
 body|body|object|true|Request body object.
 » type|body|string|false|Specified by the merchant as either the Cancellation Policy for cancellation and refund terms<br/>or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then <br/>refer to that document as type TOS. If none is provided, the value defaults to `tos`. <br/>
 » title|body|string|false|Mechant's title for this legal document to be displayed to end users. If none is provided, it defaults to <br/>the generic term "Terms of Service."<br/>
-» content|body|string|false|Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  <br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. <br/>
+» content|body|string|true|Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  <br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. <br/>
 
 
 #### Enumerated Values
@@ -3100,8 +3112,8 @@ body|body|object|true|Request body object.
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-22T07:18:02Z",
-  "updated_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z",
+  "updated_at": "2017-11-22T18:52:09Z"
 }
 ```
 ```json
@@ -3148,8 +3160,8 @@ id|path|string(uuid)|true|ID of the Legal Document to retrieve
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-22T07:18:02Z",
-  "updated_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z",
+  "updated_at": "2017-11-22T18:52:09Z"
 }
 ```
 ```json
@@ -3181,16 +3193,14 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 
 Makes changes to a legal document, which will apply to all
 future acceptances by members where that document is attached
-to a purchase. It will not apply retroactively to any Purchase 
+to a purchase. It will not apply retroactively to any Purchase
 created prior to the moment it is updated.
 
 > Body parameter
 
 ```json
 {
-  "type": "tos",
-  "title": "string",
-  "content": "string"
+  "content": "https://example.com/lease-agreements/123456"
 }
 ```
 <h3 id="patchLegalDocumentsId-parameters">Parameters</h3>
@@ -3201,7 +3211,7 @@ id|path|string(uuid)|true|ID of the Legal Document to update.
 body|body|object|true|Request body object.
 » type|body|string|false|Specified by the merchant as either the Cancellation Policy for cancellation and refund terms<br/>or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then <br/>refer to that document as type TOS. If none is provided in this request, then the existing value <br/>for the Legal Document being updated will continue to apply.<br/>
 » title|body|string|false|Mechant's title for this legal document to be displayed to end users. If none is provided, the existing value <br/>for the Legal Document being updated will continue to apply.<br/>
-» content|body|string|false|Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  <br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. <br/>If none is provided, the existing value for the Legal Document being updated will continue to apply. <br/>
+» content|body|string|true|Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  <br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. <br/>If none is provided, the existing value for the Legal Document being updated will continue to apply. <br/>
 
 
 #### Enumerated Values
@@ -3219,8 +3229,8 @@ body|body|object|true|Request body object.
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-22T07:18:02Z",
-  "updated_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z",
+  "updated_at": "2017-11-22T18:52:09Z"
 }
 ```
 ```json
@@ -3270,25 +3280,35 @@ ones will apply.
 
 *Creates a new consumer field template*
 
-You must first create a template before you can attach the template to a purchase 
-and collect data based on it. 
+You must first use this method to create a template before you can attach the template
+to a purchase and collect data based on it. 
 
 > Body parameter
 
 ```json
 {
-  "name": "string",
-  "label": "string",
-  "description": "string",
-  "type": "address",
+  "name": "shirt_size",
+  "label": "Shirt size",
+  "type": "single_select",
   "options": [
     {
-      "type": "address",
-      "value": "string"
+      "type": "text",
+      "value": "S"
+    },
+    {
+      "type": "text",
+      "value": "M"
+    },
+    {
+      "type": "text",
+      "value": "L"
+    },
+    {
+      "type": "text",
+      "value": "XL"
     }
   ],
-  "default_value": "string",
-  "order": 0,
+  "order": 1,
   "scope": "member",
   "default": true,
   "required": true
@@ -3299,18 +3319,18 @@ and collect data based on it.
 Parameter|In|Type|Required|Description
 ---|---|---|---|---|
 body|body|object|true|Request body object.
-» name|body|string|false|A unique name for the template, used as the reference for attaching the template to a purchase.
-» label|body|string|false|Text to display as the field label.
+» name|body|string|true|A unique name for the template, used as the reference for attaching the template to a purchase.
+» label|body|string|true|Text to display as the field label.
 » description|body|string|false|A description for the template displayed as sub-text below the field label.
-» type|body|string|false|Type of field to display for this template. Single_select and multi_select require passing `options` values.
+» type|body|string|true|Type of field to display for this template. Single_select and multi_select require passing `options` values.
 » default_value|body|string|false|Default value to use for the template, which prepopulates the field for the user on landing.
 » order|body|integer(int32)|false|Order in which the template should be displayed, with 1 being the first displayed. <br/>This value must be unique to each template, but the values do not have to be sequential.<br/>
-» scope|body|string|false|Whether the template applies at the member level to every group member or at the purchase <br/>level, only to the organizer.<br/>
-» default|body|boolean|false|Whether the template should be default or not. Default templates apply to every purchase unless <br/>you specify at least 1 template at purchase creation. <br/>
-» required|body|boolean|false|This is the default setting for whether the user is required to fill this field when it is presented.
+» scope|body|string|false|Whether the template applies at the member level to every group member or at the purchase <br/>level, only to the organizer. Defaults to `member` if none is provided.<br/>
+» default|body|boolean|false|Whether the template should be default or not. Default templates apply to every purchase unless <br/>you specify at least 1 template at purchase creation. Defaults to `false` if no value is provided.<br/>
+» required|body|boolean|false|This is the default setting for whether the user is required to fill this field when it is presented.<br/>Defaults to `false` if no value is provided.<br/>
 » options|body|[object]|false|Array of options to display, which is required for a template of single_select or multi_select type.
-»» type|body|string|false|Defines the format of the value you provide to display to end users.  <br/>
-»» value|body|string|false|Value displayed to end users when presenting the options
+»» type|body|string|true|Defines the format of the value you provide to display to end users.  <br/>
+»» value|body|string|true|Value displayed to end users when presenting the options
 
 
 #### Enumerated Values
@@ -3534,16 +3554,16 @@ Name|Type|Description
 ---|---|---|
 id|string(uuid)|Pay By Group UUID for this consumer field template
 default|boolean|Whether the template should be default or not.
-special|boolean|Whether the template is a special field or not. Special fields are  standardized fields where the values a user enters may be pre-populated  based on that user's previous activity. These fields are shipping  address, billing address, and phone number.  
+special|boolean|Whether the template is a special field or not. Special fields are standardized fields where the values a user enters may be pre-populated based on that user's previous activity. These fields are shipping address, billing address, and phone number. 
 order|integer(int32)|Order in which the template should be displayed.
-scope|string|Either `member` (applies to every group member) or purchase  (applies only for the organizer to fill out on behalf of the whole Purchase) 
+scope|string|Either `member` (applies to every group member) or `purchase` (applies only for the organizer to fill out on behalf of the whole Purchase) 
 required|boolean|Whether the field is required or not when the template is attached to a Purchase
 name|string|A unique name for the template, used when referencing the template to attach it to a Purchase
 label|string|Text displayed as the field label
 description|string|Descriptive helper text explaining the field to the end user
 default_value|string|Default value shown on landing for the user
 type|string|Format for how the field is displayed to end users
-options|[object]|Array of options for the user to select from, which applies for `single_select`  and `multi-select` `type` templates 
+options|[object]|Array of options for the user to select from, which applies for `single_select` and `multi-select` `type` templates 
 
 
 #### Enumerated Values
@@ -3580,8 +3600,8 @@ type|textarea|
 Name|Type|Description
 ---|---|---|
 name|string|Name of the schema
-scope|string|One of member or purchase.
-required|boolean|Whether the schema field should be required or not.
+scope|string|One of `member` or `purchase`
+required|boolean|Whether the schema field should be required or not
 
 
 #### Enumerated Values
@@ -3615,8 +3635,8 @@ scope|purchase|
       "currency_code": "string"
     }
   },
-  "charged_at": "2017-11-22T07:18:02Z",
-  "failed_at": "2017-11-22T07:18:02Z",
+  "charged_at": "2017-11-22T18:52:09Z",
+  "failed_at": "2017-11-22T18:52:09Z",
   "created_at": "string"
 } 
 ```
@@ -3626,8 +3646,8 @@ scope|purchase|
 Name|Type|Description
 ---|---|---|
 id|string|UUID of this contribution
-status|string|Current status of the contribution, any of: `created` (member is committed, but has no payment activity on this contribution yet);  `authorized` (the member's payment method was successfully authorized for this charge);  `captured` (the full contribution amount has been captured from the member's payment method);  `holdout` (the member is not currently committed to the purchase); or  `failed` (the charge or this contribution failed and Pay By Group is attempting to resolve it) 
-refund_status|string|Status that determines whether the Contribution is partially or fully refunded, one of:  `none` (none of the Contribution's Transactions were refunded);  `partial` (some of the Contribution's Transactions were partially   or fully refunded); or  `full` (all of the Contribution's Transactions were fully refunded) 
+status|string|Current status of the contribution, any of: -`created` (member is committed, but has no payment activity on this contribution yet); -`authorized` (the member's payment method was successfully authorized for this charge); -`captured` (the full contribution amount has been captured from the member's payment method); -`holdout` (the member is not currently committed to the purchase); or  -`failed` (the charge or this contribution failed and Pay By Group is attempting to resolve it) 
+refund_status|string|Status that determines whether the Contribution is partially or fully refunded, one of:  -`none` (none of the Contribution's Transactions were refunded);  -`partial` (some of the Contribution's Transactions were partially or fully refunded); or  -`full` (all of the Contribution's Transactions were fully refunded) 
 amount|[Money](#schemamoney)|Structure of all money objects in the API
 share_amount|[Money](#schemamoney)|Structure of all money objects in the API
 fees|[Fees](#schemafees)|No description
@@ -3700,7 +3720,7 @@ consumer_fee|[Money](#schemamoney)|Structure of all money objects in the API
 
 ```json
 {
-  "commit_deadline": "2017-11-22T07:18:02Z",
+  "commit_deadline": "2017-11-22T18:52:09Z",
   "max_slots": 0,
   "min_slots": 0,
   "min_contribution": {
@@ -3812,8 +3832,8 @@ type|cancelation_policy|
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-22T07:18:02Z",
-  "updated_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z",
+  "updated_at": "2017-11-22T18:52:09Z"
 } 
 ```
 
@@ -3910,8 +3930,8 @@ type|cancelation_policy|
         "currency_code": "string"
       }
     },
-    "charged_at": "2017-11-22T07:18:02Z",
-    "failed_at": "2017-11-22T07:18:02Z",
+    "charged_at": "2017-11-22T18:52:09Z",
+    "failed_at": "2017-11-22T18:52:09Z",
     "created_at": "string"
   },
   "user": {
@@ -3922,7 +3942,7 @@ type|cancelation_policy|
     "last_name": "string",
     "avatar_url": "string",
     "language_code": "string",
-    "created_at": "2017-11-22T07:18:02Z"
+    "created_at": "2017-11-22T18:52:09Z"
   },
   "purchase_id": "string",
   "payment_source": {
@@ -3934,10 +3954,10 @@ type|cancelation_policy|
       "account_number": "string",
       "account_holder_type": "string"
     },
-    "created_at": "2017-11-22T07:18:02Z"
+    "created_at": "2017-11-22T18:52:09Z"
   },
-  "committed_at": "2017-11-22T07:18:02Z",
-  "created_at": "2017-11-22T07:18:02Z"
+  "committed_at": "2017-11-22T18:52:09Z",
+  "created_at": "2017-11-22T18:52:09Z"
 } 
 ```
 
@@ -3962,7 +3982,7 @@ allowed_share_amount|[Money](#schemamoney)|Structure of all money objects in the
 allowed_fees|[Fees](#schemafees)|No description
 collected_amount|[Money](#schemamoney)|Structure of all money objects in the API
 collected_share_amount|[Money](#schemamoney)|Structure of all money objects in the API
-current_contribution|[Contribution](#schemacontribution)|Contribution(s) are nested inside each membership and describe the relationship between each  member and each payment, so a membership can have multiple contributions, 1 for each payment. 
+current_contribution|[Contribution](#schemacontribution)|Contribution(s) are nested inside each membership and describe the relationship between each member and each payment, so a membership can have multiple contributions, 1 for each payment. 
 user|[User](#schemauser)|Each user is a single end-user who can have multiple memberships across different Purchases.
 purchase_id|string(uuid)|Pay By Group UUID of the purchase to which this membership is tied
 payment_source|[PaymentSource](#schemapaymentsource)|Each committed Member has a Payment Source that is charged for their contributions to the  Purchase and which is represented by this object.  
@@ -4102,14 +4122,14 @@ currency_code|string|3-letter currency code attached to every money value
   "status": "pending",
   "number": 0,
   "percentage": 1,
-  "due_deadline": "2017-11-22T07:18:02Z",
+  "due_deadline": "2017-11-22T18:52:09Z",
   "amount": {
     "amount_cents": 0,
     "currency_code": "string"
   },
-  "submitted_at": "2017-11-22T07:18:02Z",
-  "accepted_at": "2017-11-22T07:18:02Z",
-  "paid_at": "2017-11-22T07:18:02Z",
+  "submitted_at": "2017-11-22T18:52:09Z",
+  "accepted_at": "2017-11-22T18:52:09Z",
+  "paid_at": "2017-11-22T18:52:09Z",
   "processing_currency": "string",
   "conversion_rate": 0,
   "failed": true,
@@ -4190,7 +4210,7 @@ supported_currency_codes|[string]|3-letter currency codes that can be used for p
     "account_number": "string",
     "account_holder_type": "string"
   },
-  "created_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z"
 } 
 ```
 
@@ -4255,9 +4275,9 @@ created_at|string(date-time)|Timestamp when the payment source was first added t
       "account_number": "string",
       "account_holder_type": "string"
     },
-    "created_at": "2017-11-22T07:18:02Z"
+    "created_at": "2017-11-22T18:52:09Z"
   },
-  "created_at": "2017-11-22T07:18:02Z",
+  "created_at": "2017-11-22T18:52:09Z",
   "processing_currency": "string",
   "conversion_rate": 0
 } 
@@ -4271,8 +4291,8 @@ id|string(uuid)|Pay By Group UUID for this transaction
 short_id|string|Unique ID of this transaction for easy reference
 parent_id|string|Another transaction related to and replaced by this one - e.g. the credit card authorization for which this transaction is the capture or the capture for which this is the refund. 
 chargable_type|string|No description
-action|string|One of:  `auth` (holds funds or the specified amount on the user's payment   method for later capture);  `capture` (captures funds that were previously authorized at an   amount = or < the authorized amount);  `charge` (instantly charges an amount without first making an   authorization);  `void` (voids a previously created authorization);  `refund` (refunds a previously created capture or charge);  `payout` (sends funds to a payout bank account). 
-status|string|One of:  `pending` (transaction has been submitted for processing and our system awaits reponse);  `completed` (transaction succeeded); or  `failed` (transaction failed) 
+action|string|One of:  -`auth` (holds funds or the specified amount on the user's payment method for later capture); -`capture` (captures funds that were previously authorized at an amount = or < the authorized amount); -`charge` (instantly charges an amount without first making an authorization); -`void` (voids a previously created authorization); -`refund` (refunds a previously created capture or charge); -`payout` (sends funds to a payout bank account). 
+status|string|One of:  -`pending` (transaction has been submitted for processing and our system awaits reponse);  -`completed` (transaction succeeded); or  -`failed` (transaction failed) 
 amount|[Money](#schemamoney)|Structure of all money objects in the API
 fees|[Fees](#schemafees)|No description
 payout_account|[BankAccount](#schemabankaccount)|Merchants that choose to use Pay By Group as their processor instead of a third-party gateway  receive their payouts to a bank account  
@@ -4328,8 +4348,8 @@ status|failed|
   ],
   "description": "string",
   "name": "string",
-  "start_datetime": "2017-11-22T07:18:02Z",
-  "end_datetime": "2017-11-22T07:18:02Z",
+  "start_datetime": "2017-11-22T18:52:09Z",
+  "end_datetime": "2017-11-22T18:52:09Z",
   "external_purchase_id": "string",
   "inventory_id": "string",
   "link": "string",
@@ -4341,8 +4361,8 @@ status|failed|
       "type": "tos",
       "title": "string",
       "content": "string",
-      "created_at": "2017-11-22T07:18:02Z",
-      "updated_at": "2017-11-22T07:18:02Z"
+      "created_at": "2017-11-22T18:52:09Z",
+      "updated_at": "2017-11-22T18:52:09Z"
     }
   ]
 } 
@@ -4353,7 +4373,7 @@ status|failed|
 Name|Type|Description
 ---|---|---|
 default_image_url|string|The primary or default image for this product first displayed to end users
-cost_type|string|Cost type that determines whether the product_costs amount(s) are:  `total` (single total amount so long as the number of slots claimed   is in the allowed range for that amount) or `per_slot` (amount is per slot claimed in the Purchase so the   total amount paid to the merchant is a function of the number of   slots claimed by group members) 
+cost_type|string|Cost type that determines whether the product_costs amount(s) are: -`total` (single total amount so long as the number of slots claimed is in the allowed range for that amount) or -`per_slot` (amount is per slot claimed in the Purchase so the total amount paid to the merchant is a function of the number of slots claimed by group members) 
 description|string|Description of the product for this Purchase for end users
 name|string|Name of the product being purchased as it should be shown to end users
 start_datetime|string(date-time)|Start date time for the product being purchased  (e.g. check-in date time, flight departure date time, or event starting time) 
@@ -4427,14 +4447,14 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-22T07:18:02Z",
+      "due_deadline": "2017-11-22T18:52:09Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-22T07:18:02Z",
-      "accepted_at": "2017-11-22T07:18:02Z",
-      "paid_at": "2017-11-22T07:18:02Z",
+      "submitted_at": "2017-11-22T18:52:09Z",
+      "accepted_at": "2017-11-22T18:52:09Z",
+      "paid_at": "2017-11-22T18:52:09Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -4446,20 +4466,20 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-22T07:18:02Z",
+    "due_deadline": "2017-11-22T18:52:09Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-22T07:18:02Z",
-    "accepted_at": "2017-11-22T07:18:02Z",
-    "paid_at": "2017-11-22T07:18:02Z",
+    "submitted_at": "2017-11-22T18:52:09Z",
+    "accepted_at": "2017-11-22T18:52:09Z",
+    "paid_at": "2017-11-22T18:52:09Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "next_payment_due_deadline": "2017-11-22T18:52:09Z",
   "product": {
     "images": [
       {
@@ -4483,8 +4503,8 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-22T07:18:02Z",
-    "end_datetime": "2017-11-22T07:18:02Z",
+    "start_datetime": "2017-11-22T18:52:09Z",
+    "end_datetime": "2017-11-22T18:52:09Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -4496,13 +4516,13 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-22T07:18:02Z",
-        "updated_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z",
+        "updated_at": "2017-11-22T18:52:09Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-22T07:18:02Z",
+    "commit_deadline": "2017-11-22T18:52:09Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -4585,8 +4605,8 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-22T07:18:02Z",
-        "failed_at": "2017-11-22T07:18:02Z",
+        "charged_at": "2017-11-22T18:52:09Z",
+        "failed_at": "2017-11-22T18:52:09Z",
         "created_at": "string"
       },
       "user": {
@@ -4597,7 +4617,7 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -4609,10 +4629,10 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
           "account_number": "string",
           "account_holder_type": "string"
         },
-        "created_at": "2017-11-22T07:18:02Z"
+        "created_at": "2017-11-22T18:52:09Z"
       },
-      "committed_at": "2017-11-22T07:18:02Z",
-      "created_at": "2017-11-22T07:18:02Z"
+      "committed_at": "2017-11-22T18:52:09Z",
+      "created_at": "2017-11-22T18:52:09Z"
     }
   ],
   "collected_shares_amount": {
@@ -4731,7 +4751,7 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z"
 } 
 ```
 
@@ -4742,7 +4762,7 @@ Name|Type|Description
 id|string(uuid)|Pay By Group UUID for this Purchase used for API calls
 slug|string|Short, unique identifier of this Purchase for easy reference in the Business Portal, with end users, and in URLs. 
 merchant|[Merchant](#schemamerchant)|Details for how the Merchant is referenced and presented to users
-status|string|Current status of the Purchase, one of: `created` (Purchase has been created by the Merchant);  `active` (Purchase has been claimed by an organizer and is in process);  `completed` (All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made,  only refunds.); or  `canceled` (Purchase has been canceled by the merchant or organizer and is not recoverable). 
+status|string|Current status of the Purchase, one of: -`created` (Purchase has been created by the Merchant);  -`active` (Purchase has been claimed by an organizer and is in process);  -`completed` (All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made,  only refunds.); or  -`canceled` (Purchase has been canceled by the merchant or organizer and is not recoverable). 
 currency_code|string|3-letter currency code that determines how all money values relatedd  to the Purchase are presented to users 
 current_payment|[Payment](#schemapayment)|A payment is a nested object (or array of objects) inside a purchase describing the amount(s)  a merchant expects to receive for a given purchase over time as a % of the product_cost(s).  A single purchase may have multiple payments over time, which may be a deposit + balance payment  or a series of installments. Most purchases have a single payment for 100% of the purchase value. 
 next_payment_due_deadline|string(date-time)|This is the next due deadline set by the merchant for an upcoming payment. If the current payment  does not have a `due_deadline` then the `due_deadline` for the next payment after that will apply here.            
@@ -4752,7 +4772,7 @@ collected_shares_amount|[Money](#schemamoney)|Structure of all money objects in 
 committed_shares_amount|[Money](#schemamoney)|Structure of all money objects in the API
 needed_amount_to_current_payment|[Money](#schemamoney)|Structure of all money objects in the API
 committed_slots|integer(int32)|Sum of all slots group Members have committed to in the Purchase at this point
-needed_slots_to_min|integer(int32)|Number of slots group members must claim in order to meet the minimum required to submit the current payment, which applies primarily to  Purchases with the `even_split` and `fixed_per_person` `split_types` 
+needed_slots_to_min|integer(int32)|Number of slots group members must claim in order to meet the minimum required to submit the current payment, which applies primarily to  Purchases with the `even_split` and `fixed_per_person` split types 
 product_or_group_min_slots|integer(int32)|The active minimum number of slots that must be claimed, which is the higher  of the values set by the merchant and organizer in cases where both exist  
 product_or_group_max_slots|integer(int32)|The active maximum number of slots that are allowed to be claimed, which is  the lower of the values set by the merchant and organizer in cases where both exist 
 tipped|boolean|The minimum required slots have been claimed (even_split and fixed_per_person split_types)  or amount committed (specified_per_person split_type) for the organizer to submit payment 
@@ -4924,7 +4944,7 @@ payment_destination_type|payment_gateway|
   "last_name": "string",
   "avatar_url": "string",
   "language_code": "string",
-  "created_at": "2017-11-22T07:18:02Z"
+  "created_at": "2017-11-22T18:52:09Z"
 } 
 ```
 
