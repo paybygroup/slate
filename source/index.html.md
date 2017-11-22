@@ -49,7 +49,331 @@ for a useful overview.
 
 ```json
 [
-  null
+  {
+    "id": "string",
+    "slug": "string",
+    "merchant": {
+      "id": "string",
+      "unique_name": "string",
+      "display_name": "string",
+      "support_email": "user@example.com",
+      "support_phone": "string",
+      "logo_url": "string"
+    },
+    "status": "created",
+    "currency_code": "string",
+    "payments": [
+      {
+        "id": "string",
+        "status": "pending",
+        "number": 0,
+        "percentage": 1,
+        "due_deadline": "2017-11-22T07:18:02Z",
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "submitted_at": "2017-11-22T07:18:02Z",
+        "accepted_at": "2017-11-22T07:18:02Z",
+        "paid_at": "2017-11-22T07:18:02Z",
+        "processing_currency": "string",
+        "conversion_rate": 0,
+        "failed": true,
+        "payout_failed": true
+      }
+    ],
+    "current_payment": {
+      "id": "string",
+      "status": "pending",
+      "number": 0,
+      "percentage": 1,
+      "due_deadline": "2017-11-22T07:18:02Z",
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "submitted_at": "2017-11-22T07:18:02Z",
+      "accepted_at": "2017-11-22T07:18:02Z",
+      "paid_at": "2017-11-22T07:18:02Z",
+      "processing_currency": "string",
+      "conversion_rate": 0,
+      "failed": true,
+      "payout_failed": true
+    },
+    "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+    "product": {
+      "images": [
+        {
+          "id": "string",
+          "name": "string",
+          "version": "string",
+          "url": "string"
+        }
+      ],
+      "default_image_url": "string",
+      "cost_type": "total",
+      "costs": [
+        {
+          "amount": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          },
+          "min_slots": 0,
+          "max_slots": 0
+        }
+      ],
+      "description": "string",
+      "name": "string",
+      "start_datetime": "2017-11-22T07:18:02Z",
+      "end_datetime": "2017-11-22T07:18:02Z",
+      "external_purchase_id": "string",
+      "inventory_id": "string",
+      "link": "string",
+      "max_slots": 0,
+      "min_slots": 0,
+      "legal_documents": [
+        {
+          "id": "string",
+          "type": "tos",
+          "title": "string",
+          "content": "string",
+          "created_at": "2017-11-22T07:18:02Z",
+          "updated_at": "2017-11-22T07:18:02Z"
+        }
+      ]
+    },
+    "group": {
+      "commit_deadline": "2017-11-22T07:18:02Z",
+      "max_slots": 0,
+      "min_slots": 0,
+      "min_contribution": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "organizer_email": "user@example.com",
+      "organizer_full_name": "string",
+      "legal_document_ids": [
+        "string"
+      ],
+      "split_type": "even_split"
+    },
+    "memberships": [
+      {
+        "id": "string",
+        "status": "holdout",
+        "refund_status": "none",
+        "failed": true,
+        "short": true,
+        "role": "organizer",
+        "claimed_slots": 0,
+        "opt_in_marketing": true,
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "share_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "fees": {
+          "consumer_fee": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          }
+        },
+        "consumer_field_values": {
+          "name": "string",
+          "scope": "member",
+          "required": true
+        },
+        "allowed_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "allowed_share_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "allowed_fees": {
+          "consumer_fee": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          }
+        },
+        "collected_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "collected_share_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "current_contribution": {
+          "id": "string",
+          "status": "created",
+          "refund_status": "none",
+          "amount": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          },
+          "share_amount": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          },
+          "fees": {
+            "consumer_fee": {
+              "amount_cents": 0,
+              "currency_code": "string"
+            }
+          },
+          "charged_at": "2017-11-22T07:18:02Z",
+          "failed_at": "2017-11-22T07:18:02Z",
+          "created_at": "string"
+        },
+        "user": {
+          "id": "string",
+          "email": "user@example.com",
+          "full_name": "string",
+          "first_name": "string",
+          "last_name": "string",
+          "avatar_url": "string",
+          "language_code": "string",
+          "created_at": "2017-11-22T07:18:02Z"
+        },
+        "purchase_id": "string",
+        "payment_source": {
+          "id": "string",
+          "name": "string",
+          "type": "string",
+          "info": {
+            "account_name": "string",
+            "account_number": "string",
+            "account_holder_type": "string"
+          },
+          "created_at": "2017-11-22T07:18:02Z"
+        },
+        "committed_at": "2017-11-22T07:18:02Z",
+        "created_at": "2017-11-22T07:18:02Z"
+      }
+    ],
+    "collected_shares_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "committed_shares_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "needed_amount_to_current_payment": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "committed_slots": 0,
+    "needed_slots_to_min": 0,
+    "product_or_group_min_slots": 0,
+    "product_or_group_max_slots": 0,
+    "tipped": true,
+    "auto_pilot_enabled": true,
+    "auto_pilot_trigger_slots": 0,
+    "current_product_cost_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "current_total_cost_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "cost_range": [
+      {
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "min_slots": 0,
+        "max_slots": 0
+      }
+    ],
+    "consumer_field_schemas": [
+      {
+        "id": "string",
+        "order": 0,
+        "scope": "member",
+        "required": true,
+        "name": "string",
+        "label": "string",
+        "description": "string",
+        "default_value": "string",
+        "type": "address",
+        "options": [
+          {
+            "type": "text",
+            "value": "string"
+          }
+        ]
+      }
+    ],
+    "has_consumer_field_schemas": true,
+    "consumer_field_values": [
+      {
+        "name": "string",
+        "scope": "member",
+        "required": true
+      }
+    ],
+    "payment_destination_id": "string",
+    "currency_config": {
+      "supported_payment_sources": [
+        {
+          "type": "credit_card",
+          "unsupported_cards": [
+            "string"
+          ]
+        }
+      ]
+    },
+    "refund_status": "none",
+    "processing_refund": true,
+    "fees_structure": {
+      "currency_code": "string",
+      "payment_destination_type": "bank_account",
+      "consumer_fees": {
+        "per_share": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "per_share_max": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "per_share_min": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "percentage": 1
+      },
+      "merchant_service_fees": {
+        "per_share": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "per_purchase_max": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "percentage": 1
+      },
+      "merchant_processing_fees": {
+        "per_transaction": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "percentage": 1
+      }
+    },
+    "apply_consumer_fee_to_organizer": true,
+    "language_code": "DA (Danish)",
+    "created_at": "2017-11-22T07:18:02Z"
+  }
 ]
 ```
 <h3 id="RetrieveMerchantPurchases-responses">Responses</h3>
@@ -173,22 +497,222 @@ body|body|object|true|Request body object.
 {
   "id": "string",
   "slug": "string",
-  "merchant": null,
+  "merchant": {
+    "id": "string",
+    "unique_name": "string",
+    "display_name": "string",
+    "support_email": "user@example.com",
+    "support_phone": "string",
+    "logo_url": "string"
+  },
   "status": "created",
   "currency_code": "string",
   "payments": [
-    null
+    {
+      "id": "string",
+      "status": "pending",
+      "number": 0,
+      "percentage": 1,
+      "due_deadline": "2017-11-22T07:18:02Z",
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "submitted_at": "2017-11-22T07:18:02Z",
+      "accepted_at": "2017-11-22T07:18:02Z",
+      "paid_at": "2017-11-22T07:18:02Z",
+      "processing_currency": "string",
+      "conversion_rate": 0,
+      "failed": true,
+      "payout_failed": true
+    }
   ],
-  "current_payment": null,
-  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
-  "product": null,
-  "group": null,
+  "current_payment": {
+    "id": "string",
+    "status": "pending",
+    "number": 0,
+    "percentage": 1,
+    "due_deadline": "2017-11-22T07:18:02Z",
+    "amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "submitted_at": "2017-11-22T07:18:02Z",
+    "accepted_at": "2017-11-22T07:18:02Z",
+    "paid_at": "2017-11-22T07:18:02Z",
+    "processing_currency": "string",
+    "conversion_rate": 0,
+    "failed": true,
+    "payout_failed": true
+  },
+  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "product": {
+    "images": [
+      {
+        "id": "string",
+        "name": "string",
+        "version": "string",
+        "url": "string"
+      }
+    ],
+    "default_image_url": "string",
+    "cost_type": "total",
+    "costs": [
+      {
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "min_slots": 0,
+        "max_slots": 0
+      }
+    ],
+    "description": "string",
+    "name": "string",
+    "start_datetime": "2017-11-22T07:18:02Z",
+    "end_datetime": "2017-11-22T07:18:02Z",
+    "external_purchase_id": "string",
+    "inventory_id": "string",
+    "link": "string",
+    "max_slots": 0,
+    "min_slots": 0,
+    "legal_documents": [
+      {
+        "id": "string",
+        "type": "tos",
+        "title": "string",
+        "content": "string",
+        "created_at": "2017-11-22T07:18:02Z",
+        "updated_at": "2017-11-22T07:18:02Z"
+      }
+    ]
+  },
+  "group": {
+    "commit_deadline": "2017-11-22T07:18:02Z",
+    "max_slots": 0,
+    "min_slots": 0,
+    "min_contribution": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "organizer_email": "user@example.com",
+    "organizer_full_name": "string",
+    "legal_document_ids": [
+      "string"
+    ],
+    "split_type": "even_split"
+  },
   "memberships": [
-    null
+    {
+      "id": "string",
+      "status": "holdout",
+      "refund_status": "none",
+      "failed": true,
+      "short": true,
+      "role": "organizer",
+      "claimed_slots": 0,
+      "opt_in_marketing": true,
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "consumer_field_values": {
+        "name": "string",
+        "scope": "member",
+        "required": true
+      },
+      "allowed_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "collected_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "collected_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "current_contribution": {
+        "id": "string",
+        "status": "created",
+        "refund_status": "none",
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "share_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "fees": {
+          "consumer_fee": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          }
+        },
+        "charged_at": "2017-11-22T07:18:02Z",
+        "failed_at": "2017-11-22T07:18:02Z",
+        "created_at": "string"
+      },
+      "user": {
+        "id": "string",
+        "email": "user@example.com",
+        "full_name": "string",
+        "first_name": "string",
+        "last_name": "string",
+        "avatar_url": "string",
+        "language_code": "string",
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "purchase_id": "string",
+      "payment_source": {
+        "id": "string",
+        "name": "string",
+        "type": "string",
+        "info": {
+          "account_name": "string",
+          "account_number": "string",
+          "account_holder_type": "string"
+        },
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "committed_at": "2017-11-22T07:18:02Z",
+      "created_at": "2017-11-22T07:18:02Z"
+    }
   ],
-  "collected_shares_amount": null,
-  "committed_shares_amount": null,
-  "needed_amount_to_current_payment": null,
+  "collected_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "committed_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "needed_amount_to_current_payment": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "committed_slots": 0,
   "needed_slots_to_min": 0,
   "product_or_group_min_slots": 0,
@@ -196,17 +720,50 @@ body|body|object|true|Request body object.
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "current_product_cost_amount": null,
-  "current_total_cost_amount": null,
+  "current_product_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "current_total_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "cost_range": [
-    null
+    {
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "min_slots": 0,
+      "max_slots": 0
+    }
   ],
   "consumer_field_schemas": [
-    null
+    {
+      "id": "string",
+      "order": 0,
+      "scope": "member",
+      "required": true,
+      "name": "string",
+      "label": "string",
+      "description": "string",
+      "default_value": "string",
+      "type": "address",
+      "options": [
+        {
+          "type": "text",
+          "value": "string"
+        }
+      ]
+    }
   ],
   "has_consumer_field_schemas": true,
   "consumer_field_values": [
-    null
+    {
+      "name": "string",
+      "scope": "member",
+      "required": true
+    }
   ],
   "payment_destination_id": "string",
   "currency_config": {
@@ -221,10 +778,46 @@ body|body|object|true|Request body object.
   },
   "refund_status": "none",
   "processing_refund": true,
-  "fees_structure": null,
+  "fees_structure": {
+    "currency_code": "string",
+    "payment_destination_type": "bank_account",
+    "consumer_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_min": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_service_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_purchase_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_processing_fees": {
+      "per_transaction": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    }
+  },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z"
 }
 ```
 <h3 id="CreatePurchase-responses">Responses</h3>
@@ -258,22 +851,222 @@ id|path|string(uuid)|true|Purchase ID to fetch
 {
   "id": "string",
   "slug": "string",
-  "merchant": null,
+  "merchant": {
+    "id": "string",
+    "unique_name": "string",
+    "display_name": "string",
+    "support_email": "user@example.com",
+    "support_phone": "string",
+    "logo_url": "string"
+  },
   "status": "created",
   "currency_code": "string",
   "payments": [
-    null
+    {
+      "id": "string",
+      "status": "pending",
+      "number": 0,
+      "percentage": 1,
+      "due_deadline": "2017-11-22T07:18:02Z",
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "submitted_at": "2017-11-22T07:18:02Z",
+      "accepted_at": "2017-11-22T07:18:02Z",
+      "paid_at": "2017-11-22T07:18:02Z",
+      "processing_currency": "string",
+      "conversion_rate": 0,
+      "failed": true,
+      "payout_failed": true
+    }
   ],
-  "current_payment": null,
-  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
-  "product": null,
-  "group": null,
+  "current_payment": {
+    "id": "string",
+    "status": "pending",
+    "number": 0,
+    "percentage": 1,
+    "due_deadline": "2017-11-22T07:18:02Z",
+    "amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "submitted_at": "2017-11-22T07:18:02Z",
+    "accepted_at": "2017-11-22T07:18:02Z",
+    "paid_at": "2017-11-22T07:18:02Z",
+    "processing_currency": "string",
+    "conversion_rate": 0,
+    "failed": true,
+    "payout_failed": true
+  },
+  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "product": {
+    "images": [
+      {
+        "id": "string",
+        "name": "string",
+        "version": "string",
+        "url": "string"
+      }
+    ],
+    "default_image_url": "string",
+    "cost_type": "total",
+    "costs": [
+      {
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "min_slots": 0,
+        "max_slots": 0
+      }
+    ],
+    "description": "string",
+    "name": "string",
+    "start_datetime": "2017-11-22T07:18:02Z",
+    "end_datetime": "2017-11-22T07:18:02Z",
+    "external_purchase_id": "string",
+    "inventory_id": "string",
+    "link": "string",
+    "max_slots": 0,
+    "min_slots": 0,
+    "legal_documents": [
+      {
+        "id": "string",
+        "type": "tos",
+        "title": "string",
+        "content": "string",
+        "created_at": "2017-11-22T07:18:02Z",
+        "updated_at": "2017-11-22T07:18:02Z"
+      }
+    ]
+  },
+  "group": {
+    "commit_deadline": "2017-11-22T07:18:02Z",
+    "max_slots": 0,
+    "min_slots": 0,
+    "min_contribution": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "organizer_email": "user@example.com",
+    "organizer_full_name": "string",
+    "legal_document_ids": [
+      "string"
+    ],
+    "split_type": "even_split"
+  },
   "memberships": [
-    null
+    {
+      "id": "string",
+      "status": "holdout",
+      "refund_status": "none",
+      "failed": true,
+      "short": true,
+      "role": "organizer",
+      "claimed_slots": 0,
+      "opt_in_marketing": true,
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "consumer_field_values": {
+        "name": "string",
+        "scope": "member",
+        "required": true
+      },
+      "allowed_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "collected_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "collected_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "current_contribution": {
+        "id": "string",
+        "status": "created",
+        "refund_status": "none",
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "share_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "fees": {
+          "consumer_fee": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          }
+        },
+        "charged_at": "2017-11-22T07:18:02Z",
+        "failed_at": "2017-11-22T07:18:02Z",
+        "created_at": "string"
+      },
+      "user": {
+        "id": "string",
+        "email": "user@example.com",
+        "full_name": "string",
+        "first_name": "string",
+        "last_name": "string",
+        "avatar_url": "string",
+        "language_code": "string",
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "purchase_id": "string",
+      "payment_source": {
+        "id": "string",
+        "name": "string",
+        "type": "string",
+        "info": {
+          "account_name": "string",
+          "account_number": "string",
+          "account_holder_type": "string"
+        },
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "committed_at": "2017-11-22T07:18:02Z",
+      "created_at": "2017-11-22T07:18:02Z"
+    }
   ],
-  "collected_shares_amount": null,
-  "committed_shares_amount": null,
-  "needed_amount_to_current_payment": null,
+  "collected_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "committed_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "needed_amount_to_current_payment": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "committed_slots": 0,
   "needed_slots_to_min": 0,
   "product_or_group_min_slots": 0,
@@ -281,17 +1074,50 @@ id|path|string(uuid)|true|Purchase ID to fetch
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "current_product_cost_amount": null,
-  "current_total_cost_amount": null,
+  "current_product_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "current_total_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "cost_range": [
-    null
+    {
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "min_slots": 0,
+      "max_slots": 0
+    }
   ],
   "consumer_field_schemas": [
-    null
+    {
+      "id": "string",
+      "order": 0,
+      "scope": "member",
+      "required": true,
+      "name": "string",
+      "label": "string",
+      "description": "string",
+      "default_value": "string",
+      "type": "address",
+      "options": [
+        {
+          "type": "text",
+          "value": "string"
+        }
+      ]
+    }
   ],
   "has_consumer_field_schemas": true,
   "consumer_field_values": [
-    null
+    {
+      "name": "string",
+      "scope": "member",
+      "required": true
+    }
   ],
   "payment_destination_id": "string",
   "currency_config": {
@@ -306,10 +1132,46 @@ id|path|string(uuid)|true|Purchase ID to fetch
   },
   "refund_status": "none",
   "processing_refund": true,
-  "fees_structure": null,
+  "fees_structure": {
+    "currency_code": "string",
+    "payment_destination_type": "bank_account",
+    "consumer_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_min": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_service_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_purchase_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_processing_fees": {
+      "per_transaction": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    }
+  },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z"
 }
 ```
 ```json
@@ -356,11 +1218,18 @@ You can not update `payments` or `product_costs` after you have accepted at leas
     "default_image_url": "string",
     "inventory_id": "string",
     "link": "string",
-    "start_datetime": "2017-11-22T06:40:01Z",
-    "end_datetime": "2017-11-22T06:40:01Z",
+    "start_datetime": "2017-11-22T07:18:02Z",
+    "end_datetime": "2017-11-22T07:18:02Z",
     "external_purchase_id": "string",
     "costs": [
-      null
+      {
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "min_slots": 0,
+        "max_slots": 0
+      }
     ]
   },
   "group": {
@@ -372,12 +1241,15 @@ You can not update `payments` or `product_costs` after you have accepted at leas
     "split_type": "even_split",
     "min_slots": 0,
     "max_slots": 0,
-    "min_contribution": null
+    "min_contribution": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    }
   },
   "payments": [
     {
       "percentage": 1,
-      "due_deadline": "2017-11-22T06:40:01Z"
+      "due_deadline": "2017-11-22T07:18:02Z"
     }
   ],
   "language_code": "DA (Danish)",
@@ -432,22 +1304,222 @@ body|body|object|true|Request body object.
 {
   "id": "string",
   "slug": "string",
-  "merchant": null,
+  "merchant": {
+    "id": "string",
+    "unique_name": "string",
+    "display_name": "string",
+    "support_email": "user@example.com",
+    "support_phone": "string",
+    "logo_url": "string"
+  },
   "status": "created",
   "currency_code": "string",
   "payments": [
-    null
+    {
+      "id": "string",
+      "status": "pending",
+      "number": 0,
+      "percentage": 1,
+      "due_deadline": "2017-11-22T07:18:02Z",
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "submitted_at": "2017-11-22T07:18:02Z",
+      "accepted_at": "2017-11-22T07:18:02Z",
+      "paid_at": "2017-11-22T07:18:02Z",
+      "processing_currency": "string",
+      "conversion_rate": 0,
+      "failed": true,
+      "payout_failed": true
+    }
   ],
-  "current_payment": null,
-  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
-  "product": null,
-  "group": null,
+  "current_payment": {
+    "id": "string",
+    "status": "pending",
+    "number": 0,
+    "percentage": 1,
+    "due_deadline": "2017-11-22T07:18:02Z",
+    "amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "submitted_at": "2017-11-22T07:18:02Z",
+    "accepted_at": "2017-11-22T07:18:02Z",
+    "paid_at": "2017-11-22T07:18:02Z",
+    "processing_currency": "string",
+    "conversion_rate": 0,
+    "failed": true,
+    "payout_failed": true
+  },
+  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "product": {
+    "images": [
+      {
+        "id": "string",
+        "name": "string",
+        "version": "string",
+        "url": "string"
+      }
+    ],
+    "default_image_url": "string",
+    "cost_type": "total",
+    "costs": [
+      {
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "min_slots": 0,
+        "max_slots": 0
+      }
+    ],
+    "description": "string",
+    "name": "string",
+    "start_datetime": "2017-11-22T07:18:02Z",
+    "end_datetime": "2017-11-22T07:18:02Z",
+    "external_purchase_id": "string",
+    "inventory_id": "string",
+    "link": "string",
+    "max_slots": 0,
+    "min_slots": 0,
+    "legal_documents": [
+      {
+        "id": "string",
+        "type": "tos",
+        "title": "string",
+        "content": "string",
+        "created_at": "2017-11-22T07:18:02Z",
+        "updated_at": "2017-11-22T07:18:02Z"
+      }
+    ]
+  },
+  "group": {
+    "commit_deadline": "2017-11-22T07:18:02Z",
+    "max_slots": 0,
+    "min_slots": 0,
+    "min_contribution": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "organizer_email": "user@example.com",
+    "organizer_full_name": "string",
+    "legal_document_ids": [
+      "string"
+    ],
+    "split_type": "even_split"
+  },
   "memberships": [
-    null
+    {
+      "id": "string",
+      "status": "holdout",
+      "refund_status": "none",
+      "failed": true,
+      "short": true,
+      "role": "organizer",
+      "claimed_slots": 0,
+      "opt_in_marketing": true,
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "consumer_field_values": {
+        "name": "string",
+        "scope": "member",
+        "required": true
+      },
+      "allowed_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "collected_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "collected_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "current_contribution": {
+        "id": "string",
+        "status": "created",
+        "refund_status": "none",
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "share_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "fees": {
+          "consumer_fee": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          }
+        },
+        "charged_at": "2017-11-22T07:18:02Z",
+        "failed_at": "2017-11-22T07:18:02Z",
+        "created_at": "string"
+      },
+      "user": {
+        "id": "string",
+        "email": "user@example.com",
+        "full_name": "string",
+        "first_name": "string",
+        "last_name": "string",
+        "avatar_url": "string",
+        "language_code": "string",
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "purchase_id": "string",
+      "payment_source": {
+        "id": "string",
+        "name": "string",
+        "type": "string",
+        "info": {
+          "account_name": "string",
+          "account_number": "string",
+          "account_holder_type": "string"
+        },
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "committed_at": "2017-11-22T07:18:02Z",
+      "created_at": "2017-11-22T07:18:02Z"
+    }
   ],
-  "collected_shares_amount": null,
-  "committed_shares_amount": null,
-  "needed_amount_to_current_payment": null,
+  "collected_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "committed_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "needed_amount_to_current_payment": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "committed_slots": 0,
   "needed_slots_to_min": 0,
   "product_or_group_min_slots": 0,
@@ -455,17 +1527,50 @@ body|body|object|true|Request body object.
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "current_product_cost_amount": null,
-  "current_total_cost_amount": null,
+  "current_product_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "current_total_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "cost_range": [
-    null
+    {
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "min_slots": 0,
+      "max_slots": 0
+    }
   ],
   "consumer_field_schemas": [
-    null
+    {
+      "id": "string",
+      "order": 0,
+      "scope": "member",
+      "required": true,
+      "name": "string",
+      "label": "string",
+      "description": "string",
+      "default_value": "string",
+      "type": "address",
+      "options": [
+        {
+          "type": "text",
+          "value": "string"
+        }
+      ]
+    }
   ],
   "has_consumer_field_schemas": true,
   "consumer_field_values": [
-    null
+    {
+      "name": "string",
+      "scope": "member",
+      "required": true
+    }
   ],
   "payment_destination_id": "string",
   "currency_config": {
@@ -480,10 +1585,46 @@ body|body|object|true|Request body object.
   },
   "refund_status": "none",
   "processing_refund": true,
-  "fees_structure": null,
+  "fees_structure": {
+    "currency_code": "string",
+    "payment_destination_type": "bank_account",
+    "consumer_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_min": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_service_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_purchase_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_processing_fees": {
+      "per_transaction": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    }
+  },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z"
 }
 ```
 ```json
@@ -537,13 +1678,22 @@ supplying defaults for the required parameters.
 {
   "organizer_name": "string",
   "organizer_email": "string",
-  "organizer_allowed_share_amount": null,
-  "min_contribution": null,
+  "organizer_allowed_share_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "min_contribution": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "group": {
     "split_type": "even_split",
     "max_slots": 0,
     "min_slots": 0,
-    "min_contribution": null
+    "min_contribution": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    }
   }
 }
 ```
@@ -578,22 +1728,222 @@ body|body|object|true|Request body object.
 {
   "id": "string",
   "slug": "string",
-  "merchant": null,
+  "merchant": {
+    "id": "string",
+    "unique_name": "string",
+    "display_name": "string",
+    "support_email": "user@example.com",
+    "support_phone": "string",
+    "logo_url": "string"
+  },
   "status": "created",
   "currency_code": "string",
   "payments": [
-    null
+    {
+      "id": "string",
+      "status": "pending",
+      "number": 0,
+      "percentage": 1,
+      "due_deadline": "2017-11-22T07:18:02Z",
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "submitted_at": "2017-11-22T07:18:02Z",
+      "accepted_at": "2017-11-22T07:18:02Z",
+      "paid_at": "2017-11-22T07:18:02Z",
+      "processing_currency": "string",
+      "conversion_rate": 0,
+      "failed": true,
+      "payout_failed": true
+    }
   ],
-  "current_payment": null,
-  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
-  "product": null,
-  "group": null,
+  "current_payment": {
+    "id": "string",
+    "status": "pending",
+    "number": 0,
+    "percentage": 1,
+    "due_deadline": "2017-11-22T07:18:02Z",
+    "amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "submitted_at": "2017-11-22T07:18:02Z",
+    "accepted_at": "2017-11-22T07:18:02Z",
+    "paid_at": "2017-11-22T07:18:02Z",
+    "processing_currency": "string",
+    "conversion_rate": 0,
+    "failed": true,
+    "payout_failed": true
+  },
+  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "product": {
+    "images": [
+      {
+        "id": "string",
+        "name": "string",
+        "version": "string",
+        "url": "string"
+      }
+    ],
+    "default_image_url": "string",
+    "cost_type": "total",
+    "costs": [
+      {
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "min_slots": 0,
+        "max_slots": 0
+      }
+    ],
+    "description": "string",
+    "name": "string",
+    "start_datetime": "2017-11-22T07:18:02Z",
+    "end_datetime": "2017-11-22T07:18:02Z",
+    "external_purchase_id": "string",
+    "inventory_id": "string",
+    "link": "string",
+    "max_slots": 0,
+    "min_slots": 0,
+    "legal_documents": [
+      {
+        "id": "string",
+        "type": "tos",
+        "title": "string",
+        "content": "string",
+        "created_at": "2017-11-22T07:18:02Z",
+        "updated_at": "2017-11-22T07:18:02Z"
+      }
+    ]
+  },
+  "group": {
+    "commit_deadline": "2017-11-22T07:18:02Z",
+    "max_slots": 0,
+    "min_slots": 0,
+    "min_contribution": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "organizer_email": "user@example.com",
+    "organizer_full_name": "string",
+    "legal_document_ids": [
+      "string"
+    ],
+    "split_type": "even_split"
+  },
   "memberships": [
-    null
+    {
+      "id": "string",
+      "status": "holdout",
+      "refund_status": "none",
+      "failed": true,
+      "short": true,
+      "role": "organizer",
+      "claimed_slots": 0,
+      "opt_in_marketing": true,
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "consumer_field_values": {
+        "name": "string",
+        "scope": "member",
+        "required": true
+      },
+      "allowed_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "collected_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "collected_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "current_contribution": {
+        "id": "string",
+        "status": "created",
+        "refund_status": "none",
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "share_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "fees": {
+          "consumer_fee": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          }
+        },
+        "charged_at": "2017-11-22T07:18:02Z",
+        "failed_at": "2017-11-22T07:18:02Z",
+        "created_at": "string"
+      },
+      "user": {
+        "id": "string",
+        "email": "user@example.com",
+        "full_name": "string",
+        "first_name": "string",
+        "last_name": "string",
+        "avatar_url": "string",
+        "language_code": "string",
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "purchase_id": "string",
+      "payment_source": {
+        "id": "string",
+        "name": "string",
+        "type": "string",
+        "info": {
+          "account_name": "string",
+          "account_number": "string",
+          "account_holder_type": "string"
+        },
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "committed_at": "2017-11-22T07:18:02Z",
+      "created_at": "2017-11-22T07:18:02Z"
+    }
   ],
-  "collected_shares_amount": null,
-  "committed_shares_amount": null,
-  "needed_amount_to_current_payment": null,
+  "collected_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "committed_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "needed_amount_to_current_payment": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "committed_slots": 0,
   "needed_slots_to_min": 0,
   "product_or_group_min_slots": 0,
@@ -601,17 +1951,50 @@ body|body|object|true|Request body object.
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "current_product_cost_amount": null,
-  "current_total_cost_amount": null,
+  "current_product_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "current_total_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "cost_range": [
-    null
+    {
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "min_slots": 0,
+      "max_slots": 0
+    }
   ],
   "consumer_field_schemas": [
-    null
+    {
+      "id": "string",
+      "order": 0,
+      "scope": "member",
+      "required": true,
+      "name": "string",
+      "label": "string",
+      "description": "string",
+      "default_value": "string",
+      "type": "address",
+      "options": [
+        {
+          "type": "text",
+          "value": "string"
+        }
+      ]
+    }
   ],
   "has_consumer_field_schemas": true,
   "consumer_field_values": [
-    null
+    {
+      "name": "string",
+      "scope": "member",
+      "required": true
+    }
   ],
   "payment_destination_id": "string",
   "currency_config": {
@@ -626,10 +2009,46 @@ body|body|object|true|Request body object.
   },
   "refund_status": "none",
   "processing_refund": true,
-  "fees_structure": null,
+  "fees_structure": {
+    "currency_code": "string",
+    "payment_destination_type": "bank_account",
+    "consumer_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_min": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_service_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_purchase_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_processing_fees": {
+      "per_transaction": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    }
+  },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z"
 }
 ```
 ```json
@@ -681,7 +2100,10 @@ They will receive reminders to join until the purchase completes, expires, or is
     {
       "email": "user@example.com",
       "full_name": "string",
-      "allowed_share_amount": null
+      "allowed_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      }
     }
   ],
   "message": "string",
@@ -730,11 +2152,17 @@ the sum of all payments on the purchase, you will get an error response.
 ```json
 {
   "reason": "string",
-  "amount": null,
+  "amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "memberships_shares": [
     {
       "membership_id": "string",
-      "amount": null
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      }
     }
   ],
   "funding_source_id": "string"
@@ -760,22 +2188,222 @@ body|body|object|true|Request body object.
 {
   "id": "string",
   "slug": "string",
-  "merchant": null,
+  "merchant": {
+    "id": "string",
+    "unique_name": "string",
+    "display_name": "string",
+    "support_email": "user@example.com",
+    "support_phone": "string",
+    "logo_url": "string"
+  },
   "status": "created",
   "currency_code": "string",
   "payments": [
-    null
+    {
+      "id": "string",
+      "status": "pending",
+      "number": 0,
+      "percentage": 1,
+      "due_deadline": "2017-11-22T07:18:02Z",
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "submitted_at": "2017-11-22T07:18:02Z",
+      "accepted_at": "2017-11-22T07:18:02Z",
+      "paid_at": "2017-11-22T07:18:02Z",
+      "processing_currency": "string",
+      "conversion_rate": 0,
+      "failed": true,
+      "payout_failed": true
+    }
   ],
-  "current_payment": null,
-  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
-  "product": null,
-  "group": null,
+  "current_payment": {
+    "id": "string",
+    "status": "pending",
+    "number": 0,
+    "percentage": 1,
+    "due_deadline": "2017-11-22T07:18:02Z",
+    "amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "submitted_at": "2017-11-22T07:18:02Z",
+    "accepted_at": "2017-11-22T07:18:02Z",
+    "paid_at": "2017-11-22T07:18:02Z",
+    "processing_currency": "string",
+    "conversion_rate": 0,
+    "failed": true,
+    "payout_failed": true
+  },
+  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "product": {
+    "images": [
+      {
+        "id": "string",
+        "name": "string",
+        "version": "string",
+        "url": "string"
+      }
+    ],
+    "default_image_url": "string",
+    "cost_type": "total",
+    "costs": [
+      {
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "min_slots": 0,
+        "max_slots": 0
+      }
+    ],
+    "description": "string",
+    "name": "string",
+    "start_datetime": "2017-11-22T07:18:02Z",
+    "end_datetime": "2017-11-22T07:18:02Z",
+    "external_purchase_id": "string",
+    "inventory_id": "string",
+    "link": "string",
+    "max_slots": 0,
+    "min_slots": 0,
+    "legal_documents": [
+      {
+        "id": "string",
+        "type": "tos",
+        "title": "string",
+        "content": "string",
+        "created_at": "2017-11-22T07:18:02Z",
+        "updated_at": "2017-11-22T07:18:02Z"
+      }
+    ]
+  },
+  "group": {
+    "commit_deadline": "2017-11-22T07:18:02Z",
+    "max_slots": 0,
+    "min_slots": 0,
+    "min_contribution": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "organizer_email": "user@example.com",
+    "organizer_full_name": "string",
+    "legal_document_ids": [
+      "string"
+    ],
+    "split_type": "even_split"
+  },
   "memberships": [
-    null
+    {
+      "id": "string",
+      "status": "holdout",
+      "refund_status": "none",
+      "failed": true,
+      "short": true,
+      "role": "organizer",
+      "claimed_slots": 0,
+      "opt_in_marketing": true,
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "consumer_field_values": {
+        "name": "string",
+        "scope": "member",
+        "required": true
+      },
+      "allowed_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "collected_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "collected_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "current_contribution": {
+        "id": "string",
+        "status": "created",
+        "refund_status": "none",
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "share_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "fees": {
+          "consumer_fee": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          }
+        },
+        "charged_at": "2017-11-22T07:18:02Z",
+        "failed_at": "2017-11-22T07:18:02Z",
+        "created_at": "string"
+      },
+      "user": {
+        "id": "string",
+        "email": "user@example.com",
+        "full_name": "string",
+        "first_name": "string",
+        "last_name": "string",
+        "avatar_url": "string",
+        "language_code": "string",
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "purchase_id": "string",
+      "payment_source": {
+        "id": "string",
+        "name": "string",
+        "type": "string",
+        "info": {
+          "account_name": "string",
+          "account_number": "string",
+          "account_holder_type": "string"
+        },
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "committed_at": "2017-11-22T07:18:02Z",
+      "created_at": "2017-11-22T07:18:02Z"
+    }
   ],
-  "collected_shares_amount": null,
-  "committed_shares_amount": null,
-  "needed_amount_to_current_payment": null,
+  "collected_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "committed_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "needed_amount_to_current_payment": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "committed_slots": 0,
   "needed_slots_to_min": 0,
   "product_or_group_min_slots": 0,
@@ -783,17 +2411,50 @@ body|body|object|true|Request body object.
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "current_product_cost_amount": null,
-  "current_total_cost_amount": null,
+  "current_product_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "current_total_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "cost_range": [
-    null
+    {
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "min_slots": 0,
+      "max_slots": 0
+    }
   ],
   "consumer_field_schemas": [
-    null
+    {
+      "id": "string",
+      "order": 0,
+      "scope": "member",
+      "required": true,
+      "name": "string",
+      "label": "string",
+      "description": "string",
+      "default_value": "string",
+      "type": "address",
+      "options": [
+        {
+          "type": "text",
+          "value": "string"
+        }
+      ]
+    }
   ],
   "has_consumer_field_schemas": true,
   "consumer_field_values": [
-    null
+    {
+      "name": "string",
+      "scope": "member",
+      "required": true
+    }
   ],
   "payment_destination_id": "string",
   "currency_config": {
@@ -808,10 +2469,46 @@ body|body|object|true|Request body object.
   },
   "refund_status": "none",
   "processing_refund": true,
-  "fees_structure": null,
+  "fees_structure": {
+    "currency_code": "string",
+    "payment_destination_type": "bank_account",
+    "consumer_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_min": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_service_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_purchase_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_processing_fees": {
+      "per_transaction": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    }
+  },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z"
 }
 ```
 ```json
@@ -935,7 +2632,103 @@ id|path|string(uuid)|true|Purchase ID
 
 ```json
 [
-  null
+  {
+    "id": "string",
+    "status": "holdout",
+    "refund_status": "none",
+    "failed": true,
+    "short": true,
+    "role": "organizer",
+    "claimed_slots": 0,
+    "opt_in_marketing": true,
+    "amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "share_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "fees": {
+      "consumer_fee": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      }
+    },
+    "consumer_field_values": {
+      "name": "string",
+      "scope": "member",
+      "required": true
+    },
+    "allowed_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "allowed_share_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "allowed_fees": {
+      "consumer_fee": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      }
+    },
+    "collected_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "collected_share_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "current_contribution": {
+      "id": "string",
+      "status": "created",
+      "refund_status": "none",
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "charged_at": "2017-11-22T07:18:02Z",
+      "failed_at": "2017-11-22T07:18:02Z",
+      "created_at": "string"
+    },
+    "user": {
+      "id": "string",
+      "email": "user@example.com",
+      "full_name": "string",
+      "first_name": "string",
+      "last_name": "string",
+      "avatar_url": "string",
+      "language_code": "string",
+      "created_at": "2017-11-22T07:18:02Z"
+    },
+    "purchase_id": "string",
+    "payment_source": {
+      "id": "string",
+      "name": "string",
+      "type": "string",
+      "info": {
+        "account_name": "string",
+        "account_number": "string",
+        "account_holder_type": "string"
+      },
+      "created_at": "2017-11-22T07:18:02Z"
+    },
+    "committed_at": "2017-11-22T07:18:02Z",
+    "created_at": "2017-11-22T07:18:02Z"
+  }
 ]
 ```
 ```json
@@ -979,7 +2772,56 @@ id|path|string(uuid)|true|Purchase ID
 
 ```json
 [
-  null
+  {
+    "id": "string",
+    "short_id": "string",
+    "parent_id": "string",
+    "chargable_type": "string",
+    "action": "auth",
+    "status": "pending",
+    "amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "fees": {
+      "consumer_fee": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      }
+    },
+    "payout_account": {
+      "id": "string",
+      "name": "string",
+      "status": "verified",
+      "merchant_id": "string",
+      "supported_currency_codes": [
+        "string"
+      ],
+      "currency_configs": "string"
+    },
+    "payment_gateway": {
+      "id": "string",
+      "name": "string",
+      "merchant_id": "string",
+      "supported_currency_codes": [
+        "string"
+      ]
+    },
+    "payment_source": {
+      "id": "string",
+      "name": "string",
+      "type": "string",
+      "info": {
+        "account_name": "string",
+        "account_number": "string",
+        "account_holder_type": "string"
+      },
+      "created_at": "2017-11-22T07:18:02Z"
+    },
+    "created_at": "2017-11-22T07:18:02Z",
+    "processing_currency": "string",
+    "conversion_rate": 0
+  }
 ]
 ```
 ```json
@@ -1023,7 +2865,14 @@ id|path|string(uuid)|true|Purchase ID
 
 ```json
 [
-  null
+  {
+    "id": "string",
+    "type": "tos",
+    "title": "string",
+    "content": "string",
+    "created_at": "2017-11-22T07:18:02Z",
+    "updated_at": "2017-11-22T07:18:02Z"
+  }
 ]
 ```
 ```json
@@ -1068,7 +2917,16 @@ id|path|string(uuid)|true|Purchase ID
 
 ```json
 [
-  null
+  {
+    "id": "string",
+    "type": "tos",
+    "title": "string",
+    "content": "string",
+    "created_at": "string",
+    "remote_ip": "string",
+    "user_id": "string",
+    "purchase_id": "string"
+  }
 ]
 ```
 ```json
@@ -1169,7 +3027,14 @@ Returns a paginated list of all legal documents that currently exist under this 
 
 ```json
 [
-  null
+  {
+    "id": "string",
+    "type": "tos",
+    "title": "string",
+    "content": "string",
+    "created_at": "2017-11-22T07:18:02Z",
+    "updated_at": "2017-11-22T07:18:02Z"
+  }
 ]
 ```
 ```json
@@ -1235,8 +3100,8 @@ body|body|object|true|Request body object.
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-22T06:40:01Z",
-  "updated_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z",
+  "updated_at": "2017-11-22T07:18:02Z"
 }
 ```
 ```json
@@ -1283,8 +3148,8 @@ id|path|string(uuid)|true|ID of the Legal Document to retrieve
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-22T06:40:01Z",
-  "updated_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z",
+  "updated_at": "2017-11-22T07:18:02Z"
 }
 ```
 ```json
@@ -1354,8 +3219,8 @@ body|body|object|true|Request body object.
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-22T06:40:01Z",
-  "updated_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z",
+  "updated_at": "2017-11-22T07:18:02Z"
 }
 ```
 ```json
@@ -1553,9 +3418,18 @@ status|unverified|
 
 ```json
 {
-  "per_share": null,
-  "per_share_max": null,
-  "per_share_min": null,
+  "per_share": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "per_share_max": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "per_share_min": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "percentage": 1
 } 
 ```
@@ -1564,9 +3438,9 @@ status|unverified|
 
 Name|Type|Description
 ---|---|---|
-per_share|[Money](#schemamoney)|Amount due per group member across all payments on a Purchase,  which overrides the percentage value if both exist. 
-per_share_max|[Money](#schemamoney)|Maximum charge per member's total share when applying the percentage
-per_share_min|[Money](#schemamoney)|Minimum charge per member's total share when applying the percentage
+per_share|[Money](#schemamoney)|Structure of all money objects in the API
+per_share_max|[Money](#schemamoney)|Structure of all money objects in the API
+per_share_min|[Money](#schemamoney)|Structure of all money objects in the API
 percentage|integer(int32)|Percentage applied to member's total share to determine the fee
 
 
@@ -1609,8 +3483,6 @@ description|string|Descriptive helper text explaining the field to the end user
 default_value|string|Default value shown on landing for the user
 type|string|Format for how the field is displayed to end users
 options|[object]|Array of options for the user to select from, which applies for `single_select`  and `multi-select` `type` templates 
-» type|string|Format type for the listed option
-» value|string|Value for the option displayed to end users
 
 
 #### Enumerated Values
@@ -1672,8 +3544,6 @@ description|string|Descriptive helper text explaining the field to the end user
 default_value|string|Default value shown on landing for the user
 type|string|Format for how the field is displayed to end users
 options|[object]|Array of options for the user to select from, which applies for `single_select`  and `multi-select` `type` templates 
-» type|string|Format type for the listed option
-» value|string|Value for the option displayed to end users
 
 
 #### Enumerated Values
@@ -1731,11 +3601,22 @@ scope|purchase|
   "id": "string",
   "status": "created",
   "refund_status": "none",
-  "amount": null,
-  "share_amount": null,
-  "fees": null,
-  "charged_at": "2017-11-22T06:40:01Z",
-  "failed_at": "2017-11-22T06:40:01Z",
+  "amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "share_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "fees": {
+    "consumer_fee": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    }
+  },
+  "charged_at": "2017-11-22T07:18:02Z",
+  "failed_at": "2017-11-22T07:18:02Z",
   "created_at": "string"
 } 
 ```
@@ -1747,9 +3628,9 @@ Name|Type|Description
 id|string|UUID of this contribution
 status|string|Current status of the contribution, any of: `created` (member is committed, but has no payment activity on this contribution yet);  `authorized` (the member's payment method was successfully authorized for this charge);  `captured` (the full contribution amount has been captured from the member's payment method);  `holdout` (the member is not currently committed to the purchase); or  `failed` (the charge or this contribution failed and Pay By Group is attempting to resolve it) 
 refund_status|string|Status that determines whether the Contribution is partially or fully refunded, one of:  `none` (none of the Contribution's Transactions were refunded);  `partial` (some of the Contribution's Transactions were partially   or fully refunded); or  `full` (all of the Contribution's Transactions were fully refunded) 
-amount|[Money](#schemamoney)|Amount of this contribution, the sum of the purchase share and consumer fees
-share_amount|[Money](#schemamoney)|This contribution's share of the total purchase, not including consumer fees
-fees|[Fees](#schemafees)|The consumer fee added to this contribution's share and payable to Pay By Group
+amount|[Money](#schemamoney)|Structure of all money objects in the API
+share_amount|[Money](#schemamoney)|Structure of all money objects in the API
+fees|[Fees](#schemafees)|No description
 charged_at|string(date-time)|Timestamp of when this contibution was charged
 failed_at|string(date-time)|Timestamp of when this contribution most recently failed, if at all
 created_at|string|Timestamp when the record of this contribution was first created, which is not necessarily when it was charged 
@@ -1789,8 +3670,6 @@ refund_status|full|
 Name|Type|Description
 ---|---|---|
 errors|[object]|Array of errors returned by the endpoint
-» code|integer(int32)|Error code to identify the message (NOTE: not used at the moment)
-» message|string|Description of the error
 
 
 
@@ -1800,7 +3679,10 @@ errors|[object]|Array of errors returned by the endpoint
 
 ```json
 {
-  "consumer_fee": null
+  "consumer_fee": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  }
 } 
 ```
 
@@ -1808,7 +3690,7 @@ errors|[object]|Array of errors returned by the endpoint
 
 Name|Type|Description
 ---|---|---|
-consumer_fee|[Money](#schemamoney)|Amount charged to the user and due to Pay By Group for the Membership
+consumer_fee|[Money](#schemamoney)|Structure of all money objects in the API
 
 
 
@@ -1818,10 +3700,13 @@ consumer_fee|[Money](#schemamoney)|Amount charged to the user and due to Pay By 
 
 ```json
 {
-  "commit_deadline": "2017-11-22T06:40:01Z",
+  "commit_deadline": "2017-11-22T07:18:02Z",
   "max_slots": 0,
   "min_slots": 0,
-  "min_contribution": null,
+  "min_contribution": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "organizer_email": "user@example.com",
   "organizer_full_name": "string",
   "legal_document_ids": [
@@ -1838,7 +3723,7 @@ Name|Type|Description
 commit_deadline|string(date-time)|Pay By Group-generated deadline that encourages invitees to commit to the group quickly. It auto-extends unless overriden by the merchant or organizer. 
 max_slots|integer(int32)|The organizer-specified value for the maximum number of slots they will allow to be claimed. It must be within the bounds of the highest  max_slots set by the merchant in Product Costs 
 min_slots|integer(int32)|The organizer-specified value for the minimum number of slots they require to be claimed. It must be above the minimum of the lowest  min_slots set by the merchant in Product Costs 
-min_contribution|[Money](#schemamoney)|The organizer-specified minimum required contribution by each member, which only  applies for Purchases set to `specified_per_person` `split_type` 
+min_contribution|[Money](#schemamoney)|Structure of all money objects in the API
 organizer_email|string(email)|Email of the expected organizer as provided by the merchant
 organizer_full_name|string|Full name of the expected organizer as provided by the merchant
 split_type|string|Splitting type chosen by the organizer for how to divide the cost among group members, which is one of:  `even_split` (only compatible with total cost_type and means the  Purchase amount is split evenly across each slot claimed);  `specified_per_person` (only compatible with total cost_type and means each member may pay a different amount); or  `fixed_per_person` (only compatible with per_slot cost_type and means   each group member pays a fixed amount per slot they claim) 
@@ -1927,8 +3812,8 @@ type|cancelation_policy|
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-22T06:40:01Z",
-  "updated_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z",
+  "updated_at": "2017-11-22T07:18:02Z"
 } 
 ```
 
@@ -1966,21 +3851,93 @@ type|cancelation_policy|
   "role": "organizer",
   "claimed_slots": 0,
   "opt_in_marketing": true,
-  "amount": null,
-  "share_amount": null,
-  "fees": null,
-  "consumer_field_values": null,
-  "allowed_amount": null,
-  "allowed_share_amount": null,
-  "allowed_fees": null,
-  "collected_amount": null,
-  "collected_share_amount": null,
-  "current_contribution": null,
-  "user": null,
+  "amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "share_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "fees": {
+    "consumer_fee": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    }
+  },
+  "consumer_field_values": {
+    "name": "string",
+    "scope": "member",
+    "required": true
+  },
+  "allowed_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "allowed_share_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "allowed_fees": {
+    "consumer_fee": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    }
+  },
+  "collected_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "collected_share_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "current_contribution": {
+    "id": "string",
+    "status": "created",
+    "refund_status": "none",
+    "amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "share_amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "fees": {
+      "consumer_fee": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      }
+    },
+    "charged_at": "2017-11-22T07:18:02Z",
+    "failed_at": "2017-11-22T07:18:02Z",
+    "created_at": "string"
+  },
+  "user": {
+    "id": "string",
+    "email": "user@example.com",
+    "full_name": "string",
+    "first_name": "string",
+    "last_name": "string",
+    "avatar_url": "string",
+    "language_code": "string",
+    "created_at": "2017-11-22T07:18:02Z"
+  },
   "purchase_id": "string",
-  "payment_source": null,
-  "committed_at": "2017-11-22T06:40:01Z",
-  "created_at": "2017-11-22T06:40:01Z"
+  "payment_source": {
+    "id": "string",
+    "name": "string",
+    "type": "string",
+    "info": {
+      "account_name": "string",
+      "account_number": "string",
+      "account_holder_type": "string"
+    },
+    "created_at": "2017-11-22T07:18:02Z"
+  },
+  "committed_at": "2017-11-22T07:18:02Z",
+  "created_at": "2017-11-22T07:18:02Z"
 } 
 ```
 
@@ -1996,19 +3953,19 @@ short|boolean|The user is currently committed but has not agreed to pay their ne
 role|string|Either organizer or invitee
 claimed_slots|integer(int32)|Number of slots the member has claimed in the group, defaulted to 1 if none is selected by the user
 opt_in_marketing|boolean|True if the user has opted in to receive marketing communication from the merchant, otherwise false
-amount|[Money](#schemamoney)|Total amount this member will be charged based on the current purchase details across all payments, which is the sum of the  `share_amount` and `fees` 
-share_amount|[Money](#schemamoney)|This member's share of the total purchase across all payments based on the current purchase details and not including fees 
-fees|[Fees](#schemafees)|The total consumer fees paid to Pay By Group by this member
-consumer_field_values|[ConsumerFieldValue](#schemaconsumerfieldvalue)|Values that have been filled out by the member for each consumer_field_schema  scoped to the Purchase and each slot they have claimed, when applicable 
-allowed_amount|[Money](#schemamoney)|Maximum amount, including consumer fees, this member has agreed to be charged under any circumstance across all payments
-allowed_share_amount|[Money](#schemamoney)|Maximum amount this member has agreed to be charged for their share of the purchase across all payments
-allowed_fees|[Fees](#schemafees)|Maximum amount this member has agreed to be charged for their consumer fees due to Pay By Group
-collected_amount|[Money](#schemamoney)|Sum of all paid contributions making up this member's share that have been paid to date (including fees). 
-collected_share_amount|[Money](#schemamoney)|Sum of all paid contributions making up this member's share that have been paid to date, not including fees
-current_contribution|[Contribution](#schemacontribution)|This is the next upcoming contribution by this member towards their share of the  Purchase and corresponds to the next Payment on the Purchase 
-user|[User](#schemauser)|Details for the user that owns this membership
+amount|[Money](#schemamoney)|Structure of all money objects in the API
+share_amount|[Money](#schemamoney)|Structure of all money objects in the API
+fees|[Fees](#schemafees)|No description
+consumer_field_values|[ConsumerFieldValue](#schemaconsumerfieldvalue)|Consumer Field Values record what a user saves when presented with a Consumer Field Schema.
+allowed_amount|[Money](#schemamoney)|Structure of all money objects in the API
+allowed_share_amount|[Money](#schemamoney)|Structure of all money objects in the API
+allowed_fees|[Fees](#schemafees)|No description
+collected_amount|[Money](#schemamoney)|Structure of all money objects in the API
+collected_share_amount|[Money](#schemamoney)|Structure of all money objects in the API
+current_contribution|[Contribution](#schemacontribution)|Contribution(s) are nested inside each membership and describe the relationship between each  member and each payment, so a membership can have multiple contributions, 1 for each payment. 
+user|[User](#schemauser)|Each user is a single end-user who can have multiple memberships across different Purchases.
 purchase_id|string(uuid)|Pay By Group UUID of the purchase to which this membership is tied
-payment_source|[PaymentSource](#schemapaymentsource)|The payment source (e.g. credit card or bank account) currently tied to this membership to be used for all future contributions 
+payment_source|[PaymentSource](#schemapaymentsource)|Each committed Member has a Payment Source that is charged for their contributions to the  Purchase and which is represented by this object.  
 committed_at|string(date-time)|Timestamp of when the member committed to pay into the purchase
 created_at|string(date-time)|When the membership was first created
 
@@ -2024,6 +3981,16 @@ refund_status|partial|
 refund_status|full|
 role|organizer|
 role|invitee|
+» scope|member|
+» scope|purchase|
+» status|created|
+» status|authorized|
+» status|captured|
+» status|holdout|
+» status|failed|
+» refund_status|none|
+» refund_status|partial|
+» refund_status|full|
 
 
 ## Merchant
@@ -2060,7 +4027,10 @@ logo_url|string|Logo provided by the merchant for display to end users
 
 ```json
 {
-  "per_transaction": null,
+  "per_transaction": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "percentage": 1
 } 
 ```
@@ -2069,7 +4039,7 @@ logo_url|string|Logo provided by the merchant for display to end users
 
 Name|Type|Description
 ---|---|---|
-per_transaction|[Money](#schemamoney)|Charge for each successful transaction sent through Pay By Group
+per_transaction|[Money](#schemamoney)|Structure of all money objects in the API
 percentage|integer(int32)|Percentage fee for each successful transaction sent through Pay By Group
 
 
@@ -2080,8 +4050,14 @@ percentage|integer(int32)|Percentage fee for each successful transaction sent th
 
 ```json
 {
-  "per_share": null,
-  "per_purchase_max": null,
+  "per_share": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "per_purchase_max": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "percentage": 1
 } 
 ```
@@ -2090,8 +4066,8 @@ percentage|integer(int32)|Percentage fee for each successful transaction sent th
 
 Name|Type|Description
 ---|---|---|
-per_share|[Money](#schemamoney)|Amount due per group member, which may be in place of or combined with `percentage`
-per_purchase_max|[Money](#schemamoney)|Maximum total charge per each Purchase across all members
+per_share|[Money](#schemamoney)|Structure of all money objects in the API
+per_purchase_max|[Money](#schemamoney)|Structure of all money objects in the API
 percentage|integer(int32)|Percentage fee applied to each member's share, which may be in place of or combined with `per_share`
 
 
@@ -2126,11 +4102,14 @@ currency_code|string|3-letter currency code attached to every money value
   "status": "pending",
   "number": 0,
   "percentage": 1,
-  "due_deadline": "2017-11-22T06:40:01Z",
-  "amount": null,
-  "submitted_at": "2017-11-22T06:40:01Z",
-  "accepted_at": "2017-11-22T06:40:01Z",
-  "paid_at": "2017-11-22T06:40:01Z",
+  "due_deadline": "2017-11-22T07:18:02Z",
+  "amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "submitted_at": "2017-11-22T07:18:02Z",
+  "accepted_at": "2017-11-22T07:18:02Z",
+  "paid_at": "2017-11-22T07:18:02Z",
   "processing_currency": "string",
   "conversion_rate": 0,
   "failed": true,
@@ -2147,7 +4126,7 @@ status|string|Current status of the payment, one of:  `pending` (planned future 
 number|integer(int32)|Number of this payment in the overall sequence of the purchase.  It is 0 if the purchase has only 1 payment. 
 percentage|integer(int32)|Percent of the total Purchase cost due for this payment, which must be an integer. All payments on a purchase must sum to 100. 
 due_deadline|string(date-time)|Datetime by when this payment must be submitted to the merchant for the purchase to be valid. It is required for all payments after the  first payment but may be passed for the first, or only, payment as well. 
-amount|[Money](#schemamoney)|Calculated amount, in currency, of this payment based on the percentage of the purchases total cost. 
+amount|[Money](#schemamoney)|Structure of all money objects in the API
 submitted_at|string(date-time)|Timestamp when the payment is originally submitted by the organizer
 accepted_at|string(date-time)|Timestamp when the payment is accepted by the merchant
 paid_at|string(date-time)|Timestamp when the payment is paid out to the merchant
@@ -2211,7 +4190,7 @@ supported_currency_codes|[string]|3-letter currency codes that can be used for p
     "account_number": "string",
     "account_holder_type": "string"
   },
-  "created_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z"
 } 
 ```
 
@@ -2223,9 +4202,6 @@ id|string(uuid)|Pay By Group UUID of this payment source
 name|string|Full name of this payment source's owner
 type|string|Describes the type of payment source, any of credit_card or bank_account
 info|object|Bank account information of this payment source
-» account_name|string|Listed name of the account holder
-» account_number|string|Account number
-» account_holder_type|string|Either a business or individual
 created_at|string(date-time)|Timestamp when the payment source was first added to the system
 
 
@@ -2242,12 +4218,46 @@ created_at|string(date-time)|Timestamp when the payment source was first added t
   "chargable_type": "string",
   "action": "auth",
   "status": "pending",
-  "amount": null,
-  "fees": null,
-  "payout_account": null,
-  "payment_gateway": null,
-  "payment_source": null,
-  "created_at": "2017-11-22T06:40:01Z",
+  "amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "fees": {
+    "consumer_fee": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    }
+  },
+  "payout_account": {
+    "id": "string",
+    "name": "string",
+    "status": "verified",
+    "merchant_id": "string",
+    "supported_currency_codes": [
+      "string"
+    ],
+    "currency_configs": "string"
+  },
+  "payment_gateway": {
+    "id": "string",
+    "name": "string",
+    "merchant_id": "string",
+    "supported_currency_codes": [
+      "string"
+    ]
+  },
+  "payment_source": {
+    "id": "string",
+    "name": "string",
+    "type": "string",
+    "info": {
+      "account_name": "string",
+      "account_number": "string",
+      "account_holder_type": "string"
+    },
+    "created_at": "2017-11-22T07:18:02Z"
+  },
+  "created_at": "2017-11-22T07:18:02Z",
   "processing_currency": "string",
   "conversion_rate": 0
 } 
@@ -2263,11 +4273,11 @@ parent_id|string|Another transaction related to and replaced by this one - e.g. 
 chargable_type|string|No description
 action|string|One of:  `auth` (holds funds or the specified amount on the user's payment   method for later capture);  `capture` (captures funds that were previously authorized at an   amount = or < the authorized amount);  `charge` (instantly charges an amount without first making an   authorization);  `void` (voids a previously created authorization);  `refund` (refunds a previously created capture or charge);  `payout` (sends funds to a payout bank account). 
 status|string|One of:  `pending` (transaction has been submitted for processing and our system awaits reponse);  `completed` (transaction succeeded); or  `failed` (transaction failed) 
-amount|[Money](#schemamoney)|Amount, in cents, of the transaction
-fees|[Fees](#schemafees)|Portion of the transaction that is consumer fees separate from the purchase's share of the transaction 
-payout_account|[BankAccount](#schemabankaccount)|Payout account where the transaction is paid out to
-payment_gateway|[PaymentGateway](#schemapaymentgateway)|Payment gateway where the transaction is run directly into
-payment_source|[PaymentSource](#schemapaymentsource)|Payment source of funds for this transaction
+amount|[Money](#schemamoney)|Structure of all money objects in the API
+fees|[Fees](#schemafees)|No description
+payout_account|[BankAccount](#schemabankaccount)|Merchants that choose to use Pay By Group as their processor instead of a third-party gateway  receive their payouts to a bank account  
+payment_gateway|[PaymentGateway](#schemapaymentgateway)|Merchants that choose to use a third-party gateway to receive payments will see  this object as the payment destination on their Purchases instead of a `bank_account`. 
+payment_source|[PaymentSource](#schemapaymentsource)|Each committed Member has a Payment Source that is charged for their contributions to the  Purchase and which is represented by this object.  
 created_at|string(date-time)|Timestamp when the transaction was created
 processing_currency|string|The currency in which this transaction occurred
 conversion_rate|number(float)|If the currency of the purchase differs from the required currency of the payout account then this is the conversion rate used to determine the transaction amount in the processing_currency. 
@@ -2286,6 +4296,8 @@ action|payout|
 status|pending|
 status|completed|
 status|failed|
+» status|verified|
+» status|unverified|
 
 
 ## Product
@@ -2295,24 +4307,43 @@ status|failed|
 ```json
 {
   "images": [
-    null
+    {
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "url": "string"
+    }
   ],
   "default_image_url": "string",
   "cost_type": "total",
   "costs": [
-    null
+    {
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "min_slots": 0,
+      "max_slots": 0
+    }
   ],
   "description": "string",
   "name": "string",
-  "start_datetime": "2017-11-22T06:40:01Z",
-  "end_datetime": "2017-11-22T06:40:01Z",
+  "start_datetime": "2017-11-22T07:18:02Z",
+  "end_datetime": "2017-11-22T07:18:02Z",
   "external_purchase_id": "string",
   "inventory_id": "string",
   "link": "string",
   "max_slots": 0,
   "min_slots": 0,
   "legal_documents": [
-    null
+    {
+      "id": "string",
+      "type": "tos",
+      "title": "string",
+      "content": "string",
+      "created_at": "2017-11-22T07:18:02Z",
+      "updated_at": "2017-11-22T07:18:02Z"
+    }
   ]
 } 
 ```
@@ -2343,6 +4374,8 @@ legal_documents|[[LegalDocument](#schemalegaldocument)]|All legal documents atta
 |---|---|
 cost_type|total|
 cost_type|per_slot|
+» type|tos|
+» type|cancelation_policy|
 
 
 ## ProductCost
@@ -2351,7 +4384,10 @@ cost_type|per_slot|
 
 ```json
 {
-  "amount": null,
+  "amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "min_slots": 0,
   "max_slots": 0
 } 
@@ -2361,7 +4397,7 @@ cost_type|per_slot|
 
 Name|Type|Description
 ---|---|---|
-amount|[Money](#schemamoney)|Total cost as provided by the merchant for this range of slots. If no slots are provided, it is for the entire Purchase. 
+amount|[Money](#schemamoney)|Structure of all money objects in the API
 min_slots|integer(int32)|Minimum number of slots that must be claimed by group members before the Purchase can be made at the amount specified for this range. 
 max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by group members at the amount specified for this range. 
 
@@ -2375,22 +4411,222 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
 {
   "id": "string",
   "slug": "string",
-  "merchant": null,
+  "merchant": {
+    "id": "string",
+    "unique_name": "string",
+    "display_name": "string",
+    "support_email": "user@example.com",
+    "support_phone": "string",
+    "logo_url": "string"
+  },
   "status": "created",
   "currency_code": "string",
   "payments": [
-    null
+    {
+      "id": "string",
+      "status": "pending",
+      "number": 0,
+      "percentage": 1,
+      "due_deadline": "2017-11-22T07:18:02Z",
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "submitted_at": "2017-11-22T07:18:02Z",
+      "accepted_at": "2017-11-22T07:18:02Z",
+      "paid_at": "2017-11-22T07:18:02Z",
+      "processing_currency": "string",
+      "conversion_rate": 0,
+      "failed": true,
+      "payout_failed": true
+    }
   ],
-  "current_payment": null,
-  "next_payment_due_deadline": "2017-11-22T06:40:01Z",
-  "product": null,
-  "group": null,
+  "current_payment": {
+    "id": "string",
+    "status": "pending",
+    "number": 0,
+    "percentage": 1,
+    "due_deadline": "2017-11-22T07:18:02Z",
+    "amount": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "submitted_at": "2017-11-22T07:18:02Z",
+    "accepted_at": "2017-11-22T07:18:02Z",
+    "paid_at": "2017-11-22T07:18:02Z",
+    "processing_currency": "string",
+    "conversion_rate": 0,
+    "failed": true,
+    "payout_failed": true
+  },
+  "next_payment_due_deadline": "2017-11-22T07:18:02Z",
+  "product": {
+    "images": [
+      {
+        "id": "string",
+        "name": "string",
+        "version": "string",
+        "url": "string"
+      }
+    ],
+    "default_image_url": "string",
+    "cost_type": "total",
+    "costs": [
+      {
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "min_slots": 0,
+        "max_slots": 0
+      }
+    ],
+    "description": "string",
+    "name": "string",
+    "start_datetime": "2017-11-22T07:18:02Z",
+    "end_datetime": "2017-11-22T07:18:02Z",
+    "external_purchase_id": "string",
+    "inventory_id": "string",
+    "link": "string",
+    "max_slots": 0,
+    "min_slots": 0,
+    "legal_documents": [
+      {
+        "id": "string",
+        "type": "tos",
+        "title": "string",
+        "content": "string",
+        "created_at": "2017-11-22T07:18:02Z",
+        "updated_at": "2017-11-22T07:18:02Z"
+      }
+    ]
+  },
+  "group": {
+    "commit_deadline": "2017-11-22T07:18:02Z",
+    "max_slots": 0,
+    "min_slots": 0,
+    "min_contribution": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "organizer_email": "user@example.com",
+    "organizer_full_name": "string",
+    "legal_document_ids": [
+      "string"
+    ],
+    "split_type": "even_split"
+  },
   "memberships": [
-    null
+    {
+      "id": "string",
+      "status": "holdout",
+      "refund_status": "none",
+      "failed": true,
+      "short": true,
+      "role": "organizer",
+      "claimed_slots": 0,
+      "opt_in_marketing": true,
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "consumer_field_values": {
+        "name": "string",
+        "scope": "member",
+        "required": true
+      },
+      "allowed_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "allowed_fees": {
+        "consumer_fee": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        }
+      },
+      "collected_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "collected_share_amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "current_contribution": {
+        "id": "string",
+        "status": "created",
+        "refund_status": "none",
+        "amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "share_amount": {
+          "amount_cents": 0,
+          "currency_code": "string"
+        },
+        "fees": {
+          "consumer_fee": {
+            "amount_cents": 0,
+            "currency_code": "string"
+          }
+        },
+        "charged_at": "2017-11-22T07:18:02Z",
+        "failed_at": "2017-11-22T07:18:02Z",
+        "created_at": "string"
+      },
+      "user": {
+        "id": "string",
+        "email": "user@example.com",
+        "full_name": "string",
+        "first_name": "string",
+        "last_name": "string",
+        "avatar_url": "string",
+        "language_code": "string",
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "purchase_id": "string",
+      "payment_source": {
+        "id": "string",
+        "name": "string",
+        "type": "string",
+        "info": {
+          "account_name": "string",
+          "account_number": "string",
+          "account_holder_type": "string"
+        },
+        "created_at": "2017-11-22T07:18:02Z"
+      },
+      "committed_at": "2017-11-22T07:18:02Z",
+      "created_at": "2017-11-22T07:18:02Z"
+    }
   ],
-  "collected_shares_amount": null,
-  "committed_shares_amount": null,
-  "needed_amount_to_current_payment": null,
+  "collected_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "committed_shares_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "needed_amount_to_current_payment": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "committed_slots": 0,
   "needed_slots_to_min": 0,
   "product_or_group_min_slots": 0,
@@ -2398,17 +4634,50 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
   "tipped": true,
   "auto_pilot_enabled": true,
   "auto_pilot_trigger_slots": 0,
-  "current_product_cost_amount": null,
-  "current_total_cost_amount": null,
+  "current_product_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
+  "current_total_cost_amount": {
+    "amount_cents": 0,
+    "currency_code": "string"
+  },
   "cost_range": [
-    null
+    {
+      "amount": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "min_slots": 0,
+      "max_slots": 0
+    }
   ],
   "consumer_field_schemas": [
-    null
+    {
+      "id": "string",
+      "order": 0,
+      "scope": "member",
+      "required": true,
+      "name": "string",
+      "label": "string",
+      "description": "string",
+      "default_value": "string",
+      "type": "address",
+      "options": [
+        {
+          "type": "text",
+          "value": "string"
+        }
+      ]
+    }
   ],
   "has_consumer_field_schemas": true,
   "consumer_field_values": [
-    null
+    {
+      "name": "string",
+      "scope": "member",
+      "required": true
+    }
   ],
   "payment_destination_id": "string",
   "currency_config": {
@@ -2423,10 +4692,46 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
   },
   "refund_status": "none",
   "processing_refund": true,
-  "fees_structure": null,
+  "fees_structure": {
+    "currency_code": "string",
+    "payment_destination_type": "bank_account",
+    "consumer_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_share_min": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_service_fees": {
+      "per_share": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "per_purchase_max": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    },
+    "merchant_processing_fees": {
+      "per_transaction": {
+        "amount_cents": 0,
+        "currency_code": "string"
+      },
+      "percentage": 1
+    }
+  },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z"
 } 
 ```
 
@@ -2436,16 +4741,16 @@ Name|Type|Description
 ---|---|---|
 id|string(uuid)|Pay By Group UUID for this Purchase used for API calls
 slug|string|Short, unique identifier of this Purchase for easy reference in the Business Portal, with end users, and in URLs. 
-merchant|[Merchant](#schemamerchant)|The merchant under which this Purchase exists.
+merchant|[Merchant](#schemamerchant)|Details for how the Merchant is referenced and presented to users
 status|string|Current status of the Purchase, one of: `created` (Purchase has been created by the Merchant);  `active` (Purchase has been claimed by an organizer and is in process);  `completed` (All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made,  only refunds.); or  `canceled` (Purchase has been canceled by the merchant or organizer and is not recoverable). 
 currency_code|string|3-letter currency code that determines how all money values relatedd  to the Purchase are presented to users 
-current_payment|[Payment](#schemapayment)|This is the next upcoming group payment due for the purchase
+current_payment|[Payment](#schemapayment)|A payment is a nested object (or array of objects) inside a purchase describing the amount(s)  a merchant expects to receive for a given purchase over time as a % of the product_cost(s).  A single purchase may have multiple payments over time, which may be a deposit + balance payment  or a series of installments. Most purchases have a single payment for 100% of the purchase value. 
 next_payment_due_deadline|string(date-time)|This is the next due deadline set by the merchant for an upcoming payment. If the current payment  does not have a `due_deadline` then the `due_deadline` for the next payment after that will apply here.            
-product|[Product](#schemaproduct)|Hash that includes all product attributes, which are set by the Merchant
-group|[Group](#schemagroup)|Hash that includes all group attributes, which are usually provided by the organizer or set by Pay By Group
-collected_shares_amount|[Money](#schemamoney)|Sum of all collected contributions so far where the Members were successfully charged.
-committed_shares_amount|[Money](#schemamoney)|Sum of all Contributions group Members have agreed to pay towards the Purchase's total cost at this point, even though some or all of these may  not yet be collected.  
-needed_amount_to_current_payment|[Money](#schemamoney)|Amount group Members must still commit to in order to submit the current Payment, which  applies primarily to Purchases with the `specified_per_person` `split_type` 
+product|[Product](#schemaproduct)|The product is a nested object inside the Purchase that defines all the details of  what is being bought. All Product parameters are set by the merchant. 
+group|[Group](#schemagroup)|The Group parameters are nested in the Purchase object and cover selections typically made  by the group organizer within the constraints set by the Merchant. 
+collected_shares_amount|[Money](#schemamoney)|Structure of all money objects in the API
+committed_shares_amount|[Money](#schemamoney)|Structure of all money objects in the API
+needed_amount_to_current_payment|[Money](#schemamoney)|Structure of all money objects in the API
 committed_slots|integer(int32)|Sum of all slots group Members have committed to in the Purchase at this point
 needed_slots_to_min|integer(int32)|Number of slots group members must claim in order to meet the minimum required to submit the current payment, which applies primarily to  Purchases with the `even_split` and `fixed_per_person` `split_types` 
 product_or_group_min_slots|integer(int32)|The active minimum number of slots that must be claimed, which is the higher  of the values set by the merchant and organizer in cases where both exist  
@@ -2453,17 +4758,14 @@ product_or_group_max_slots|integer(int32)|The active maximum number of slots tha
 tipped|boolean|The minimum required slots have been claimed (even_split and fixed_per_person split_types)  or amount committed (specified_per_person split_type) for the organizer to submit payment 
 auto_pilot_enabled|boolean|The organizer has chosen to have payments triggered automatically as soon as the trigger_slots level they set is reached. For multi-payment  Purchases, payments subsequent to the first payment are triggered  automatically one day before each payment's `due_deadline`.  
 auto_pilot_trigger_slots|integer(int32)|The number of slots set by the organizer, which when reached, automatically triggers the next payment's submission without  requiring any further action by the organizer. 
-current_product_cost_amount|[Money](#schemamoney)|The cost of the product (either `total` or `per_slot` depending on `cost_type`)   for this Purchase based on the current number of claimed slots 
-current_total_cost_amount|[Money](#schemamoney)|Total amount due to merchant for this Purchase based on the current number of claimed slots
+current_product_cost_amount|[Money](#schemamoney)|Structure of all money objects in the API
+current_total_cost_amount|[Money](#schemamoney)|Structure of all money objects in the API
 has_consumer_field_schemas|boolean|Whether or not this Purchase has any consumer field schemas declared
 payment_destination_id|string(uuid)|ID of the payment destination that will receive all future Payments made under this  Purchase, which means all Payments that are still in `active` status 
 currency_config|object|Describes the payment methods that members can and cannot use for their  contributions based on this Purchase's currency and payment destination 
-» supported_payment_sources|[object]|List of supported payment sources for this Purchase
-»» type|string|Type of the supported payment source
-»» unsupported_cards|[string]|List of unsupported credit cards for this particular payment source if  the type is `credit_card`. If none are listed, then all of Amex,  Diner's Club, Discover, JCB, MasterCard, and Visa are supported.  
 refund_status|string|Status that describes whether the Purchase is partially or fully refunded, one of: `none` (none of the Purchase's Memberships were refunded);  `partial` (some of the Purchase's Memberships were partially or fully refunded); or  `full` (all of the Purchase's Memberships were fully refunded). 
 processing_refund|boolean|Determines whether or not a refund is currently being processed for the Purchase
-fees_structure|[PurchaseFeesStructure](#schemapurchasefeesstructure)|Full breakdown of fees due to Pay By Group from the merchant and/or group member(s) for this Purchase 
+fees_structure|[PurchaseFeesStructure](#schemapurchasefeesstructure)|Defines which consumer and merchant fees structures apply based on the currency of the  Purchase and its payment destination type.  
 apply_consumer_fee_to_organizer|boolean|Tells if the consumer_fees apply to the purchase's organizer for this Purchase
 language_code|string|Default 2-character language code for this purchase. It is going  to be used in the claim and commit steps; and as one of the  fallbacks when detecting what language to show to the user 
 created_at|string(date-time)|Timestamp of when the Purchase was first created by the merchant
@@ -2482,13 +4784,68 @@ status|created|
 status|active|
 status|completed|
 status|canceled|
+» status|pending|
+» status|active|
+» status|authorizing|
+» status|authorized|
+» status|captured|
+» status|processing_payout|
+» status|canceled|
+» status|paid|
+» cost_type|total|
+» cost_type|per_slot|
+»» type|tos|
+»» type|cancelation_policy|
+» split_type|even_split|
+» split_type|specified_per_person|
+» split_type|fixed_per_person|
 »» type|credit_card|
 refund_status|none|
 refund_status|partial|
 refund_status|full|
+» payment_destination_type|bank_account|
+» payment_destination_type|payment_gateway|
 language_code|DA (Danish)|
 language_code|EN (English)|
 language_code|ES (Spanish)|
+» status|pending|
+» status|active|
+» status|authorizing|
+» status|authorized|
+» status|captured|
+» status|processing_payout|
+» status|canceled|
+» status|paid|
+» status|holdout|
+» status|committed|
+» refund_status|none|
+» refund_status|partial|
+» refund_status|full|
+» role|organizer|
+» role|invitee|
+»» scope|member|
+»» scope|purchase|
+»» status|created|
+»» status|authorized|
+»» status|captured|
+»» status|holdout|
+»» status|failed|
+»» refund_status|none|
+»» refund_status|partial|
+»» refund_status|full|
+» scope|member|
+» scope|purchase|
+» type|address|
+» type|datetime|
+» type|multi_select|
+» type|single_select|
+» type|text|
+» type|textarea|
+»» type|text|
+»» type|datetime|
+»» type|address|
+» scope|member|
+» scope|purchase|
 
 
 ## PurchaseFeesStructure
@@ -2499,9 +4856,39 @@ language_code|ES (Spanish)|
 {
   "currency_code": "string",
   "payment_destination_type": "bank_account",
-  "consumer_fees": null,
-  "merchant_service_fees": null,
-  "merchant_processing_fees": null
+  "consumer_fees": {
+    "per_share": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "per_share_max": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "per_share_min": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "percentage": 1
+  },
+  "merchant_service_fees": {
+    "per_share": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "per_purchase_max": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "percentage": 1
+  },
+  "merchant_processing_fees": {
+    "per_transaction": {
+      "amount_cents": 0,
+      "currency_code": "string"
+    },
+    "percentage": 1
+  }
 } 
 ```
 
@@ -2511,9 +4898,9 @@ Name|Type|Description
 ---|---|---|
 currency_code|string|3-letter currency code for which this fee structure applies
 payment_destination_type|string|Payment destination type for which this fee structure applies
-consumer_fees|[ConsumerFeesStructure](#schemaconsumerfeesstructure)|Structure of fees paid by end users for using Pay By Group, which  can be in place of or in addition to merchant_service_fees 
-merchant_service_fees|[MerchantServiceFeesStructure](#schemamerchantservicefeesstructure)|Fees charged to merchant for use of the Pay By Group service, which  can be in place of or in addition to consumer_fees 
-merchant_processing_fees|[MerchantProcessingFeesStructure](#schemamerchantprocessingfeesstructure)|Fees charged to the merchant for the processing of payments, either through the Pay By Group gateway or the merchant's own gateway 
+consumer_fees|[ConsumerFeesStructure](#schemaconsumerfeesstructure)|These parameters describe the fees a consumer is charged on top of their share of the purchase.  These fees are payable to Pay By Group and collected directly for merchants that use Pay By Group as  their processor or invoiced for merchants that use a third-party gateway. Merchants may use this object  to display how fees on a Purchase work to an end user.  
+merchant_service_fees|[MerchantServiceFeesStructure](#schemamerchantservicefeesstructure)|These parameters describe the fees a merchant is charged for the Pay By Group service.  Typically they are charged in place of the Consumer Fees when the merchant chooses to absorb  the cost of the service instead of passing it onto end users. It is useful for merchants to  calculate their own costs if needed.         
+merchant_processing_fees|[MerchantProcessingFeesStructure](#schemamerchantprocessingfeesstructure)|These parameters describe the fees a merchant is charged for processing payments.  These fees are always invoiced to the merchant and vary depending on whether the merchant  uses Pay By Group as their processor or a third-party gateway.  
 
 
 #### Enumerated Values
@@ -2537,7 +4924,7 @@ payment_destination_type|payment_gateway|
   "last_name": "string",
   "avatar_url": "string",
   "language_code": "string",
-  "created_at": "2017-11-22T06:40:01Z"
+  "created_at": "2017-11-22T07:18:02Z"
 } 
 ```
 
