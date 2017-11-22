@@ -311,10 +311,16 @@
                     <a href="#consumerfieldschema" class="toc-h2 toc-link" data-title="ConsumerFieldSchema">ConsumerFieldSchema</a>
                   </li>
                   <li>
+                    <a href="#consumerfieldtemplate" class="toc-h2 toc-link" data-title="ConsumerFieldTemplate">ConsumerFieldTemplate</a>
+                  </li>
+                  <li>
                     <a href="#consumerfieldvalue" class="toc-h2 toc-link" data-title="ConsumerFieldValue">ConsumerFieldValue</a>
                   </li>
                   <li>
                     <a href="#contribution" class="toc-h2 toc-link" data-title="Contribution">Contribution</a>
+                  </li>
+                  <li>
+                    <a href="#error" class="toc-h2 toc-link" data-title="Error">Error</a>
                   </li>
                   <li>
                     <a href="#fees" class="toc-h2 toc-link" data-title="Fees">Fees</a>
@@ -324,6 +330,12 @@
                   </li>
                   <li>
                     <a href="#image" class="toc-h2 toc-link" data-title="Image">Image</a>
+                  </li>
+                  <li>
+                    <a href="#legalbinding" class="toc-h2 toc-link" data-title="LegalBinding">LegalBinding</a>
+                  </li>
+                  <li>
+                    <a href="#legaldocument" class="toc-h2 toc-link" data-title="LegalDocument">LegalDocument</a>
                   </li>
                   <li>
                     <a href="#membership" class="toc-h2 toc-link" data-title="Membership">Membership</a>
@@ -342,6 +354,9 @@
                   </li>
                   <li>
                     <a href="#payment" class="toc-h2 toc-link" data-title="Payment">Payment</a>
+                  </li>
+                  <li>
+                    <a href="#paymentgateway" class="toc-h2 toc-link" data-title="PaymentGateway">PaymentGateway</a>
                   </li>
                   <li>
                     <a href="#paymentsource" class="toc-h2 toc-link" data-title="PaymentSource">PaymentSource</a>
@@ -363,21 +378,6 @@
                   </li>
                   <li>
                     <a href="#user" class="toc-h2 toc-link" data-title="User">User</a>
-                  </li>
-                  <li>
-                    <a href="#paymentgateway" class="toc-h2 toc-link" data-title="PaymentGateway">PaymentGateway</a>
-                  </li>
-                  <li>
-                    <a href="#legaldocument" class="toc-h2 toc-link" data-title="LegalDocument">LegalDocument</a>
-                  </li>
-                  <li>
-                    <a href="#legalbinding" class="toc-h2 toc-link" data-title="LegalBinding">LegalBinding</a>
-                  </li>
-                  <li>
-                    <a href="#consumerfieldtemplate" class="toc-h2 toc-link" data-title="ConsumerFieldTemplate">ConsumerFieldTemplate</a>
-                  </li>
-                  <li>
-                    <a href="#error" class="toc-h2 toc-link" data-title="Error">Error</a>
                   </li>
               </ul>
           </li>
@@ -405,13 +405,13 @@
 <p>Email: <a href="mailto:dev@paybygroup.com">Pay By Group</a> </p>
 <h1 id='authentication'>Authentication</h1>
 <ul>
-<li>Basic Authentication. Use your own API Access Key and API Secret Key.</li>
+<li>Basic Authentication. Use your own Access Key and Secret Key.</li>
 </ul>
 <h1 id='purchases'>purchases</h1>
-<p>These are all operations that can be done on Purchase objects. Many other objects,
-such as Memberships and Payments, can be accessed and updated within the Purchase object.
-See this summary of <a href="https://developers.paybygroup.com/v1.0/docs/objects">all object relationships</a>
-for a useful overview.</p>
+<p>These are all operations that can be done on Purchase objects. Many other objects, 
+such as Memberships and Payments, can be accessed and updated within the Purchase object. 
+See this summary of <a href="https://developers.paybygroup.com/v1.0/docs/objects">all object relationships</a> 
+for a useful overview. </p>
 <h2 id='retrievemerchantpurchases'>RetrieveMerchantPurchases</h2>
 <p><code>GET /purchases</code></p>
 
@@ -450,12 +450,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 
 <p><em>Create a purchase</em></p>
 
-<p>Creates a new purchase and returns the Purchase object, which contains
-the slug you can use to redirect an end user to their group&#39;s hub page,
-or you can proceed to use PATCH /purchases/:id/claim if you want to fully
-embed the experience. See this
-<a href="https://developers.paybygroup.com/v1.0/docs/standard-flow">breakdown of the entire flow</a>
-for a list of all calls to use for a fully embedded experience.</p>
+<p>Creates a new purchase and returns the Purchase object, which contains 
+the slug you can use to redirect an end user to their group&#39;s hub page, 
+or you can proceed to use PATCH /purchases/:id/claim if you want to fully 
+embed the experience. See this 
+<a href="https://developers.paybygroup.com/v1.0/docs/standard-flow">breakdown of the entire flow</a> 
+for a list of all calls to use for a fully embedded experience. </p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -538,7 +538,7 @@ for a list of all calls to use for a fully embedded experience.</p>
 <td>»» name</td>
 <td>body</td>
 <td>string</td>
-<td>true</td>
+<td>false</td>
 <td>Name of the product being purchased as it should be shown to end users</td>
 </tr>
 <tr>
@@ -546,7 +546,7 @@ for a list of all calls to use for a fully embedded experience.</p>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Cost type that determines whether the product_costs amount(s) are for the whole group or per slot.<br/>-<code>per_slot</code> The product cost provided is for each slot a Member commits to in the Purchase,<br/>  so the total amount paid to the merchant is a function of the number of<br/>  slots claimed by all group members.<br/>-<code>total</code> The product cost is single total amount so long as<br/>  the number of slots claimed<br/>  is in the allowed range for that amount.<br/></td>
+<td>Cost type that determines whether the product_costs amount(s) are for the whole group or per slot.<br/>-<code>per_slot</code> The product cost provided is for each slot a Member commits to in the Purchase, <br/>  so the total amount paid to the merchant is a function of the number of<br/>  slots claimed by all group members.<br/>-<code>total</code> The product cost is single total amount so long as <br/>  the number of slots claimed <br/>  is in the allowed range for that amount.<br/></td>
 </tr>
 <tr>
 <td>»» description</td>
@@ -560,7 +560,7 @@ for a list of all calls to use for a fully embedded experience.</p>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>The primary image to display to users for this product. The<br/>merchant default image applies if none is provided. Use the<br/><a href="#createpurchaseimages">CreatePurchaseImages</a> call to add an image using the API.<br/></td>
+<td>The primary image to display to users for this product. The <br/>merchant default image applies if none is provided. Use the <br/><a href="#createpurchaseimages">CreatePurchaseImages</a> call to add an image using the API.<br/></td>
 </tr>
 <tr>
 <td>»» inventory_id</td>
@@ -602,7 +602,7 @@ for a list of all calls to use for a fully embedded experience.</p>
 <td>body</td>
 <td>[<a href="#schemaproductcost">ProductCost</a>]</td>
 <td>false</td>
-<td>The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. The currency of the product cost<br/>determines the currency of the purchase.<br/></td>
+<td>The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. The currency of the product cost <br/>determines the currency of the purchase. <br/></td>
 </tr>
 <tr>
 <td>» group</td>
@@ -630,7 +630,7 @@ for a list of all calls to use for a fully embedded experience.</p>
 <td>body</td>
 <td>[string]</td>
 <td>false</td>
-<td>Array of <a href="#legaldocument">legal document IDs</a><br/>that must be accepted by the members in this purchase. If no values are passed, the default Legal<br/>Documents will be attached to the Purchase. If one or more value is passed, it will override all defaults.<br/></td>
+<td>Array of <a href="#legaldocument">legal document IDs</a> <br/>that must be accepted by the members in this purchase. If no values are passed, the default Legal <br/>Documents will be attached to the Purchase. If one or more value is passed, it will override all defaults. <br/></td>
 </tr>
 <tr>
 <td>» language_code</td>
@@ -658,21 +658,21 @@ for a list of all calls to use for a fully embedded experience.</p>
 <td>body</td>
 <td>integer(int32)</td>
 <td>true</td>
-<td>Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are<br/>not doing installment or deposit payments, this is most likely &quot;100&quot;.<br/>If no payments are passed, then by default a single payment for &quot;100&quot;<br/>percent with no <code>due_deadline</code> will be created.<br/></td>
+<td>Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are <br/>not doing installment or deposit payments, this is most likely &quot;100&quot;. <br/>If no payments are passed, then by default a single payment for &quot;100&quot; <br/>percent with no <code>due_deadline</code> will be created.<br/></td>
 </tr>
 <tr>
 <td>»» due_deadline</td>
 <td>body</td>
 <td>string(date-time)</td>
 <td>false</td>
-<td>Datetime by when this payment must be submitted to the merchant for<br/>the purchase to be valid. It is required for all payments after<br/>the first payment but may be passed for the first, or only, payment as well.<br/></td>
+<td>Datetime by when this payment must be submitted to the merchant for<br/>the purchase to be valid. It is required for all payments after <br/>the first payment but may be passed for the first, or only, payment as well.<br/></td>
 </tr>
 <tr>
 <td>» consumer_field_schemas</td>
 <td>body</td>
 <td>[object]</td>
 <td>false</td>
-<td>The set of consumer fields that should be attached to this purchase, by name,<br/>and their accompanying options. If any consumer_field_schemas are passed, then<br/>they override all default consumer_field_templates for the merchant.<br/></td>
+<td>The set of consumer fields that should be attached to this purchase, by name, <br/>and their accompanying options. If any consumer_field_schemas are passed, then <br/>they override all default consumer_field_templates for the merchant.                   <br/></td>
 </tr>
 <tr>
 <td>»» name</td>
@@ -734,7 +734,7 @@ for a list of all calls to use for a fully embedded experience.</p>
     </span><span class="kc">null</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"current_payment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"memberships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -778,7 +778,7 @@ for a list of all calls to use for a fully embedded experience.</p>
   </span><span class="s2">"fees_structure"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"apply_consumer_fee_to_organizer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <h3 id="CreatePurchase-responses">Responses</h3>
@@ -842,7 +842,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
     </span><span class="kc">null</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"current_payment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"memberships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -886,7 +886,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"fees_structure"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"apply_consumer_fee_to_organizer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -946,8 +946,8 @@ You can not update <code>payments</code> or <code>product_costs</code> after you
     </span><span class="s2">"default_image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"costs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="kc">null</span><span class="w">
@@ -967,7 +967,7 @@ You can not update <code>payments</code> or <code>product_costs</code> after you
   </span><span class="s2">"payments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+      </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
@@ -1067,7 +1067,7 @@ You can not update <code>payments</code> or <code>product_costs</code> after you
 <td>body</td>
 <td>[<a href="#schemaproductcost">ProductCost</a>]</td>
 <td>false</td>
-<td>The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. When updating the product_costs,<br/>you cannot use a different currency than the existing one after the purchase<br/>has been claimed. You cannot edit the range of slots to be less than the current<br/>number of committed slots.<br/></td>
+<td>The set of product_costs and the optional allowed range(s) of slots<br/>for each cost as provided by the merchant. When updating the product_costs, <br/>you cannot use a different currency than the existing one after the purchase <br/>has been claimed. You cannot edit the range of slots to be less than the current <br/>number of committed slots. <br/></td>
 </tr>
 <tr>
 <td>» group</td>
@@ -1081,14 +1081,14 @@ You can not update <code>payments</code> or <code>product_costs</code> after you
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Full name of the expected organizer as provided by the merchant. This will only affect information<br/>displayed to the merchant if updated after the Purchase is claimed.<br/></td>
+<td>Full name of the expected organizer as provided by the merchant. This will only affect information <br/>displayed to the merchant if updated after the Purchase is claimed. <br/></td>
 </tr>
 <tr>
 <td>»» organizer_email</td>
 <td>body</td>
 <td>string(email)</td>
 <td>false</td>
-<td>Email of the expected organizer as provided by the merchant. This will only affect information<br/>displayed to the merchant if updated after the Purchase is claimed.<br/></td>
+<td>Email of the expected organizer as provided by the merchant. This will only affect information <br/>displayed to the merchant if updated after the Purchase is claimed. <br/></td>
 </tr>
 <tr>
 <td>»» split_type</td>
@@ -1102,63 +1102,63 @@ You can not update <code>payments</code> or <code>product_costs</code> after you
 <td>body</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant.<br/>Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types.<br/></td>
+<td>The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types. <br/></td>
 </tr>
 <tr>
 <td>»» max_slots</td>
 <td>body</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant.<br/>Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types.<br/></td>
+<td>The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types. <br/></td>
 </tr>
 <tr>
 <td>»» min_contribution</td>
 <td>body</td>
 <td><a href="#schemamoney">Money</a></td>
 <td>false</td>
-<td>Minimum required contribution from each group member.<br/>Only compatible with <code>specified_per_person</code> split type.<br/></td>
+<td>Minimum required contribution from each group member. <br/>Only compatible with <code>specified_per_person</code> split type.<br/></td>
 </tr>
 <tr>
 <td>»» legal_document_ids</td>
 <td>body</td>
 <td>[string]</td>
 <td>false</td>
-<td>Array of legal document IDs that must be accepted by the members in this purchase. These should NOT<br/>be updated after a Purchase has been claimed because then some members will end up with different<br/>accepted legal terms from others.<br/></td>
+<td>Array of legal document IDs that must be accepted by the members in this purchase. These should NOT <br/>be updated after a Purchase has been claimed because then some members will end up with different <br/>accepted legal terms from others. <br/></td>
 </tr>
 <tr>
 <td>» language_code</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Default 2-character language code for this purchase. It is going<br/>to be used in the claim and commit steps; and as one of the<br/>fallbacks when detecting what language to show to the user<br/></td>
+<td>Default 2-character language code for this purchase. It is going <br/>to be used in the claim and commit steps; and as one of the <br/>fallbacks when detecting what language to show to the user<br/></td>
 </tr>
 <tr>
 <td>» payment_destination_id</td>
 <td>body</td>
 <td>string(uuid)</td>
 <td>false</td>
-<td>ID of the payment destination that will receive all future payments<br/>made under this Purchase. NOTE: updating this value will not affect<br/>any previously accepted payments on this purchase.<br/></td>
+<td>ID of the payment destination that will receive all future payments<br/>made under this Purchase. NOTE: updating this value will not affect <br/>any previously accepted payments on this purchase. <br/></td>
 </tr>
 <tr>
 <td>» payments</td>
 <td>body</td>
 <td>[object]</td>
 <td>false</td>
-<td>Breakdown of payment amounts and deadlines due over time for this Purchase.<br/>They can only be updated if no payment has yet been accepted by the merchant for this Purchase..<br/></td>
+<td>Breakdown of payment amounts and deadlines due over time for this Purchase. <br/>They can only be updated if no payment has yet been accepted by the merchant for this Purchase.. <br/></td>
 </tr>
 <tr>
 <td>»» percentage</td>
 <td>body</td>
 <td>integer(int32)</td>
 <td>true</td>
-<td>Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are<br/>not doing installment or deposit payments, this is most likely &quot;100&quot;.<br/></td>
+<td>Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are <br/>not doing installment or deposit payments, this is most likely &quot;100&quot;.<br/></td>
 </tr>
 <tr>
 <td>»» due_deadline</td>
 <td>body</td>
 <td>string(date-time)</td>
 <td>false</td>
-<td>Datetime by when this payment must be submitted to the merchant for<br/>the purchase to be valid. It is required for all payments after<br/>the first payment but may be passed for the first, or only, payment as well.<br/></td>
+<td>Datetime by when this payment must be submitted to the merchant for<br/>the purchase to be valid. It is required for all payments after <br/>the first payment but may be passed for the first, or only, payment as well.<br/></td>
 </tr>
 </tbody></table>
 <h4 id='enumerated-values-2'>Enumerated Values</h4>
@@ -1207,7 +1207,7 @@ You can not update <code>payments</code> or <code>product_costs</code> after you
     </span><span class="kc">null</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"current_payment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"memberships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1251,7 +1251,7 @@ You can not update <code>payments</code> or <code>product_costs</code> after you
   </span><span class="s2">"fees_structure"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"apply_consumer_fee_to_organizer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1403,21 +1403,21 @@ supplying defaults for the required parameters.</p>
 <td>body</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant.<br/>Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types.<br/></td>
+<td>The organizer-specified value for the minimum number of slots they<br/>require to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types. <br/></td>
 </tr>
 <tr>
 <td>»» min_slots</td>
 <td>body</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant.<br/>Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types.<br/></td>
+<td>The organizer-specified value for the maximum number of slots they<br/>will allow to be claimed. It must be within the bounds allowed by the merchant. <br/>Only compatible with <code>even_split</code> and <code>fixed_per_person</code> split types. <br/></td>
 </tr>
 <tr>
 <td>»» min_contribution</td>
 <td>body</td>
 <td><a href="#schemamoney">Money</a></td>
 <td>false</td>
-<td>Minimum required contribution from each group member.<br/>Only compatible with <code>specified_per_person</code> split type.<br/></td>
+<td>Minimum required contribution from each group member. <br/>Only compatible with <code>specified_per_person</code> split type. <br/></td>
 </tr>
 </tbody></table>
 <h4 id='enumerated-values-3'>Enumerated Values</h4>
@@ -1454,7 +1454,7 @@ supplying defaults for the required parameters.</p>
     </span><span class="kc">null</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"current_payment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"memberships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1498,7 +1498,7 @@ supplying defaults for the required parameters.</p>
   </span><span class="s2">"fees_structure"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"apply_consumer_fee_to_organizer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1744,7 +1744,7 @@ the sum of all payments on the purchase, you will get an error response.</p>
 <td>body</td>
 <td>string(uuid)</td>
 <td>false</td>
-<td>UUID of the merchant&#39;s payment source they wish to use to fund this refund.<br/>This is only applicable if the merchant originally received the payment that is being<br/>refunded into the merchant&#39;s bank account instead of a through a custom gateway.<br/></td>
+<td>UUID of the merchant&#39;s payment source they wish to use to fund this refund. <br/>This is only applicable if the merchant originally received the payment that is being <br/>refunded into the merchant&#39;s bank account instead of a through a custom gateway.<br/></td>
 </tr>
 <tr>
 <td>» memberships_shares</td>
@@ -1782,7 +1782,7 @@ the sum of all payments on the purchase, you will get an error response.</p>
     </span><span class="kc">null</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"current_payment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"memberships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1826,7 +1826,7 @@ the sum of all payments on the purchase, you will get an error response.</p>
   </span><span class="s2">"fees_structure"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"apply_consumer_fee_to_organizer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1883,9 +1883,9 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 
 <p><em>Create purchase image</em></p>
 
-<p>This call attaches the image you specify in the body to the purchase you
-specify in the request. That image should be of the product and is used
-for display to end users. The most recent image uploaded will be the primary
+<p>This call attaches the image you specify in the body to the purchase you 
+specify in the request. That image should be of the product and is used 
+for display to end users. The most recent image uploaded will be the primary 
 image displayed for the purchase.</p>
 
 <blockquote>
@@ -1940,6 +1940,7 @@ image displayed for the purchase.</p>
 <p>Example responses</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
@@ -2275,9 +2276,9 @@ for this purchase by a group member.</p>
 To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 <h1 id='payments'>payments</h1>
-<p>This section covers all operations on Payment objects. A purchase must have at least 1
-payment and may have up to n payments. Each payment defines an amount of the purchase
-that must be paid by the group by a certain date.</p>
+<p>This section covers all operations on Payment objects. A purchase must have at least 1 
+payment and may have up to n payments. Each payment defines an amount of the purchase 
+that must be paid by the group by a certain date. </p>
 <h2 id='acceptpayment'>AcceptPayment</h2>
 <p><code>POST /payments/{id}/accept</code></p>
 
@@ -2361,11 +2362,11 @@ all payments automatically</p>
 To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 <h1 id='legal_documents'>legal_documents</h1>
-<p>This section covers all operations on Legal Document objects. Legal Documents are terms of
-service and other contractual requirements you want all members in a purchase to accept
-when joining a purchase. All Legal Documents apply to every member in every purchase
-unless you specify 1 or more Legal Documents to attach to a purchase when creating a purchase,
-in which case only the specified Legal Documents will apply to that purchases&#39;s members.</p>
+<p>This section covers all operations on Legal Document objects. Legal Documents are terms of 
+service and other contractual requirements you want all members in a purchase to accept 
+when joining a purchase. All Legal Documents apply to every member in every purchase 
+unless you specify 1 or more Legal Documents to attach to a purchase when creating a purchase, 
+in which case only the specified Legal Documents will apply to that purchases&#39;s members. </p>
 <h2 id='retrievemerchantlegaldocuments'>RetrieveMerchantLegalDocuments</h2>
 <p><code>GET /legal_documents</code></p>
 
@@ -2454,21 +2455,21 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Specified by the merchant as either the Cancellation Policy for cancellation and refund terms<br/>or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then<br/>refer to that document as type TOS. If none is provided, the value defaults to <code>tos</code>.<br/></td>
+<td>Specified by the merchant as either the Cancellation Policy for cancellation and refund terms<br/>or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then <br/>refer to that document as type TOS. If none is provided, the value defaults to <code>tos</code>. <br/></td>
 </tr>
 <tr>
 <td>» title</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Mechant&#39;s title for this legal document to be displayed to end users. If none is provided, it defaults to<br/>the generic term &quot;Terms of Service.&quot;<br/></td>
+<td>Mechant&#39;s title for this legal document to be displayed to end users. If none is provided, it defaults to <br/>the generic term &quot;Terms of Service.&quot;<br/></td>
 </tr>
 <tr>
 <td>» content</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is<br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active.<br/></td>
+<td>Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  <br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. <br/></td>
 </tr>
 </tbody></table>
 <h4 id='enumerated-values-4'>Enumerated Values</h4>
@@ -2496,8 +2497,8 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2570,8 +2571,8 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2616,7 +2617,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 
 <p>Makes changes to a legal document, which will apply to all
 future acceptances by members where that document is attached
-to a purchase. It will not apply retroactively to any Purchase
+to a purchase. It will not apply retroactively to any Purchase 
 created prior to the moment it is updated.</p>
 
 <blockquote>
@@ -2658,21 +2659,21 @@ created prior to the moment it is updated.</p>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Specified by the merchant as either the Cancellation Policy for cancellation and refund terms<br/>or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then<br/>refer to that document as type TOS. If none is provided in this request, then the existing value<br/>for the Legal Document being updated will continue to apply.<br/></td>
+<td>Specified by the merchant as either the Cancellation Policy for cancellation and refund terms<br/>or TOS (Terms of Service) for all other legal documents. If the cancellation policy is included in the TOS, then <br/>refer to that document as type TOS. If none is provided in this request, then the existing value <br/>for the Legal Document being updated will continue to apply.<br/></td>
 </tr>
 <tr>
 <td>» title</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Mechant&#39;s title for this legal document to be displayed to end users. If none is provided, the existing value<br/>for the Legal Document being updated will continue to apply.<br/></td>
+<td>Mechant&#39;s title for this legal document to be displayed to end users. If none is provided, the existing value <br/>for the Legal Document being updated will continue to apply.<br/></td>
 </tr>
 <tr>
 <td>» content</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is<br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active.<br/>If none is provided, the existing value for the Legal Document being updated will continue to apply.<br/></td>
+<td>Full content of the legal document, as provided by the merchant, either in plain text or as a URL. If a URL is  <br/>provided, it will be linked to directly and not cached, so ensure the URL works so long as the Purchase is active. <br/>If none is provided, the existing value for the Legal Document being updated will continue to apply. <br/></td>
 </tr>
 </tbody></table>
 <h4 id='enumerated-values-5'>Enumerated Values</h4>
@@ -2700,8 +2701,8 @@ created prior to the moment it is updated.</p>
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2754,19 +2755,19 @@ created prior to the moment it is updated.</p>
 To perform this operation, you must be authenticated by HTTP Basic Authorization header.
 </aside>
 <h1 id='consumer_field_templates'>consumer_field_templates</h1>
-<p>Consumer Field Templates define information you wish to collect from
-the organizer pertaining to the entire purchase or from each group member.
-The templates define the basic structure, which can be configured futher when
-attaching each template to a purchase. All &quot;default&quot; templates apply to every
-purchase unless you specify 1 or more templates, in which case only the specified
+<p>Consumer Field Templates define information you wish to collect from 
+the organizer pertaining to the entire purchase or from each group member. 
+The templates define the basic structure, which can be configured futher when 
+attaching each template to a purchase. All &quot;default&quot; templates apply to every 
+purchase unless you specify 1 or more templates, in which case only the specified 
 ones will apply.</p>
 <h2 id='createconsumerfieldtemplate'>CreateConsumerFieldTemplate</h2>
 <p><code>POST /consumer_field_templates</code></p>
 
 <p><em>Creates a new consumer field template</em></p>
 
-<p>You must first create a template before you can attach the template to a purchase
-and collect data based on it.</p>
+<p>You must first create a template before you can attach the template to a purchase 
+and collect data based on it. </p>
 
 <blockquote>
 <p>Body parameter</p>
@@ -2847,21 +2848,21 @@ and collect data based on it.</p>
 <td>body</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>Order in which the template should be displayed, with 1 being the first displayed.<br/>This value must be unique to each template, but the values do not have to be sequential.<br/></td>
+<td>Order in which the template should be displayed, with 1 being the first displayed. <br/>This value must be unique to each template, but the values do not have to be sequential.<br/></td>
 </tr>
 <tr>
 <td>» scope</td>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Whether the template applies at the member level to every group member or at the purchase<br/>level, only to the organizer.<br/></td>
+<td>Whether the template applies at the member level to every group member or at the purchase <br/>level, only to the organizer.<br/></td>
 </tr>
 <tr>
 <td>» default</td>
 <td>body</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether the template should be default or not. Default templates apply to every purchase unless<br/>you specify at least 1 template at purchase creation.<br/></td>
+<td>Whether the template should be default or not. Default templates apply to every purchase unless <br/>you specify at least 1 template at purchase creation. <br/></td>
 </tr>
 <tr>
 <td>» required</td>
@@ -2882,7 +2883,7 @@ and collect data based on it.</p>
 <td>body</td>
 <td>string</td>
 <td>false</td>
-<td>Defines the format of the value you provide to display to end users.<br/></td>
+<td>Defines the format of the value you provide to display to end users.  <br/></td>
 </tr>
 <tr>
 <td>»» value</td>
@@ -2950,22 +2951,22 @@ and collect data based on it.</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"special"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"default_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"special"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -3089,7 +3090,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>per_share</td>
 <td><a href="#schemamoney">Money</a></td>
-<td>Amount due per group member across all payments on a Purchase, which overrides the percentage value if both exist.</td>
+<td>Amount due per group member across all payments on a Purchase,  which overrides the percentage value if both exist.</td>
 </tr>
 <tr>
 <td>per_share_max</td>
@@ -3111,11 +3112,20 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <p><a id="schemaconsumerfieldschema"></a></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"default_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
 </span></code></pre><h3 id='properties-3'>Properties</h3>
 <table><thead>
@@ -3131,6 +3141,21 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>UUID that identfies this consumer_field_schema for this Purchase</td>
 </tr>
 <tr>
+<td>order</td>
+<td>integer(int32)</td>
+<td>Order in which the template should be displayed.</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>string</td>
+<td>Either <code>member</code> (applies to every group member) or purchase  (applies only for the organizer to fill out on behalf of the whole Purchase)</td>
+</tr>
+<tr>
+<td>required</td>
+<td>boolean</td>
+<td>Whether the field is required or not</td>
+</tr>
+<tr>
 <td>name</td>
 <td>string</td>
 <td>Name of this consumer_field as provided in the consumer_field_template that created this consumer_field_schema</td>
@@ -3141,19 +3166,34 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>Text displayed as the field label</td>
 </tr>
 <tr>
-<td>scope</td>
+<td>description</td>
 <td>string</td>
-<td>Either <code>member</code> (applies to every group member) or purchase (applies only for the organizer to fill out on behalf of the whole Purchase)</td>
+<td>Descriptive helper text explaining the field to the end user</td>
 </tr>
 <tr>
-<td>required</td>
-<td>boolean</td>
-<td>Whether the field is required or not</td>
+<td>default_value</td>
+<td>string</td>
+<td>Default value shown on landing for the user</td>
 </tr>
 <tr>
 <td>type</td>
 <td>string</td>
 <td>Format for how the field is displayed to end users</td>
+</tr>
+<tr>
+<td>options</td>
+<td>[object]</td>
+<td>Array of options for the user to select from, which applies for <code>single_select</code>  and <code>multi-select</code> <code>type</code> templates</td>
+</tr>
+<tr>
+<td>» type</td>
+<td>string</td>
+<td>Format type for the listed option</td>
+</tr>
+<tr>
+<td>» value</td>
+<td>string</td>
+<td>Value for the option displayed to end users</td>
 </tr>
 </tbody></table>
 <h4 id='enumerated-values-8'>Enumerated Values</h4>
@@ -3195,6 +3235,170 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>type</td>
 <td>textarea</td>
 </tr>
+<tr>
+<td>» type</td>
+<td>text</td>
+</tr>
+<tr>
+<td>» type</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>» type</td>
+<td>address</td>
+</tr>
+</tbody></table>
+<h2 id='consumerfieldtemplate'>ConsumerFieldTemplate</h2>
+<p><a id="schemaconsumerfieldtemplate"></a></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"special"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"default_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w"> 
+</span></code></pre><h3 id='properties-4'>Properties</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>string(uuid)</td>
+<td>Pay By Group UUID for this consumer field template</td>
+</tr>
+<tr>
+<td>default</td>
+<td>boolean</td>
+<td>Whether the template should be default or not.</td>
+</tr>
+<tr>
+<td>special</td>
+<td>boolean</td>
+<td>Whether the template is a special field or not. Special fields are  standardized fields where the values a user enters may be pre-populated  based on that user&#39;s previous activity. These fields are shipping  address, billing address, and phone number.</td>
+</tr>
+<tr>
+<td>order</td>
+<td>integer(int32)</td>
+<td>Order in which the template should be displayed.</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>string</td>
+<td>Either <code>member</code> (applies to every group member) or purchase  (applies only for the organizer to fill out on behalf of the whole Purchase)</td>
+</tr>
+<tr>
+<td>required</td>
+<td>boolean</td>
+<td>Whether the field is required or not when the template is attached to a Purchase</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>A unique name for the template, used when referencing the template to attach it to a Purchase</td>
+</tr>
+<tr>
+<td>label</td>
+<td>string</td>
+<td>Text displayed as the field label</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>Descriptive helper text explaining the field to the end user</td>
+</tr>
+<tr>
+<td>default_value</td>
+<td>string</td>
+<td>Default value shown on landing for the user</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>Format for how the field is displayed to end users</td>
+</tr>
+<tr>
+<td>options</td>
+<td>[object]</td>
+<td>Array of options for the user to select from, which applies for <code>single_select</code>  and <code>multi-select</code> <code>type</code> templates</td>
+</tr>
+<tr>
+<td>» type</td>
+<td>string</td>
+<td>Format type for the listed option</td>
+</tr>
+<tr>
+<td>» value</td>
+<td>string</td>
+<td>Value for the option displayed to end users</td>
+</tr>
+</tbody></table>
+<h4 id='enumerated-values-9'>Enumerated Values</h4>
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>scope</td>
+<td>member</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>purchase</td>
+</tr>
+<tr>
+<td>type</td>
+<td>address</td>
+</tr>
+<tr>
+<td>type</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>type</td>
+<td>multi_select</td>
+</tr>
+<tr>
+<td>type</td>
+<td>single_select</td>
+</tr>
+<tr>
+<td>type</td>
+<td>text</td>
+</tr>
+<tr>
+<td>type</td>
+<td>textarea</td>
+</tr>
+<tr>
+<td>» type</td>
+<td>text</td>
+</tr>
+<tr>
+<td>» type</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>» type</td>
+<td>address</td>
+</tr>
 </tbody></table>
 <h2 id='consumerfieldvalue'>ConsumerFieldValue</h2>
 <p><a id="schemaconsumerfieldvalue"></a></p>
@@ -3203,7 +3407,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-4'>Properties</h3>
+</span></code></pre><h3 id='properties-5'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3227,7 +3431,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>Whether the schema field should be required or not.</td>
 </tr>
 </tbody></table>
-<h4 id='enumerated-values-9'>Enumerated Values</h4>
+<h4 id='enumerated-values-10'>Enumerated Values</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -3252,11 +3456,11 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"share_amount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"fees"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"charged_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"failed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-5'>Properties</h3>
+</span></code></pre><h3 id='properties-6'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3272,12 +3476,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>status</td>
 <td>string</td>
-<td>Current status of the contribution, any of: <code>created</code> (member is committed, but has no payment activity on this contribution yet); <code>authorized</code> (the member&#39;s payment method was successfully authorized for this charge); <code>captured</code> (the full contribution amount has been captured from the member&#39;s payment method); <code>holdout</code> (the member is not currently committed to the purchase); or <code>failed</code> (the charge or this contribution failed and Pay By Group is attempting to resolve it)</td>
+<td>Current status of the contribution, any of: <code>created</code> (member is committed, but has no payment activity on this contribution yet);  <code>authorized</code> (the member&#39;s payment method was successfully authorized for this charge);  <code>captured</code> (the full contribution amount has been captured from the member&#39;s payment method);  <code>holdout</code> (the member is not currently committed to the purchase); or  <code>failed</code> (the charge or this contribution failed and Pay By Group is attempting to resolve it)</td>
 </tr>
 <tr>
 <td>refund_status</td>
 <td>string</td>
-<td>Status that determines whether the Contribution is partially or fully refunded, one of: <code>none</code> (none of the Contribution&#39;s Transactions were refunded); <code>partial</code> (some of the Contribution&#39;s Transactions were partially   or fully refunded); or <code>full</code> (all of the Contribution&#39;s Transactions were fully refunded)</td>
+<td>Status that determines whether the Contribution is partially or fully refunded, one of:  <code>none</code> (none of the Contribution&#39;s Transactions were refunded);  <code>partial</code> (some of the Contribution&#39;s Transactions were partially   or fully refunded); or  <code>full</code> (all of the Contribution&#39;s Transactions were fully refunded)</td>
 </tr>
 <tr>
 <td>amount</td>
@@ -3310,7 +3514,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>Timestamp when the record of this contribution was first created, which is not necessarily when it was charged</td>
 </tr>
 </tbody></table>
-<h4 id='enumerated-values-10'>Enumerated Values</h4>
+<h4 id='enumerated-values-11'>Enumerated Values</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -3350,12 +3554,46 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>full</td>
 </tr>
 </tbody></table>
+<h2 id='error'>Error</h2>
+<p><a id="schemaerror"></a></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w"> 
+</span></code></pre><h3 id='properties-7'>Properties</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>errors</td>
+<td>[object]</td>
+<td>Array of errors returned by the endpoint</td>
+</tr>
+<tr>
+<td>» code</td>
+<td>integer(int32)</td>
+<td>Error code to identify the message (NOTE: not used at the moment)</td>
+</tr>
+<tr>
+<td>» message</td>
+<td>string</td>
+<td>Description of the error</td>
+</tr>
+</tbody></table>
 <h2 id='fees'>Fees</h2>
 <p><a id="schemafees"></a></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"consumer_fee"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-6'>Properties</h3>
+</span></code></pre><h3 id='properties-8'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3372,7 +3610,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <h2 id='group'>Group</h2>
 <p><a id="schemagroup"></a></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"commit_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"min_contribution"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -3383,7 +3621,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"split_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"even_split"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-7'>Properties</h3>
+</span></code></pre><h3 id='properties-9'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3399,17 +3637,17 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>max_slots</td>
 <td>integer(int32)</td>
-<td>The organizer-specified value for the maximum number of slots they will allow to be claimed. It must be within the bounds of the highest max_slots set by the merchant in Product Costs</td>
+<td>The organizer-specified value for the maximum number of slots they will allow to be claimed. It must be within the bounds of the highest  max_slots set by the merchant in Product Costs</td>
 </tr>
 <tr>
 <td>min_slots</td>
 <td>integer(int32)</td>
-<td>The organizer-specified value for the minimum number of slots they require to be claimed. It must be above the minimum of the lowest min_slots set by the merchant in Product Costs</td>
+<td>The organizer-specified value for the minimum number of slots they require to be claimed. It must be above the minimum of the lowest  min_slots set by the merchant in Product Costs</td>
 </tr>
 <tr>
 <td>min_contribution</td>
 <td><a href="#schemamoney">Money</a></td>
-<td>The organizer-specified minimum required contribution by each member, which only applies for Purchases set to <code>specified_per_person</code> <code>split_type</code></td>
+<td>The organizer-specified minimum required contribution by each member, which only  applies for Purchases set to <code>specified_per_person</code> <code>split_type</code></td>
 </tr>
 <tr>
 <td>organizer_email</td>
@@ -3424,7 +3662,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>split_type</td>
 <td>string</td>
-<td>Splitting type chosen by the organizer for how to divide the cost among group members, which is one of: <code>even_split</code> (only compatible with total cost_type and means the Purchase amount is split evenly across each slot claimed); <code>specified_per_person</code> (only compatible with total cost_type and means each member may pay a different amount); or <code>fixed_per_person</code> (only compatible with per_slot cost_type and means   each group member pays a fixed amount per slot they claim)</td>
+<td>Splitting type chosen by the organizer for how to divide the cost among group members, which is one of:  <code>even_split</code> (only compatible with total cost_type and means the  Purchase amount is split evenly across each slot claimed);  <code>specified_per_person</code> (only compatible with total cost_type and means each member may pay a different amount); or  <code>fixed_per_person</code> (only compatible with per_slot cost_type and means   each group member pays a fixed amount per slot they claim)</td>
 </tr>
 <tr>
 <td>legal_document_ids</td>
@@ -3432,7 +3670,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>Array of legal document IDs that must be accepted by the members in this purchase</td>
 </tr>
 </tbody></table>
-<h4 id='enumerated-values-11'>Enumerated Values</h4>
+<h4 id='enumerated-values-12'>Enumerated Values</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -3455,11 +3693,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <h2 id='image'>Image</h2>
 <p><a id="schemaimage"></a></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-8'>Properties</h3>
+</span></code></pre><h3 id='properties-10'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3467,6 +3706,11 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <th>Description</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>id</td>
+<td>string(uuid)</td>
+<td>Pay By Group UUID of this image</td>
+</tr>
 <tr>
 <td>name</td>
 <td>string</td>
@@ -3481,6 +3725,148 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>url</td>
 <td>string</td>
 <td>URL to retrieve the image stored with Pay By Group</td>
+</tr>
+</tbody></table>
+<h2 id='legalbinding'>LegalBinding</h2>
+<p><a id="schemalegalbinding"></a></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"remote_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w"> 
+</span></code></pre><h3 id='properties-11'>Properties</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>string(uuid)</td>
+<td>Pay By Group UUID of this specific record of acceptance by the user</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>Either <code>cancellation_policy</code> for cancellation and refund terms or <code>tos</code> for all other legal documents provided by merchant.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>Mechant&#39;s title for this legal document at the time it was accepted by the user</td>
+</tr>
+<tr>
+<td>content</td>
+<td>string</td>
+<td>Full content as accepted by the user at the moment they agreed to this legal document</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>string</td>
+<td>Verifiable timestamp when the user accepted this legal document</td>
+</tr>
+<tr>
+<td>remote_ip</td>
+<td>string</td>
+<td>User&#39;s IP address at the moment they accepted this legal document</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>string</td>
+<td>ID of the user that accepted the document, which includes their name and email</td>
+</tr>
+<tr>
+<td>purchase_id</td>
+<td>string</td>
+<td>The purchase for which this document was accepted by the user</td>
+</tr>
+</tbody></table>
+<h4 id='enumerated-values-13'>Enumerated Values</h4>
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>tos</td>
+</tr>
+<tr>
+<td>type</td>
+<td>cancelation_policy</td>
+</tr>
+</tbody></table>
+<h2 id='legaldocument'>LegalDocument</h2>
+<p><a id="schemalegaldocument"></a></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
+</span><span class="p">}</span><span class="w"> 
+</span></code></pre><h3 id='properties-12'>Properties</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>string(uuid)</td>
+<td>Pay By Group UUID of this legal document</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>Specified by the merchant as either <code>cancellation_policy</code> for cancellation and refund terms or <code>tos</code> for all other legal documents.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>Mechant&#39;s title for this legal document</td>
+</tr>
+<tr>
+<td>content</td>
+<td>string</td>
+<td>Full content as provided by the merchant, either in plain text or as a URL</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>string(date-time)</td>
+<td>When this legal document was added by the merchant</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>string(date-time)</td>
+<td>When this legal document was last updated by the merchant</td>
+</tr>
+</tbody></table>
+<h4 id='enumerated-values-14'>Enumerated Values</h4>
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>tos</td>
+</tr>
+<tr>
+<td>type</td>
+<td>cancelation_policy</td>
 </tr>
 </tbody></table>
 <h2 id='membership'>Membership</h2>
@@ -3507,10 +3893,10 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"payment_source"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"committed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-9'>Properties</h3>
+</span></code></pre><h3 id='properties-13'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3526,12 +3912,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>status</td>
 <td>string</td>
-<td>One of: <code>holdout</code> (user has been invited but not joined the group) or <code>committed</code> (user has joined the group and whether they have been charged is in the contribution object)</td>
+<td>One of:  <code>holdout</code> (user has been invited but not joined the group) or <code>committed</code> (user has joined the group and whether they have been charged is in the contribution object)</td>
 </tr>
 <tr>
 <td>refund_status</td>
 <td>string</td>
-<td>Status that determines whether the Membership is partially or fully refunded, which is one of: <code>none</code> (none of the Membership&#39;s Contributions were refunded); <code>partial</code> (some of the Membership&#39;s Contributions were partially or fully refunded); or <code>full</code> (all of the Membership&#39;s Contributions were fully refunded).</td>
+<td>Status that determines whether the Membership is partially or fully refunded, which is one of:  <code>none</code> (none of the Membership&#39;s Contributions were refunded);  <code>partial</code> (some of the Membership&#39;s Contributions were partially or fully refunded); or  <code>full</code> (all of the Membership&#39;s Contributions were fully refunded).</td>
 </tr>
 <tr>
 <td>failed</td>
@@ -3541,7 +3927,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>short</td>
 <td>boolean</td>
-<td>The user is currently committed but has not agreed to pay their new required amount for their share due to changes to the purchase since they first committed.</td>
+<td>The user is currently committed but has not agreed to pay their new required amount for their share due to changes to the purchase  since they first committed.</td>
 </tr>
 <tr>
 <td>role</td>
@@ -3561,7 +3947,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>amount</td>
 <td><a href="#schemamoney">Money</a></td>
-<td>Total amount this member will be charged based on the current purchase details across all payments, which is the sum of the <code>share_amount</code> and <code>fees</code></td>
+<td>Total amount this member will be charged based on the current purchase details across all payments, which is the sum of the  <code>share_amount</code> and <code>fees</code></td>
 </tr>
 <tr>
 <td>share_amount</td>
@@ -3576,7 +3962,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>consumer_field_values</td>
 <td><a href="#schemaconsumerfieldvalue">ConsumerFieldValue</a></td>
-<td>Values that have been filled out by the member for each consumer_field_schema scoped to the Purchase and each slot they have claimed, when applicable</td>
+<td>Values that have been filled out by the member for each consumer_field_schema  scoped to the Purchase and each slot they have claimed, when applicable</td>
 </tr>
 <tr>
 <td>allowed_amount</td>
@@ -3606,7 +3992,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>current_contribution</td>
 <td><a href="#schemacontribution">Contribution</a></td>
-<td>This is the next upcoming contribution by this member towards their share of the Purchase and corresponds to the next Payment on the Purchase</td>
+<td>This is the next upcoming contribution by this member towards their share of the  Purchase and corresponds to the next Payment on the Purchase</td>
 </tr>
 <tr>
 <td>user</td>
@@ -3634,7 +4020,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>When the membership was first created</td>
 </tr>
 </tbody></table>
-<h4 id='enumerated-values-12'>Enumerated Values</h4>
+<h4 id='enumerated-values-15'>Enumerated Values</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -3680,7 +4066,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"support_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"logo_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-10'>Properties</h3>
+</span></code></pre><h3 id='properties-14'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3725,7 +4111,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"per_transaction"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-11'>Properties</h3>
+</span></code></pre><h3 id='properties-15'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3751,7 +4137,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"per_purchase_max"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-12'>Properties</h3>
+</span></code></pre><h3 id='properties-16'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3781,7 +4167,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"amount_cents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-13'>Properties</h3>
+</span></code></pre><h3 id='properties-17'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3807,17 +4193,17 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"submitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"accepted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"paid_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"processing_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"conversion_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"payout_failed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-14'>Properties</h3>
+</span></code></pre><h3 id='properties-18'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -3833,12 +4219,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>status</td>
 <td>string</td>
-<td>Current status of the payment, one of: <code>pending</code> (planned future payment on the purchase); <code>active</code> (currently active, next payment to be paid on the purchase); <code>authorizing</code> (contributions that comprise this payment are in the process of having their funds verified); <code>authorized</code> (all funds have been verified for this payment and it awaits acceptance by the merchant); <code>captured</code> (all funds have been taken from group members for the purchase and are awaiting payout to the merchant); <code>processing_payout</code> (payout to the merchant is in process); <code>canceled</code> (the Purchase, therefore the payment, has been canceled); <code>paid</code> (all funds are paid out to the Merchant&#39;s payout account).</td>
+<td>Current status of the payment, one of:  <code>pending</code> (planned future payment on the purchase);  <code>active</code> (currently active, next payment to be paid on the purchase);  <code>authorizing</code> (contributions that comprise this payment are in the  process of having their funds verified);  <code>authorized</code> (all funds have been verified for this payment and it  awaits acceptance by the merchant);  <code>captured</code> (all funds have been taken from group members for the purchase  and are awaiting payout to the merchant);  <code>processing_payout</code> (payout to the merchant is in process);  <code>canceled</code> (the Purchase, therefore the payment, has been canceled);  <code>paid</code> (all funds are paid out to the Merchant&#39;s payout account).</td>
 </tr>
 <tr>
 <td>number</td>
 <td>integer(int32)</td>
-<td>Number of this payment in the overall sequence of the purchase. It is 0 if the purchase has only 1 payment.</td>
+<td>Number of this payment in the overall sequence of the purchase.  It is 0 if the purchase has only 1 payment.</td>
 </tr>
 <tr>
 <td>percentage</td>
@@ -3848,7 +4234,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>due_deadline</td>
 <td>string(date-time)</td>
-<td>Datetime by when this payment must be submitted to the merchant for the purchase to be valid. It is required for all payments after the first payment but may be passed for the first, or only, payment as well.</td>
+<td>Datetime by when this payment must be submitted to the merchant for the purchase to be valid. It is required for all payments after the  first payment but may be passed for the first, or only, payment as well.</td>
 </tr>
 <tr>
 <td>amount</td>
@@ -3891,7 +4277,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>true if the last attempt to perform a payout failed</td>
 </tr>
 </tbody></table>
-<h4 id='enumerated-values-13'>Enumerated Values</h4>
+<h4 id='enumerated-values-16'>Enumerated Values</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -3931,6 +4317,45 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>paid</td>
 </tr>
 </tbody></table>
+<h2 id='paymentgateway'>PaymentGateway</h2>
+<p><a id="schemapaymentgateway"></a></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"merchant_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"supported_currency_codes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"string"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w"> 
+</span></code></pre><h3 id='properties-19'>Properties</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>Pay By Group UUID for this payment gateway</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Displayed name of the gateway</td>
+</tr>
+<tr>
+<td>merchant_id</td>
+<td>string</td>
+<td>Merchant this gateway belongs to</td>
+</tr>
+<tr>
+<td>supported_currency_codes</td>
+<td>[string]</td>
+<td>3-letter currency codes that can be used for payments to this gateway</td>
+</tr>
+</tbody></table>
 <h2 id='paymentsource'>PaymentSource</h2>
 <p><a id="schemapaymentsource"></a></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -3942,9 +4367,9 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
     </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"account_holder_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-15'>Properties</h3>
+</span></code></pre><h3 id='properties-20'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -4007,11 +4432,11 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"payout_account"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"payment_gateway"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"payment_source"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"processing_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"conversion_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-16'>Properties</h3>
+</span></code></pre><h3 id='properties-21'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -4042,12 +4467,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>action</td>
 <td>string</td>
-<td>One of: <code>auth</code> (holds funds or the specified amount on the user&#39;s payment   method for later capture); <code>capture</code> (captures funds that were previously authorized at an   amount = or &lt; the authorized amount); <code>charge</code> (instantly charges an amount without first making an   authorization); <code>void</code> (voids a previously created authorization); <code>refund</code> (refunds a previously created capture or charge); <code>payout</code> (sends funds to a payout bank account).</td>
+<td>One of:  <code>auth</code> (holds funds or the specified amount on the user&#39;s payment   method for later capture);  <code>capture</code> (captures funds that were previously authorized at an   amount = or &lt; the authorized amount);  <code>charge</code> (instantly charges an amount without first making an   authorization);  <code>void</code> (voids a previously created authorization);  <code>refund</code> (refunds a previously created capture or charge);  <code>payout</code> (sends funds to a payout bank account).</td>
 </tr>
 <tr>
 <td>status</td>
 <td>string</td>
-<td>One of: <code>pending</code> (transaction has been submitted for processing and our system awaits reponse); <code>completed</code> (transaction succeeded); or <code>failed</code> (transaction failed)</td>
+<td>One of:  <code>pending</code> (transaction has been submitted for processing and our system awaits reponse);  <code>completed</code> (transaction succeeded); or  <code>failed</code> (transaction failed)</td>
 </tr>
 <tr>
 <td>amount</td>
@@ -4090,7 +4515,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>If the currency of the purchase differs from the required currency of the payout account then this is the conversion rate used to determine the transaction amount in the processing_currency.</td>
 </tr>
 </tbody></table>
-<h4 id='enumerated-values-14'>Enumerated Values</h4>
+<h4 id='enumerated-values-17'>Enumerated Values</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -4147,8 +4572,8 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"start_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"end_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"external_purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"inventory_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -4158,7 +4583,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
     </span><span class="kc">null</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-17'>Properties</h3>
+</span></code></pre><h3 id='properties-22'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -4174,7 +4599,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>cost_type</td>
 <td>string</td>
-<td>Cost type that determines whether the product_costs amount(s) are: <code>total</code> (single total amount so long as the number of slots claimed   is in the allowed range for that amount) or <code>per_slot</code> (amount is per slot claimed in the Purchase so the   total amount paid to the merchant is a function of the number of   slots claimed by group members)</td>
+<td>Cost type that determines whether the product_costs amount(s) are:  <code>total</code> (single total amount so long as the number of slots claimed   is in the allowed range for that amount) or <code>per_slot</code> (amount is per slot claimed in the Purchase so the   total amount paid to the merchant is a function of the number of   slots claimed by group members)</td>
 </tr>
 <tr>
 <td>description</td>
@@ -4189,12 +4614,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>start_datetime</td>
 <td>string(date-time)</td>
-<td>Start date time for the product being purchased (e.g. check-in date time, flight departure date time, or event starting time)</td>
+<td>Start date time for the product being purchased  (e.g. check-in date time, flight departure date time, or event starting time)</td>
 </tr>
 <tr>
 <td>end_datetime</td>
 <td>string(date-time)</td>
-<td>End date time for the product being purchased (e.g. check-out date time, flight arrival date time, or activity ending time)</td>
+<td>End date time for the product being purchased  (e.g. check-out date time, flight arrival date time, or activity ending time)</td>
 </tr>
 <tr>
 <td>external_purchase_id</td>
@@ -4237,7 +4662,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>All legal documents attached to this purchase that must be agreed to by the group members</td>
 </tr>
 </tbody></table>
-<h4 id='enumerated-values-15'>Enumerated Values</h4>
+<h4 id='enumerated-values-18'>Enumerated Values</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -4260,7 +4685,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"min_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="s2">"max_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-18'>Properties</h3>
+</span></code></pre><h3 id='properties-23'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -4296,7 +4721,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
     </span><span class="kc">null</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"current_payment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"next_payment_due_deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"product"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"memberships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -4340,9 +4765,9 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"fees_structure"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"apply_consumer_fee_to_organizer"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DA (Danish)"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-19'>Properties</h3>
+</span></code></pre><h3 id='properties-24'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -4368,12 +4793,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>status</td>
 <td>string</td>
-<td>Current status of the Purchase, one of: <code>created</code> (Purchase has been created by the Merchant); <code>active</code> (Purchase has been claimed by an organizer and is in process); <code>completed</code> (All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made, only refunds.); or <code>canceled</code> (Purchase has been canceled by the merchant or organizer and is not recoverable).</td>
+<td>Current status of the Purchase, one of: <code>created</code> (Purchase has been created by the Merchant);  <code>active</code> (Purchase has been claimed by an organizer and is in process);  <code>completed</code> (All payments have been successfully paid out to the Merchant for this Purchase. No further changes or payments may be made,  only refunds.); or  <code>canceled</code> (Purchase has been canceled by the merchant or organizer and is not recoverable).</td>
 </tr>
 <tr>
 <td>currency_code</td>
 <td>string</td>
-<td>3-letter currency code that determines how all money values relatedd to the Purchase are presented to users</td>
+<td>3-letter currency code that determines how all money values relatedd  to the Purchase are presented to users</td>
 </tr>
 <tr>
 <td>current_payment</td>
@@ -4383,7 +4808,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>next_payment_due_deadline</td>
 <td>string(date-time)</td>
-<td>This is the next due deadline set by the merchant for an upcoming payment. If the current payment does not have a <code>due_deadline</code> then the <code>due_deadline</code> for the next payment after that will apply here.</td>
+<td>This is the next due deadline set by the merchant for an upcoming payment. If the current payment  does not have a <code>due_deadline</code> then the <code>due_deadline</code> for the next payment after that will apply here.</td>
 </tr>
 <tr>
 <td>product</td>
@@ -4403,12 +4828,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>committed_shares_amount</td>
 <td><a href="#schemamoney">Money</a></td>
-<td>Sum of all Contributions group Members have agreed to pay towards the Purchase&#39;s total cost at this point, even though some or all of these may not yet be collected.</td>
+<td>Sum of all Contributions group Members have agreed to pay towards the Purchase&#39;s total cost at this point, even though some or all of these may  not yet be collected.</td>
 </tr>
 <tr>
 <td>needed_amount_to_current_payment</td>
 <td><a href="#schemamoney">Money</a></td>
-<td>Amount group Members must still commit to in order to submit the current Payment, which applies primarily to Purchases with the <code>specified_per_person</code> <code>split_type</code></td>
+<td>Amount group Members must still commit to in order to submit the current Payment, which  applies primarily to Purchases with the <code>specified_per_person</code> <code>split_type</code></td>
 </tr>
 <tr>
 <td>committed_slots</td>
@@ -4418,37 +4843,37 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>needed_slots_to_min</td>
 <td>integer(int32)</td>
-<td>Number of slots group members must claim in order to meet the minimum required to submit the current payment, which applies primarily to Purchases with the <code>even_split</code> and <code>fixed_per_person</code> <code>split_types</code></td>
+<td>Number of slots group members must claim in order to meet the minimum required to submit the current payment, which applies primarily to  Purchases with the <code>even_split</code> and <code>fixed_per_person</code> <code>split_types</code></td>
 </tr>
 <tr>
 <td>product_or_group_min_slots</td>
 <td>integer(int32)</td>
-<td>The active minimum number of slots that must be claimed, which is the higher of the values set by the merchant and organizer in cases where both exist</td>
+<td>The active minimum number of slots that must be claimed, which is the higher  of the values set by the merchant and organizer in cases where both exist</td>
 </tr>
 <tr>
 <td>product_or_group_max_slots</td>
 <td>integer(int32)</td>
-<td>The active maximum number of slots that are allowed to be claimed, which is the lower of the values set by the merchant and organizer in cases where both exist</td>
+<td>The active maximum number of slots that are allowed to be claimed, which is  the lower of the values set by the merchant and organizer in cases where both exist</td>
 </tr>
 <tr>
 <td>tipped</td>
 <td>boolean</td>
-<td>The minimum required slots have been claimed (even_split and fixed_per_person split_types) or amount committed (specified_per_person split_type) for the organizer to submit payment</td>
+<td>The minimum required slots have been claimed (even_split and fixed_per_person split_types)  or amount committed (specified_per_person split_type) for the organizer to submit payment</td>
 </tr>
 <tr>
 <td>auto_pilot_enabled</td>
 <td>boolean</td>
-<td>The organizer has chosen to have payments triggered automatically as soon as the trigger_slots level they set is reached. For multi-payment Purchases, payments subsequent to the first payment are triggered automatically one day before each payment&#39;s <code>due_deadline</code>.</td>
+<td>The organizer has chosen to have payments triggered automatically as soon as the trigger_slots level they set is reached. For multi-payment  Purchases, payments subsequent to the first payment are triggered  automatically one day before each payment&#39;s <code>due_deadline</code>.</td>
 </tr>
 <tr>
 <td>auto_pilot_trigger_slots</td>
 <td>integer(int32)</td>
-<td>The number of slots set by the organizer, which when reached, automatically triggers the next payment&#39;s submission without requiring any further action by the organizer.</td>
+<td>The number of slots set by the organizer, which when reached, automatically triggers the next payment&#39;s submission without  requiring any further action by the organizer.</td>
 </tr>
 <tr>
 <td>current_product_cost_amount</td>
 <td><a href="#schemamoney">Money</a></td>
-<td>The cost of the product (either <code>total</code> or <code>per_slot</code> depending on <code>cost_type</code>) for this Purchase based on the current number of claimed slots</td>
+<td>The cost of the product (either <code>total</code> or <code>per_slot</code> depending on <code>cost_type</code>)   for this Purchase based on the current number of claimed slots</td>
 </tr>
 <tr>
 <td>current_total_cost_amount</td>
@@ -4463,12 +4888,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>payment_destination_id</td>
 <td>string(uuid)</td>
-<td>ID of the payment destination that will receive all future Payments made under this Purchase, which means all Payments that are still in <code>active</code> status</td>
+<td>ID of the payment destination that will receive all future Payments made under this  Purchase, which means all Payments that are still in <code>active</code> status</td>
 </tr>
 <tr>
 <td>currency_config</td>
 <td>object</td>
-<td>Describes the payment methods that members can and cannot use for their contributions based on this Purchase&#39;s currency and payment destination</td>
+<td>Describes the payment methods that members can and cannot use for their  contributions based on this Purchase&#39;s currency and payment destination</td>
 </tr>
 <tr>
 <td>» supported_payment_sources</td>
@@ -4483,12 +4908,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>»» unsupported_cards</td>
 <td>[string]</td>
-<td>List of unsupported credit cards for this particular payment source if the type is <code>credit_card</code>. If none are listed, then all of Amex, Diner&#39;s Club, Discover, JCB, MasterCard, and Visa are supported.</td>
+<td>List of unsupported credit cards for this particular payment source if  the type is <code>credit_card</code>. If none are listed, then all of Amex,  Diner&#39;s Club, Discover, JCB, MasterCard, and Visa are supported.</td>
 </tr>
 <tr>
 <td>refund_status</td>
 <td>string</td>
-<td>Status that describes whether the Purchase is partially or fully refunded, one of: <code>none</code> (none of the Purchase&#39;s Memberships were refunded); <code>partial</code> (some of the Purchase&#39;s Memberships were partially or fully refunded); or <code>full</code> (all of the Purchase&#39;s Memberships were fully refunded).</td>
+<td>Status that describes whether the Purchase is partially or fully refunded, one of: <code>none</code> (none of the Purchase&#39;s Memberships were refunded);  <code>partial</code> (some of the Purchase&#39;s Memberships were partially or fully refunded); or  <code>full</code> (all of the Purchase&#39;s Memberships were fully refunded).</td>
 </tr>
 <tr>
 <td>processing_refund</td>
@@ -4508,7 +4933,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>language_code</td>
 <td>string</td>
-<td>Default 2-character language code for this purchase. It is going to be used in the claim and commit steps; and as one of the fallbacks when detecting what language to show to the user</td>
+<td>Default 2-character language code for this purchase. It is going  to be used in the claim and commit steps; and as one of the  fallbacks when detecting what language to show to the user</td>
 </tr>
 <tr>
 <td>created_at</td>
@@ -4523,12 +4948,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>memberships</td>
 <td>[<a href="#schemamembership">Membership</a>]</td>
-<td>Array that includes all members in this Purchase and the details for each. The only information not included are every <code>contribution</code> if it is a multi-payment Purchase. Only the Contribution for the current Payment is included.</td>
+<td>Array that includes all members in this Purchase and the details for each. The only  information not included are every <code>contribution</code> if it is a multi-payment Purchase.  Only the Contribution for the current Payment is included.</td>
 </tr>
 <tr>
 <td>cost_range</td>
 <td>[<a href="#schemaproductcost">ProductCost</a>]</td>
-<td>The minimum and maximum possible costs for this product based on the <code>costs</code> merchant supplies and the current <code>product_or_group_min_slots</code> and <code>product_or_group_max_slots</code></td>
+<td>The minimum and maximum possible costs for this product based on the <code>costs</code> merchant supplies and the  current <code>product_or_group_min_slots</code> and <code>product_or_group_max_slots</code></td>
 </tr>
 <tr>
 <td>consumer_field_schemas</td>
@@ -4541,7 +4966,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>Values that have been provided by the organizer for each consumer_field_schema scoped to the Purchase</td>
 </tr>
 </tbody></table>
-<h4 id='enumerated-values-16'>Enumerated Values</h4>
+<h4 id='enumerated-values-19'>Enumerated Values</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -4602,7 +5027,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"merchant_service_fees"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"merchant_processing_fees"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-20'>Properties</h3>
+</span></code></pre><h3 id='properties-25'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -4623,12 +5048,12 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <tr>
 <td>consumer_fees</td>
 <td><a href="#schemaconsumerfeesstructure">ConsumerFeesStructure</a></td>
-<td>Structure of fees paid by end users for using Pay By Group, which can be in place of or in addition to merchant_service_fees</td>
+<td>Structure of fees paid by end users for using Pay By Group, which  can be in place of or in addition to merchant_service_fees</td>
 </tr>
 <tr>
 <td>merchant_service_fees</td>
 <td><a href="#schemamerchantservicefeesstructure">MerchantServiceFeesStructure</a></td>
-<td>Fees charged to merchant for use of the Pay By Group service, which can be in place of or in addition to consumer_fees</td>
+<td>Fees charged to merchant for use of the Pay By Group service, which  can be in place of or in addition to consumer_fees</td>
 </tr>
 <tr>
 <td>merchant_processing_fees</td>
@@ -4636,7 +5061,7 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>Fees charged to the merchant for the processing of payments, either through the Pay By Group gateway or the merchant&#39;s own gateway</td>
 </tr>
 </tbody></table>
-<h4 id='enumerated-values-17'>Enumerated Values</h4>
+<h4 id='enumerated-values-20'>Enumerated Values</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -4662,9 +5087,9 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
   </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"language_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:40:01Z"</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-21'>Properties</h3>
+</span></code></pre><h3 id='properties-26'>Properties</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -4711,369 +5136,6 @@ To perform this operation, you must be authenticated by HTTP Basic Authorization
 <td>created_at</td>
 <td>string(date-time)</td>
 <td>Timestamp of when this user was first created</td>
-</tr>
-</tbody></table>
-<h2 id='paymentgateway'>PaymentGateway</h2>
-<p><a id="schemapaymentgateway"></a></p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"merchant_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"supported_currency_codes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"string"</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-22'>Properties</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>string</td>
-<td>Pay By Group UUID for this payment gateway</td>
-</tr>
-<tr>
-<td>name</td>
-<td>string</td>
-<td>Displayed name of the gateway</td>
-</tr>
-<tr>
-<td>merchant_id</td>
-<td>string</td>
-<td>Merchant this gateway belongs to</td>
-</tr>
-<tr>
-<td>supported_currency_codes</td>
-<td>[string]</td>
-<td>3-letter currency codes that can be used for payments to this gateway</td>
-</tr>
-</tbody></table>
-<h2 id='legaldocument'>LegalDocument</h2>
-<p><a id="schemalegaldocument"></a></p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tos"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-22T06:36:12Z"</span><span class="w">
-</span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-23'>Properties</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>string(uuid)</td>
-<td>Pay By Group UUID of this legal document</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td>Specified by the merchant as either cancellation policy for cancellation and refund terms or tos for all other legal documents.</td>
-</tr>
-<tr>
-<td>title</td>
-<td>string</td>
-<td>Mechant&#39;s title for this legal document</td>
-</tr>
-<tr>
-<td>content</td>
-<td>string</td>
-<td>Full content as provided by the merchant, either in plain text or as a URL</td>
-</tr>
-<tr>
-<td>created_at</td>
-<td>string(date-time)</td>
-<td>When this legal document was added by the merchant</td>
-</tr>
-<tr>
-<td>updated_at</td>
-<td>string(date-time)</td>
-<td>When this legal document was last updated by the merchant</td>
-</tr>
-</tbody></table>
-<h4 id='enumerated-values-18'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>type</td>
-<td>tos</td>
-</tr>
-<tr>
-<td>type</td>
-<td>cancelation_policy</td>
-</tr>
-</tbody></table>
-<h2 id='legalbinding'>LegalBinding</h2>
-<p><a id="schemalegalbinding"></a></p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"remote_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"purchase_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-</span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-24'>Properties</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>string(uuid)</td>
-<td>Pay By Group UUID of this specific record of acceptance by the user</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td>Either cancellation policy for cancellation and refund terms or tos for all other legal documents provided by merchant.</td>
-</tr>
-<tr>
-<td>title</td>
-<td>string</td>
-<td>Mechant&#39;s title for this legal document as accepted by the user</td>
-</tr>
-<tr>
-<td>content</td>
-<td>string</td>
-<td>Full content as accepted by the user at the moment they agreed to this legal document</td>
-</tr>
-<tr>
-<td>created_at</td>
-<td>string</td>
-<td>Verifiable timestamp when the user accepted this legal document</td>
-</tr>
-<tr>
-<td>remote_ip</td>
-<td>string</td>
-<td>User&#39;s IP address at the moment they accepted this legal document</td>
-</tr>
-<tr>
-<td>user_id</td>
-<td>string</td>
-<td>ID of the user that accepted the document, which includes their name and email</td>
-</tr>
-<tr>
-<td>purchase_id</td>
-<td>string</td>
-<td>The purchase for which this document was accepted by the user</td>
-</tr>
-</tbody></table>
-<h2 id='consumerfieldtemplate'>ConsumerFieldTemplate</h2>
-<p><a id="schemaconsumerfieldtemplate"></a></p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"default_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"special"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-25'>Properties</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>string(uuid)</td>
-<td>Pay By Group UUID for this consumer field template</td>
-</tr>
-<tr>
-<td>name</td>
-<td>string</td>
-<td>A unique name for the template.</td>
-</tr>
-<tr>
-<td>label</td>
-<td>string</td>
-<td>Text to display as the field label.</td>
-</tr>
-<tr>
-<td>description</td>
-<td>string</td>
-<td>A description for the template</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td>Type of field to display for this template.</td>
-</tr>
-<tr>
-<td>default_value</td>
-<td>string</td>
-<td>Default value to use for the template.</td>
-</tr>
-<tr>
-<td>order</td>
-<td>integer(int32)</td>
-<td>Order in which the template should be displayed.</td>
-</tr>
-<tr>
-<td>scope</td>
-<td>string</td>
-<td>Whether the template is at the member level, or purchase level.</td>
-</tr>
-<tr>
-<td>default</td>
-<td>boolean</td>
-<td>Whether the template should be default or not.</td>
-</tr>
-<tr>
-<td>special</td>
-<td>boolean</td>
-<td>Whether the template is a special field or not.</td>
-</tr>
-<tr>
-<td>required</td>
-<td>boolean</td>
-<td>Whether the template is required or not.</td>
-</tr>
-<tr>
-<td>options</td>
-<td>[object]</td>
-<td>Array of options to use for a list template.</td>
-</tr>
-<tr>
-<td>» type</td>
-<td>string</td>
-<td>Value type for the option item</td>
-</tr>
-<tr>
-<td>» value</td>
-<td>string</td>
-<td>Value for the option item</td>
-</tr>
-</tbody></table>
-<h4 id='enumerated-values-19'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>type</td>
-<td>text</td>
-</tr>
-<tr>
-<td>type</td>
-<td>textarea</td>
-</tr>
-<tr>
-<td>type</td>
-<td>datetime</td>
-</tr>
-<tr>
-<td>type</td>
-<td>address</td>
-</tr>
-<tr>
-<td>type</td>
-<td>single_select</td>
-</tr>
-<tr>
-<td>type</td>
-<td>multi_select</td>
-</tr>
-<tr>
-<td>scope</td>
-<td>member</td>
-</tr>
-<tr>
-<td>scope</td>
-<td>purchase</td>
-</tr>
-<tr>
-<td>» type</td>
-<td>text</td>
-</tr>
-<tr>
-<td>» type</td>
-<td>textarea</td>
-</tr>
-<tr>
-<td>» type</td>
-<td>datetime</td>
-</tr>
-<tr>
-<td>» type</td>
-<td>address</td>
-</tr>
-<tr>
-<td>» type</td>
-<td>single_select</td>
-</tr>
-<tr>
-<td>» type</td>
-<td>multi_select</td>
-</tr>
-</tbody></table>
-<h2 id='error'>Error</h2>
-<p><a id="schemaerror"></a></p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w"> 
-</span></code></pre><h3 id='properties-26'>Properties</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>errors</td>
-<td>[object]</td>
-<td>Array of errors returned by the endpoint</td>
-</tr>
-<tr>
-<td>» code</td>
-<td>integer(int32)</td>
-<td>Error code to identify the message. Not used at the moment.</td>
-</tr>
-<tr>
-<td>» message</td>
-<td>string</td>
-<td>Description of the error.</td>
 </tr>
 </tbody></table>
 
