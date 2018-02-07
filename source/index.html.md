@@ -70,14 +70,14 @@ for a useful overview.
         "status": "pending",
         "number": 0,
         "percentage": 1,
-        "due_deadline": "2017-11-30T15:42:59Z",
+        "due_deadline": "2018-02-07T17:17:29Z",
         "amount": {
           "amount_cents": 0,
           "currency_code": "string"
         },
-        "submitted_at": "2017-11-30T15:42:59Z",
-        "accepted_at": "2017-11-30T15:42:59Z",
-        "paid_at": "2017-11-30T15:42:59Z",
+        "submitted_at": "2018-02-07T17:17:29Z",
+        "accepted_at": "2018-02-07T17:17:29Z",
+        "paid_at": "2018-02-07T17:17:29Z",
         "processing_currency": "string",
         "conversion_rate": 0,
         "failed": true,
@@ -89,20 +89,20 @@ for a useful overview.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-30T15:42:59Z",
+      "due_deadline": "2018-02-07T17:17:29Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-30T15:42:59Z",
-      "accepted_at": "2017-11-30T15:42:59Z",
-      "paid_at": "2017-11-30T15:42:59Z",
+      "submitted_at": "2018-02-07T17:17:29Z",
+      "accepted_at": "2018-02-07T17:17:29Z",
+      "paid_at": "2018-02-07T17:17:29Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
       "payout_failed": true
     },
-    "next_payment_due_deadline": "2017-11-30T15:42:59Z",
+    "next_payment_due_deadline": "2018-02-07T17:17:29Z",
     "product": {
       "images": [
         {
@@ -124,8 +124,8 @@ for a useful overview.
       ],
       "description": "string",
       "name": "string",
-      "start_datetime": "2017-11-30T15:42:59Z",
-      "end_datetime": "2017-11-30T15:42:59Z",
+      "start_datetime": "2018-02-07T17:17:29Z",
+      "end_datetime": "2018-02-07T17:17:29Z",
       "external_purchase_id": "string",
       "inventory_id": "string",
       "link": "string",
@@ -137,13 +137,13 @@ for a useful overview.
           "type": "tos",
           "title": "string",
           "content": "string",
-          "created_at": "2017-11-30T15:42:59Z",
-          "updated_at": "2017-11-30T15:42:59Z"
+          "created_at": "2018-02-07T17:17:29Z",
+          "updated_at": "2018-02-07T17:17:29Z"
         }
       ]
     },
     "group": {
-      "commit_deadline": "2017-11-30T15:42:59Z",
+      "commit_deadline": "2018-02-07T17:17:29Z",
       "max_slots": 0,
       "min_slots": 0,
       "min_contribution": {
@@ -225,8 +225,8 @@ for a useful overview.
               "currency_code": "string"
             }
           },
-          "charged_at": "2017-11-30T15:42:59Z",
-          "failed_at": "2017-11-30T15:42:59Z",
+          "charged_at": "2018-02-07T17:17:29Z",
+          "failed_at": "2018-02-07T17:17:29Z",
           "created_at": "string"
         },
         "user": {
@@ -237,7 +237,7 @@ for a useful overview.
           "last_name": "string",
           "avatar_url": "string",
           "language_code": "string",
-          "created_at": "2017-11-30T15:42:59Z"
+          "created_at": "2018-02-07T17:17:29Z"
         },
         "purchase_id": "string",
         "payment_source": {
@@ -249,10 +249,10 @@ for a useful overview.
             "last_four": "string",
             "valid_until": "string"
           },
-          "created_at": "2017-11-30T15:42:59Z"
+          "created_at": "2018-02-07T17:17:29Z"
         },
-        "committed_at": "2017-11-30T15:42:59Z",
-        "created_at": "2017-11-30T15:42:59Z"
+        "committed_at": "2018-02-07T17:17:29Z",
+        "created_at": "2018-02-07T17:17:29Z"
       }
     ],
     "collected_shares_amount": {
@@ -373,7 +373,7 @@ for a useful overview.
     },
     "apply_consumer_fee_to_organizer": true,
     "language_code": "DA (Danish)",
-    "created_at": "2017-11-30T15:42:59Z"
+    "created_at": "2018-02-07T17:17:29Z"
   }
 ]
 ```
@@ -514,14 +514,14 @@ body|body|object|true|Request body object.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-30T15:42:59Z",
+      "due_deadline": "2018-02-07T17:17:29Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-30T15:42:59Z",
-      "accepted_at": "2017-11-30T15:42:59Z",
-      "paid_at": "2017-11-30T15:42:59Z",
+      "submitted_at": "2018-02-07T17:17:29Z",
+      "accepted_at": "2018-02-07T17:17:29Z",
+      "paid_at": "2018-02-07T17:17:29Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -533,20 +533,20 @@ body|body|object|true|Request body object.
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-30T15:42:59Z",
+    "due_deadline": "2018-02-07T17:17:29Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-30T15:42:59Z",
-    "accepted_at": "2017-11-30T15:42:59Z",
-    "paid_at": "2017-11-30T15:42:59Z",
+    "submitted_at": "2018-02-07T17:17:29Z",
+    "accepted_at": "2018-02-07T17:17:29Z",
+    "paid_at": "2018-02-07T17:17:29Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-30T15:42:59Z",
+  "next_payment_due_deadline": "2018-02-07T17:17:29Z",
   "product": {
     "images": [
       {
@@ -568,8 +568,8 @@ body|body|object|true|Request body object.
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-30T15:42:59Z",
-    "end_datetime": "2017-11-30T15:42:59Z",
+    "start_datetime": "2018-02-07T17:17:29Z",
+    "end_datetime": "2018-02-07T17:17:29Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -581,13 +581,13 @@ body|body|object|true|Request body object.
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-30T15:42:59Z",
-        "updated_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z",
+        "updated_at": "2018-02-07T17:17:29Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-30T15:42:59Z",
+    "commit_deadline": "2018-02-07T17:17:29Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -669,8 +669,8 @@ body|body|object|true|Request body object.
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-30T15:42:59Z",
-        "failed_at": "2017-11-30T15:42:59Z",
+        "charged_at": "2018-02-07T17:17:29Z",
+        "failed_at": "2018-02-07T17:17:29Z",
         "created_at": "string"
       },
       "user": {
@@ -681,7 +681,7 @@ body|body|object|true|Request body object.
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -693,10 +693,10 @@ body|body|object|true|Request body object.
           "last_four": "string",
           "valid_until": "string"
         },
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
-      "committed_at": "2017-11-30T15:42:59Z",
-      "created_at": "2017-11-30T15:42:59Z"
+      "committed_at": "2018-02-07T17:17:29Z",
+      "created_at": "2018-02-07T17:17:29Z"
     }
   ],
   "collected_shares_amount": {
@@ -817,7 +817,7 @@ body|body|object|true|Request body object.
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z"
 }
 ```
 <h3 id="CreatePurchase-responses">Responses</h3>
@@ -867,14 +867,14 @@ id|path|string(uuid)|true|Purchase ID to fetch
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-30T15:42:59Z",
+      "due_deadline": "2018-02-07T17:17:29Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-30T15:42:59Z",
-      "accepted_at": "2017-11-30T15:42:59Z",
-      "paid_at": "2017-11-30T15:42:59Z",
+      "submitted_at": "2018-02-07T17:17:29Z",
+      "accepted_at": "2018-02-07T17:17:29Z",
+      "paid_at": "2018-02-07T17:17:29Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -886,20 +886,20 @@ id|path|string(uuid)|true|Purchase ID to fetch
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-30T15:42:59Z",
+    "due_deadline": "2018-02-07T17:17:29Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-30T15:42:59Z",
-    "accepted_at": "2017-11-30T15:42:59Z",
-    "paid_at": "2017-11-30T15:42:59Z",
+    "submitted_at": "2018-02-07T17:17:29Z",
+    "accepted_at": "2018-02-07T17:17:29Z",
+    "paid_at": "2018-02-07T17:17:29Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-30T15:42:59Z",
+  "next_payment_due_deadline": "2018-02-07T17:17:29Z",
   "product": {
     "images": [
       {
@@ -921,8 +921,8 @@ id|path|string(uuid)|true|Purchase ID to fetch
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-30T15:42:59Z",
-    "end_datetime": "2017-11-30T15:42:59Z",
+    "start_datetime": "2018-02-07T17:17:29Z",
+    "end_datetime": "2018-02-07T17:17:29Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -934,13 +934,13 @@ id|path|string(uuid)|true|Purchase ID to fetch
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-30T15:42:59Z",
-        "updated_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z",
+        "updated_at": "2018-02-07T17:17:29Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-30T15:42:59Z",
+    "commit_deadline": "2018-02-07T17:17:29Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -1022,8 +1022,8 @@ id|path|string(uuid)|true|Purchase ID to fetch
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-30T15:42:59Z",
-        "failed_at": "2017-11-30T15:42:59Z",
+        "charged_at": "2018-02-07T17:17:29Z",
+        "failed_at": "2018-02-07T17:17:29Z",
         "created_at": "string"
       },
       "user": {
@@ -1034,7 +1034,7 @@ id|path|string(uuid)|true|Purchase ID to fetch
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -1046,10 +1046,10 @@ id|path|string(uuid)|true|Purchase ID to fetch
           "last_four": "string",
           "valid_until": "string"
         },
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
-      "committed_at": "2017-11-30T15:42:59Z",
-      "created_at": "2017-11-30T15:42:59Z"
+      "committed_at": "2018-02-07T17:17:29Z",
+      "created_at": "2018-02-07T17:17:29Z"
     }
   ],
   "collected_shares_amount": {
@@ -1170,7 +1170,7 @@ id|path|string(uuid)|true|Purchase ID to fetch
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z"
 }
 ```
 ```json
@@ -1257,8 +1257,9 @@ body|body|object|true|Request body object.
 »» min_contribution|body|[Money](#schemamoney)|false|Minimum required contribution from each group member.<br/>Only compatible with `specified_per_person` split type.<br/>
 » language_code|body|string|false|Default 2-character language code for this purchase. It is going<br/>to be used in the claim and commit steps; and as one of the<br/>fallbacks when detecting what language to show to the user<br/>
 » payment_destination_id|body|string(uuid)|false|ID of the payment destination that will receive all future payments<br/>made under this Purchase. NOTE: updating this value will not affect<br/>any previously accepted payments on this purchase.<br/>
-» payments|body|[object]|false|Breakdown of payment amounts and deadlines due over time for this Purchase.<br/>They can only be updated if no payment has yet been accepted by the merchant for this Purchase..<br/>
-»» percentage|body|integer(int32)|true|Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are<br/>not doing installment or deposit payments, this is most likely "100".<br/>
+» payments|body|[object]|false|Breakdown of payment percentages, amounts and deadlines due over time for this Purchase.<br/>They can be updated as long as at least one payment is still `active` or `pending`.<br/>Values for the amount and the percentage of each payment can be provided as long as<br/>those values are consistent with the total purchase cost. If you are using multiple<br/>price ranges, you should ONLY update payments using the percentages and NOT amounts.<br/>
+»» percentage|body|integer(int32)|false|Percent of the total purchase cost due for this payment, which must<br/>be an integer. All payments on a purchase must sum to 100. If you are<br/>not doing installment or deposit payments, this is most likely "100". If<br/>the payment is already captured, the percentage will be calculated<br/>automatically by the server, thus the specified value will be ignored.<br/>
+»» amount|body|[Money](#schemamoney)|false|Partial amount of the total purchase cost due for this payment, which must be<br/>a Money object. All payment amounts on a purchase must sum to the total<br/>purchase cost. If you are not doing installment or deposit payments, this<br/>is most likely the total purchase cost. If both, the amount and percentage<br/>values are specified for a payment, the amount value takes precedence over<br/>the percentage. If the payment is already captured, the current amount of the<br/>payment will be used, thus the specified value will be ignored.<br/>
 »» due_deadline|body|string(date-time)|false|Datetime by when this payment must be submitted to the merchant for<br/>the purchase to be valid. It is required for all payments after<br/>the first payment but may be passed for the first, or only, payment as well.<br/>
 
 
@@ -1295,14 +1296,14 @@ body|body|object|true|Request body object.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-30T15:42:59Z",
+      "due_deadline": "2018-02-07T17:17:29Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-30T15:42:59Z",
-      "accepted_at": "2017-11-30T15:42:59Z",
-      "paid_at": "2017-11-30T15:42:59Z",
+      "submitted_at": "2018-02-07T17:17:29Z",
+      "accepted_at": "2018-02-07T17:17:29Z",
+      "paid_at": "2018-02-07T17:17:29Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -1314,20 +1315,20 @@ body|body|object|true|Request body object.
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-30T15:42:59Z",
+    "due_deadline": "2018-02-07T17:17:29Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-30T15:42:59Z",
-    "accepted_at": "2017-11-30T15:42:59Z",
-    "paid_at": "2017-11-30T15:42:59Z",
+    "submitted_at": "2018-02-07T17:17:29Z",
+    "accepted_at": "2018-02-07T17:17:29Z",
+    "paid_at": "2018-02-07T17:17:29Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-30T15:42:59Z",
+  "next_payment_due_deadline": "2018-02-07T17:17:29Z",
   "product": {
     "images": [
       {
@@ -1349,8 +1350,8 @@ body|body|object|true|Request body object.
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-30T15:42:59Z",
-    "end_datetime": "2017-11-30T15:42:59Z",
+    "start_datetime": "2018-02-07T17:17:29Z",
+    "end_datetime": "2018-02-07T17:17:29Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -1362,13 +1363,13 @@ body|body|object|true|Request body object.
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-30T15:42:59Z",
-        "updated_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z",
+        "updated_at": "2018-02-07T17:17:29Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-30T15:42:59Z",
+    "commit_deadline": "2018-02-07T17:17:29Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -1450,8 +1451,8 @@ body|body|object|true|Request body object.
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-30T15:42:59Z",
-        "failed_at": "2017-11-30T15:42:59Z",
+        "charged_at": "2018-02-07T17:17:29Z",
+        "failed_at": "2018-02-07T17:17:29Z",
         "created_at": "string"
       },
       "user": {
@@ -1462,7 +1463,7 @@ body|body|object|true|Request body object.
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -1474,10 +1475,10 @@ body|body|object|true|Request body object.
           "last_four": "string",
           "valid_until": "string"
         },
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
-      "committed_at": "2017-11-30T15:42:59Z",
-      "created_at": "2017-11-30T15:42:59Z"
+      "committed_at": "2018-02-07T17:17:29Z",
+      "created_at": "2018-02-07T17:17:29Z"
     }
   ],
   "collected_shares_amount": {
@@ -1598,7 +1599,7 @@ body|body|object|true|Request body object.
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z"
 }
 ```
 ```json
@@ -1706,14 +1707,14 @@ body|body|object|true|Request body object.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-30T15:42:59Z",
+      "due_deadline": "2018-02-07T17:17:29Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-30T15:42:59Z",
-      "accepted_at": "2017-11-30T15:42:59Z",
-      "paid_at": "2017-11-30T15:42:59Z",
+      "submitted_at": "2018-02-07T17:17:29Z",
+      "accepted_at": "2018-02-07T17:17:29Z",
+      "paid_at": "2018-02-07T17:17:29Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -1725,20 +1726,20 @@ body|body|object|true|Request body object.
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-30T15:42:59Z",
+    "due_deadline": "2018-02-07T17:17:29Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-30T15:42:59Z",
-    "accepted_at": "2017-11-30T15:42:59Z",
-    "paid_at": "2017-11-30T15:42:59Z",
+    "submitted_at": "2018-02-07T17:17:29Z",
+    "accepted_at": "2018-02-07T17:17:29Z",
+    "paid_at": "2018-02-07T17:17:29Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-30T15:42:59Z",
+  "next_payment_due_deadline": "2018-02-07T17:17:29Z",
   "product": {
     "images": [
       {
@@ -1760,8 +1761,8 @@ body|body|object|true|Request body object.
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-30T15:42:59Z",
-    "end_datetime": "2017-11-30T15:42:59Z",
+    "start_datetime": "2018-02-07T17:17:29Z",
+    "end_datetime": "2018-02-07T17:17:29Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -1773,13 +1774,13 @@ body|body|object|true|Request body object.
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-30T15:42:59Z",
-        "updated_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z",
+        "updated_at": "2018-02-07T17:17:29Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-30T15:42:59Z",
+    "commit_deadline": "2018-02-07T17:17:29Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -1861,8 +1862,8 @@ body|body|object|true|Request body object.
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-30T15:42:59Z",
-        "failed_at": "2017-11-30T15:42:59Z",
+        "charged_at": "2018-02-07T17:17:29Z",
+        "failed_at": "2018-02-07T17:17:29Z",
         "created_at": "string"
       },
       "user": {
@@ -1873,7 +1874,7 @@ body|body|object|true|Request body object.
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -1885,10 +1886,10 @@ body|body|object|true|Request body object.
           "last_four": "string",
           "valid_until": "string"
         },
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
-      "committed_at": "2017-11-30T15:42:59Z",
-      "created_at": "2017-11-30T15:42:59Z"
+      "committed_at": "2018-02-07T17:17:29Z",
+      "created_at": "2018-02-07T17:17:29Z"
     }
   ],
   "collected_shares_amount": {
@@ -2009,7 +2010,7 @@ body|body|object|true|Request body object.
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z"
 }
 ```
 ```json
@@ -2175,14 +2176,14 @@ body|body|object|true|Request body object.
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-30T15:42:59Z",
+      "due_deadline": "2018-02-07T17:17:29Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-30T15:42:59Z",
-      "accepted_at": "2017-11-30T15:42:59Z",
-      "paid_at": "2017-11-30T15:42:59Z",
+      "submitted_at": "2018-02-07T17:17:29Z",
+      "accepted_at": "2018-02-07T17:17:29Z",
+      "paid_at": "2018-02-07T17:17:29Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -2194,20 +2195,20 @@ body|body|object|true|Request body object.
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-30T15:42:59Z",
+    "due_deadline": "2018-02-07T17:17:29Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-30T15:42:59Z",
-    "accepted_at": "2017-11-30T15:42:59Z",
-    "paid_at": "2017-11-30T15:42:59Z",
+    "submitted_at": "2018-02-07T17:17:29Z",
+    "accepted_at": "2018-02-07T17:17:29Z",
+    "paid_at": "2018-02-07T17:17:29Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-30T15:42:59Z",
+  "next_payment_due_deadline": "2018-02-07T17:17:29Z",
   "product": {
     "images": [
       {
@@ -2229,8 +2230,8 @@ body|body|object|true|Request body object.
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-30T15:42:59Z",
-    "end_datetime": "2017-11-30T15:42:59Z",
+    "start_datetime": "2018-02-07T17:17:29Z",
+    "end_datetime": "2018-02-07T17:17:29Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -2242,13 +2243,13 @@ body|body|object|true|Request body object.
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-30T15:42:59Z",
-        "updated_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z",
+        "updated_at": "2018-02-07T17:17:29Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-30T15:42:59Z",
+    "commit_deadline": "2018-02-07T17:17:29Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -2330,8 +2331,8 @@ body|body|object|true|Request body object.
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-30T15:42:59Z",
-        "failed_at": "2017-11-30T15:42:59Z",
+        "charged_at": "2018-02-07T17:17:29Z",
+        "failed_at": "2018-02-07T17:17:29Z",
         "created_at": "string"
       },
       "user": {
@@ -2342,7 +2343,7 @@ body|body|object|true|Request body object.
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -2354,10 +2355,10 @@ body|body|object|true|Request body object.
           "last_four": "string",
           "valid_until": "string"
         },
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
-      "committed_at": "2017-11-30T15:42:59Z",
-      "created_at": "2017-11-30T15:42:59Z"
+      "committed_at": "2018-02-07T17:17:29Z",
+      "created_at": "2018-02-07T17:17:29Z"
     }
   ],
   "collected_shares_amount": {
@@ -2478,7 +2479,7 @@ body|body|object|true|Request body object.
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z"
 }
 ```
 ```json
@@ -2707,8 +2708,8 @@ id|path|string(uuid)|true|Purchase ID
           "currency_code": "string"
         }
       },
-      "charged_at": "2017-11-30T15:42:59Z",
-      "failed_at": "2017-11-30T15:42:59Z",
+      "charged_at": "2018-02-07T17:17:29Z",
+      "failed_at": "2018-02-07T17:17:29Z",
       "created_at": "string"
     },
     "user": {
@@ -2719,7 +2720,7 @@ id|path|string(uuid)|true|Purchase ID
       "last_name": "string",
       "avatar_url": "string",
       "language_code": "string",
-      "created_at": "2017-11-30T15:42:59Z"
+      "created_at": "2018-02-07T17:17:29Z"
     },
     "purchase_id": "string",
     "payment_source": {
@@ -2731,10 +2732,10 @@ id|path|string(uuid)|true|Purchase ID
         "last_four": "string",
         "valid_until": "string"
       },
-      "created_at": "2017-11-30T15:42:59Z"
+      "created_at": "2018-02-07T17:17:29Z"
     },
-    "committed_at": "2017-11-30T15:42:59Z",
-    "created_at": "2017-11-30T15:42:59Z"
+    "committed_at": "2018-02-07T17:17:29Z",
+    "created_at": "2018-02-07T17:17:29Z"
   }
 ]
 ```
@@ -2823,9 +2824,9 @@ id|path|string(uuid)|true|Purchase ID
         "last_four": "string",
         "valid_until": "string"
       },
-      "created_at": "2017-11-30T15:42:59Z"
+      "created_at": "2018-02-07T17:17:29Z"
     },
-    "created_at": "2017-11-30T15:42:59Z",
+    "created_at": "2018-02-07T17:17:29Z",
     "processing_currency": "string",
     "conversion_rate": 0
   }
@@ -2877,8 +2878,8 @@ id|path|string(uuid)|true|Purchase ID
     "type": "tos",
     "title": "string",
     "content": "string",
-    "created_at": "2017-11-30T15:42:59Z",
-    "updated_at": "2017-11-30T15:42:59Z"
+    "created_at": "2018-02-07T17:17:29Z",
+    "updated_at": "2018-02-07T17:17:29Z"
   }
 ]
 ```
@@ -3039,8 +3040,8 @@ Returns a paginated list of all legal documents that currently exist under this 
     "type": "tos",
     "title": "string",
     "content": "string",
-    "created_at": "2017-11-30T15:42:59Z",
-    "updated_at": "2017-11-30T15:42:59Z"
+    "created_at": "2018-02-07T17:17:29Z",
+    "updated_at": "2018-02-07T17:17:29Z"
   }
 ]
 ```
@@ -3107,8 +3108,8 @@ body|body|object|true|Request body object.
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-30T15:42:59Z",
-  "updated_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z",
+  "updated_at": "2018-02-07T17:17:29Z"
 }
 ```
 ```json
@@ -3155,8 +3156,8 @@ id|path|string(uuid)|true|ID of the Legal Document to retrieve
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-30T15:42:59Z",
-  "updated_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z",
+  "updated_at": "2018-02-07T17:17:29Z"
 }
 ```
 ```json
@@ -3224,8 +3225,8 @@ body|body|object|true|Request body object.
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-30T15:42:59Z",
-  "updated_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z",
+  "updated_at": "2018-02-07T17:17:29Z"
 }
 ```
 ```json
@@ -3643,8 +3644,8 @@ value|string|Stored value entered by the member or organizer or selected from th
       "currency_code": "string"
     }
   },
-  "charged_at": "2017-11-30T15:42:59Z",
-  "failed_at": "2017-11-30T15:42:59Z",
+  "charged_at": "2018-02-07T17:17:29Z",
+  "failed_at": "2018-02-07T17:17:29Z",
   "created_at": "string"
 } 
 ```
@@ -3763,7 +3764,7 @@ consumer_fee|[Money](#schemamoney)|Amount charged to the user and due to Pay By 
 
 ```json
 {
-  "commit_deadline": "2017-11-30T15:42:59Z",
+  "commit_deadline": "2018-02-07T17:17:29Z",
   "max_slots": 0,
   "min_slots": 0,
   "min_contribution": {
@@ -3875,8 +3876,8 @@ type|cancelation_policy|
   "type": "tos",
   "title": "string",
   "content": "string",
-  "created_at": "2017-11-30T15:42:59Z",
-  "updated_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z",
+  "updated_at": "2018-02-07T17:17:29Z"
 } 
 ```
 
@@ -3978,8 +3979,8 @@ type|cancelation_policy|
         "currency_code": "string"
       }
     },
-    "charged_at": "2017-11-30T15:42:59Z",
-    "failed_at": "2017-11-30T15:42:59Z",
+    "charged_at": "2018-02-07T17:17:29Z",
+    "failed_at": "2018-02-07T17:17:29Z",
     "created_at": "string"
   },
   "user": {
@@ -3990,7 +3991,7 @@ type|cancelation_policy|
     "last_name": "string",
     "avatar_url": "string",
     "language_code": "string",
-    "created_at": "2017-11-30T15:42:59Z"
+    "created_at": "2018-02-07T17:17:29Z"
   },
   "purchase_id": "string",
   "payment_source": {
@@ -4002,10 +4003,10 @@ type|cancelation_policy|
       "last_four": "string",
       "valid_until": "string"
     },
-    "created_at": "2017-11-30T15:42:59Z"
+    "created_at": "2018-02-07T17:17:29Z"
   },
-  "committed_at": "2017-11-30T15:42:59Z",
-  "created_at": "2017-11-30T15:42:59Z"
+  "committed_at": "2018-02-07T17:17:29Z",
+  "created_at": "2018-02-07T17:17:29Z"
 } 
 ```
 
@@ -4176,14 +4177,14 @@ currency_code|string|3-letter currency code attached to every money value
   "status": "pending",
   "number": 0,
   "percentage": 1,
-  "due_deadline": "2017-11-30T15:42:59Z",
+  "due_deadline": "2018-02-07T17:17:29Z",
   "amount": {
     "amount_cents": 0,
     "currency_code": "string"
   },
-  "submitted_at": "2017-11-30T15:42:59Z",
-  "accepted_at": "2017-11-30T15:42:59Z",
-  "paid_at": "2017-11-30T15:42:59Z",
+  "submitted_at": "2018-02-07T17:17:29Z",
+  "accepted_at": "2018-02-07T17:17:29Z",
+  "paid_at": "2018-02-07T17:17:29Z",
   "processing_currency": "string",
   "conversion_rate": 0,
   "failed": true,
@@ -4272,7 +4273,7 @@ supported_currency_codes|[string]|3-letter currency codes that can be used for p
     "last_four": "string",
     "valid_until": "string"
   },
-  "created_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z"
 } 
 ```
 
@@ -4364,9 +4365,9 @@ valid_until|string|Expiration date in mm/yy format.
       "last_four": "string",
       "valid_until": "string"
     },
-    "created_at": "2017-11-30T15:42:59Z"
+    "created_at": "2018-02-07T17:17:29Z"
   },
-  "created_at": "2017-11-30T15:42:59Z",
+  "created_at": "2018-02-07T17:17:29Z",
   "processing_currency": "string",
   "conversion_rate": 0
 } 
@@ -4439,8 +4440,8 @@ status|failed|
   ],
   "description": "string",
   "name": "string",
-  "start_datetime": "2017-11-30T15:42:59Z",
-  "end_datetime": "2017-11-30T15:42:59Z",
+  "start_datetime": "2018-02-07T17:17:29Z",
+  "end_datetime": "2018-02-07T17:17:29Z",
   "external_purchase_id": "string",
   "inventory_id": "string",
   "link": "string",
@@ -4452,8 +4453,8 @@ status|failed|
       "type": "tos",
       "title": "string",
       "content": "string",
-      "created_at": "2017-11-30T15:42:59Z",
-      "updated_at": "2017-11-30T15:42:59Z"
+      "created_at": "2018-02-07T17:17:29Z",
+      "updated_at": "2018-02-07T17:17:29Z"
     }
   ]
 } 
@@ -4543,14 +4544,14 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
       "status": "pending",
       "number": 0,
       "percentage": 1,
-      "due_deadline": "2017-11-30T15:42:59Z",
+      "due_deadline": "2018-02-07T17:17:29Z",
       "amount": {
         "amount_cents": 0,
         "currency_code": "string"
       },
-      "submitted_at": "2017-11-30T15:42:59Z",
-      "accepted_at": "2017-11-30T15:42:59Z",
-      "paid_at": "2017-11-30T15:42:59Z",
+      "submitted_at": "2018-02-07T17:17:29Z",
+      "accepted_at": "2018-02-07T17:17:29Z",
+      "paid_at": "2018-02-07T17:17:29Z",
       "processing_currency": "string",
       "conversion_rate": 0,
       "failed": true,
@@ -4562,20 +4563,20 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
     "status": "pending",
     "number": 0,
     "percentage": 1,
-    "due_deadline": "2017-11-30T15:42:59Z",
+    "due_deadline": "2018-02-07T17:17:29Z",
     "amount": {
       "amount_cents": 0,
       "currency_code": "string"
     },
-    "submitted_at": "2017-11-30T15:42:59Z",
-    "accepted_at": "2017-11-30T15:42:59Z",
-    "paid_at": "2017-11-30T15:42:59Z",
+    "submitted_at": "2018-02-07T17:17:29Z",
+    "accepted_at": "2018-02-07T17:17:29Z",
+    "paid_at": "2018-02-07T17:17:29Z",
     "processing_currency": "string",
     "conversion_rate": 0,
     "failed": true,
     "payout_failed": true
   },
-  "next_payment_due_deadline": "2017-11-30T15:42:59Z",
+  "next_payment_due_deadline": "2018-02-07T17:17:29Z",
   "product": {
     "images": [
       {
@@ -4597,8 +4598,8 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
     ],
     "description": "string",
     "name": "string",
-    "start_datetime": "2017-11-30T15:42:59Z",
-    "end_datetime": "2017-11-30T15:42:59Z",
+    "start_datetime": "2018-02-07T17:17:29Z",
+    "end_datetime": "2018-02-07T17:17:29Z",
     "external_purchase_id": "string",
     "inventory_id": "string",
     "link": "string",
@@ -4610,13 +4611,13 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
         "type": "tos",
         "title": "string",
         "content": "string",
-        "created_at": "2017-11-30T15:42:59Z",
-        "updated_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z",
+        "updated_at": "2018-02-07T17:17:29Z"
       }
     ]
   },
   "group": {
-    "commit_deadline": "2017-11-30T15:42:59Z",
+    "commit_deadline": "2018-02-07T17:17:29Z",
     "max_slots": 0,
     "min_slots": 0,
     "min_contribution": {
@@ -4698,8 +4699,8 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
             "currency_code": "string"
           }
         },
-        "charged_at": "2017-11-30T15:42:59Z",
-        "failed_at": "2017-11-30T15:42:59Z",
+        "charged_at": "2018-02-07T17:17:29Z",
+        "failed_at": "2018-02-07T17:17:29Z",
         "created_at": "string"
       },
       "user": {
@@ -4710,7 +4711,7 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
         "last_name": "string",
         "avatar_url": "string",
         "language_code": "string",
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
       "purchase_id": "string",
       "payment_source": {
@@ -4722,10 +4723,10 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
           "last_four": "string",
           "valid_until": "string"
         },
-        "created_at": "2017-11-30T15:42:59Z"
+        "created_at": "2018-02-07T17:17:29Z"
       },
-      "committed_at": "2017-11-30T15:42:59Z",
-      "created_at": "2017-11-30T15:42:59Z"
+      "committed_at": "2018-02-07T17:17:29Z",
+      "created_at": "2018-02-07T17:17:29Z"
     }
   ],
   "collected_shares_amount": {
@@ -4846,7 +4847,7 @@ max_slots|integer(int32)|Maximum allowed number of slots that may be claimed by 
   },
   "apply_consumer_fee_to_organizer": true,
   "language_code": "DA (Danish)",
-  "created_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z"
 } 
 ```
 
@@ -5025,7 +5026,7 @@ unsupported_cards|dankort|
   "last_name": "string",
   "avatar_url": "string",
   "language_code": "string",
-  "created_at": "2017-11-30T15:42:59Z"
+  "created_at": "2018-02-07T17:17:29Z"
 } 
 ```
 
